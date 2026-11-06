@@ -1,0 +1,469 @@
+{
+  "items": [
+    {
+      "id": "91c5a9f9",
+      "status": "pending",
+      "kind": "article",
+      "title": "Harmonization Framework for Translating Clinical Cancer Staging Systems for Public Health and Surveillance Use in Low- and Middle-Income Countries: Validation Using Indian Cancer Registry Data",
+      "source": "ICMR-NINE",
+      "date": "2026-11-06",
+      "url": "https://ijmr.org.in/cerebral-venous-thrombosis-related-stroke-in-india-clinical-patterns-risk-factors-and-outcomes-from-the-hospital-based-stroke-registry-programme/",
+      "cancer_score": 3,
+      "india_score": 9,
+      "terms": {
+        "cancer": [
+          "cancer"
+        ],
+        "india": [
+          "Indian",
+          "low- and middle-income"
+        ]
+      },
+      "fetched_at": "2026-11-06T16:37:24+05:30",
+      "date_source": "first seen on icmrnine.org",
+      "via": "https://icmrnine.org/",
+      "warning": "icmrnine.org links 3 featured publications to this same URL; open it and confirm it is this paper before approving (use --url to correct it)"
+    },
+    {
+      "id": "85faa86c",
+      "status": "approved",
+      "kind": "article",
+      "title": "Portable ultrasound performed by non-radiologists could improve breast cancer early detection in low-resource settings, new study in India shows",
+      "source": "IARC",
+      "date": "2026-11-06",
+      "url": "https://www.iarc.who.int/news-events/portable-ultrasound-performed-by-non-radiologists-could-improve-breast-cancer-early-detection-in-low-resource-settings-new-study-in-india-shows/",
+      "cancer_score": 5,
+      "india_score": 5,
+      "terms": {
+        "cancer": [
+          "cancer",
+          "early detection"
+        ],
+        "india": [
+          "India",
+          "low-resource"
+        ]
+      },
+      "fetched_at": "2026-11-06T16:37:19+05:30",
+      "via": "https://www.iarc.who.int/feed/?post_type=news-events",
+      "approved_by": "e2e test (Claude session)",
+      "approved_at": "2026-11-06T16:38:18+05:30"
+    },
+    {
+      "id": "b8dd83b9",
+      "status": "approved",
+      "kind": "article",
+      "title": "Cheaper Cancer Medicines: What the New Margin Cap Means for Patients",
+      "source": "PIB Backgrounder",
+      "date": "2026-11-06",
+      "url": "https://pib.gov.in/PressReleasePage.aspx?PRID=2333536",
+      "cancer_score": 3,
+      "india_score": 5,
+      "terms": {
+        "cancer": [
+          "cancer"
+        ],
+        "india": []
+      },
+      "fetched_at": "2026-11-06T16:37:23+05:30",
+      "ministry": "PIB Backgrounder",
+      "via": "PIB",
+      "approved_by": "e2e test (Claude session)",
+      "approved_at": "2026-11-06T16:38:18+05:30"
+    },
+    {
+      "id": "05676708",
+      "status": "pending",
+      "kind": "article",
+      "title": "A systematic review and meta-analysis of diagnostic accuracy of urine self-sampling for human papillomavirus detection in cervical cancer screening",
+      "source": "ICMR-NINE",
+      "date": "2026-11-06",
+      "url": "https://ijmr.org.in/cerebral-venous-thrombosis-related-stroke-in-india-clinical-patterns-risk-factors-and-outcomes-from-the-hospital-based-stroke-registry-programme/",
+      "cancer_score": 8,
+      "india_score": 5,
+      "terms": {
+        "cancer": [
+          "cancer",
+          "human papillomavirus",
+          "screening"
+        ],
+        "india": []
+      },
+      "fetched_at": "2026-11-06T16:37:24+05:30",
+      "date_source": "first seen on icmrnine.org",
+      "via": "https://icmrnine.org/",
+      "warning": "icmrnine.org links 3 featured publications to this same URL; open it and confirm it is this paper before approving (use --url to correct it)"
+    },
+    {
+      "id": "f634e112",
+      "status": "pending",
+      "kind": "page_change",
+      "title": "",
+      "label": "GLOBOCAN India fact sheet PDF recently updated (Last-Modified Wed, 21 Oct 2026 14:50:06 GMT)",
+      "source": "IARC Global Cancer Observatory",
+      "date": "2026-10-21",
+      "url": "https://gco.iarc.who.int/today/en/fact-sheets-populations/356/india",
+      "changes": [
+        {
+          "label": "India fact sheet PDF",
+          "url": "https://gco.iarc.who.int/media/globocan/factsheets/populations/356-india-fact-sheet.pdf",
+          "etag": "\"36f68d50ebba5bcbda62e4c181283eb1\"",
+          "last_modified": "Wed, 21 Oct 2026 14:50:06 GMT",
+          "sha256": "909461cd8de6e27fe77bb5a4015fb725f5c1c952e931780274c0713cf02700ac",
+          "bytes": 724141
+        }
+      ],
+      "cancer_score": 0,
+      "india_score": 5,
+      "terms": {},
+      "fetched_at": "2026-11-06T16:37:38+05:30"
+    },
+    {
+      "id": "d51b29ea",
+      "status": "pending",
+      "kind": "article",
+      "title": "IARC explores opportunities to advance gastric cancer prevention in Mongolia",
+      "source": "IARC",
+      "date": "2026-11-05",
+      "url": "https://www.iarc.who.int/news-events/iarc-explores-opportunities-to-advance-gastric-cancer-prevention-in-mongolia/",
+      "cancer_score": 4,
+      "india_score": 0,
+      "terms": {
+        "cancer": [
+          "cancer"
+        ],
+        "india": []
+      },
+      "fetched_at": "2026-11-06T16:37:19+05:30",
+      "via": "https://www.iarc.who.int/feed/?post_type=news-events"
+    },
+    {
+      "id": "640a3949",
+      "status": "pending",
+      "kind": "article",
+      "title": "Launch of EU-GAINS website",
+      "source": "IARC",
+      "date": "2026-11-05",
+      "url": "https://www.iarc.who.int/news-events/launch-of-eu-gains-website/",
+      "cancer_score": 1,
+      "india_score": 0,
+      "terms": {
+        "cancer": [
+          "cancer"
+        ],
+        "india": []
+      },
+      "fetched_at": "2026-11-06T16:37:19+05:30",
+      "via": "https://www.iarc.who.int/feed/?post_type=news-events"
+    },
+    {
+      "id": "404c86a4",
+      "status": "pending",
+      "kind": "article",
+      "title": "Launch of the Nigerian National Cancer Biobank Network",
+      "source": "IARC",
+      "date": "2026-11-04",
+      "url": "https://www.iarc.who.int/news-events/launch-of-the-nigerian-national-cancer-biobank-network/",
+      "cancer_score": 4,
+      "india_score": 0,
+      "terms": {
+        "cancer": [
+          "cancer"
+        ],
+        "india": []
+      },
+      "fetched_at": "2026-11-06T16:37:19+05:30",
+      "via": "https://www.iarc.who.int/feed/?post_type=news-events"
+    },
+    {
+      "id": "4abf79f6",
+      "status": "pending",
+      "kind": "article",
+      "title": "Gastric Cancer Awareness Month 2026",
+      "source": "IARC",
+      "date": "2026-11-03",
+      "url": "https://www.iarc.who.int/news-events/gastric-cancer-awareness-month-2026/",
+      "cancer_score": 4,
+      "india_score": 0,
+      "terms": {
+        "cancer": [
+          "cancer"
+        ],
+        "india": []
+      },
+      "fetched_at": "2026-11-06T16:37:19+05:30",
+      "via": "https://www.iarc.who.int/feed/?post_type=news-events"
+    },
+    {
+      "id": "272c7a40",
+      "status": "pending",
+      "kind": "article",
+      "title": "Lung Cancer Awareness Month 2026",
+      "source": "IARC",
+      "date": "2026-11-02",
+      "url": "https://www.iarc.who.int/news-events/lung-cancer-awareness-month-2026/",
+      "cancer_score": 4,
+      "india_score": 0,
+      "terms": {
+        "cancer": [
+          "cancer"
+        ],
+        "india": []
+      },
+      "fetched_at": "2026-11-06T16:37:19+05:30",
+      "via": "https://www.iarc.who.int/feed/?post_type=news-events"
+    },
+    {
+      "id": "a804e681",
+      "status": "pending",
+      "kind": "article",
+      "title": "Launch of the IARC-MonDO database",
+      "source": "IARC",
+      "date": "2026-10-30",
+      "url": "https://www.iarc.who.int/news-events/launch-of-the-iarc-mondo-database/",
+      "cancer_score": 1,
+      "india_score": 0,
+      "terms": {
+        "cancer": [
+          "cancer"
+        ],
+        "india": []
+      },
+      "fetched_at": "2026-11-06T16:37:19+05:30",
+      "via": "https://www.iarc.who.int/feed/?post_type=news-events"
+    },
+    {
+      "id": "104c3709",
+      "status": "pending",
+      "kind": "article",
+      "title": "Nationwide implementation of digital non-communicable diseases screening in Indonesia’s primary care system",
+      "source": "IARC",
+      "date": "2026-10-27",
+      "url": "https://www.iarc.who.int/news-events/nationwide-implementation-of-digital-non-communicable-diseases-screening-in-indonesias-primary-care-system/",
+      "cancer_score": 2,
+      "india_score": 0,
+      "terms": {
+        "cancer": [
+          "cancer",
+          "screening"
+        ],
+        "india": []
+      },
+      "fetched_at": "2026-11-06T16:37:19+05:30",
+      "via": "https://www.iarc.who.int/feed/?post_type=news-events"
+    },
+    {
+      "id": "02454112",
+      "status": "pending",
+      "kind": "article",
+      "title": "Third EU-GAINS–EC-GaC Working Group meeting takes place at IARC",
+      "source": "IARC",
+      "date": "2026-10-22",
+      "url": "https://www.iarc.who.int/news-events/third-eu-gains-ec-gac-working-group-meeting-takes-place-at-iarc/",
+      "cancer_score": 1,
+      "india_score": 0,
+      "terms": {
+        "cancer": [
+          "cancer"
+        ],
+        "india": []
+      },
+      "fetched_at": "2026-11-06T16:37:19+05:30",
+      "via": "https://www.iarc.who.int/feed/?post_type=news-events"
+    },
+    {
+      "id": "25ff3126",
+      "status": "pending",
+      "kind": "article",
+      "title": "Automated mRNA-based detection of ER, PR, HER2, and Ki-67 in breast cancer tissue and cytology samples in resource-limited settings",
+      "source": "IARC",
+      "date": "2026-10-21",
+      "url": "https://www.iarc.who.int/news-events/automated-mrna-based-detection-of-er-pr-her2-and-ki-67-in-breast-cancer-tissue-and-cytology-samples-in-resource-limited-settings/",
+      "cancer_score": 4,
+      "india_score": 0,
+      "terms": {
+        "cancer": [
+          "cancer"
+        ],
+        "india": []
+      },
+      "fetched_at": "2026-11-06T16:37:19+05:30",
+      "via": "https://www.iarc.who.int/feed/?post_type=news-events"
+    },
+    {
+      "id": "cd1a1342",
+      "status": "pending",
+      "kind": "article",
+      "title": "WHO releases training manual to expand access to early breast cancer care",
+      "source": "WHO",
+      "date": "2026-10-19",
+      "url": "https://www.who.int/news/item/19-10-2026-who-releases-training-manual-to-expand-access-to-early-breast-cancer-care",
+      "cancer_score": 3,
+      "india_score": 0,
+      "terms": {
+        "cancer": [
+          "cancer"
+        ],
+        "india": []
+      },
+      "fetched_at": "2026-11-06T16:37:21+05:30",
+      "via": "WHO news API"
+    },
+    {
+      "id": "ea067418",
+      "status": "pending",
+      "kind": "article",
+      "title": "WHO formalize partnership with the largest organization for physicians and oncology professionals",
+      "source": "WHO",
+      "date": "2026-10-15",
+      "url": "https://www.who.int/news/item/15-10-2026-who-formalize-partnership-with-the-largest-organization-for-physicians-and-oncology-professionals",
+      "cancer_score": 3,
+      "india_score": 0,
+      "terms": {
+        "cancer": [
+          "oncology"
+        ],
+        "india": []
+      },
+      "fetched_at": "2026-11-06T16:37:21+05:30",
+      "via": "WHO news API"
+    },
+    {
+      "id": "35b3ff4b",
+      "status": "pending",
+      "kind": "article",
+      "title": "Global burden of cancer attributable to infections in 2024: One in eight cancers worldwide linked to infections",
+      "source": "IARC",
+      "date": "2026-09-29",
+      "url": "https://www.iarc.who.int/pressrelease/global-burden-of-cancer-attributable-to-infections-in-2024-one-in-eight-cancers-worldwide-linked-to-infections/",
+      "cancer_score": 6,
+      "india_score": 0,
+      "terms": {
+        "cancer": [
+          "cancer",
+          "cancers"
+        ],
+        "india": []
+      },
+      "fetched_at": "2026-11-06T16:37:18+05:30",
+      "via": "https://www.iarc.who.int/feed/?post_type=pressrelease"
+    },
+    {
+      "id": "0aeba39c",
+      "status": "pending",
+      "kind": "article",
+      "title": "Indonesia joins IARC as a new Participating State, strengthening collaboration in cancer research and prevention",
+      "source": "IARC",
+      "date": "2026-09-24",
+      "url": "https://www.iarc.who.int/pressrelease/indonesia-joins-iarc-as-a-new-participating-state-strengthening-collaboration-in-cancer-research-and-prevention/",
+      "cancer_score": 3,
+      "india_score": 0,
+      "terms": {
+        "cancer": [
+          "cancer"
+        ],
+        "india": []
+      },
+      "fetched_at": "2026-11-06T16:37:18+05:30",
+      "via": "https://www.iarc.who.int/feed/?post_type=pressrelease"
+    },
+    {
+      "id": "c4763e9d",
+      "status": "pending",
+      "kind": "article",
+      "title": "IARC Handbooks of Cancer Prevention Volume 21: The IARC perspective on lung cancer screening",
+      "source": "IARC",
+      "date": "2026-09-24",
+      "url": "https://www.iarc.who.int/pressrelease/iarc-handbooks-of-cancer-prevention-volume-21-the-iarc-perspective-on-lung-cancer-screening/",
+      "cancer_score": 5,
+      "india_score": 0,
+      "terms": {
+        "cancer": [
+          "cancer",
+          "screening"
+        ],
+        "india": []
+      },
+      "fetched_at": "2026-11-06T16:37:18+05:30",
+      "via": "https://www.iarc.who.int/feed/?post_type=pressrelease"
+    },
+    {
+      "id": "8cabc15e",
+      "status": "pending",
+      "kind": "article",
+      "title": "Tobacco cessation after cancer diagnosis: a fundamental component of cancer care (IARC Evidence Summary Brief No. 8)",
+      "source": "IARC",
+      "date": "2026-09-23",
+      "url": "https://www.iarc.who.int/pressrelease/tobacco-cessation-after-cancer-diagnosis-a-fundamental-component-of-cancer-care-iarc-evidence-summary-brief-no-8/",
+      "cancer_score": 4,
+      "india_score": 0,
+      "terms": {
+        "cancer": [
+          "cancer",
+          "tobacco"
+        ],
+        "india": []
+      },
+      "fetched_at": "2026-11-06T16:37:18+05:30",
+      "via": "https://www.iarc.who.int/feed/?post_type=pressrelease"
+    },
+    {
+      "id": "4b4f1d0c",
+      "status": "pending",
+      "kind": "article",
+      "title": "Country-comparable childhood cancer survival data now available through WHO data portal",
+      "source": "WHO",
+      "date": "2026-09-22",
+      "url": "https://www.who.int/news/item/22-09-2026-country-comparable-childhood-cancer-survival-data-now-available-through-who-data-portal",
+      "cancer_score": 3,
+      "india_score": 0,
+      "terms": {
+        "cancer": [
+          "cancer"
+        ],
+        "india": []
+      },
+      "fetched_at": "2026-11-06T16:37:21+05:30",
+      "via": "WHO news API"
+    },
+    {
+      "id": "4c5f5387",
+      "status": "pending",
+      "kind": "article",
+      "title": "New strategy to build a healthier market for childhood cancer medicines",
+      "source": "WHO",
+      "date": "2026-09-15",
+      "url": "https://www.who.int/news/item/15-09-2026-new-strategy-to-build-a-healthier-market-for-childhood-cancer-medicines",
+      "cancer_score": 3,
+      "india_score": 0,
+      "terms": {
+        "cancer": [
+          "cancer"
+        ],
+        "india": []
+      },
+      "fetched_at": "2026-11-06T16:37:21+05:30",
+      "via": "WHO news API"
+    },
+    {
+      "id": "cb7bc174",
+      "status": "pending",
+      "kind": "article",
+      "title": "WHO advances access to quality-assured, child-friendly cancer medicines",
+      "source": "WHO",
+      "date": "2026-09-04",
+      "url": "https://www.who.int/news/item/04-09-2026-who-advances-access-to-quality-assured--child-friendly-cancer-medicines",
+      "cancer_score": 3,
+      "india_score": 0,
+      "terms": {
+        "cancer": [
+          "cancer"
+        ],
+        "india": []
+      },
+      "fetched_at": "2026-11-06T16:37:21+05:30",
+      "via": "WHO news API"
+    }
+  ],
+  "updated_at": "2026-11-06T16:38:17+05:30"
+}

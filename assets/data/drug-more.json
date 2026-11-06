@@ -1,0 +1,357 @@
+{
+ "groups": {
+  "taxanes": {
+   "title": "Taxanes",
+   "molecules": [
+    {
+     "name": "Paclitaxel + Human Albumin",
+     "url": "https://pharmeasy.in/molecules/paclitaxel-human-albumin-3677870"
+    },
+    {
+     "name": "Paclitaxel Nanoparticle",
+     "url": "https://pharmeasy.in/molecules/paclitaxel-nanoparticle-4345247"
+    },
+    {
+     "name": "Docetaxel + Polysorbate + Alcohol",
+     "url": "https://pharmeasy.in/molecules/4128388"
+    }
+   ]
+  },
+  "anthracyclines": {
+   "title": "Anthracyclines",
+   "molecules": [
+    {
+     "name": "Liposomal Doxorubicin",
+     "url": "https://pharmeasy.in/molecules/liposomal-doxorubicin-4820772"
+    },
+    {
+     "name": "Epirubicin + Methylparaben",
+     "url": "https://pharmeasy.in/molecules/epirubicin-methylparaben-13267"
+    },
+    {
+     "name": "Mitoxantrone",
+     "url": "https://pharmeasy.in/molecules/mitoxantrone-6756"
+    }
+   ]
+  },
+  "alkylating-agents": {
+   "title": "Alkylating agents",
+   "molecules": [
+    {
+     "name": "Mesna + Ifosfamide",
+     "url": "https://pharmeasy.in/molecules/mesna-ifosfamide-1541"
+    },
+    {
+     "name": "Thiotepa",
+     "url": "https://pharmeasy.in/molecules/thiotepa-491644"
+    },
+    {
+     "name": "Treosulfan",
+     "url": "https://pharmeasy.in/molecules/treosulfan-4836351"
+    },
+    {
+     "name": "Lomustine",
+     "url": "https://pharmeasy.in/molecules/lomustine-4836228"
+    },
+    {
+     "name": "Carmustine",
+     "url": "https://pharmeasy.in/molecules/carmustine-4818115"
+    },
+    {
+     "name": "Procarbazine",
+     "url": "https://pharmeasy.in/molecules/procarbazine-149"
+    },
+    {
+     "name": "Altretamine",
+     "url": "https://pharmeasy.in/molecules/altretamine-897"
+    },
+    {
+     "name": "Estramustine",
+     "url": "https://pharmeasy.in/molecules/estramustine-7217"
+    }
+   ]
+  },
+  "antimetabolites": {
+   "title": "Antimetabolites",
+   "molecules": [
+    {
+     "name": "Cladribine",
+     "url": "https://pharmeasy.in/molecules/cladribine-256"
+    },
+    {
+     "name": "Tioguanine",
+     "url": "https://pharmeasy.in/molecules/tioguanine-1437"
+    },
+    {
+     "name": "Nelarabine",
+     "url": "https://pharmeasy.in/molecules/nelarabine-4798217"
+    },
+    {
+     "name": "Tegafur + Uracil",
+     "url": "https://pharmeasy.in/molecules/tegafur-uracil-3661"
+    },
+    {
+     "name": "Tegafur + Gimeracil + Oteracil",
+     "url": "https://pharmeasy.in/molecules/4175362"
+    },
+    {
+     "name": "Tipiracil + Trifluridine",
+     "url": "https://pharmeasy.in/molecules/tipiracil-trifluridine-4820751"
+    }
+   ]
+  },
+  "monoclonal-antibodies": {
+   "title": "Monoclonal antibodies",
+   "molecules": [
+    {
+     "name": "Pertuzumab + Trastuzumab",
+     "url": "https://pharmeasy.in/molecules/pertuzumab-trastuzumab-3994853"
+    },
+    {
+     "name": "Ado-trastuzumab Emtansine",
+     "url": "https://pharmeasy.in/molecules/ado-trastuzumab-emtansine-489426"
+    },
+    {
+     "name": "Trastuzumab Emtansine",
+     "url": "https://pharmeasy.in/molecules/trastuzumab-emtansine-4339494"
+    },
+    {
+     "name": "Obinutuzumab",
+     "url": "https://pharmeasy.in/molecules/obinutuzumab-2977633"
+    },
+    {
+     "name": "Ramucirumab",
+     "url": "https://pharmeasy.in/molecules/ramucirumab-3994868"
+    },
+    {
+     "name": "Panitumumab",
+     "url": "https://pharmeasy.in/molecules/panitumumab-3994963"
+    },
+    {
+     "name": "Alemtuzumab",
+     "url": "https://pharmeasy.in/molecules/alemtuzumab-3441469"
+    },
+    {
+     "name": "Inotuzumab",
+     "url": "https://pharmeasy.in/molecules/inotuzumab-3994923"
+    },
+    {
+     "name": "Brentuximab Vedotin",
+     "url": "https://pharmeasy.in/molecules/brentuximab-vedotin-4828141"
+    }
+   ]
+  },
+  "immunotherapy": {
+   "title": "Immunotherapy",
+   "molecules": [
+    {
+     "name": "Avelumab",
+     "url": "https://pharmeasy.in/molecules/avelumab-3994839"
+    },
+    {
+     "name": "Serplulimab",
+     "url": "https://pharmeasy.in/molecules/serplulimab-4798210"
+    },
+    {
+     "name": "Interferon Alfa-2b",
+     "url": "https://pharmeasy.in/molecules/interferon-alfa-2b-1092"
+    }
+   ]
+  },
+  "hormone-therapy": {
+   "title": "Hormone therapy",
+   "molecules": [
+    {
+     "name": "Flutamide",
+     "url": "https://pharmeasy.in/molecules/flutamide-3130"
+    },
+    {
+     "name": "Nilutamide",
+     "url": "https://pharmeasy.in/molecules/nilutamide-4820743"
+    },
+    {
+     "name": "Apalutamide",
+     "url": "https://pharmeasy.in/molecules/apalutamide-4023149"
+    },
+    {
+     "name": "Abiraterone Acetate",
+     "url": "https://pharmeasy.in/molecules/abiraterone-acetate-491688"
+    },
+    {
+     "name": "Goserelin",
+     "url": "https://pharmeasy.in/molecules/goserelin-492474"
+    },
+    {
+     "name": "Goserelin Acetate",
+     "url": "https://pharmeasy.in/molecules/goserelin-acetate-10625"
+    },
+    {
+     "name": "Triptorelin",
+     "url": "https://pharmeasy.in/molecules/triptorelin-4248"
+    },
+    {
+     "name": "Buserelin",
+     "url": "https://pharmeasy.in/molecules/buserelin-743"
+    },
+    {
+     "name": "Degarelix",
+     "url": "https://pharmeasy.in/molecules/degarelix-12068"
+    },
+    {
+     "name": "Relugolix",
+     "url": "https://pharmeasy.in/molecules/relugolix-4149430"
+    },
+    {
+     "name": "Cyproterone",
+     "url": "https://pharmeasy.in/molecules/cyproterone-475663"
+    },
+    {
+     "name": "Fosfestrol",
+     "url": "https://pharmeasy.in/molecules/fosfestrol-6953"
+    },
+    {
+     "name": "Megestrol Acetate",
+     "url": "https://pharmeasy.in/molecules/megestrol-acetate-491352"
+    },
+    {
+     "name": "Octreotide",
+     "url": "https://pharmeasy.in/molecules/octreotide-7330"
+    }
+   ]
+  },
+  "targeted-therapy": {
+   "title": "Targeted therapy",
+   "molecules": [
+    {
+     "name": "Imatinib Mesylate",
+     "url": "https://pharmeasy.in/molecules/imatinib-mesylate-492671"
+    },
+    {
+     "name": "Bosutinib",
+     "url": "https://pharmeasy.in/molecules/bosutinib-3523241"
+    },
+    {
+     "name": "Dacomitinib",
+     "url": "https://pharmeasy.in/molecules/dacomitinib-3995162"
+    },
+    {
+     "name": "Lapatinib",
+     "url": "https://pharmeasy.in/molecules/lapatinib-5471"
+    },
+    {
+     "name": "Tucatinib",
+     "url": "https://pharmeasy.in/molecules/tucatinib-4798207"
+    },
+    {
+     "name": "Crizotinib",
+     "url": "https://pharmeasy.in/molecules/crizotinib-6357"
+    },
+    {
+     "name": "Ceritinib",
+     "url": "https://pharmeasy.in/molecules/ceritinib-11961"
+    },
+    {
+     "name": "Alectinib",
+     "url": "https://pharmeasy.in/molecules/alectinib-4005363"
+    },
+    {
+     "name": "Brigatinib",
+     "url": "https://pharmeasy.in/molecules/brigatinib-4798213"
+    },
+    {
+     "name": "Lorlatinib",
+     "url": "https://pharmeasy.in/molecules/lorlatinib-3994806"
+    },
+    {
+     "name": "Capmatinib",
+     "url": "https://pharmeasy.in/molecules/capmatinib-4836240"
+    },
+    {
+     "name": "Dabrafenib",
+     "url": "https://pharmeasy.in/molecules/dabrafenib-4836243"
+    },
+    {
+     "name": "Axitinib",
+     "url": "https://pharmeasy.in/molecules/axitinib-1537"
+    },
+    {
+     "name": "Acalabrutinib",
+     "url": "https://pharmeasy.in/molecules/acalabrutinib-4005376"
+    },
+    {
+     "name": "Zanubrutinib",
+     "url": "https://pharmeasy.in/molecules/zanubrutinib-4743593"
+    },
+    {
+     "name": "Venetoclax",
+     "url": "https://pharmeasy.in/molecules/venetoclax-3532027"
+    },
+    {
+     "name": "Ruxolitinib",
+     "url": "https://pharmeasy.in/molecules/ruxolitinib-5145"
+    },
+    {
+     "name": "Midostaurin",
+     "url": "https://pharmeasy.in/molecules/midostaurin-3917597"
+    },
+    {
+     "name": "Alpelisib",
+     "url": "https://pharmeasy.in/molecules/alpelisib-4005296"
+    },
+    {
+     "name": "Niraparib",
+     "url": "https://pharmeasy.in/molecules/niraparib-4743563"
+    },
+    {
+     "name": "Rucaparib",
+     "url": "https://pharmeasy.in/molecules/rucaparib-3647485"
+    }
+   ]
+  },
+  "bone-directed-and-supportive-care": {
+   "title": "Bone-directed and supportive care",
+   "molecules": [
+    {
+     "name": "Zoledronic Acid",
+     "url": "https://pharmeasy.in/molecules/zoledronic-acid-215"
+    },
+    {
+     "name": "Erythropoietin",
+     "url": "https://pharmeasy.in/molecules/erythropoietin-544"
+    },
+    {
+     "name": "Fosaprepitant",
+     "url": "https://pharmeasy.in/molecules/fosaprepitant-1700"
+    },
+    {
+     "name": "Netupitant + Palonosetron",
+     "url": "https://pharmeasy.in/molecules/netupitant-palonosetron-3623580"
+    },
+    {
+     "name": "Palonosetron + Fosnetupitant",
+     "url": "https://pharmeasy.in/molecules/palonosetron-fosnetupitant-4812528"
+    },
+    {
+     "name": "Mesna",
+     "url": "https://pharmeasy.in/molecules/mesna-1088"
+    },
+    {
+     "name": "Calcium Folinate",
+     "url": "https://pharmeasy.in/molecules/calcium-folinate-86"
+    },
+    {
+     "name": "Amifostine",
+     "url": "https://pharmeasy.in/molecules/amifostine-1848"
+    },
+    {
+     "name": "Rasburicase",
+     "url": "https://pharmeasy.in/molecules/rasburicase-1221"
+    },
+    {
+     "name": "Plerixafor",
+     "url": "https://pharmeasy.in/molecules/plerixafor-5000"
+    }
+   ]
+  }
+ }
+}

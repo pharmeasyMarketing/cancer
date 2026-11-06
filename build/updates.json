@@ -1,0 +1,27 @@
+{
+  "items": [
+    {
+      "id": "85faa86c",
+      "status": "approved",
+      "title": "Portable ultrasound performed by non-radiologists could improve breast cancer early detection in low-resource settings, new study in India shows",
+      "source": "IARC",
+      "date": "2026-11-06",
+      "url": "https://www.iarc.who.int/news-events/portable-ultrasound-performed-by-non-radiologists-could-improve-breast-cancer-early-detection-in-low-resource-settings-new-study-in-india-shows/",
+      "kind": "article",
+      "approved_by": "e2e test (Claude session)",
+      "approved_at": "2026-11-06T16:38:18+05:30"
+    },
+    {
+      "id": "b8dd83b9",
+      "status": "approved",
+      "title": "Cheaper Cancer Medicines: What the New Margin Cap Means for Patients",
+      "source": "PIB Backgrounder",
+      "date": "2026-11-06",
+      "url": "https://pib.gov.in/PressReleasePage.aspx?PRID=2333536",
+      "kind": "article",
+      "approved_by": "e2e test (Claude session)",
+      "approved_at": "2026-11-06T16:38:18+05:30"
+    }
+  ],
+  "updated_at": "2026-11-06T16:38:18+05:30"
+}

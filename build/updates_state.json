@@ -1,0 +1,21 @@
+{
+  "icmr_nine": {
+    "hash": "5a576c6e084a8d5b3b02267c88b94a06191ad42529043de03dd39a691313eb30",
+    "checked_at": "2026-11-06T16:37:54+05:30",
+    "seen_links": [
+      "https://icmrnine.org/All_Reports/PR/Shine_2026.pdf",
+      "https://icmrnine.org/ncdir_Media.aspx",
+      "https://ijmr.org.in/cerebral-venous-thrombosis-related-stroke-in-india-clinical-patterns-risk-factors-and-outcomes-from-the-hospital-based-stroke-registry-programme/|A systematic review and meta-analysis of diagnostic accuracy of urine self-sampling for human papillomavirus detection in cervical cancer screening",
+      "https://ijmr.org.in/cerebral-venous-thrombosis-related-stroke-in-india-clinical-patterns-risk-factors-and-outcomes-from-the-hospital-based-stroke-registry-programme/|Cerebral venous thrombosis-related stroke in India: Clinical patterns, risk factors, and outcomes from the hospital-based stroke registry programme.",
+      "https://ijmr.org.in/cerebral-venous-thrombosis-related-stroke-in-india-clinical-patterns-risk-factors-and-outcomes-from-the-hospital-based-stroke-registry-programme/|Harmonization Framework for Translating Clinical Cancer Staging Systems for Public Health and Surveillance Use in Low- and Middle-Income Countries: Validation Using Indian Cancer Registry Data",
+      "https://journals.sagepub.com/doi/10.1177/17474930251393187|Prothrombotic States in Acute Ischemic Stroke: Clinical Characteristics and Outcomes from Hospital Based Stroke Registry Programme in India"
+    ]
+  },
+  "globocan_india": {
+    "hash": "909461cd8de6e27fe77bb5a4015fb725f5c1c952e931780274c0713cf02700ac",
+    "etag": "\"36f68d50ebba5bcbda62e4c181283eb1\"",
+    "last_modified": "Wed, 21 Oct 2026 14:50:06 GMT",
+    "bytes": 724141,
+    "checked_at": "2026-11-06T16:38:17+05:30"
+  }
+}

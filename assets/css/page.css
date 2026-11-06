@@ -1,0 +1,126 @@
+
+/* page shell per the handoff: #F5F7F8 background, Inter, 1120px column */
+body { margin: 0; background: #F5F7F8; font-family: Inter, Mulish, -apple-system, 'Segoe UI', Roboto, sans-serif; color: #25282B; }
+#dc-root { display: block; }
+.skip { position: absolute; left: -9999px; top: 0; background: #008880; color: #fff; padding: 10px 16px; z-index: 200; }
+.skip:focus { left: 0; }
+main [id] { scroll-margin-top: 20px; }
+/* The rail scrolls itself, but its scrollbar sits in the middle of the page
+   and reads as a stray line. Hide the bar, keep the scrolling. */
+main .toc,
+main div[style*="position:sticky"][style*="flex:0 1"] {
+  scrollbar-width: none; -ms-overflow-style: none;
+}
+main .toc::-webkit-scrollbar,
+main div[style*="position:sticky"][style*="flex:0 1"]::-webkit-scrollbar {
+  width: 0; height: 0; display: none;
+}
+/* Price rows (name + note on the left, "From ₹x" on the right). A long note
+   used to push the price onto its own line, where it read as left aligned.
+   The text column shrinks instead, and if it ever does wrap the price still
+   sits hard right. */
+#dc-root div[style*="justify-content:space-between"][style*="align-items:baseline"] > :first-child {
+  /* a small basis keeps the text column on the same line as the price:
+     with flex-wrap on, an auto basis wraps before it shrinks */
+  min-width: 0; flex: 1 1 45%;
+}
+#dc-root div[style*="justify-content:space-between"][style*="align-items:baseline"] > :last-child {
+  flex: 0 0 auto; margin-left: auto; text-align: right;
+}
+/* the handoff puts the rail full-width below the article at 560px; some
+   templates omit the .toc hook, so match the sticky rail column directly */
+@media (max-width: 560px) {
+  main .toc,
+  main div[style*="position:sticky"][style*="flex:0 1"] {
+    flex: 1 1 100% !important; min-width: 0 !important; width: 100% !important;
+    position: static !important; max-height: none !important; order: 3;
+  }
+  main .toc > div, main div[style*="position:sticky"][style*="flex:0 1"] > div { width: 100%; box-sizing: border-box; }
+}
+
+/* ---- hero intro: Read more / less on the phone (home-page pattern) ---- */
+.hero-more { display: none; }
+@media (max-width: 560px) {
+  #dc-root .hero-lead.is-clamped {
+    max-height: 168px; overflow: hidden;
+    -webkit-mask-image: linear-gradient(180deg, #000 62%, transparent 100%);
+    mask-image: linear-gradient(180deg, #000 62%, transparent 100%);
+  }
+  .hero-more {
+    display: inline-flex; align-items: center; gap: 6px;
+    margin: 4px 0 2px; padding: 0; border: 0; background: transparent;
+    font: 800 14px/1 Inter, Mulish, sans-serif; color: #008880; cursor: pointer;
+  }
+  .hero-more svg { transition: transform 160ms ease-out; }
+  .hero-more.open svg { transform: rotate(180deg); }
+}
+
+/* ---- table of contents: highlight, floating sheet on mobile ---- */
+#dc-root .dc-toc-link { transition: color .15s ease; }
+#dc-root .dc-toc-link:not(.is-active) { color: #5C636D !important; font-weight: 500 !important; }
+#dc-root .dc-toc-link.is-active { color: #008880 !important; font-weight: 700 !important; }
+/* the mobile quick links ride under the header as chips, the same pattern
+   the PharmEasy home page uses under its search bar */
+#dc-toc-strip { display: none; }
+@media (max-width: 560px) {
+  #dc-root .dc-toc-source { display: none !important; }
+  /* the band sits directly under the sticky white header and carries its own
+     tint, the way the PharmEasy app puts its category carousel under search.
+     Its top offset is set from the header's measured height at runtime. */
+  /* fixed rather than sticky: it can then slide in when the reader reaches
+     the first heading without shifting the page under them */
+  #dc-toc-strip {
+    display: block; position: fixed; top: 0; left: 0; right: 0; z-index: 80;
+    background: #E6F2F1; border-bottom: 1px solid #D3E4E2;
+    transform: translateY(-110%); transition: transform 200ms ease-out;
+  }
+  #dc-toc-strip.is-on { transform: none; }
+  .dc-toc-track {
+    display: flex; gap: 8px; overflow-x: auto; scrollbar-width: none;
+    padding: 10px 14px; scroll-behavior: smooth; -webkit-overflow-scrolling: touch;
+  }
+  .dc-toc-track::-webkit-scrollbar { display: none; }
+  .dc-toc-chip {
+    flex: 0 0 auto; max-width: 62vw; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+    padding: 8px 14px; border: 1px solid #E1E7EA; border-radius: 999px;
+    background: #fff; color: #5C636D; text-decoration: none;
+    font: 600 13px/16px Inter, sans-serif;
+  }
+  /* white pills on the tinted band; the section you are in fills teal, which
+     a #F2F9F8 tint could not do against this background */
+  .dc-toc-chip.is-active { background: #008880; border-color: #008880; color: #fff; font-weight: 700; }
+}
+
+/* home page, phone only: the design's 36px section gaps read as too airy
+   at 390px, so the vertical rhythm tightens to 20px. Side padding is left
+   at the 14px the design already sets. */
+@media (max-width: 560px) {
+  #dc-root .sec[style*="padding:36px 20px 0"],
+  #dc-root .sec[style*="padding:28px 20px 0"],
+  #dc-root .sec[style*="padding:24px 20px 0"] { padding-top: 20px !important; }
+  #dc-root .sec[style*="padding:20px 20px 36px"] { padding-bottom: 20px !important; }
+}
+
+
+a { color: #00736C; text-decoration: none; }
+a:hover { color: #004D48; text-decoration: underline; }
+details > summary { list-style: none; cursor: pointer; }
+details > summary::-webkit-details-marker { display: none; }
+details[open] > summary .chev { transform: rotate(180deg); }
+details.faq[open] { background: #fff !important; border-color: #B8DEDB !important; box-shadow: 0 2px 6px rgba(15,46,44,.07), 0 10px 26px rgba(15,46,44,.07) !important; border-top-color: #008880 !important; border-top-width: 2px !important; }
+details.faq[open] > summary .chev { color: #008880; }
+details.faq:not([open]):hover { border-color: #C3D4D2 !important; box-shadow: 0 2px 6px rgba(15,46,44,.08), 0 10px 24px rgba(15,46,44,.07) !important; }
+.chev { transition: transform 160ms ease-out; display: inline-block; }
+.mrow:hover { background: #F7FAFA; }
+@media (max-width: 560px) {
+  .sec { padding-left: 14px !important; padding-right: 14px !important; }
+  .sec div[style*="padding:24px"], .sec div[style*="padding:22px"], .sec div[style*="padding:20px 20px"] { padding: 16px !important; }
+  .sec div[style*="padding:20px"][style*="border:1px solid #E6E9ED"] { padding: 16px !important; }
+  .sec div[style*="padding:18px 20px"] { padding: 16px !important; }
+  .sec summary[style*="padding:20px 24px"] { padding: 16px !important; }
+  .sec div[style*="padding:0 24px 20px"] { padding: 0 16px 16px !important; }
+  .sec div[style*="padding:22px 24px"], .sec div[style*="padding:16px 24px"] { padding: 16px !important; }
+  .sec h1 { font-size: 32px !important; line-height: 40px !important; }
+  .sec h2 { font-size: 21px !important; line-height: 29px !important; }
+}
+

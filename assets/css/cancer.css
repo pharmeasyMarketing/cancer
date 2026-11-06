@@ -1,0 +1,364 @@
+/* ============================================================
+   Cancer hub: blocks added on top of the GLP-1 hub page shell.
+   Same tokens as the hub (teal #008880, ink #1C1F22, hairline
+   #E6E9ED, 12px cards). Everything here is HTML + CSS, no images.
+   ============================================================ */
+
+/* ---- hover states (the hub's style-hover attribute, as real CSS) ---- */
+.cx-btn-primary { background: #008880; color: #fff; font-weight: 700; font-size: 14px; padding: 12px 22px; border-radius: 12px; display: inline-block; white-space: nowrap; }
+.cx-btn-primary:hover { background: #00736C; color: #fff; text-decoration: none; }
+.cx-btn-ghost { background: #fff; color: #008880; font-weight: 700; font-size: 14px; padding: 12px 22px; border-radius: 12px; border: 1px solid #B8DEDB; display: inline-block; white-space: nowrap; }
+.cx-btn-ghost:hover { background: #F2F9F8; color: #00736C; text-decoration: none; }
+.toc-a { font-size: 14px; line-height: 22px; color: #25282B; font-weight: 700; }
+.toc-a:hover { color: #008880; text-decoration: none; }
+.rel-a { font-size: 14px; line-height: 22px; font-weight: 700; color: #1C1F22; }
+.rel-a:hover { color: #008880; text-decoration: none; }
+.tool-card { background: #fff; border: 1px solid #E6E9ED; border-radius: 12px; padding: 16px; display: flex; gap: 12px; align-items: flex-start; color: #25282B; }
+.tool-card:hover { border-color: #008880; text-decoration: none; color: #25282B; }
+.link-arrow { font-size: 13px; font-weight: 800; color: #00736C; display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; }
+.link-arrow:hover { color: #004D48; text-decoration: none; }
+
+/* ---- citations: superscript [1], [2] ---- */
+sup.cite { font-size: 11px; line-height: 0; color: #8E97A3; font-weight: 600; white-space: nowrap; margin-left: 1px; }
+sup.cite a { color: inherit; text-decoration: none; }
+sup.cite a:hover { color: #008880; text-decoration: underline; }
+.refs :target, [id^="ref-"]:target { background: #FEF3E1; border-radius: 4px; }
+
+/* ---- generic type used by the new blocks ---- */
+.lead-p { font-size: 15px; line-height: 24px; color: #5C636D; margin: 0 0 18px; max-width: 760px; }
+.lead-p.wide { max-width: 820px; }
+.h3 { font-size: 18px; line-height: 26px; font-weight: 800; margin: 0 0 10px; color: #1C1F22; }
+.cx-card { background: #fff; border: 1px solid #E6E9ED; border-radius: 12px; }
+.cx-tile { background: #fff; border: 1px solid #E6E9ED; border-radius: 12px; padding: 16px; }
+.cx-tile p, .cx-card p { margin: 0; }
+.note-box { background: #F2F9F8; border: 1px solid #B8DEDB; border-radius: 12px; padding: 16px; }
+.note-box p { font-size: 14px; line-height: 22px; color: #25282B; margin: 0; }
+.cx-eyebrow { font-size: 11px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: #008880; margin-bottom: 6px; }
+.hr { height: 1px; background: #F0F2F4; margin: 0 0 20px; }
+
+/* ---- responsive tables: a real table on desktop, stacked cards on the phone ---- */
+.rt-wrap { background: #fff; border: 1px solid #E6E9ED; border-radius: 12px; overflow: hidden; }
+.rt-scroll { overflow-x: auto; }
+.rtable { width: 100%; border-collapse: collapse; font-size: 14px; }
+.rtable th { text-align: left; padding: 13px 16px; font-size: 11px; font-weight: 800; letter-spacing: 0.05em; text-transform: uppercase; color: #00736C; background: #F2F9F8; border-bottom: 1px solid #E6E9ED; vertical-align: bottom; }
+.rtable td { padding: 15px 16px; border-bottom: 1px solid #F0F2F4; color: #5C636D; line-height: 22px; vertical-align: top; }
+.rtable tr:last-child td { border-bottom: 0; }
+.rtable td:first-child, .rtable th:first-child { padding-left: 20px; }
+.rtable td:last-child, .rtable th:last-child { padding-right: 20px; }
+.rtable tbody tr:hover { background: #F7FAFA; }
+.rtable td.k { color: #1C1F22; font-weight: 800; font-size: 15px; line-height: 22px; }
+.rtable td.k a { font-weight: 800; }
+.rtable td.num, .rtable th.num { text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.rtable td.num { color: #25282B; font-weight: 700; }
+.rtable td .yes { color: #A6231A; font-weight: 700; }
+.rtable td .no { color: #12805A; font-weight: 700; }
+.rt-foot { padding: 12px 20px; background: #F5F7F8; border-top: 1px solid #E6E9ED; font-size: 12px; line-height: 18px; color: #8E97A3; }
+@container art (max-width: 640px) {
+  .rtable, .rtable tbody, .rtable tr, .rtable td { display: block; width: 100%; box-sizing: border-box; }
+  .rtable thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  .rtable tr { padding: 14px 16px; border-bottom: 1px solid #E6E9ED; }
+  .rtable tr:last-child { border-bottom: 0; }
+  .rtable td, .rtable td:first-child, .rtable td:last-child { padding: 0; border: 0; }
+  .rtable td + td { margin-top: 10px; }
+  .rtable td[data-label]::before { content: attr(data-label); display: block; font-size: 10.5px; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; color: #00736C; margin-bottom: 2px; }
+  .rtable td.k { font-size: 16px; }
+  .rtable td.k::before { display: none; }
+  .rtable td.num, .rtable th.num { text-align: left; }
+}
+
+/* ---- drug-group table: molecule on the left, its brands on the right ---- */
+.mol-list { display: flex; flex-direction: column; gap: 8px; }
+.mol-row { display: grid; grid-template-columns: minmax(100px, 130px) 1fr; gap: 4px 14px; align-items: baseline; }
+.mol-name { font-weight: 800; font-size: 13.5px; line-height: 20px; }
+.mol-name a { color: #00736C; }
+.brands { display: flex; flex-wrap: wrap; gap: 4px 6px; }
+.brand { font-size: 12.5px; line-height: 18px; color: #25282B; background: #F5F7F8; border: 1px solid #E6E9ED; border-radius: 999px; padding: 1px 9px; }
+a.brand:hover { border-color: #008880; color: #008880; text-decoration: none; background: #fff; }
+.brand.more { background: #E6F3F2; border-color: #D3E8E6; color: #00736C; font-weight: 700; }
+.brand.none { background: transparent; border-style: dashed; color: #8E97A3; }
+.route-pill { display: inline-block; font-size: 11px; line-height: 16px; font-weight: 700; color: #00736C; background: #E6F3F2; padding: 3px 10px; border-radius: 12px; }
+@container art (max-width: 640px) { .mol-row { grid-template-columns: 1fr; gap: 3px; } }
+
+/* ---- stat tiles ---- */
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin: 0 0 16px; }
+.stat { background: #fff; border: 1px solid #E6E9ED; border-radius: 12px; padding: 16px 18px; }
+.stat b { display: block; font-size: 28px; line-height: 34px; font-weight: 800; letter-spacing: -0.02em; color: #0F2E2C; }
+.stat span { display: block; font-size: 13px; line-height: 19px; color: #5C636D; margin-top: 2px; }
+.stat.hot b { color: #00736C; }
+
+/* ---- illustration shell ---- */
+.ill { background: #fff; border: 1px solid #E6E9ED; border-radius: 12px; padding: 24px; margin: 20px 0; }
+.ill-eyebrow { font-size: 11px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: #5C636D; margin-bottom: 10px; }
+.ill-card { background: #fff; border: 1px solid #DCE6E5; border-radius: 10px; padding: 10px 12px; }
+.ill-card b { display: block; font-size: 14px; line-height: 20px; font-weight: 800; color: #1C1F22; }
+.ill-card span { display: block; font-size: 12.5px; line-height: 18px; color: #5C636D; }
+.ill-card span.bad { color: #B93B0B; font-weight: 700; }
+.ill-arrow { display: flex; align-items: center; justify-content: center; color: #5C636D; }
+.ill-arrow svg { width: 26px; height: 26px; }
+.ill-callout { background: #F2F9F8; border: 1px solid #B8DEDB; border-radius: 12px; padding: 14px 16px; margin-top: 20px; }
+.ill-callout b { display: block; font-size: 14px; color: #00736C; margin-bottom: 4px; }
+.ill-callout p { font-size: 14px; line-height: 22px; color: #25282B; margin: 0; }
+
+/* A. DNA pathway */
+.dna-grid { display: grid; grid-template-columns: 1fr 28px 1fr 28px 1fr; gap: 0 10px; align-items: stretch; }
+.dna-col { display: flex; flex-direction: column; gap: 8px; }
+.dna-col .ill-eyebrow { margin-bottom: 2px; }
+.dna-arrow { align-self: center; }
+.dna-do { border-radius: 10px; padding: 11px 12px; font-size: 13.5px; line-height: 19px; font-weight: 700; border: 1px solid transparent; }
+.dna-do.d1 { background: #EAF5F4; border-color: #D3E8E6; color: #0F2E2C; }
+.dna-do.d2 { background: #CBE6E3; border-color: #B8DEDB; color: #0F2E2C; }
+.dna-do.d3 { background: #5BB0A8; color: #fff; }
+.dna-do.d4 { background: #00736C; color: #fff; }
+.dna-do.d5 { background: #C2410C; color: #fff; }
+.dna-time { position: relative; display: flex; justify-content: space-between; margin: 26px 6px 0; padding-top: 22px; }
+.dna-time::before { content: ""; position: absolute; left: 5px; right: 5px; top: 5px; height: 2px; background: #008880; }
+.dna-pt { position: relative; max-width: 33%; font-size: 12px; line-height: 17px; color: #5C636D; }
+.dna-pt::before { content: ""; position: absolute; top: -22px; width: 12px; height: 12px; border-radius: 50%; background: #008880; }
+.dna-pt b { display: block; font-size: 13.5px; color: #1C1F22; }
+.dna-pt.mid { text-align: center; }
+.dna-pt.mid::before { left: 50%; transform: translateX(-50%); }
+.dna-pt.end { text-align: right; }
+.dna-pt.end::before { right: 0; background: #C2410C; }
+@container art (max-width: 640px) {
+  .ill { padding: 16px; }
+  .dna-grid { grid-template-columns: 1fr; gap: 6px; }
+  .dna-arrow { padding: 2px 0; }
+  .dna-arrow svg { transform: rotate(90deg); }
+  .dna-pt { max-width: 34%; font-size: 11.5px; }
+}
+
+/* B. benign / in situ / malignant */
+.tm-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.tm { display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.tm-title { text-align: center; font-size: 16px; font-weight: 800; }
+.tm-title.t-b { color: #00736C; } .tm-title.t-i { color: #A8741A; } .tm-title.t-m { color: #C2410C; }
+.tm-box { background: #F5F7F8; border: 1px solid #E6E9ED; border-radius: 12px; padding: 14px 14px 12px; position: relative; flex: 1; }
+.tm-cells { display: flex; flex-direction: column; align-items: center; gap: 5px; padding-bottom: 12px; min-height: 92px; justify-content: flex-end; }
+.tm-row { display: flex; justify-content: center; gap: 5px; }
+.cx-dot { width: 20px; height: 20px; border-radius: 50%; flex: none; }
+.cx-dot.b { background: #2F9A92; } .cx-dot.i { background: #C79A2B; } .cx-dot.m { background: #C2410C; }
+.tm-line { position: relative; height: 0; border-top: 2px solid #1C1F22; margin: 0 -2px; }
+.tm-line .cx-dot { position: absolute; top: -11px; }
+.tm-label { font-size: 12px; color: #5C636D; margin: 6px 0 8px; position: relative; z-index: 1; }
+.tm-tissue { position: relative; background: #E6F3F2; border-radius: 8px; padding: 7px 10px; font-size: 12px; text-align: center; color: #3D4A48; }
+.tm-tissue .cx-dot { position: absolute; width: 16px; height: 16px; top: -26px; }
+.tm-vessel { display: inline-block; margin-left: 8px; border: 1.5px dashed #C2410C; color: #C2410C; border-radius: 999px; padding: 0 9px; font-size: 11.5px; background: #fff; }
+.tm-cap { text-align: center; font-size: 13.5px; line-height: 20px; color: #5C636D; }
+@container art (max-width: 600px) { .tm-grid { grid-template-columns: 1fr; gap: 20px; } .tm-box { max-width: 420px; width: 100%; margin: 0 auto; box-sizing: border-box; } }
+
+/* C. how cancer spreads: primary tumour fans out to three routes, then to destinations */
+.sp { display: grid; grid-template-columns: auto 92px minmax(0, 1.2fr) 40px minmax(0, 1fr); grid-template-areas: "p c1 r1 a d" "p c2 r2 a d" "p c3 r3 a d"; row-gap: 14px; align-items: stretch; }
+.sp-primary { grid-area: p; align-self: center; background: #C2410C; color: #fff; font-weight: 800; font-size: 15px; padding: 18px 20px; border-radius: 12px; text-align: center; position: relative; z-index: 1; }
+.sp-r1 { grid-area: r1; } .sp-r2 { grid-area: r2; } .sp-r3 { grid-area: r3; }
+.sp-r { display: flex; }
+.sp-r .ill-card { flex: 1; display: flex; flex-direction: column; justify-content: center; }
+.sp-c { position: relative; min-height: 52px; }
+.sp-c.c1 { grid-area: c1; } .sp-c.c2 { grid-area: c2; } .sp-c.c3 { grid-area: c3; }
+.sp-c .h { position: absolute; left: 0; right: 9px; top: 50%; border-top: 2px solid #C2410C; }
+.sp-c .h::after { content: ""; position: absolute; right: -9px; top: -6px; border-left: 9px solid #C2410C; border-top: 5px solid transparent; border-bottom: 5px solid transparent; }
+.sp-c .v { position: absolute; left: 0; border-left: 2px solid #C2410C; }
+.sp-c.c1 .v { top: 50%; bottom: -14px; }
+.sp-c.c2 .v { top: -14px; bottom: -14px; }
+.sp-c.c3 .v { top: -14px; bottom: 50%; }
+.sp-c .lbl { position: absolute; left: 14px; right: 14px; bottom: calc(50% + 4px); text-align: center; font-size: 11.5px; color: #5C636D; white-space: nowrap; }
+.sp-a { grid-area: a; align-self: center; display: flex; justify-content: center; color: #5C636D; }
+.sp-a svg { width: 26px; height: 26px; }
+.sp-dest { grid-area: d; align-self: center; background: #E6F3F2; border: 1px solid #D3E8E6; border-radius: 12px; padding: 14px 16px; }
+.sp-dest b { display: block; font-size: 14px; color: #1C1F22; margin-bottom: 4px; }
+.sp-dest .big { font-size: 15px; font-weight: 700; color: #00736C; margin-bottom: 4px; }
+.sp-dest span { font-size: 12.5px; line-height: 18px; color: #5C636D; display: block; }
+.ill-card span.sp-via { display: none; }
+@container art (max-width: 640px) {
+  .sp { grid-template-columns: 1fr; grid-template-areas: "p" "r1" "r2" "r3" "a" "d"; row-gap: 10px; }
+  .sp-primary { text-align: left; align-self: stretch; }
+  .sp-c { display: none; }
+  .ill-card span.sp-via { display: block; font-size: 11px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; color: #C2410C; margin-bottom: 3px; }
+  .sp-a svg { transform: rotate(90deg); }
+  .sp-dest { align-self: stretch; }
+}
+
+/* stage and grade scales */
+.tnm { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 12px; margin: 0 0 18px; }
+.tnm .cx-tile b.l { display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px; border-radius: 10px; background: #008880; color: #fff; font-size: 17px; font-weight: 800; margin-bottom: 10px; }
+.stage { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; margin: 0 0 12px; }
+.stage div { text-align: center; font-weight: 800; font-size: 14px; padding: 12px 4px; border-radius: 10px; color: #0F2E2C; }
+.stage .s0 { background: #EAF5F4; } .stage .s1 { background: #CBE6E3; } .stage .s2 { background: #8FCBC5; } .stage .s3 { background: #3F9F97; color: #fff; } .stage .s4 { background: #C2410C; color: #fff; }
+.stage-notes { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; }
+.stage-notes p:first-child { grid-column: 2 / 5; text-align: center; }
+.stage-notes p:last-child { grid-column: 5 / 6; text-align: center; }
+.stage-notes p { font-size: 13px; line-height: 19px; color: #5C636D; margin: 0; }
+.stage-notes p b { color: #1C1F22; }
+.grade { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; margin-bottom: 8px; }
+.grade div { text-align: center; font-weight: 800; font-size: 13px; padding: 10px 4px; border-radius: 10px; color: #0F2E2C; }
+.grade .g1 { background: #EAF5F4; } .grade .g2 { background: #CBE6E3; } .grade .g3 { background: #F3D9A8; } .grade .g4 { background: #E9A27C; }
+.grade-ends { display: flex; justify-content: space-between; font-size: 12px; color: #5C636D; }
+@container art (max-width: 520px) { .stage-notes { grid-template-columns: 1fr; } .stage-notes p:first-child, .stage-notes p:last-child { grid-column: auto; text-align: left; } .stage div { font-size: 13px; padding: 10px 2px; } }
+
+/* ---- bar charts ---- */
+.chart { background: #fff; border: 1px solid #E6E9ED; border-radius: 12px; padding: 20px 22px 16px; margin: 16px 0 18px; }
+.chart-h { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; margin-bottom: 14px; }
+.chart-h b { font-size: 16px; font-weight: 800; color: #1C1F22; }
+.chart-h span { font-size: 12px; color: #8E97A3; }
+.bar-row { display: grid; grid-template-columns: minmax(150px, 220px) 1fr; align-items: center; gap: 10px; padding: 3px 0; }
+.bar-label { font-size: 13px; line-height: 17px; color: #3D4A48; text-align: right; }
+.bar-track { position: relative; height: 22px; margin-right: 46px; background-image: linear-gradient(to right, #E6E9ED 1px, transparent 1px); background-size: var(--tick) 100%; background-repeat: repeat-x; border-right: 1px solid #E6E9ED; }
+.bar { position: absolute; left: 0; top: 3px; bottom: 3px; border-radius: 0 4px 4px 0; background: #5BB0A8; }
+.bar.top { background: #00736C; }
+.bar.other { background: #B9C4C9; }
+.bar-val { position: absolute; top: 50%; transform: translateY(-50%); margin-left: 6px; font-size: 12.5px; font-weight: 700; color: #25282B; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.axis { display: grid; grid-template-columns: minmax(150px, 220px) 1fr; gap: 10px; margin-top: 2px; }
+.axis-ticks { position: relative; height: 16px; margin-right: 46px; }
+.axis-ticks i { position: absolute; font-style: normal; font-size: 11px; color: #8E97A3; transform: translateX(-50%); }
+.axis-title { text-align: center; font-size: 12px; color: #8E97A3; margin-top: 4px; }
+@container art (max-width: 520px) {
+  .chart { padding: 16px 14px 12px; }
+  .bar-row, .axis { grid-template-columns: 1fr; gap: 2px; }
+  .axis > :first-child { display: none; }
+  .bar-label { text-align: left; font-size: 12.5px; }
+  .bar-track { margin-right: 40px; height: 18px; }
+  .bar { top: 2px; bottom: 2px; }
+  .bar-row { padding: 5px 0; }
+}
+
+/* ---- row list with a pill (molecular markers, updates feed) ---- */
+.pill-list { background: #fff; border: 1px solid #E6E9ED; border-radius: 12px; padding: 22px; }
+.pill-row { display: flex; gap: 16px; padding: 16px 0; border-bottom: 1px solid #F0F2F4; align-items: flex-start; }
+.pill-row:first-child { padding-top: 0; }
+.pill-row:last-child { padding-bottom: 0; border-bottom: 0; }
+.cx-pill { flex: none; width: 132px; font-size: 11.5px; font-weight: 800; color: #00736C; background: #E6F3F2; padding: 5px 8px; border-radius: 999px; text-align: center; height: fit-content; }
+.cx-pill.grey { color: #5C636D; background: #F0F2F4; }
+.pill-row p { font-size: 14px; line-height: 22px; color: #5C636D; margin: 0; }
+.pill-row p .src { display: block; font-size: 12px; color: #8E97A3; margin-top: 2px; }
+@container art (max-width: 520px) { .pill-list { padding: 16px; } .pill-row { flex-direction: column; gap: 8px; } .cx-pill { width: auto; padding: 5px 12px; } }
+
+/* ---- screening cards ---- */
+.screen { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin: 16px 0; }
+.screen .cx-tile .k { font-size: 11px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; color: #008880; margin-bottom: 4px; }
+.screen .cx-tile b { display: block; font-size: 15px; color: #1C1F22; margin-bottom: 4px; }
+.screen .cx-tile span { font-size: 13.5px; line-height: 21px; color: #5C636D; }
+
+/* ---- verified badge ---- */
+.verified { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 700; color: #12805A; background: #E3F6EE; border-radius: 999px; padding: 4px 12px; }
+.verified svg { width: 14px; height: 14px; }
+
+/* ---- source chips under the updates feed ---- */
+.srcs { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+.srcs a { font-size: 12.5px; font-weight: 700; color: #00736C; background: #fff; border: 1px solid #B8DEDB; border-radius: 999px; padding: 5px 12px; }
+.srcs a:hover { background: #F2F9F8; text-decoration: none; }
+
+@media (max-width: 560px) {
+  .card-pad { padding: 16px !important; }
+  .stat b { font-size: 24px; line-height: 30px; }
+}
+
+/* fixed column widths for the drug-group table so brand chips get room */
+.rtable.fixed { table-layout: fixed; }
+@container art (max-width: 640px) { .rtable.fixed col { width: auto !important; } }
+
+/* ---- two-column page: article column is the container the blocks respond to ---- */
+.art { container: art / inline-size; }
+@media (max-width: 560px) {
+  .asec[style*="padding:36px 0 0"] { padding-top: 20px !important; }
+}
+
+/* ---- opening description: clamped with a Read more toggle (GLP-1 home pattern) ---- */
+.hero-intro.is-clamped { max-height: 196px; overflow: hidden; -webkit-mask-image: linear-gradient(180deg, #000 58%, transparent 100%); mask-image: linear-gradient(180deg, #000 58%, transparent 100%); }
+.hero-toggle { display: inline-flex; align-items: center; gap: 6px; margin: 0 0 22px; padding: 0; border: 0; background: transparent; font: 800 14px/1 Inter, Mulish, sans-serif; color: #008880; cursor: pointer; }
+.hero-toggle[hidden] { display: none; }
+.hero-toggle:hover { color: #004D48; }
+.hero-toggle svg { transition: transform 160ms ease-out; }
+.hero-toggle.open svg { transform: rotate(180deg); }
+@media (max-width: 560px) { .hero-intro.is-clamped { max-height: 176px; } }
+
+.art > .asec:first-child { padding-top: 0 !important; }
+
+/* ---- drug groups: group details on the left, molecules and their brands on the right ---- */
+.dg-head { display: grid; grid-template-columns: 230px 1fr; gap: 16px; padding: 13px 20px; background: #F2F9F8; border-bottom: 1px solid #E6E9ED; font-size: 11px; font-weight: 800; letter-spacing: 0.05em; text-transform: uppercase; color: #00736C; }
+.dg-item { display: grid; grid-template-columns: 230px 1fr; gap: 16px; padding: 16px 20px; border-bottom: 1px solid #F0F2F4; }
+.dg-item:last-child { border-bottom: 0; }
+.dg-name { font-size: 15px; line-height: 22px; font-weight: 800; color: #1C1F22; margin-bottom: 6px; }
+.dg-use { font-size: 13.5px; line-height: 21px; color: #5C636D; margin: 8px 0 0; }
+.dg-use b { color: #25282B; font-weight: 700; }
+.dg-item .mol-row { grid-template-columns: minmax(96px, 130px) 1fr; }
+@container art (max-width: 640px) {
+  .dg-head { display: none; }
+  .dg-item { grid-template-columns: 1fr; gap: 12px; padding: 16px; }
+}
+
+/* ================= phone tweaks (review 6 Nov) ================= */
+.dg-toggle, .refs-toggle { display: none; }
+@media (max-width: 560px) {
+  /* the rail (consult + related) follows the article on the phone */
+  main .toc { order: 3 !important; }
+  /* byline: one fact per line, no floating separators */
+  .byline { flex-direction: column; align-items: flex-start !important; gap: 2px !important; }
+  .byline > span[style*="#C9D0D8"] { display: none; }
+  /* screening stats: two per row */
+  .stats[style] { grid-template-columns: repeat(2, 1fr) !important; }
+  .stats .stat:last-child:nth-child(odd) { grid-column: 1 / -1; }
+}
+@container art (max-width: 520px) {
+  /* numbered steps and T/N/M: number beside the text */
+  .step-tile { display: flex; gap: 12px; align-items: flex-start; padding: 14px; }
+  .step-tile .num { margin-bottom: 0 !important; flex: none; }
+  .tnm .cx-tile b.l { width: 30px; height: 30px; font-size: 15px; }
+  /* drug groups: molecule name above its chips, chips get the full width */
+  .dg-item .mol-row { grid-template-columns: 1fr; gap: 4px; }
+  .mol-list { gap: 12px; }
+  /* explore band: two columns, icon above the text */
+  .pad .tool-card { flex-direction: column; gap: 8px; padding: 12px; }
+}
+@container art (max-width: 640px) {
+  /* India indicators: Males / Females / Both sexes on one line */
+  .rtable.nums td.num { display: inline-block; width: 33.33%; vertical-align: top; margin-top: 10px; white-space: normal; padding-right: 8px !important; }
+  .rtable.nums td.num + td.num { margin-top: 10px; }
+  .rtable.nums td.num::before { font-size: 10px; }
+  /* two-column tables: the key already says what the row is */
+  .rtable.two td[data-label]::before { display: none; }
+  .rtable.two td + td { margin-top: 4px; }
+}
+@media (max-width: 560px) {
+  .dg-item.is-collapsed .mol-row:nth-child(n+5) { display: none; }
+  .dg-toggle, .refs-toggle { display: inline-flex; align-items: center; gap: 6px; margin-top: 4px; padding: 8px 14px; border: 1px solid #B8DEDB; border-radius: 999px; background: #fff; font: 700 13px/1 Inter, Mulish, sans-serif; color: #00736C; cursor: pointer; width: fit-content; }
+  .refs.is-collapsed > div:nth-child(n+6) { display: none !important; }
+  .refs-toggle { margin-top: 6px; }
+}
+@container art (max-width: 520px) {
+  .pad > div[style*="minmax(250px,1fr)"] { grid-template-columns: repeat(2, 1fr) !important; gap: 10px !important; }
+}
+
+/* ---- tablet (561-900px): the rail cannot sit beside the article, so it is split.
+   "On this page" spans the top with its links in columns; the consult and related
+   cards follow the article side by side. ---- */
+@media (min-width: 561px) and (max-width: 900px) {
+  main .toc { display: contents !important; }
+  main .toc > .toc-nav { order: 1; flex: 1 1 100%; }
+  main .toc > .toc-nav > div:last-child { display: grid !important; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 8px 24px !important; }
+  main .art { order: 2; flex: 1 1 100% !important; }
+  main .toc > .pad:not(.toc-nav) { order: 3; flex: 1 1 300px; align-self: stretch; }
+}
+
+/* ---- drug table "+N more molecules" popup (client-rendered by cancer.js) */
+.mol-more-row { display: flex; }
+button.mol-more { font: inherit; font-size: 12.5px; line-height: 18px; cursor: pointer; }
+button.mol-more:hover { border-color: #008880; background: #fff; }
+button.mol-more[aria-busy="true"] { opacity: .6; }
+html.mm-open { overflow: hidden; }
+.mm-overlay { position: fixed; inset: 0; z-index: 1000; background: rgba(15, 46, 44, .45); display: flex; align-items: center; justify-content: center; padding: 16px; }
+.mm-overlay[hidden] { display: none; }
+.mm-dialog { background: #fff; border-radius: 16px; width: 100%; max-width: 520px; max-height: min(80vh, 640px); display: flex; flex-direction: column; box-shadow: 0 20px 48px rgba(15, 46, 44, .25); font-family: var(--glp-font, Inter, Mulish, sans-serif); }
+.mm-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 18px 20px 4px; }
+.mm-head h3 { font-size: 18px; line-height: 26px; font-weight: 800; color: #1C1F22; margin: 0; }
+.mm-close { flex: none; width: 36px; height: 36px; border-radius: 999px; border: 1px solid #E6E9ED; background: #fff; color: #5C636D; display: inline-flex; align-items: center; justify-content: center; cursor: pointer; }
+.mm-close:hover { border-color: #008880; color: #00736C; }
+.mm-sub { font-size: 13px; line-height: 20px; color: #5C636D; margin: 0; padding: 0 20px 12px; border-bottom: 1px solid #F0F2F4; }
+.mm-list { list-style: none; margin: 0; padding: 12px 20px 20px; overflow-y: auto; display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 6px 16px; }
+.mm-list a { display: block; padding: 8px 12px; border: 1px solid #E6E9ED; border-radius: 10px; font-size: 14px; line-height: 20px; font-weight: 700; color: #00736C; background: #F5F7F8; }
+.mm-list a:hover { border-color: #008880; background: #fff; text-decoration: none; }
+@media (max-width: 560px) {
+  .mm-overlay { align-items: flex-end; padding: 0; }
+  .mm-dialog { max-width: none; border-radius: 16px 16px 0 0; max-height: 85vh; }
+  .mm-list { grid-template-columns: 1fr; }
+}
+/* phone: a collapsed group shows "Show all N molecules" first; the "+N more" chip appears once expanded */
+@media (max-width: 560px) { .dg-item.is-collapsed .mol-more-row { display: none; } }

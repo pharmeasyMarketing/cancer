@@ -1,0 +1,113 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@id": "https://pharmeasy.in/#Organization",
+      "@type": "Organization",
+      "name": "PharmEasy",
+      "legalName": "Threpsi Solutions Pvt Ltd",
+      "alternateName": ["Pharm Easy", "Pharmeasy"],
+      "brand": {
+        "@type": "Brand",
+        "name": "PharmEasy",
+        "url": "https://pharmeasy.in/",
+        "logo": "https://assets.pharmeasy.in/web-assets/dist/fca22bc9.png"
+      },
+      "parentOrganization": {
+        "@type": "Organization",
+        "name": "API Holdings Pvt Ltd",
+        "url": "https://www.apiholdings.in/",
+        "legalRepresentative": [
+          { "@type": "Person", "name": "Gaurav Verma", "jobTitle": "Chief Business Officer (CBO)- B2C" },
+          { "@type": "Person", "name": "Rahul Guha", "jobTitle": "Chief Executive Officer (CEO) & Managing Director (MD)" },
+          { "@type": "Person", "name": "Alok Kumar Jagnani", "jobTitle": "Group Chief Financial Officer" },
+          { "@type": "Person", "name": "Pranav Saxena", "jobTitle": "Chief Product and Technology Officer" },
+          { "@type": "Person", "name": "Shashi Tiwari", "jobTitle": "Chief Human Resource Officer" },
+          { "@type": "Person", "name": "Uday Patel Kadam", "jobTitle": "Chief Operating Officer, Chief Business Officer (CBO)- B2B" },
+          { "@type": "Person", "name": "Drashti Shriram Shah", "jobTitle": "General Counsel & Chief Compliance Officer" }
+        ]
+      },
+      "email": "care@pharmeasy.in",
+      "publishingPrinciples": "https://pharmeasy.in/legal/editorial-policy",
+      "areaServed": "IN",
+      "founders": [
+        { "@type": "Person", "name": "Dhaval Shah" },
+        { "@type": "Person", "name": "Dharmil Sheth" },
+        { "@type": "Person", "name": "Hardik Dedhia" },
+        { "@type": "Person", "name": "Harsh Parekh" },
+        { "@type": "Person", "name": "Siddharth Shah" }
+      ],
+      "foundingDate": "2014",
+      "foundingLocation": { "@type": "Place", "name": "Mumbai, IN" },
+      "url": "https://pharmeasy.in/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "E Shape Building, 1st Floor, Ashok Silk Mills Compound, LBS Rd, opposite Damodar Park, Ghatkopar West",
+        "addressLocality": "Mumbai",
+        "addressRegion": "IN-MH",
+        "addressCountry": "IN",
+        "postalCode": "400086"
+      },
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+918069809760",
+          "contactType": "Customer Care",
+          "email": "care@pharmeasy.in",
+          "areaServed": "IN",
+          "availableLanguage": ["en", "hi"]
+        },
+        {
+          "@type": "ContactPoint",
+          "contactType": "Business",
+          "areaServed": "IN",
+          "availableLanguage": ["en"]
+        }
+      ],
+      "description": "PharmEasy is one of India's most trusted online healthcare platforms offering medicine delivery, lab tests, doctor consultations, home vaccinations, and healthcare essentials. Trusted by over 5 million customers across 1,200+ cities including Mumbai, Delhi, Bangalore, Hyderabad, Pune, Kolkata, Gurgaon, and Noida.",
+      "logo": "https://assets.pharmeasy.in/web-assets/dist/fca22bc9.png",
+      "sameAs": [
+        "https://www.instagram.com/pharmeasyapp/",
+        "https://www.facebook.com/pharmeasy/",
+        "https://www.youtube.com/c/PharmEasyApp",
+        "https://twitter.com/pharmeasyapp/",
+        "https://www.linkedin.com/company/pharmeasy/"
+      ],
+      "knowsAbout": [
+        "Online medicine delivery",
+        "Online Diagnostic lab tests",
+        "Online Doctor consultations",
+        "Home vaccinations",
+        "Healthcare essentials"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "PharmEasy Services",
+        "itemListElement": [
+          { "@type": "OfferCatalog", "name": "Medicines" },
+          { "@type": "OfferCatalog", "name": "Lab Tests" },
+          { "@type": "OfferCatalog", "name": "Doctor Consultations" },
+          { "@type": "OfferCatalog", "name": "Home Vaccinations" },
+          { "@type": "OfferCatalog", "name": "Healthcare Essentials" }
+        ]
+      },
+      "taxID": "GSTIN27AAHCT1527F1ZG"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://pharmeasy.in/#Website",
+      "url": "https://pharmeasy.in/",
+      "publisher": { "@id": "https://pharmeasy.in/#Organization" },
+      "inLanguage": ["en", "hi"],
+      "isAccessibleForFree": true,
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": [
+          "https://pharmeasy.in/search/all?name={search_term_string}",
+          "push.pharmeasy.clevertap://deeplink/search_results?q={search_term_string}"
+        ],
+        "query-input": "required name=search_term_string"
+      }
+    }
+  ]
+}
