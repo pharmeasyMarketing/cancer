@@ -631,17 +631,35 @@ def explore_band():
         sub = ('<div class="ex-subs">%s</div>' % ''.join('<a href="%s%s">%s</a>' % (CX, p, esc(t)) for t, p in subs)) if subs else ''
         cards.append('<div class="ex-card"><span class="ex-ic">%s</span><div class="ex-body"><a class="ex-title" href="%s%s">%s</a>'
                      '<span class="ex-desc">%s</span>%s</div></div>' % (svg(IC[ic], 18), CX, path, esc(title), esc(desc), sub))
-    types = []
+    # grouped by first letter; a type with subpages gets a toggle on mobile (cancer.js), everything
+    # stays in the HTML and is visible without JS
+    letters = {}
     for name, path, subs in CANCER_TYPES:
-        sub = ('<span class="az-subs">%s</span>' % ''.join('<a href="%s%s">%s</a>' % (CX, p, esc(t)) for t, p in subs)) if subs else ''
-        types.append('<li><a class="az-type" href="%s%s">%s</a>%s</li>' % (CX, path, esc(name), sub))
+        letters.setdefault(name[0].upper(), []).append((name, path, subs))
+    groups = []
+    for letter in sorted(letters):
+        rows = []
+        for name, path, subs in letters[letter]:
+            if subs:
+                sid = 'ctz-' + slug(name)
+                n_guides = '%d guide%s' % (len(subs), '' if len(subs) == 1 else 's')
+                rows.append('<li class="ctz-item has-subs"><div class="ctz-row"><a class="ctz-type" href="%s%s">%s</a>'
+                            '<button type="button" class="ctz-tog" aria-expanded="false" aria-controls="%s" aria-label="%s on %s">'
+                            '<span>%s</span>%s</button></div><div class="ctz-subs" id="%s">%s</div></li>'
+                            % (CX, path, esc(name), sid, n_guides, esc(name), n_guides, svg(IC['chev'], 16), sid,
+                               ''.join('<a href="%s%s">%s</a>' % (CX, p, esc(t)) for t, p in subs)))
+            else:
+                rows.append('<li class="ctz-item"><div class="ctz-row"><a class="ctz-type" href="%s%s">%s%s</a></div></li>'
+                            % (CX, path, esc(name), '<span class="ctz-go" aria-hidden="true">%s</span>' % svg(IC['arrow'], 16)))
+        groups.append('<div class="ctz-group"><div class="ctz-letter" aria-hidden="true">%s</div><ul class="ctz-list">%s</ul></div>' % (letter, ''.join(rows)))
+    types = groups
     return ('\n  <div class="asec" style="padding:36px 0 0">\n'
             '    <div class="pad explore" style="background:#F2F9F8;border:1px solid #B8DEDB;border-radius:12px;padding:20px;margin-bottom:20px">\n'
             '      <div class="cx-eyebrow" style="margin-bottom:4px">Explore cancer care</div>\n'
             '      <p style="font-size:14px;line-height:22px;color:#5C636D;margin:0 0 14px">Each guide goes deeper on one part of this page. They are for information and do not replace your oncologist.</p>\n'
             '      <div class="ex-grid">%s</div>\n'
-            '      <div class="az">\n        <div class="az-head"><a href="%stypes/">Cancer types A to Z</a></div>\n'
-            '        <ul class="az-list">%s</ul>\n      </div>\n    </div>\n  </div>\n' % (''.join(cards), CX, ''.join(types)))
+            '      <div class="ctz">\n        <div class="ctz-head"><a href="%stypes/">Cancer types A to Z</a><span>21 cancers</span></div>\n'
+            '        <div class="ctz-groups">%s</div>\n      </div>\n    </div>\n  </div>\n' % (''.join(cards), CX, ''.join(types)))
 
 
 def faq_and_refs():

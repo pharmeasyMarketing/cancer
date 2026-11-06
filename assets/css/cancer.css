@@ -374,21 +374,25 @@ html.mm-open { overflow: hidden; }
 .ex-title:hover { text-decoration: none; color: #00736C; }
 .ex-desc { font-size: 13px; line-height: 20px; color: #5C636D; }
 .ex-subs { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
-.ex-subs a, .az-subs a { position: relative; z-index: 1; font-size: 12.5px; line-height: 18px; font-weight: 700; color: #00736C; background: #F2F9F8; border: 1px solid #D3E8E6; border-radius: 999px; padding: 3px 10px; }
-.ex-subs a:hover, .az-subs a:hover { background: #fff; border-color: #008880; text-decoration: none; }
-.az { margin-top: 16px; background: #fff; border: 1px solid #E6E9ED; border-radius: 12px; padding: 16px; }
-.az-head { font-size: 11px; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 10px; }
-.az-head a { color: #00736C; }
-.az-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 10px 20px; }
-.az-list li { display: flex; flex-direction: column; gap: 5px; }
-.az-type { font-size: 14px; line-height: 20px; font-weight: 800; color: #0F2E2C; }
-.az-type:hover { color: #00736C; }
-.az-subs { display: flex; flex-wrap: wrap; gap: 5px; }
-.az-subs a { font-size: 12px; padding: 2px 9px; font-weight: 600; }
+.ex-subs a, .ctz-subs a { position: relative; z-index: 1; font-size: 12.5px; line-height: 18px; font-weight: 700; color: #00736C; background: #F2F9F8; border: 1px solid #D3E8E6; border-radius: 999px; padding: 3px 10px; }
+.ex-subs a:hover, .ctz-subs a:hover { background: #fff; border-color: #008880; text-decoration: none; }
+.ctz { margin-top: 16px; background: #fff; border: 1px solid #E6E9ED; border-radius: 12px; padding: 18px 20px; }
+.ctz-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 14px; }
+.ctz-head a { font-size: 11px; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; color: #00736C; }
+.ctz-head span { font-size: 12px; color: #8E97A3; }
+.ctz-groups { columns: 3 220px; column-gap: 28px; }
+.ctz-group { break-inside: avoid; display: grid; grid-template-columns: 26px 1fr; gap: 0 10px; margin-bottom: 14px; }
+.ctz-letter { font-size: 13px; font-weight: 800; color: #00736C; background: #EAF5F4; border-radius: 8px; width: 26px; height: 26px; display: flex; align-items: center; justify-content: center; }
+.ctz-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+.ctz-row { display: flex; align-items: center; justify-content: space-between; gap: 8px; min-height: 26px; }
+.ctz-type { font-size: 14px; line-height: 20px; font-weight: 800; color: #0F2E2C; }
+.ctz-type:hover { color: #00736C; }
+.ctz-go, .ctz-tog { display: none; }
+.ctz-subs { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 6px; }
+.ctz-subs a { font-size: 12px; padding: 2px 9px; font-weight: 600; }
 @container art (max-width: 520px) {
   .ex-grid { grid-template-columns: 1fr; gap: 10px; }
   .ex-card { padding: 14px; }
-  .az-list { grid-template-columns: 1fr 1fr; gap: 10px 12px; }
 }
 
 /* ---- drug table key: "Molecule" / "Brands on PharmEasy" tags, mobile only (the desktop header is hidden there) */
@@ -402,4 +406,24 @@ html.mm-open { overflow: hidden; }
 @container art (max-width: 520px) {
   /* rows stack (name above chips), so the key reads as a legend on one line */
   .mol-key { display: flex; gap: 8px; }
+}
+
+/* A to Z on mobile: one column of full-width rows under letter markers; types with subpages fold */
+@container art (max-width: 520px) {
+  .ctz { padding: 14px 14px 6px; }
+  .ctz-groups { columns: auto; }
+  .ctz-group { grid-template-columns: 28px 1fr; gap: 0 12px; margin-bottom: 10px; }
+  .ctz-letter { width: 28px; height: 28px; margin-top: 8px; }
+  .ctz-list { gap: 0; }
+  .ctz-item { border-bottom: 1px solid #F0F2F4; }
+  .ctz-group:last-child .ctz-item:last-child { border-bottom: 0; }
+  .ctz-row { min-height: 44px; }
+  .ctz-type { flex: 1; padding: 12px 0; font-size: 15px; }
+  .ctz-go { display: flex; color: #8E97A3; }
+  .ctz-item:not(.has-subs) .ctz-type { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+  .ctz-tog { display: inline-flex; align-items: center; gap: 4px; flex: none; border: 1px solid #D3E8E6; background: #F2F9F8; color: #00736C; border-radius: 999px; padding: 6px 8px 6px 11px; font: 700 12px/1 Inter, Mulish, sans-serif; cursor: pointer; }
+  .ctz-tog svg { transition: transform 160ms ease-out; }
+  .ctz-tog[aria-expanded="true"] svg { transform: rotate(180deg); }
+  .ctz-subs { margin: 0 0 12px; }
+  .ctz.js-fold .ctz-item.has-subs:not(.open) .ctz-subs { display: none; }
 }

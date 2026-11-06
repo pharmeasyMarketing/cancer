@@ -148,3 +148,19 @@
     });
   });
 })();
+
+/* Cancer types A to Z: on mobile (CSS decides) a type's subpages fold behind its "N guides" toggle.
+   The fold only switches on once this runs, so without JS every link stays visible. */
+(function () {
+  'use strict';
+  var ctz = document.querySelector('.ctz');
+  if (!ctz) return;
+  ctz.classList.add('js-fold');
+  [].forEach.call(ctz.querySelectorAll('.ctz-tog'), function (b) {
+    b.addEventListener('click', function () {
+      var item = b.closest('.ctz-item');
+      var open = item.classList.toggle('open');
+      b.setAttribute('aria-expanded', String(open));
+    });
+  });
+})();
