@@ -318,7 +318,7 @@ a.brand:hover { border-color: #008880; color: #008880; text-decoration: none; ba
   .rtable.two td + td { margin-top: 4px; }
 }
 @media (max-width: 560px) {
-  .dg-item.is-collapsed .mol-row:nth-child(n+5) { display: none; }
+  .dg-item.is-collapsed .mol-row:nth-child(n+6) { display: none; }   /* child 1 is the .mol-key */
   .dg-toggle, .refs-toggle { display: inline-flex; align-items: center; gap: 6px; margin-top: 4px; padding: 8px 14px; border: 1px solid #B8DEDB; border-radius: 999px; background: #fff; font: 700 13px/1 Inter, Mulish, sans-serif; color: #00736C; cursor: pointer; width: fit-content; }
   .refs.is-collapsed > div:nth-child(n+6) { display: none !important; }
   .refs-toggle { margin-top: 6px; }
@@ -389,4 +389,17 @@ html.mm-open { overflow: hidden; }
   .ex-grid { grid-template-columns: 1fr; gap: 10px; }
   .ex-card { padding: 14px; }
   .az-list { grid-template-columns: 1fr 1fr; gap: 10px 12px; }
+}
+
+/* ---- drug table key: "Molecule" / "Brands on PharmEasy" tags, mobile only (the desktop header is hidden there) */
+.mol-key { display: none; }
+.mol-key span { font-size: 10.5px; line-height: 16px; font-weight: 800; letter-spacing: 0.05em; text-transform: uppercase; border-radius: 999px; padding: 2px 9px; width: fit-content; }
+.mol-key .k-mol { color: #fff; background: #00736C; }
+.mol-key .k-brand { color: #5C636D; background: #F5F7F8; border: 1px solid #E6E9ED; }
+@container art (max-width: 640px) {
+  .mol-key { display: grid; grid-template-columns: minmax(96px, 130px) 1fr; gap: 4px 14px; align-items: center; padding-bottom: 8px; border-bottom: 1px dashed #E6E9ED; }
+}
+@container art (max-width: 520px) {
+  /* rows stack (name above chips), so the key reads as a legend on one line */
+  .mol-key { display: flex; gap: 8px; }
 }

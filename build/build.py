@@ -308,6 +308,11 @@ def slug(s):
     return re.sub(r'[^a-z0-9]+', '-', s.lower()).strip('-')
 
 
+# Mobile only (CSS): the desktop column header is hidden there, so each group's list gets its own key.
+MOL_KEY = ('<div class="mol-key" aria-hidden="true"><span class="k-mol">Molecule</span>'
+           '<span class="k-brand">Brands on PharmEasy</span></div>')
+
+
 def drug_table():
     items = []
     drugs = parse_drugs()
@@ -333,7 +338,7 @@ def drug_table():
             lines.append('<div class="mol-more-row"><button type="button" class="brand more mol-more" data-group="%s" aria-haspopup="dialog">'
                          '+%d more %s</button></div>' % (slug(d['group']), n_more, 'molecule' if n_more == 1 else 'molecules'))
         items.append('<div class="dg-item" data-mols="%d"><div class="dg-side">' % len(d['mols']) + '<div class="dg-name">%s</div><span class="route-pill">%s</span>'
-                     '<p class="dg-use"><b>Used for:</b> %s</p></div><div class="mol-list">%s</div></div>' % (esc(d['group']), d['route'], d['use'], ''.join(lines)))
+                     '<p class="dg-use"><b>Used for:</b> %s</p></div><div class="mol-list">%s%s</div></div>' % (esc(d['group']), d['route'], d['use'], MOL_KEY, ''.join(lines)))
     return ('    <div class="rt-wrap dg"><div class="dg-head"><span>Drug group, how it is given and what it is used for</span><span>Molecules and brands on PharmEasy</span></div>%s</div>\n' % ''.join(items))
 
 
