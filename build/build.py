@@ -65,6 +65,7 @@ IC = {
     'arrow': '<path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>',
     'chev': '<path d="m6 9 6 6 6-6"/>',
     'check': '<path d="M20 6 9 17l-5-5"/>',
+    'grid': '<rect width="7" height="7" x="3" y="3" rx="1"/><rect width="7" height="7" x="14" y="3" rx="1"/><rect width="7" height="7" x="14" y="14" rx="1"/><rect width="7" height="7" x="3" y="14" rx="1"/>',
 }
 ARROW_BIG = svg(IC['arrow'], 26)
 
@@ -555,25 +556,87 @@ def build_sections():
     return S, toc
 
 
+CX = 'https://pharmeasy.in/cancer/'
+
+# Explore band: each card links its hub page plus that hub's most useful child pages; the A to Z
+# directory under it links every cancer type and subtype, so every page in cancer_urls.txt is one
+# click from the homepage. Anchor text names the page (no bare "Symptoms" or "Read more").
+EXPLORE = [
+    ('Cancer types', 'Guides to 21 cancers and their subtypes.', 'grid', 'types/',
+     [('Lung cancer', 'types/lung-cancer/'), ('Blood cancer', 'types/blood-cancer/'),
+      ('Colorectal cancer', 'types/colorectal-cancer/'), ('Prostate cancer', 'types/prostate-cancer/')]),
+    ('Symptoms and early signs', 'Common symptoms and when to get them checked.', 'search', 'symptoms/',
+     [('Tumour or cancer?', 'symptoms/is-it-cancer/'), ('Breast cancer symptoms', 'types/breast-cancer/symptoms/'),
+      ('Brain cancer symptoms', 'types/brain-cancer/symptoms/')]),
+    ('Tests and tumour markers', 'Markers, imaging and biopsy explained.', 'flask', 'tests/',
+     [('Breast cancer diagnosis', 'types/breast-cancer/diagnosis/'), ('Cervical cancer diagnosis', 'types/cervical-cancer/diagnosis/'),
+      ('Prostate cancer diagnosis', 'types/prostate-cancer/diagnosis/')]),
+    ('Cancer screening', 'Who should be screened, and for what. India screens for these three:', 'clip', 'screening/',
+     [('Breast cancer', 'types/breast-cancer/'), ('Oral cancer', 'types/head-and-neck-cancer/oral-cancer/'),
+      ('Cervical cancer', 'types/cervical-cancer/')]),
+    ('Cancer treatment', 'How each treatment works and what to expect.', 'pill', 'treatment/',
+     [('Surgery', 'treatment/surgery/'), ('Chemotherapy', 'treatment/chemotherapy/'), ('Radiation therapy', 'treatment/radiation-therapy/'),
+      ('Immunotherapy', 'treatment/immunotherapy/'), ('Targeted therapy', 'treatment/targeted-therapy/'), ('Hormone therapy', 'treatment/hormone-therapy/')]),
+    ('Cancer prevention', 'Steps that lower your risk.', 'shield', 'prevention/',
+     [('Tobacco and cancer', 'prevention/tobacco/'), ('HPV and the vaccine', 'prevention/hpv/'),
+      ('Lifestyle changes', 'prevention/lifestyle/'), ('Cancer myths', 'prevention/myths/')]),
+    ('Nutrition during treatment', 'What to eat during and after treatment.', 'leaf', 'nutrition/', []),
+    ('Cost and support', 'Insurance, schemes and financial support.', 'wallet', 'cost-and-support/', []),
+    ('Living with cancer', 'Follow-up, late effects and fertility.', 'heart', 'living-with/', []),
+    ('Cancer in India', 'Burden, screening gaps and schemes.', 'pin', 'india/', []),
+]
+
+# A to Z: (type, path, [(subpage anchor, path)])
+CANCER_TYPES = [
+    ('Anal cancer', 'types/anal-cancer/', []),
+    ('Bladder cancer', 'types/bladder-cancer/', []),
+    ('Blood cancer', 'types/blood-cancer/', [('Leukaemia', 'types/blood-cancer/leukaemia/'), ('Lymphoma', 'types/blood-cancer/lymphoma/'),
+                                             ('Multiple myeloma', 'types/blood-cancer/multiple-myeloma/')]),
+    ('Bone cancer', 'types/bone-cancer/', []),
+    ('Brain cancer', 'types/brain-cancer/', [('Brain cancer symptoms', 'types/brain-cancer/symptoms/')]),
+    ('Breast cancer', 'types/breast-cancer/', [('Breast cancer symptoms', 'types/breast-cancer/symptoms/'),
+                                               ('Breast cancer stages and types', 'types/breast-cancer/stages-and-types/'),
+                                               ('Breast cancer diagnosis', 'types/breast-cancer/diagnosis/'),
+                                               ('Breast cancer treatment', 'types/breast-cancer/treatment/')]),
+    ('Cervical cancer', 'types/cervical-cancer/', [('Cervical cancer diagnosis', 'types/cervical-cancer/diagnosis/')]),
+    ('Colorectal cancer', 'types/colorectal-cancer/', [('Colon cancer', 'types/colorectal-cancer/colon-cancer/'),
+                                                       ('Rectal cancer', 'types/colorectal-cancer/rectal-cancer/')]),
+    ('Head and neck cancer', 'types/head-and-neck-cancer/', [('Oral cancer', 'types/head-and-neck-cancer/oral-cancer/'),
+                                                             ('Tongue cancer', 'types/head-and-neck-cancer/oral-cancer/tongue-cancer/'),
+                                                             ('Throat cancer', 'types/head-and-neck-cancer/throat-cancer/')]),
+    ('Kidney cancer', 'types/kidney-cancer/', []),
+    ('Liver cancer', 'types/liver-cancer/', []),
+    ('Lung cancer', 'types/lung-cancer/', []),
+    ('Oesophageal cancer', 'types/oesophageal-cancer/', []),
+    ('Ovarian cancer', 'types/ovarian-cancer/', []),
+    ('Prostate cancer', 'types/prostate-cancer/', [('Prostate cancer diagnosis', 'types/prostate-cancer/diagnosis/')]),
+    ('Skin cancer', 'types/skin-cancer/', [('Melanoma', 'types/skin-cancer/melanoma/'),
+                                           ('Non-melanoma skin cancer', 'types/skin-cancer/non-melanoma-skin-cancer/')]),
+    ('Stomach cancer', 'types/stomach-cancer/', []),
+    ('Testicular cancer', 'types/testicular-cancer/', []),
+    ('Thyroid cancer', 'types/thyroid-cancer/', []),
+    ('Uterine cancer', 'types/uterine-cancer/', []),
+    ('Vaginal and vulvar cancer', 'types/vaginal-and-vulvar-cancer/', []),
+]
+
+
 def explore_band():
-    cards = [('Symptoms and early signs', 'Common symptoms and when to get them checked.', 'search', 'https://pharmeasy.in/cancer/symptoms/'),
-             ('Tests and tumour markers', 'Markers, imaging and biopsy explained.', 'flask', 'https://pharmeasy.in/cancer/tests/'),
-             ('Cancer screening', 'Who should be screened, and for what.', 'clip', 'https://pharmeasy.in/cancer/screening/'),
-             ('Cancer treatment', 'Surgery, chemotherapy, radiotherapy and more.', 'pill', 'https://pharmeasy.in/cancer/treatment/'),
-             ('Nutrition during treatment', 'What to eat during and after treatment.', 'leaf', 'https://pharmeasy.in/cancer/nutrition/'),
-             ('Cost and support', 'Insurance, schemes and financial support.', 'wallet', 'https://pharmeasy.in/cancer/cost-and-support/'),
-             ('Living with cancer', 'Follow-up, late effects and fertility.', 'heart', 'https://pharmeasy.in/cancer/living-with/'),
-             ('Cancer prevention', 'Steps that lower your risk.', 'shield', 'https://pharmeasy.in/cancer/prevention/'),
-             ('Cancer in India', 'Burden, screening gaps and schemes.', 'pin', 'https://pharmeasy.in/cancer/india/'),
-             ('Tumour versus cancer', 'Benign, in situ and malignant explained.', 'scale', 'https://pharmeasy.in/cancer/symptoms/is-it-cancer/')]
-    items = ''.join('<a class="tool-card" href="%s"><span style="width:34px;height:34px;border-radius:10px;background:#EAF5F4;color:#008880;display:flex;align-items:center;justify-content:center;flex-shrink:0">%s</span>'
-                    '<span style="display:flex;flex-direction:column;gap:3px"><span style="font-size:15px;font-weight:800;color:#0F2E2C">%s</span>'
-                    '<span style="font-size:13px;line-height:20px;color:#5C636D">%s</span></span></a>' % (u, svg(IC[ic], 18), esc(t), esc(d)) for t, d, ic, u in cards)
+    cards = []
+    for title, desc, ic, path, subs in EXPLORE:
+        sub = ('<div class="ex-subs">%s</div>' % ''.join('<a href="%s%s">%s</a>' % (CX, p, esc(t)) for t, p in subs)) if subs else ''
+        cards.append('<div class="ex-card"><span class="ex-ic">%s</span><div class="ex-body"><a class="ex-title" href="%s%s">%s</a>'
+                     '<span class="ex-desc">%s</span>%s</div></div>' % (svg(IC[ic], 18), CX, path, esc(title), esc(desc), sub))
+    types = []
+    for name, path, subs in CANCER_TYPES:
+        sub = ('<span class="az-subs">%s</span>' % ''.join('<a href="%s%s">%s</a>' % (CX, p, esc(t)) for t, p in subs)) if subs else ''
+        types.append('<li><a class="az-type" href="%s%s">%s</a>%s</li>' % (CX, path, esc(name), sub))
     return ('\n  <div class="asec" style="padding:36px 0 0">\n'
-            '    <div class="pad" style="background:#F2F9F8;border:1px solid #B8DEDB;border-radius:12px;padding:20px;margin-bottom:20px">\n'
+            '    <div class="pad explore" style="background:#F2F9F8;border:1px solid #B8DEDB;border-radius:12px;padding:20px;margin-bottom:20px">\n'
             '      <div class="cx-eyebrow" style="margin-bottom:4px">Explore cancer care</div>\n'
             '      <p style="font-size:14px;line-height:22px;color:#5C636D;margin:0 0 14px">Each guide goes deeper on one part of this page. They are for information and do not replace your oncologist.</p>\n'
-            '      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px">%s</div>\n    </div>\n  </div>\n' % items)
+            '      <div class="ex-grid">%s</div>\n'
+            '      <div class="az">\n        <div class="az-head"><a href="%stypes/">Cancer types A to Z</a></div>\n'
+            '        <ul class="az-list">%s</ul>\n      </div>\n    </div>\n  </div>\n' % (''.join(cards), CX, ''.join(types)))
 
 
 def faq_and_refs():
@@ -671,7 +734,7 @@ def hero():
 def rail(toc):
     items = list(toc) + [('toc-faq', 'Frequently Asked Questions'), ('references', 'References')]
     links = ''.join('<a href="#%s" style="font-size:14px;line-height:20px;color:#5C636D">%s</a>' % (i, esc(t)) for i, t in items)
-    rel = [('Cancer symptoms and early signs', 'https://pharmeasy.in/cancer/symptoms/'), ('Cancer tests and tumour markers', 'https://pharmeasy.in/cancer/tests/'),
+    rel = [('Cancer types', 'https://pharmeasy.in/cancer/types/'), ('Cancer symptoms and early signs', 'https://pharmeasy.in/cancer/symptoms/'), ('Cancer tests and tumour markers', 'https://pharmeasy.in/cancer/tests/'),
            ('Cancer screening', 'https://pharmeasy.in/cancer/screening/'), ('Cancer treatment', 'https://pharmeasy.in/cancer/treatment/'),
            ('Cancer in India', 'https://pharmeasy.in/cancer/india/'), ('Tumour versus cancer', 'https://pharmeasy.in/cancer/symptoms/is-it-cancer/'),
            ('Medicines by drug class', 'https://pharmeasy.in/molecules-by-class/')]
@@ -754,6 +817,20 @@ def nofollow_external(page):
     return EXTERNAL_A.sub(fix, page)
 
 
+URLS_FILE = os.path.join(HERE, 'cancer_urls.txt')
+
+
+def check_cancer_links(page):
+    """Only the planned /cancer/ pages may be linked (cancer_urls.txt). Fails the build otherwise."""
+    allowed = {l.strip() for l in open(URLS_FILE, encoding='utf8') if l.startswith('/cancer/')}
+    used = set(re.findall(r'href="https://pharmeasy\.in(/cancer/[^"#?]*)', page))
+    bad = sorted(used - allowed)
+    assert not bad, 'links to /cancer/ pages that are not in cancer_urls.txt: %s' % bad
+    missing = sorted(allowed - used - {'/cancer/'})
+    print('cancer links: %d of %d planned pages linked%s' % (len(used & allowed), len(allowed),
+          ('; not linked: ' + ', '.join(missing)) if missing else ''))
+
+
 def main():
     sections, toc = build_sections()
     faq, ref, faqs = faq_and_refs()
@@ -769,6 +846,7 @@ def main():
             '\n</div>\n</div></main>\n<div data-pe-footer></div>\n'
             '<script src="assets/js/pe-shell.js" defer></script>\n<script src="assets/js/pe-toc.js" defer></script>\n<script src="assets/js/cancer.js" defer></script>\n</body>\n</html>\n')
     page = nofollow_external(page)
+    check_cancer_links(page)
     # the house rule: no em or en dashes in any output
     assert '—' not in page and '–' not in page, [m.start() for m in re.finditer('[—–]', page)][:5]
     open(OUT, 'w', encoding='utf8').write(page)

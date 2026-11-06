@@ -362,3 +362,31 @@ html.mm-open { overflow: hidden; }
 }
 /* phone: a collapsed group shows "Show all N molecules" first; the "+N more" chip appears once expanded */
 @media (max-width: 560px) { .dg-item.is-collapsed .mol-more-row { display: none; } }
+
+/* ---- explore band: hub cards with child links + cancer types A to Z */
+.ex-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; }
+.ex-card { position: relative; background: #fff; border: 1px solid #E6E9ED; border-radius: 12px; padding: 16px; display: flex; gap: 12px; align-items: flex-start; }
+.ex-card:hover { border-color: #008880; }
+.ex-ic { width: 34px; height: 34px; border-radius: 10px; background: #EAF5F4; color: #008880; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.ex-body { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
+.ex-title { font-size: 15px; font-weight: 800; color: #0F2E2C; }
+.ex-title::after { content: ''; position: absolute; inset: 0; border-radius: 12px; }   /* whole card opens the hub page */
+.ex-title:hover { text-decoration: none; color: #00736C; }
+.ex-desc { font-size: 13px; line-height: 20px; color: #5C636D; }
+.ex-subs { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.ex-subs a, .az-subs a { position: relative; z-index: 1; font-size: 12.5px; line-height: 18px; font-weight: 700; color: #00736C; background: #F2F9F8; border: 1px solid #D3E8E6; border-radius: 999px; padding: 3px 10px; }
+.ex-subs a:hover, .az-subs a:hover { background: #fff; border-color: #008880; text-decoration: none; }
+.az { margin-top: 16px; background: #fff; border: 1px solid #E6E9ED; border-radius: 12px; padding: 16px; }
+.az-head { font-size: 11px; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 10px; }
+.az-head a { color: #00736C; }
+.az-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 10px 20px; }
+.az-list li { display: flex; flex-direction: column; gap: 5px; }
+.az-type { font-size: 14px; line-height: 20px; font-weight: 800; color: #0F2E2C; }
+.az-type:hover { color: #00736C; }
+.az-subs { display: flex; flex-wrap: wrap; gap: 5px; }
+.az-subs a { font-size: 12px; padding: 2px 9px; font-weight: 600; }
+@container art (max-width: 520px) {
+  .ex-grid { grid-template-columns: 1fr; gap: 10px; }
+  .ex-card { padding: 14px; }
+  .az-list { grid-template-columns: 1fr 1fr; gap: 10px 12px; }
+}
