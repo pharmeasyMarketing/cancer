@@ -17,6 +17,10 @@ LAST_UPDATED = '6 November 2026'
 CURRENT_MONTH_YEAR = 'November 2026'
 LAST_UPDATED_ISO = '2026-11-06T09:00:00+05:30'
 CANON = 'https://pharmeasy.in/cancer/'
+# The committed index.html is what GitHub Pages serves (pharmeasymarketing.github.io/cancer/),
+# and that copy must stay out of search. Only a pharmeasy.in deploy builds with --production.
+PRODUCTION = '--production' in sys.argv
+ROBOTS = '' if PRODUCTION else '<meta name="robots" content="noindex, nofollow">\n'
 
 REVIEWER = 'Dr. Ayush Shashikant Dubey'
 REVIEWER_URL = 'https://pharmeasy.in/legal/editorial-policy/-dr-ayush-shashikant-dubey-190'
@@ -719,7 +723,7 @@ def head(faqs, desc, title):
 <link rel="apple-touch-icon" href="https://pharmeasy.in/favicon.ico">
 <title>{esc(title)}</title>
 <meta name="description" content="{esc(desc)}">
-<link rel="canonical" href="{CANON}">
+{ROBOTS}<link rel="canonical" href="{CANON}">
 <meta property="og:title" content="{esc(title)}">
 <meta property="og:description" content="{esc(desc)}">
 <meta property="og:url" content="{CANON}">
@@ -769,6 +773,8 @@ def main():
     assert '—' not in page and '–' not in page, [m.start() for m in re.finditer('[—–]', page)][:5]
     open(OUT, 'w', encoding='utf8').write(page)
     print('wrote', os.path.abspath(OUT), len(page), 'bytes; sections', len(toc), 'faqs', len(faqs))
+    print('robots: indexable (production build)' if PRODUCTION else
+          'robots: NOINDEX (GitHub Pages copy; build with --production for pharmeasy.in)')
 
 
 if __name__ == '__main__':

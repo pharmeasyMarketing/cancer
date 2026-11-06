@@ -2,6 +2,13 @@
 
 `python3 build.py` regenerates `../index.html` from `source.md` (the doctor-reviewed editorial doc).
 
+**Indexing.** The committed `index.html` is the copy GitHub Pages serves at
+pharmeasymarketing.github.io/cancer/, so a plain `python3 build.py` adds
+`<meta name="robots" content="noindex, nofollow">` to keep that copy out of search.
+For the real pharmeasy.in/cancer/ deploy, build with `python3 build.py --production`, which
+leaves the robots tag out. A deploy job should check for it, for example
+`! grep -q 'name="robots" content="noindex' index.html`, so a noindexed page can never reach production.
+
 ## Drug table: "+N more molecules" popups
 
 Each drug-group row ends with a "+N more molecules" chip. Clicking it opens a popup listing that
