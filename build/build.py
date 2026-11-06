@@ -854,6 +854,17 @@ def check_cancer_links(page):
           ('; not linked: ' + ', '.join(missing)) if missing else ''))
 
 
+def built_pages():
+    """Inner pages present in this build (for the preview-only link rewrite in cancer.js)."""
+    root = os.path.join(HERE, '..')
+    out = []
+    for d, _, files in os.walk(root):
+        rel = os.path.relpath(d, root).replace(os.sep, '/')
+        if 'index.html' in files and rel != '.' and not rel.startswith(('build', 'assets', '.git')):
+            out.append(rel + '/')
+    return sorted(out)
+
+
 def main():
     sections, toc = build_sections()
     faq, ref, faqs = faq_and_refs()
@@ -862,7 +873,7 @@ def main():
             'Medically reviewed by Dr. Ayush Shashikant Dubey.')
     body = ''.join(sections)
     # the explore band sits before the FAQ, like the GLP-1 tools band
-    page = (head(faqs, desc, title) + '\n<body>\n<a class="skip" href="#main">Skip to content</a>\n<div data-pe-header></div>\n<main id="main"><div id="dc-root">\n'
+    page = (head(faqs, desc, title) + '\n<body data-built="%s">\n<a class="skip" href="#main">Skip to content</a>' % ' '.join(built_pages()) + '\n<div data-pe-header></div>\n<main id="main"><div id="dc-root">\n'
             '<div style="background:#F5F7F8;font-family:var(--glp-font,Inter,Mulish,sans-serif);color:#25282B;padding-bottom:48px;container-type:inline-size">\n'
             + hero() + '\n  <div class="sec" style="max-width:1120px;margin:0 auto;padding:24px 20px 0">\n    <div style="display:flex;flex-wrap:wrap;gap:24px;align-items:flex-start">\n\n' + rail(toc)
             + '\n      <div class="art" style="order:2;flex:1 1 560px;min-width:0">\n' + body + explore_band() + faq + ref + '\n      </div>\n    </div>\n  </div>\n' + disclaimer() +

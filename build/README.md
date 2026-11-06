@@ -9,6 +9,27 @@ For the real pharmeasy.in/cancer/ deploy, build with `python3 build.py --product
 leaves the robots tag out. A deploy job should check for it, for example
 `! grep -q 'name="robots" content="noindex' index.html`, so a noindexed page can never reach production.
 
+## Inner pages (`pages.py`)
+
+`python3 pages.py` builds each editorial doc in `pages/` into `/cancer/<path>/index.html` in the
+homepage's design. Docs are named by URL path (`treatment__chemotherapy.md` is
+`/cancer/treatment/chemotherapy/`) and listed in `PAGES` at the top of `pages.py`. To add a page,
+drop the doc in `pages/`, add it to `PAGES`, and run `python3 build.py && python3 pages.py`.
+
+The renderer reads the doc as written: H1, reviewer byline (name, profile link, photo), intro,
+`##` sections, `###` sub-headings, lists, tables, the "Medicines on PharmEasy" molecule/brand
+table, FAQs (FAQPage schema) and references. It only makes mechanical changes, and lists each one
+in `pages_report.md` for the editors:
+
+- links to `/cancer/` pages outside `cancer_urls.txt` keep their words and lose the link
+- em/en dashes become a colon, comma or hyphen
+- the "Latest on ..." sample-row module, table columns made only of unfilled `{{...}}` fields and
+  prototype screenshots (`SKIP_IMAGES`) are left out
+
+Each page gets the same noindex (unless `--production`), nofollow, URL-plan check and dash check
+as the homepage. On GitHub Pages and localhost, `cancer.js` points links to built pages at the
+built copy (they are not live on pharmeasy.in yet); production links are unchanged.
+
 ## Drug table: "+N more molecules" popups
 
 Each drug-group row ends with a "+N more molecules" chip. Clicking it opens a popup listing that

@@ -164,3 +164,19 @@
     });
   });
 })();
+
+/* Preview only (GitHub Pages / localhost): links to hub pages that exist in this build open the
+   built copy instead of pharmeasy.in, where they are not live yet. Production is untouched. */
+(function () {
+  'use strict';
+  var h = location.hostname;
+  if (!(/\.github\.io$/.test(h) || h === 'localhost' || h === '127.0.0.1')) return;
+  var built = (document.body.getAttribute('data-built') || '').split(/\s+/).filter(Boolean);
+  var src = (document.querySelector('script[src*="assets/js/cancer.js"]') || {}).src || '';
+  if (!src) return;
+  var base = src.replace(/assets\/js\/cancer\.js.*$/, '');
+  [].forEach.call(document.querySelectorAll('a[href^="https://pharmeasy.in/cancer/"]'), function (a) {
+    var p = a.getAttribute('href').replace('https://pharmeasy.in/cancer/', '').split('#')[0];
+    if (p === '' || built.indexOf(p) !== -1) a.setAttribute('href', base + p + (a.hash || ''));
+  });
+})();
