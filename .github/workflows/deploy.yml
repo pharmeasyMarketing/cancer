@@ -1,0 +1,104 @@
+name: Deploy cancer hub to CyberPanel
+
+# Publishes the cancer hub to the CyberPanel box that will serve https://pharmeasy.in/cancer/,
+# the same way the GLP-1 hub is published to /glp-1/.
+#
+# The committed HTML is the GitHub Pages preview copy, which is noindexed. This workflow rebuilds
+# it with --production (no robots noindex tag), stages only the site files (index.html, assets/
+# and the inner-page folders listed in build/pages.json) and rsyncs that to the server.
+#
+# The deploy key is locked to /home/pharmeasy.in/public_html/cancer with rrsync on the server:
+# write-only, no shell, that one directory. Setup: deploy/CYBERPANEL.md. Until the DEPLOY_*
+# secrets exist the workflow builds, checks and then skips the upload, so it can never publish
+# by accident.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "index.html"
+      - "assets/**"
+      - "build/**"
+      - "nutrition/**"
+      - "prevention/**"
+      - "symptoms/**"
+      - "tests/**"
+      - "treatment/**"
+      - "types/**"
+      - ".github/workflows/deploy.yml"
+  workflow_dispatch:
+
+concurrency:
+  group: cancer-deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+
+      # ---- 1. production build (standard library only) ----
+      - name: Build production pages
+        run: |
+          set -euo pipefail
+          python3 build/build.py --production
+          python3 build/pages.py --production
+
+      # ---- 2. stage only what belongs on the site, then check it ----
+      - name: Stage site
+        run: |
+          set -euo pipefail
+          rm -rf dist && mkdir dist
+          cp index.html dist/
+          cp -R assets dist/
+          # top-level folder of every inner page (treatment/, types/ ...)
+          for d in $(python3 -c "import json;print(' '.join(sorted({p['path'].split('/')[0] for p in json.load(open('build/pages.json'))['pages']})))"); do
+            cp -R "$d" dist/
+          done
+          find dist -name '__pycache__' -prune -exec rm -rf {} +
+          echo "staged:"; (cd dist && find . -name index.html | sort)
+          # production must be indexable and must not leak the preview noindex
+          if grep -rl 'name="robots" content="noindex' dist --include=index.html; then
+            echo "::error::a page still carries the preview noindex tag"; exit 1
+          fi
+          # house rule: no em/en dashes in any published page
+          if grep -rlP '[\x{2013}\x{2014}]' dist --include=index.html; then
+            echo "::error::em/en dash found in a published page"; exit 1
+          fi
+
+      # ---- 3. upload ----
+      - name: Deploy to CyberPanel (/cancer)
+        env:
+          SSH_KEY: ${{ secrets.DEPLOY_SSH_KEY }}
+          HOST:    ${{ secrets.DEPLOY_HOST }}
+          USER:    ${{ secrets.DEPLOY_USER }}
+          DEST:    ${{ secrets.DEPLOY_PATH }}
+          KNOWN:   ${{ secrets.DEPLOY_KNOWN_HOSTS }}
+          PORT:    ${{ secrets.DEPLOY_PORT }}
+        run: |
+          set -euo pipefail
+          if [ -z "${HOST:-}" ] || [ -z "${USER:-}" ] || [ -z "${DEST:-}" ]; then
+            echo "DEPLOY_* secrets not set: built and checked, upload skipped"
+            exit 0
+          fi
+          mkdir -p ~/.ssh
+          # the trailing newline matters: OpenSSH rejects a key file without one ("error in libcrypto")
+          printf '%s\n' "$SSH_KEY" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          printf '%s\n' "$KNOWN" > ~/.ssh/known_hosts
+          if ! ssh-keygen -y -f ~/.ssh/id_ed25519 >/dev/null 2>&1; then
+            echo "::error::DEPLOY_SSH_KEY is not a valid private key: gh secret set DEPLOY_SSH_KEY < ~/.ssh/cancer_deploy"
+            exit 1
+          fi
+          SSH_OPTS="-i ~/.ssh/id_ed25519 -p ${PORT:-22} -o ConnectTimeout=25 -o ServerAliveInterval=15 -o ServerAliveCountMax=4"
+          for attempt in 1 2 3; do
+            if rsync -az --delete -e "ssh $SSH_OPTS" dist/ "$USER@$HOST:$DEST/"; then
+              echo "deployed on attempt $attempt"; exit 0
+            fi
+            [ "$attempt" = 3 ] && { echo "::error::rsync failed after 3 attempts"; exit 1; }
+            sleep $((attempt * 30))
+          done
