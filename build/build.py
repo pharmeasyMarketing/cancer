@@ -625,17 +625,37 @@ CANCER_TYPES = [
 ]
 
 
+def existing_pages():
+    """Hub pages that actually exist: the homepage plus every inner page in pages.json whose doc is present.
+    None of the planned URLs is live on pharmeasy.in yet, so only these may be linked from the explore band."""
+    cfg = json.load(open(os.path.join(HERE, 'pages.json'), encoding='utf8'))['pages']
+    return {''} | {p['path'] for p in cfg if os.path.exists(os.path.join(HERE, 'pages', p['doc']))}
+
+
 def explore_band():
+    have = existing_pages()
     cards = []
     for title, desc, ic, path, subs in EXPLORE:
+        if path not in have:
+            continue
+        subs = [(t, p) for t, p in subs if p in have]
         sub = ('<div class="ex-subs">%s</div>' % ''.join('<a href="%s%s">%s</a>' % (CX, p, esc(t)) for t, p in subs)) if subs else ''
         cards.append('<div class="ex-card"><span class="ex-ic">%s</span><div class="ex-body"><a class="ex-title" href="%s%s">%s</a>'
                      '<span class="ex-desc">%s</span>%s</div></div>' % (svg(IC[ic], 18), CX, path, esc(title), esc(desc), sub))
     # grouped by first letter; a type with subpages gets a toggle on mobile (cancer.js), everything
     # stays in the HTML and is visible without JS
-    letters = {}
+    letters, n_types = {}, 0
     for name, path, subs in CANCER_TYPES:
-        letters.setdefault(name[0].upper(), []).append((name, path, subs))
+        live_subs = [(t, p) for t, p in subs if p in have]
+        if path in have:
+            letters.setdefault(name[0].upper(), []).append((name, path, live_subs))
+            n_types += 1
+        else:   # parent page missing: an existing subpage gets its own row
+            for t, p in live_subs:
+                letters.setdefault(t[0].upper(), []).append((t, p, []))
+                n_types += 1
+    for k in letters:
+        letters[k].sort(key=lambda r: r[0])
     groups = []
     for letter in sorted(letters):
         rows = []
@@ -652,14 +672,16 @@ def explore_band():
                 rows.append('<li class="ctz-item"><div class="ctz-row"><a class="ctz-type" href="%s%s">%s%s</a></div></li>'
                             % (CX, path, esc(name), '<span class="ctz-go" aria-hidden="true">%s</span>' % svg(IC['arrow'], 16)))
         groups.append('<div class="ctz-group"><div class="ctz-letter" aria-hidden="true">%s</div><ul class="ctz-list">%s</ul></div>' % (letter, ''.join(rows)))
-    types = groups
+    head_lbl = ('<a href="%stypes/">Cancer types A to Z</a>' % CX) if 'types/' in have else '<span class="ctz-title">Cancer types A to Z</span>'
+    ctz = ('      <div class="ctz">\n        <div class="ctz-head">%s<span>%d cancer%s</span></div>\n'
+           '        <div class="ctz-groups">%s</div>\n      </div>\n' % (head_lbl, n_types, '' if n_types == 1 else 's', ''.join(groups))) if groups else ''
+    if not cards and not ctz:
+        return ''
     return ('\n  <div class="asec" style="padding:36px 0 0">\n'
             '    <div class="pad explore" style="background:#F2F9F8;border:1px solid #B8DEDB;border-radius:12px;padding:20px;margin-bottom:20px">\n'
             '      <div class="cx-eyebrow" style="margin-bottom:4px">Explore cancer care</div>\n'
             '      <p style="font-size:14px;line-height:22px;color:#5C636D;margin:0 0 14px">Each guide goes deeper on one part of this page. They are for information and do not replace your oncologist.</p>\n'
-            '      <div class="ex-grid">%s</div>\n'
-            '      <div class="ctz">\n        <div class="ctz-head"><a href="%stypes/">Cancer types A to Z</a><span>21 cancers</span></div>\n'
-            '        <div class="ctz-groups">%s</div>\n      </div>\n    </div>\n  </div>\n' % (''.join(cards), CX, ''.join(types)))
+            '      %s\n%s    </div>\n  </div>\n' % (('<div class="ex-grid">%s</div>' % ''.join(cards)) if cards else '', ctz))
 
 
 def faq_and_refs():
@@ -849,9 +871,7 @@ def check_cancer_links(page):
     used = set(re.findall(r'href="https://pharmeasy\.in(/cancer/[^"#?]*)', page))
     bad = sorted(used - allowed)
     assert not bad, 'links to /cancer/ pages that are not in cancer_urls.txt: %s' % bad
-    missing = sorted(allowed - used - {'/cancer/'})
-    print('cancer links: %d of %d planned pages linked%s' % (len(used & allowed), len(allowed),
-          ('; not linked: ' + ', '.join(missing)) if missing else ''))
+    print('cancer links: %d of %d planned pages linked' % (len(used & allowed), len(allowed)))
 
 
 def built_pages():

@@ -1,0 +1,37 @@
+{
+ "_about": "Inner pages built by pages.py (doc in build/pages/ -> /cancer/<path>/). build.py links only these (plus the homepage) from the Explore cancer care band and the Cancer types A to Z.",
+ "pages": [
+  {
+   "doc": "treatment.md",
+   "path": "treatment/"
+  },
+  {
+   "doc": "treatment__chemotherapy.md",
+   "path": "treatment/chemotherapy/"
+  },
+  {
+   "doc": "nutrition.md",
+   "path": "nutrition/"
+  },
+  {
+   "doc": "prevention.md",
+   "path": "prevention/"
+  },
+  {
+   "doc": "prevention__hpv.md",
+   "path": "prevention/hpv/"
+  },
+  {
+   "doc": "symptoms.md",
+   "path": "symptoms/"
+  },
+  {
+   "doc": "tests.md",
+   "path": "tests/"
+  },
+  {
+   "doc": "types__cervical-cancer.md",
+   "path": "types/cervical-cancer/"
+  }
+ ]
+}

@@ -13,8 +13,12 @@ leaves the robots tag out. A deploy job should check for it, for example
 
 `python3 pages.py` builds each editorial doc in `pages/` into `/cancer/<path>/index.html` in the
 homepage's design. Docs are named by URL path (`treatment__chemotherapy.md` is
-`/cancer/treatment/chemotherapy/`) and listed in `PAGES` at the top of `pages.py`. To add a page,
-drop the doc in `pages/`, add it to `PAGES`, and run `python3 build.py && python3 pages.py`.
+`/cancer/treatment/chemotherapy/`) and listed in `pages.json`. To add a page, drop the doc in
+`pages/`, add it to `pages.json`, and run `python3 build.py && python3 pages.py`.
+
+The Explore cancer care band and the Cancer types A to Z (homepage and every inner page) link only
+pages that exist: the homepage plus the pages in `pages.json`. Cards, chips and A to Z rows for
+planned pages appear automatically once their page is added and rebuilt.
 
 The renderer reads the doc as written: H1, reviewer byline (name, profile link, photo), intro,
 `##` sections, `###` sub-headings, lists, tables, the "Medicines on PharmEasy" molecule/brand

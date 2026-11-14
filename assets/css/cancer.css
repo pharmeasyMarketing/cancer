@@ -378,7 +378,7 @@ html.mm-open { overflow: hidden; }
 .ex-subs a:hover, .ctz-subs a:hover { background: #fff; border-color: #008880; text-decoration: none; }
 .ctz { margin-top: 16px; background: #fff; border: 1px solid #E6E9ED; border-radius: 12px; padding: 18px 20px; }
 .ctz-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 14px; }
-.ctz-head a { font-size: 11px; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; color: #00736C; }
+.ctz-head a, .ctz-head .ctz-title { font-size: 11px; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; color: #00736C; }
 .ctz-head span { font-size: 12px; color: #8E97A3; }
 .ctz-groups { columns: 3 220px; column-gap: 28px; }
 .ctz-group { break-inside: avoid; display: grid; grid-template-columns: 26px 1fr; gap: 0 10px; margin-bottom: 14px; }

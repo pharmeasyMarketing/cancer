@@ -25,16 +25,7 @@ SRC_DIR = os.path.join(HERE, 'pages')
 CX = B.CX
 
 # doc file -> URL path under /cancer/
-PAGES = [
-    ('treatment.md', 'treatment/'),
-    ('treatment__chemotherapy.md', 'treatment/chemotherapy/'),
-    ('nutrition.md', 'nutrition/'),
-    ('prevention.md', 'prevention/'),
-    ('prevention__hpv.md', 'prevention/hpv/'),
-    ('symptoms.md', 'symptoms/'),
-    ('tests.md', 'tests/'),
-    ('types__cervical-cancer.md', 'types/cervical-cancer/'),
-]
+PAGES = [(p['doc'], p['path']) for p in json.load(open(os.path.join(HERE, 'pages.json'), encoding='utf8'))['pages']]
 
 ALLOWED = {l.strip() for l in open(B.URLS_FILE, encoding='utf8') if l.startswith('/cancer/')}
 
