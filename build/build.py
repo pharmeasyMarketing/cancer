@@ -359,6 +359,11 @@ def approved_updates():
     return sorted(items, key=lambda i: i['date'], reverse=True)[:UPDATES_MAX]
 
 
+def editor_approved(items):
+    """Approved items that came from an editor, not from the pipeline's end-to-end test run."""
+    return [i for i in items if not str(i.get('approved_by', '')).lower().startswith('e2e test')]
+
+
 def pill_date(iso):
     y, m, d = map(int, iso.split('-'))
     return '%d %s %d' % (d, MONTHS[m - 1][:3], y)
@@ -556,7 +561,10 @@ def build_sections():
             ('GCO data tables', 'https://gco.iarc.who.int/today/en/dataviz/tables'), ('WHO cancer fact sheet', 'https://www.who.int/news-room/fact-sheets/detail/cancer'),
             ('data.gov.in cancer datasets', 'https://data.gov.in/keywords/Cancer')]
     b += '    <div class="srcs">%s</div>\n' % ''.join('<a href="%s">%s</a>' % (u, esc(t)) for t, u in srcs)
-    add('toc-updates', 'Latest on cancer in India', b)
+    # Production shows this section only once an editor has approved real items (decision 14 Nov 2026).
+    # The preview keeps the sample/test rows so the module can still be reviewed.
+    if not PRODUCTION or editor_approved(approved):
+        add('toc-updates', 'Latest on cancer in India', b)
 
     return S, toc
 

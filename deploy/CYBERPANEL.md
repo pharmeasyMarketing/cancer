@@ -12,6 +12,17 @@ difference: **this repo is public, so the private deploy key is never committed.
 The deploy key is locked to that one directory with `rrsync`: write-only, no shell, nothing else
 on the box.
 
+## Status (14 Nov 2026)
+
+- Steps 1 to 5 are done: `cancer/` exists on the box (owner `pharm9528`), the deploy key is
+  authorised with `/usr/local/bin/rrsync -wo /home/pharmeasy.in/public_html/cancer` (line 10 of
+  `/home/pharmeasy.in/.ssh/authorized_keys`, backup `authorized_keys.bak-20261114021407`) and the
+  five `DEPLOY_*` secrets are set. The key cannot open a shell (tested).
+- **Step 0 (CloudFront) is still open.** Files deploy to the server, but the public URL serves the
+  app's 404 until `/cancer*` is routed to the CyberPanel origin.
+- The "Latest on cancer in India" section is left off production until an editor approves real
+  items (`review_updates.py approve`); items approved by the end-to-end test do not count.
+
 ## Two warnings
 
 1. **`--delete` is on.** Anything in `cancer/` that is not in the build is removed on every
