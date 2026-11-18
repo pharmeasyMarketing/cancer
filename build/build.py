@@ -11,6 +11,17 @@ from lib import *
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(HERE, '..', 'index.html')
 
+
+def bust(page):
+    """Stamp every assets/css|js link with a hash of the file, so browsers and the CDN fetch the new
+    file as soon as it changes instead of serving a stale cached copy."""
+    import hashlib
+    def stamp(m):
+        f = os.path.join(HERE, '..', m.group(2))
+        v = hashlib.md5(open(f, 'rb').read()).hexdigest()[:8]
+        return '%s%s?v=%s"' % (m.group(1), m.group(2), v)
+    return re.sub(r'((?:\.\./)*)(assets/(?:css|js)/[\w-]+\.(?:css|js))"', stamp, page)
+
 # ---- CMS fields (the doc's {{...}} placeholders) ----
 PUBLISHED_DATE = '6 November 2026'
 LAST_UPDATED = '6 November 2026'
@@ -1079,7 +1090,7 @@ def main():
     check_cancer_links(page)
     # the house rule: no em or en dashes in any output
     assert '—' not in page and '–' not in page, [m.start() for m in re.finditer('[—–]', page)][:5]
-    open(OUT, 'w', encoding='utf8').write(page)
+    open(OUT, 'w', encoding='utf8').write(bust(page))
     write_removed_report()
     write_link_report()
     print('wrote', os.path.abspath(OUT), len(page), 'bytes; sections', len(toc), 'faqs', len(faqs))
