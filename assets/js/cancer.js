@@ -180,3 +180,23 @@
     if (p === '' || built.indexOf(p) !== -1) a.setAttribute('href', base + p + (a.hash || ''));
   });
 })();
+
+/* A table that is wider than the article column would hide its last columns behind a sideways
+   scroll. Show it as row cards instead (.stack, see cancer.css). Re-checked on resize. */
+(function () {
+  'use strict';
+  var wraps = [].slice.call(document.querySelectorAll('.rt-scroll'));
+  if (!wraps.length) return;
+  function fit() {
+    wraps.forEach(function (s) {
+      var t = s.querySelector('table.rtable');
+      if (!t) return;
+      t.classList.remove('stack');
+      if (s.scrollWidth > s.clientWidth + 2) t.classList.add('stack');
+    });
+  }
+  fit();
+  var timer;
+  window.addEventListener('resize', function () { clearTimeout(timer); timer = setTimeout(fit, 150); });
+  window.addEventListener('load', fit);
+})();

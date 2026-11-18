@@ -14,7 +14,7 @@ Run:  python3 pages.py            (GitHub Pages copy, noindex)
       python3 pages.py --production
 """
 import base64, html, json, os, re, sys
-from collections import OrderedDict
+from collections import OrderedDict, Counter
 
 import build as B
 from lib import inline, unesc, clean_url, ref_html
@@ -95,10 +95,59 @@ def prep(text, page):
         note(page, '%d em/en dash(es) replaced (colon between phrases, otherwise comma or hyphen)' % n)
     text = re.sub(r'\s+—\s+', ': ', text)
     text = text.replace('—', ', ').replace('–', '-')
+    return tidy(text, page)
+
+
+# Visible-text clean-up found in the 18 Nov 2026 desktop + mobile review.
+TYPOS = [('imgaing', 'imaging'), ('modality of choce', 'modality of choice'), ('CLosed', 'Closed'),
+         ('precanceruous', 'precancerous'), ('pregant', 'pregnant'), ('duaorubicin', 'daunorubicin'),
+         ('Ou can find', 'You can find'), ('can effect the total', 'can affect the total'),
+         ('Factors that can effect', 'Factors that can affect'), ('child nis 14', 'child is 14'),
+         ('Section 5, ide effects', 'Section 5, side effects'), ('Pharmeasy website', 'PharmEasy website'),
+         ('lymphnodes', 'lymph nodes')]
+META_SENTENCES = [  # editor / prototype notes that are not meant for readers
+    r'[^.\n|]*\bprototype\b[^.\n|]*\.[ \t]*',
+    r'\*\*Prices are read live from the product catalogue\.\*\*[ \t]*',
+    r'There are no rupee figures here\.[ \t]*',
+    r'This section does not give prices in rupees\.[ \t]*',
+]
+
+
+def tidy(text, page):
+    for a, b in TYPOS:
+        if a in text:
+            text = text.replace(a, b)
+            note(page, 'typo fixed: "%s" -> "%s"' % (a, b))
+    for pat in META_SENTENCES:
+        for m in re.findall(pat, text):
+            note(page, 'editor note removed from the page: "%s"' % m.strip())
+        text = re.sub(pat, '', text)
+    # "[.16](url)", "[)9](url)", "[38.](url)", "[,63](url)": punctuation caught inside a citation link
+    text = re.sub(r'\[([^\w\s\]\[]*)(\d{1,3})([^\w\s\]\[]*)\]\((https?://[^)\s]+)\)',
+                  lambda m: m.group(0) if not (m.group(1) or m.group(3))
+                  else '%s[%s](%s)%s' % (m.group(1), m.group(2), m.group(4), m.group(3)), text)
+    # "[medicines grouped by class](url)es": a word split by the link
+    text = re.sub(r'\[([^\]]*[A-Za-z][^\]]*)\]\((https?://[^)\s]+)\)([a-z]{1,3})\b', r'[\1\3](\2)', text)
+    # "(CHE).42 A study": a citation typed as plain digits. Body only, never the reference list.
+    parts = re.split(r'(?m)(?=^#+\s*\**References)', text, maxsplit=1)
+    parts[0] = re.sub(r'(?<=[a-z)])\.(\d{1,2})(?=[\s|]|$)', lambda m: '.\x01%s\x02' % m.group(1), parts[0])
+    text = ''.join(parts)
+    # stray punctuation left by edits: "continuous. . In", "cancer..", "status,  .", "stage/,"
+    text = re.sub(r'(?<![.\d])\.[ \t]*\.(?!\.)', '.', text)
+    text = re.sub(r',[ \t]*\.', '.', text)
+    text = re.sub(r'(?<=[a-z])/,(?= )', ',', text)
+    # "Insurance in India- what to check" (a dash that lost its space); keep "low- and middle-income"
+    text = re.sub(r'(?<=[a-z])- (?!(?:and|or|to)\b)(?=[a-z])', ': ', text)
+    text = re.sub(r'(?<=[A-Za-z])- (?=\d)', ' ', text)            # "Cancer Antigen- 15-3"
+    parts = re.split(r'(?m)(?=^#+\s*\**References)', text, maxsplit=1)   # "Imaging test - what each test" (was an en dash)
+    parts[0] = re.sub(r'(?<=[a-z]) - (?=[a-z])', ': ', parts[0])
+    text = ''.join(parts)
+    text = re.sub(r'(?<=\w) +:(?=\s)', ':', text)                  # "Tests & tumour markers : what"
     return text
 
 
 def fill(s):
+    s = s.replace('{MONTH\\_YEAR}', B.CURRENT_MONTH_YEAR).replace('{MONTH_YEAR}', B.CURRENT_MONTH_YEAR)
     return (s.replace('{{CURRENT\\_MONTH\\_YEAR}}', B.CURRENT_MONTH_YEAR).replace('{{CURRENT_MONTH_YEAR}}', B.CURRENT_MONTH_YEAR)
              .replace('{{PUBLISHED\\_DATE}}', B.PUBLISHED_DATE).replace('{{LAST\\_UPDATED}}', B.LAST_UPDATED))
 
@@ -154,8 +203,12 @@ def split_cells(l):
 
 def cell_html(c):
     # the docs flatten in-cell bullet lists into "item  item  item": break them back onto lines
-    parts = re.split(r'\s{2,}(?=[A-Z\[])', c.strip())
-    return '<br>'.join(il(p) for p in parts if p.strip())
+    # ...including a bold sub-label ("**Taxanes:** ...  **Vinca alkaloids:** ...")
+    parts = re.split(r'\s{2,}(?=[A-Z\[]|\*\*)', c.strip())
+    parts = [p for p in parts if p.strip()]
+    if len(parts) == 1 and re.fullmatch(r'[\s:;,.\-]*', parts[0]):
+        return ''          # a cell holding only ":" is an unfilled placeholder
+    return '<br>'.join(il(p) for p in parts)
 
 
 def render_table(rows, page):
@@ -168,6 +221,10 @@ def render_table(rows, page):
     body = [(r + [''] * width)[:width] for r in body]
     # a column whose every cell is an unfilled CMS field ({{X}}) has nothing to show: drop it
     empty = [j for j in range(width) if body and all(re.fullmatch(r'\s*\{\{[^}]*\}\}\s*', r[j]) for r in body)]
+    # ...and so does one that says the same CMS placeholder on every row ("Brand-specific" prices)
+    empty += [j for j in range(width) if j not in empty and len(body) > 1
+              and len({unesc(r[j]).strip().lower() for r in body}) == 1
+              and re.fullmatch(r'(?i)\s*brand[- ]specific\s*', unesc(body[0][j]))]
     if empty:
         note(page, 'dropped table column "%s": every cell is an unfilled CMS field (%s)'
              % (', '.join(hdr_txt[j] for j in empty), ', '.join(sorted({unesc(r[j]).strip() for r in body for j in empty}))))
@@ -198,7 +255,8 @@ def render_medicines(body):
         if cur is None:
             cur = ('', [])
             groups.append(cur)
-        nm = '<a href="%s">%s</a>' % (esc(murl), esc(name)) if murl else esc(name)
+        nm = esc(name).replace('+', '+<wbr>').replace('/', '/<wbr>')   # "Capecitabine+Cyclophosphamide" may wrap
+        nm = '<a href="%s">%s</a>' % (esc(murl), nm) if murl else nm
         cur[1].append('<div class="mol-row"><div class="mol-name">%s</div><div class="brands">%s</div></div>'
                       % (nm, ''.join(chips) or '<span class="brand none">no brands listed</span>'))
     out = []
@@ -365,7 +423,7 @@ def strip_latest_module(lines, page):
 def split_related(lines):
     """A plain "Related pages" line starts the related-links box (it is not a ## heading in most docs)."""
     for i, l in enumerate(lines):
-        if l.strip().rstrip(':') == 'Related pages':
+        if l.strip().strip('*').strip().rstrip(':') == 'Related pages':   # plain or **bold**
             return lines[:i], lines[i + 1:]
     return lines, None
 
@@ -538,7 +596,22 @@ def refs_html(refs):
 
 
 def related_box(lines):
+    # an item whose page is not live yet lost its link in prep(): a related-pages list only lists pages you can open
+    have = B.existing_pages()
+
+    def live(l):
+        for m in LINK_MD.finditer(l):
+            mm = re.match(r'https?://(?:www\.)?pharmeasy\.in/cancer/([^?#]*)', clean_url(m.group(2)))
+            if not mm or (mm.group(1) if mm.group(1).endswith('/') or not mm.group(1) else mm.group(1) + '/') in have:
+                return True
+        return False
+    dropped = [l for l in lines if LIST_RE.match(l) and not live(l)]
+    for l in dropped:
+        note('related pages', 'related item left out, its page is not built yet: %s' % re.sub(r'\s+', ' ', l.strip())[:90])
+    lines = [l for l in lines if l not in dropped]
     body = render_blocks(lines, '', {})
+    if not re.search(r'<a ', body):
+        return ''
     return ('\n  <div class="asec" style="padding:28px 0 0">\n    <div class="pad related-box">\n'
             '      <div class="cx-eyebrow" style="margin-bottom:8px">Related pages</div>\n%s    </div>\n  </div>\n' % body)
 
@@ -595,6 +668,78 @@ def meta_desc(doc):
 
 
 # ---------------------------------------------------------------- build
+SEC_STOP = set('the a an of and in to is it its what how for on with or your you this that are be does do when which '
+               'why explains mentions discusses describes'.split())
+
+
+def _toks(s):
+    return {w for w in re.findall(r'[a-z]+', html.unescape(s).lower()) if w not in SEC_STOP and len(w) > 2}
+
+
+def link_sections(page, toc, path):
+    """The "Which applies to you?" tables point at "Section 5, when to see a doctor", but the page does not
+    number its sections. Link each pointer to the heading it names (an h2 or one of its h3 sub-headings),
+    with that heading's own wording as the link text. Words decide first; the number is the fallback, read
+    against the doc's own outline (its offset is learned from pointers whose words clearly match one h2)."""
+    if not toc:
+        return page
+    h2 = [(sid, t, _toks(t)) for sid, t in toc]
+    # give the h3 sub-headings ids so a pointer can land on them
+    h3, used = [], set(s for s, _ in toc)
+    def h3_id(m):
+        text = html.unescape(re.sub(r'<[^>]+>', '', m.group(2))).strip()
+        sid = 'sub-' + slug(re.sub(r'^\d+\.\s*', '', text))
+        while sid in used:
+            sid += '-2'
+        used.add(sid)
+        h3.append((sid, re.sub(r'^\d+\.\s*', '', text), _toks(text)))
+        return '<h3 class="h3" id="%s"%s>%s</h3>' % (sid, m.group(1) or '', m.group(2))
+    page = re.sub(r'<h3 class="h3"( [^>]*)?>(.*?)</h3>', h3_id, page)
+    cell = re.compile(r'(<td[^>]*>)\s*Section (\d+)\s*[,:]?\s*([^<]*)(</td>)')
+    see = re.compile(r'\(see section (\d+)\)', re.I)
+
+    def by_words(rest, cands):
+        want = _toks(rest)
+        # rank: shared words, all pointer words found, then an h2 before an h3 on a tie
+        sc = sorted(((len(want & tt), len(want - tt) == 0, sid.startswith('toc-'), i)
+                     for i, (sid, _, tt) in enumerate(cands)), reverse=True)
+        if not sc or sc[0][0] == 0 or (len(sc) > 1 and sc[0][:3] == sc[1][:3]):
+            return None
+        best = sc[0]
+        return best[3] if (best[0] >= 2 or best[1]) else None
+
+    offs = Counter()
+    for m in cell.finditer(page):
+        i = by_words(m.group(3), h2)
+        if i is not None:
+            offs[int(m.group(2)) - 1 - i] += 1
+    off = offs.most_common(1)[0][0] if offs else 0
+
+    def target(n, rest=''):
+        if rest:
+            i = by_words(rest, h2 + h3)
+            if i is not None:
+                return (h2 + h3)[i]
+        i = n - 1 - off
+        return h2[i] if 0 <= i < len(h2) else None
+
+    def cell_sub(m):
+        t = target(int(m.group(2)), m.group(3))
+        if not t:
+            note(path, 'section pointer left as text, no matching section: "Section %s %s"' % (m.group(2), m.group(3)))
+            return m.group(0)
+        return '%s<a href="#%s">%s</a>%s' % (m.group(1), t[0], esc(t[1]), m.group(4))
+
+    def see_sub(m):
+        t = target(int(m.group(1)))
+        return '(see <a href="#%s">%s</a>)' % (t[0], esc(t[1])) if t else m.group(0)
+
+    n = len(cell.findall(page)) + len(see.findall(page))
+    if n:
+        note(path, '%d "Section N" pointer(s) linked to the heading they name (number offset %d)' % (n, off))
+    return see.sub(see_sub, cell.sub(cell_sub, page))
+
+
 def build_page(fname, path, built):
     doc = parse(fname, path)
     depth = path.count('/')
@@ -615,6 +760,7 @@ def build_page(fname, path, built):
         if low.startswith('related pages'):
             related = (related or []) + lines
             continue
+        title = re.sub(r'^\d+\.\s+', '', title)       # "5. Blood tests and tumour markers": the only numbered h2
         sid = 'toc-' + slug(title)
         toc.append((sid, title))
         body.append(B.sec(sid, title, render_blocks(lines, path, doc['images'])))
@@ -634,6 +780,7 @@ def build_page(fname, path, built):
             + ''.join('<script src="%sassets/js/%s.js" defer></script>\n' % (prefix, j) for j in ('pe-shell', 'pe-toc', 'cancer'))
             + '</body>\n</html>\n')
     page = page.replace('IMGPREFIX/', prefix + 'assets/img/')
+    page = link_sections(page, toc, path)
     page = B.remove_dead_links(page, '/cancer/' + path)
     page = B.nofollow_external(page)
     used = set(re.findall(r'href="https://pharmeasy\.in(/cancer/[^"#?]*)', page))

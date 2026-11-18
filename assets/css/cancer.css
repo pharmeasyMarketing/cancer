@@ -448,3 +448,28 @@ html.mm-open { overflow: hidden; }
 .related-box { background: #fff; border: 1px solid #E6E9ED; border-radius: 12px; padding: 18px 20px; }
 .related-box .pg-list { margin-bottom: 10px; }
 .rel-reading { font-size: 14px !important; }
+
+/* ---- review 18 Nov: tables too wide for the article column become row cards on every screen
+   (cancer.js adds .stack when a table would otherwise need a sideways scroll) ---- */
+.mol-name { overflow-wrap: anywhere; min-width: 0; }
+.rtable.stack, .rtable.stack tbody { display: block; width: 100%; }
+.rtable.stack thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+.rtable.stack tr { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 28px; padding: 16px 20px; border-bottom: 1px solid #E6E9ED; }
+.rtable.stack tr:last-child { border-bottom: 0; }
+.rtable.stack tbody tr:hover { background: transparent; }
+.rtable.stack td, .rtable.stack td:first-child, .rtable.stack td:last-child { display: block; padding: 0; border: 0; margin: 0; }
+.rtable.stack td.k { grid-column: 1 / -1; font-size: 16px; }
+.rtable.stack td[data-label]::before { content: attr(data-label); display: block; font-size: 10.5px; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; color: #00736C; margin-bottom: 2px; }
+.rtable.stack td.k::before { display: none; }
+.rtable.stack td:empty { display: none; }
+@container art (max-width: 640px) {
+  .rtable.stack tr { grid-template-columns: 1fr; gap: 10px; padding: 14px 16px; }
+  .rtable.stack td + td { margin-top: 0; }
+}
+/* a one-row "facts" table: its first column is a fact too, so keep that column's label */
+.rtable.stack tbody tr:only-child td.k::before { display: block; }
+.rtable.stack tbody tr:only-child td.k { font-size: 15px; }
+@container art (max-width: 640px) {
+  .rtable tbody tr:only-child td.k::before { display: block; }
+  .rtable tbody tr:only-child td.k { font-size: 15px; }
+}

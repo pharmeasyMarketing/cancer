@@ -83,7 +83,6 @@ From build/link_status.json (python3 build/check_links.py). Dead = the server an
 - https://pharmeasy.in/cancer/types/lung-cancer/ (404, unlinked): "lung cancer"
 - https://pharmeasy.in/cancer/types/breast-cancer/ (404, unlinked): "breast cancer"
 - https://pharmeasy.in/cancer/symptoms/is-it-cancer/ (404, unlinked): "Is It Cancer?"
-- https://pharmeasy.in/cancer/screening/ (404, unlinked): "Screening &amp; early detection"
 
 ## /cancer/tests/
 
@@ -123,8 +122,6 @@ From build/link_status.json (python3 build/check_links.py). Dead = the server an
 - https://pharmeasy.in/online-medicine-order/25715 (404, removed): "Sorafenat"
 - https://pharmeasy.in/online-medicine-order/4123163 (404, removed): "Denosurel"
 - https://pharmeasy.in/cancer/cost-and-support/ (404, unlinked): "cost and financial support"
-- https://pharmeasy.in/cancer/living-with/ (404, unlinked): "Living with cancer &amp; caregivers"
-- https://pharmeasy.in/cancer/cost-and-support/ (404, unlinked): "Cost &amp; financial support"
 
 ## /cancer/treatment/chemotherapy/
 
@@ -146,10 +143,6 @@ From build/link_status.json (python3 build/check_links.py). Dead = the server an
 - https://pharmeasy.in/cancer/treatment/radiation-therapy/ (404, unlinked): "Radiotherapy"
 - https://pharmeasy.in/cancer/cost-and-support/ (404, unlinked): "cost and financial support"
 - https://pharmeasy.in/cancer/cost-and-support/ (404, unlinked): "Cost and financial support"
-- https://pharmeasy.in/cancer/treatment/radiation-therapy/ (404, unlinked): "Radiation therapy"
-- https://pharmeasy.in/cancer/treatment/surgery/ (404, unlinked): "Cancer surgery"
-- https://pharmeasy.in/cancer/living-with/ (404, unlinked): "Living with cancer &amp; caregivers"
-- https://pharmeasy.in/cancer/cost-and-support/ (404, unlinked): "Cost &amp; financial support"
 
 ## /cancer/types/cervical-cancer/
 
@@ -168,8 +161,4 @@ From build/link_status.json (python3 build/check_links.py). Dead = the server an
 - https://pharmeasy.in/online-medicine-order/5896 (404, removed): "Celplat"
 - https://pharmeasy.in/cancer/cost-and-support/ (404, unlinked): "cost and financial support"
 - https://pharmeasy.in/cancer/cost-and-support/ (404, unlinked): "Cost and financial support"
-- https://pharmeasy.in/cancer/treatment/radiation-therapy/ (404, unlinked): "Radiation therapy"
-- https://pharmeasy.in/cancer/treatment/surgery/ (404, unlinked): "Cancer surgery"
-- https://pharmeasy.in/cancer/living-with/ (404, unlinked): "Living with cancer &amp; caregivers"
-- https://pharmeasy.in/cancer/cost-and-support/ (404, unlinked): "Cost &amp; financial support"
 - https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-tisotumab-vedotin-tftv-recurrent-or-metastatic-cervical-cancer (404, unlinked): "https://www.fda.gov/drugs/resources-information-approved-dru"
