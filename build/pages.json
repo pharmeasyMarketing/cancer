@@ -3,35 +3,110 @@
  "pages": [
   {
    "doc": "treatment.md",
-   "path": "treatment/"
+   "path": "treatment/",
+   "about": [
+    {
+     "@type": "MedicalCondition",
+     "name": "Cancer"
+    },
+    {
+     "@type": "MedicalTherapy",
+     "name": "Cancer treatment"
+    }
+   ]
   },
   {
    "doc": "treatment__chemotherapy.md",
-   "path": "treatment/chemotherapy/"
+   "path": "treatment/chemotherapy/",
+   "about": [
+    {
+     "@type": "MedicalTherapy",
+     "name": "Chemotherapy",
+     "alternateName": "Cancer chemotherapy"
+    }
+   ]
   },
   {
    "doc": "nutrition.md",
-   "path": "nutrition/"
+   "path": "nutrition/",
+   "about": [
+    {
+     "@type": "MedicalCondition",
+     "name": "Cancer"
+    },
+    {
+     "@type": "Diet",
+     "name": "Nutrition during cancer treatment"
+    }
+   ]
   },
   {
    "doc": "prevention.md",
-   "path": "prevention/"
+   "path": "prevention/",
+   "about": [
+    {
+     "@type": "MedicalCondition",
+     "name": "Cancer"
+    }
+   ]
   },
   {
    "doc": "prevention__hpv.md",
-   "path": "prevention/hpv/"
+   "path": "prevention/hpv/",
+   "about": [
+    {
+     "@type": "MedicalCondition",
+     "name": "Human papillomavirus infection",
+     "alternateName": "HPV"
+    },
+    {
+     "@type": "MedicalCondition",
+     "name": "Cervical cancer"
+    }
+   ]
   },
   {
    "doc": "symptoms.md",
-   "path": "symptoms/"
+   "path": "symptoms/",
+   "about": [
+    {
+     "@type": "MedicalCondition",
+     "name": "Cancer"
+    }
+   ]
   },
   {
    "doc": "tests.md",
-   "path": "tests/"
+   "path": "tests/",
+   "about": [
+    {
+     "@type": "MedicalCondition",
+     "name": "Cancer"
+    }
+   ]
   },
   {
    "doc": "types__cervical-cancer.md",
-   "path": "types/cervical-cancer/"
+   "path": "types/cervical-cancer/",
+   "about": [
+    {
+     "@type": "MedicalCondition",
+     "name": "Cervical cancer",
+     "alternateName": "Cancer of the cervix",
+     "code": {
+      "@type": "MedicalCode",
+      "codeValue": "C53",
+      "codingSystem": "ICD-10"
+     }
+    }
+   ]
+  }
+ ],
+ "home_about": [
+  {
+   "@type": "MedicalCondition",
+   "name": "Cancer",
+   "alternateName": "Malignant neoplasm"
   }
  ]
 }

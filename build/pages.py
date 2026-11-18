@@ -25,6 +25,7 @@ SRC_DIR = os.path.join(HERE, 'pages')
 CX = B.CX
 
 # doc file -> URL path under /cancer/
+ABOUT = {p['path']: p.get('about', []) for p in json.load(open(os.path.join(HERE, 'pages.json'), encoding='utf8'))['pages']}
 PAGES = [(p['doc'], p['path']) for p in json.load(open(os.path.join(HERE, 'pages.json'), encoding='utf8'))['pages']]
 
 ALLOWED = {l.strip() for l in open(B.URLS_FILE, encoding='utf8') if l.startswith('/cancer/')}
@@ -412,6 +413,13 @@ def related_links(path):
     if parent == '/cancer/':
         out = kids + [u for u in ('/cancer/types/', '/cancer/symptoms/', '/cancer/tests/', '/cancer/screening/', '/cancer/treatment/',
                                   '/cancer/prevention/') if u != me and u not in kids]
+    have = {'/cancer/' + p for p in B.existing_pages()}
+    out = [u for u in out if u in have]          # only pages that exist
+    for u in sorted(have - {'/cancer/', me}, key=lambda x: (x.count('/'), x)):
+        if len(out) >= 4:
+            break
+        if u not in out:
+            out.append(u)                          # top up with other built hub pages
     res = []
     for u in out[:8]:
         p = u[len('/cancer/'):]
@@ -444,9 +452,7 @@ def hero(doc, path):
            'border-radius:999px;object-fit:cover;border:1px solid #B8DEDB;flex-shrink:0;display:block">' % (doc['reviewer_img'], esc(doc['reviewer']))) if doc['reviewer_img'] else ''
     who = ('<a href="%s" style="color:#00736C;font-weight:700">%s</a>' % (doc['reviewer_url'], esc(doc['reviewer']))) if doc['reviewer_url'] else esc(doc['reviewer'])
     intro = ''.join('      <p style="font-size:18px;line-height:30px;color:#3D4A48;margin:0 0 16px">%s</p>\n' % il(p) for p in doc['intro'])
-    ypath = ''
-    if doc['path_line']:
-        ypath = '    <div class="your-path"><span class="yp-label">Your path</span>%s</div>\n' % il(doc['path_line'][len('Your path'):].strip())
+    ypath = ''   # the docs' "Your path" line is recognised (kept out of the intro) but not shown (decision 18 Nov 2026)
     return f'''
   <div style="background:linear-gradient(180deg,#EDF6F5 0%,#F8FBFB 100%);border-bottom:1px solid #DCE6E5">
 
@@ -461,8 +467,6 @@ def hero(doc, path):
         <span><strong style="color:#25282B;font-weight:700">Medically reviewed by</strong> {who}</span>
         <span style="color:#C9D0D8">·</span>
         <span><strong style="color:#25282B;font-weight:700">Written by</strong> <a href="https://pharmeasy.in/legal/editorial-policy" style="color:#00736C;font-weight:700">PharmEasy Medical Team</a></span>
-        <span style="color:#C9D0D8">·</span>
-        <span>Published {B.PUBLISHED_DATE}</span>
         <span style="color:#C9D0D8">·</span>
         <span>Updated on {B.LAST_UPDATED}</span>
       </div>
@@ -552,7 +556,7 @@ def head(doc, path, faqs, desc, title, prefix):
                   'isPartOf': {'@id': 'https://pharmeasy.in/#Website'}, 'breadcrumb': {'@id': canon + '#breadcrumb'},
                   'publisher': {'@id': 'https://pharmeasy.in/#Organization'},
                   'author': {'@type': 'Organization', 'name': 'PharmEasy Medical Team', 'url': 'https://pharmeasy.in/legal/editorial-policy'},
-                  'dateModified': B.LAST_UPDATED_ISO, 'reviewedBy': rev})
+                  'dateModified': B.LAST_UPDATED_ISO, 'reviewedBy': rev, **B.medical_page_props(ABOUT.get(path, []))})
     cr = crumbs(path, doc['h1'])
     graph.append({'@type': 'BreadcrumbList', '@id': canon + '#breadcrumb', 'itemListElement': [
         {'@type': 'ListItem', 'position': i + 1, 'name': t, 'item': u or canon} for i, (t, u) in enumerate(cr)]})
@@ -630,6 +634,7 @@ def build_page(fname, path, built):
             + ''.join('<script src="%sassets/js/%s.js" defer></script>\n' % (prefix, j) for j in ('pe-shell', 'pe-toc', 'cancer'))
             + '</body>\n</html>\n')
     page = page.replace('IMGPREFIX/', prefix + 'assets/img/')
+    page = B.remove_dead_links(page, '/cancer/' + path)
     page = B.nofollow_external(page)
     used = set(re.findall(r'href="https://pharmeasy\.in(/cancer/[^"#?]*)', page))
     bad = sorted(used - ALLOWED)
@@ -646,12 +651,25 @@ def build_page(fname, path, built):
     return out, len(toc), len(faqs), len(refs)
 
 
+def write_sitemap():
+    """sitemap.xml for the hub: the homepage plus every page that exists (the same set the explore band
+    links). Production URLs on pharmeasy.in; deployed to /cancer/sitemap.xml."""
+    paths = sorted(B.existing_pages(), key=lambda p: (p.count('/'), p))
+    lastmod = B.LAST_UPDATED_ISO[:10]
+    rows = ''.join('  <url><loc>%s%s</loc><lastmod>%s</lastmod></url>\n' % (CX, p, lastmod) for p in paths)
+    xml = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n%s</urlset>\n' % rows
+    open(os.path.join(ROOT, 'sitemap.xml'), 'w', encoding='utf8').write(xml)
+    return len(paths)
+
+
 def main():
     built = [p for _, p in PAGES]
     for fname, path in PAGES:
         out, ns, nf, nr = build_page(fname, path, built)
         print('wrote /cancer/%-26s sections %2d  faqs %d  refs %d' % (path, ns, nf, nr))
     print('robots: %s' % ('indexable (production build)' if B.PRODUCTION else 'NOINDEX (GitHub Pages copy)'))
+    print('sitemap.xml: %d urls' % write_sitemap())
+    B.write_removed_report()
     with open(os.path.join(HERE, 'pages_report.md'), 'w', encoding='utf8') as f:
         f.write('# Editorial notes from the page build\n\nMechanical changes the build made, and things for the editors to fix in the docs.\n')
         for page, notes in REPORT.items():

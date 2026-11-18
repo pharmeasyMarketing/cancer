@@ -17,6 +17,7 @@ on:
     branches: [main]
     paths:
       - "index.html"
+      - "sitemap.xml"
       - "assets/**"
       - "build/**"
       - "nutrition/**"
@@ -53,7 +54,7 @@ jobs:
         run: |
           set -euo pipefail
           rm -rf dist && mkdir dist
-          cp index.html dist/
+          cp index.html sitemap.xml dist/
           cp -R assets dist/
           # top-level folder of every inner page (treatment/, types/ ...)
           for d in $(python3 -c "import json;print(' '.join(sorted({p['path'].split('/')[0] for p in json.load(open('build/pages.json'))['pages']})))"); do

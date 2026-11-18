@@ -299,8 +299,10 @@ def more_molecules(drugs):
     out = {}
     for d in drugs:
         shown = {mol_id(u) for _, u in d['mols']}
+        dead = dead_urls()
         out[d['group']] = [{'name': mol_display(n), 'url': sheet[n]['urls'].strip()}
-                           for n in gm['groups'].get(d['group'], []) if sheet[n]['molecule_id'].strip() not in shown]
+                           for n in gm['groups'].get(d['group'], [])
+                           if sheet[n]['molecule_id'].strip() not in shown and sheet[n]['urls'].strip() not in dead]
     return out
 
 
@@ -754,8 +756,6 @@ def hero():
         <span style="color:#C9D0D8">·</span>
         <span><strong style="color:#25282B;font-weight:700">Written by</strong> <a href="https://pharmeasy.in/legal/editorial-policy" style="color:#00736C;font-weight:700">PharmEasy Medical Team</a></span>
         <span style="color:#C9D0D8">·</span>
-        <span>Published {PUBLISHED_DATE}</span>
-        <span style="color:#C9D0D8">·</span>
         <span>Updated on {LAST_UPDATED}</span>
       </div>
     </div>
@@ -815,6 +815,12 @@ def strip_tags(s):
     return html.unescape(re.sub(r'\s+', ' ', s)).strip()
 
 
+def medical_page_props(about):
+    """Shared MedicalWebPage properties: what the page is about, its reviewed date, specialty and audience."""
+    return {'about': about, 'lastReviewed': LAST_UPDATED_ISO[:10], 'specialty': 'https://schema.org/Oncologic',
+            'audience': {'@type': 'MedicalAudience', 'audienceType': 'Patient'}}
+
+
 def head(faqs, desc, title):
     org = json.load(open(os.path.join(HERE, 'org-schema.json'), encoding='utf8'))
     graph = list(org['@graph'])
@@ -823,6 +829,7 @@ def head(faqs, desc, title):
                   'publisher': {'@id': 'https://pharmeasy.in/#Organization'},
                   'author': {'@type': 'Organization', 'name': 'PharmEasy Medical Team', 'url': 'https://pharmeasy.in/legal/editorial-policy'},
                   'dateModified': LAST_UPDATED_ISO,
+                  **medical_page_props(json.load(open(os.path.join(HERE, 'pages.json'), encoding='utf8'))['home_about']),
                   'reviewedBy': {'@type': 'Person', 'name': REVIEWER, 'url': REVIEWER_URL, 'image': REVIEWER_IMG}})
     graph.append({'@type': 'BreadcrumbList', '@id': CANON + '#breadcrumb', 'itemListElement': [
         {'@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': 'https://pharmeasy.in/'},
@@ -852,6 +859,63 @@ def head(faqs, desc, title):
 <link rel="stylesheet" href="assets/css/page.css">
 <link rel="stylesheet" href="assets/css/cancer.css">
 </head>'''
+
+
+LINK_STATUS = os.path.join(HERE, 'link_status.json')
+REMOVED_LINKS = {}   # page -> [(url, status, anchor text, how)]
+BUILT_THIS_RUN = set()  # pages rebuilt in this process (their old report rows are replaced)
+
+
+def dead_urls():
+    """URLs check_links.py found dead (404/410). Empty until the checker has run."""
+    if not os.path.exists(LINK_STATUS):
+        return {}
+    return {u: v['status'] for u, v in json.load(open(LINK_STATUS, encoding='utf8')).items() if v.get('verdict') == 'dead'}
+
+
+def remove_dead_links(page, name):
+    """Drop links to dead URLs. Sidebar related links and brand chips go entirely (a bare word there
+    means nothing); any other link keeps its text and loses the link."""
+    BUILT_THIS_RUN.add(name)
+    dead = dead_urls()
+    if not dead:
+        return page
+
+    def fix(m):
+        tag, inner = m.group(1), m.group(2)
+        href = html.unescape(re.search(r'href="([^"]*)"', tag).group(1)).split('#')[0]
+        if href not in dead:
+            return m.group(0)
+        whole = re.search(r'class="[^"]*\b(rel-a|brand)\b', tag)
+        REMOVED_LINKS.setdefault(name, []).append((href, dead[href], re.sub(r'<[^>]+>', '', inner).strip()[:60],
+                                                   'removed' if whole else 'unlinked'))
+        return '' if whole else inner
+    page = re.sub(r'(<a\b[^>]*\bhref="https?://[^"]+"[^>]*>)(.*?)</a>', fix, page, flags=re.S)
+    # a molecule whose only brand chips were dead
+    return page.replace('<div class="brands"></div>', '<div class="brands"><span class="brand none">no brands listed</span></div>')
+
+
+def write_removed_report():
+    """Merge this run's removals into dead_links_removed.json (homepage and inner pages are built by
+    separate scripts) and render dead_links_removed.md from it."""
+    jf = os.path.join(HERE, 'dead_links_removed.json')
+    data = json.load(open(jf, encoding='utf8')) if os.path.exists(jf) else {}
+    for name in list(data):
+        if name in BUILT_THIS_RUN:
+            data.pop(name)
+    for name, rows in REMOVED_LINKS.items():
+        uniq = []
+        for r in rows:
+            if list(r) not in uniq:
+                uniq.append(list(r))
+        data[name] = uniq
+    json.dump(dict(sorted(data.items())), open(jf, 'w', encoding='utf8'), indent=1, ensure_ascii=False)
+    lines = ['# Dead links removed at build time', '',
+             'From build/link_status.json (python3 build/check_links.py). Dead = the server answered 404 or 410.',
+             '"removed" = sidebar link or brand chip dropped; "unlinked" = words kept, link removed.', '']
+    for name, rows in sorted(data.items()):
+        lines += ['## %s' % name, ''] + ['- %s (%s, %s): "%s"' % (u, st, how, txt) for u, st, txt, how in rows] + ['']
+    open(os.path.join(HERE, 'dead_links_removed.md'), 'w', encoding='utf8').write('\n'.join(lines))
 
 
 EXTERNAL_A = re.compile(r'<a\b[^>]*\bhref="(?:https?:)?//(?!(?:www\.)?pharmeasy\.in[/"])[^"]*"[^>]*>')
@@ -907,11 +971,13 @@ def main():
             + '\n      <div class="art" style="order:2;flex:1 1 560px;min-width:0">\n' + body + explore_band() + faq + ref + '\n      </div>\n    </div>\n  </div>\n' + disclaimer() +
             '\n</div>\n</div></main>\n<div data-pe-footer></div>\n'
             '<script src="assets/js/pe-shell.js" defer></script>\n<script src="assets/js/pe-toc.js" defer></script>\n<script src="assets/js/cancer.js" defer></script>\n</body>\n</html>\n')
+    page = remove_dead_links(page, '/cancer/')
     page = nofollow_external(page)
     check_cancer_links(page)
     # the house rule: no em or en dashes in any output
     assert '—' not in page and '–' not in page, [m.start() for m in re.finditer('[—–]', page)][:5]
     open(OUT, 'w', encoding='utf8').write(page)
+    write_removed_report()
     print('wrote', os.path.abspath(OUT), len(page), 'bytes; sections', len(toc), 'faqs', len(faqs))
     print('robots: indexable (production build)' if PRODUCTION else
           'robots: NOINDEX (GitHub Pages copy; build with --production for pharmeasy.in)')
