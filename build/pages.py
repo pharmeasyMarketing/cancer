@@ -540,7 +540,6 @@ def hero(doc, path):
         <p style="font-size:14px;line-height:22px;color:#25282B;margin:0 0 14px"><strong style="font-weight:800">Have a question about your situation?</strong> An online doctor consultation can help you understand what applies to you and how urgently you may need further evaluation.</p>
         <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:12px">
           <a class="cx-btn-primary" href="{B.ODC}">Consult a doctor</a>
-          <a class="cx-btn-ghost" href="{CX}">Cancer care home</a>
         </div>
         <p style="font-size:12px;line-height:19px;color:#8E97A3;margin:0">This information is meant for educational purposes and does not replace advice from your doctor. All oncology medicines are prescription-only.</p>
       </div>
