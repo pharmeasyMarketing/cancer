@@ -71,7 +71,7 @@ ARROW_BIG = svg(IC['arrow'], 26)
 
 
 # ---------------------------------------------------------------- layout helpers
-def sec(id_, h2, body, eyebrow=None, mb=8):
+def sec(id_, h2, body, eyebrow=None, mb=14):
     eb = '<div class="cx-eyebrow">%s</div>' % esc(eyebrow) if eyebrow else ''
     hid = ' id="%s"' % id_ if id_ else ''
     return ('\n  <div class="asec" style="padding:36px 0 0">\n    %s<h2%s style="font-size:24px;line-height:32px;'

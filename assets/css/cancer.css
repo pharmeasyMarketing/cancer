@@ -473,3 +473,14 @@ html.mm-open { overflow: hidden; }
   .rtable tbody tr:only-child td.k::before { display: block; }
   .rtable tbody tr:only-child td.k { font-size: 15px; }
 }
+
+/* ---- spacing pass (18 Nov): one vertical rhythm on every page ---- */
+.art .rt-wrap + p, .art .rt-wrap + .lead-p, .art .med-table + p { margin-top: 18px; }   /* text under a table */
+.art .pg-list { margin-bottom: 18px; }
+.art .pg-list ul { margin-top: 8px; }
+/* phone: drug-class tables put the molecule above its brand chips (as on the hub page) */
+@container art (max-width: 520px) {
+  .med-table .mol-row { grid-template-columns: 1fr; gap: 6px; }
+  .med-table .mol-list { gap: 14px; }
+}
+.art .related-box .pg-list { margin-bottom: 10px; }
