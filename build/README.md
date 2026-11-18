@@ -41,8 +41,14 @@ built copy (they are not live on pharmeasy.in yet); production links are unchang
   blocks, timeouts and 403s are "unverified" and stay. pharmeasy.in is paced at ~40 requests a
   minute; `/cancer/` links are checked at the CyberPanel origin until CloudFront routes `/cancer`.
   It rechecks URLs older than 7 days (`--all` for everything).
+- The checker also records each linked page's canonical and robots tag. Where a page names a
+  different canonical on the same site that works, the build links the canonical (PharmEasy short
+  product URLs become slug URLs, tracking parameters drop, moved pages follow). Bot challenge pages,
+  cross-domain and homepage-collapse canonicals are ignored. It crawls `all_links.json` (every link as
+  written, before removal and swaps), so removed links are still rechecked.
 - `build.py` and `pages.py` remove dead links at build time: sidebar related links and brand chips
-  are dropped, any other link keeps its words. Every removal is listed in `dead_links_removed.md`.
+  are dropped, any other link keeps its words. Every removal is listed in `dead_links_removed.md`; `link_check_report.md` lists dead,
+  unverified, canonical swaps, rejected canonicals and linked pages PharmEasy sets to NOINDEX.
 - `pages.py` writes `../sitemap.xml` (homepage plus every built page, pharmeasy.in URLs); the deploy
   ships it to `https://pharmeasy.in/cancer/sitemap.xml`. Submit it in Search Console or list it in
   the root `robots.txt`.

@@ -5,7 +5,7 @@ Content is read from source.md (the editorial doc) via lib.py so prose, tables, 
 citations stay faithful; the page shell, tokens and components mirror the GLP-1 hub.
 Run:  python3 build.py
 """
-import re, json, html, os, sys
+import re, json, html, os, sys, collections
 from lib import *
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -299,10 +299,11 @@ def more_molecules(drugs):
     out = {}
     for d in drugs:
         shown = {mol_id(u) for _, u in d['mols']}
-        dead = dead_urls()
-        out[d['group']] = [{'name': mol_display(n), 'url': sheet[n]['urls'].strip()}
-                           for n in gm['groups'].get(d['group'], [])
-                           if sheet[n]['molecule_id'].strip() not in shown and sheet[n]['urls'].strip() not in dead]
+        dead, canon = dead_urls(), canonical_map()
+        raw = [(n, sheet[n]['urls'].strip()) for n in gm['groups'].get(d['group'], []) if sheet[n]['molecule_id'].strip() not in shown]
+        ALL_LINKS.setdefault('assets/data/drug-more.json', [])
+        ALL_LINKS['assets/data/drug-more.json'] = sorted(set(ALL_LINKS['assets/data/drug-more.json']) | {u for _, u in raw})
+        out[d['group']] = [{'name': mol_display(n), 'url': canon.get(u, u)} for n, u in raw if u not in dead]
     return out
 
 
@@ -864,27 +865,78 @@ def head(faqs, desc, title):
 LINK_STATUS = os.path.join(HERE, 'link_status.json')
 REMOVED_LINKS = {}   # page -> [(url, status, anchor text, how)]
 BUILT_THIS_RUN = set()  # pages rebuilt in this process (their old report rows are replaced)
+ALL_LINKS = {}          # page -> every outbound URL as written, before dead-link removal or canonical swap
+ALL_LINKS_FILE = os.path.join(HERE, 'all_links.json')   # what check_links.py crawls
+
+
+def link_status():
+    return json.load(open(LINK_STATUS, encoding='utf8')) if os.path.exists(LINK_STATUS) else {}
+
+
+def canonical_map():
+    """linked URL -> its canonical, where the page names a different canonical and that canonical works."""
+    st = link_status()
+    ok_targets = {t for t, code in st.get('_canonical_targets', {}).items() if isinstance(code, int) and 200 <= code < 400}
+    ok_targets |= {u for u, v in st.items() if isinstance(v, dict) and v.get('verdict') == 'ok'}
+    out = {}
+    for u, v in st.items():
+        if u.startswith('_') or not isinstance(v, dict) or v.get('verdict') != 'ok':
+            continue
+        c = v.get('canonical')
+        if c and c in ok_targets and canonical_acceptable(u, c):
+            out[u] = c
+    return out
+
+
+def _parts(url):
+    from urllib.parse import urlsplit, unquote
+    p = urlsplit(url)
+    hostn = (p.hostname or '').lower()
+    hostn = hostn[4:] if hostn.startswith('www.') else hostn
+    path = unquote(p.path) or '/'
+    return hostn, path, p.query
+
+
+def canonical_acceptable(linked, canon):
+    """Use a page's canonical only when it is a real, same-site alternative to the linked URL: not a bot
+    challenge page, not another domain, not a deep URL collapsed to the site homepage, and not the
+    same URL written differently (explicit :443, %28 for "(", a bare root slash)."""
+    lh, lp, lq = _parts(linked)
+    ch, cp, cq = _parts(canon)
+    if not ch or ch != lh:
+        return False
+    if re.search(r'captcha|challenge', canon, re.I):
+        return False
+    if cp in ('', '/') and lp not in ('', '/'):
+        return False
+    if (lp, lq) == (cp, cq):
+        return False
+    return True
 
 
 def dead_urls():
     """URLs check_links.py found dead (404/410). Empty until the checker has run."""
     if not os.path.exists(LINK_STATUS):
         return {}
-    return {u: v['status'] for u, v in json.load(open(LINK_STATUS, encoding='utf8')).items() if v.get('verdict') == 'dead'}
+    return {u: v['status'] for u, v in json.load(open(LINK_STATUS, encoding='utf8')).items()
+            if isinstance(v, dict) and v.get('verdict') == 'dead'}
 
 
 def remove_dead_links(page, name):
     """Drop links to dead URLs. Sidebar related links and brand chips go entirely (a bare word there
     means nothing); any other link keeps its text and loses the link."""
     BUILT_THIS_RUN.add(name)
-    dead = dead_urls()
-    if not dead:
-        return page
+    ALL_LINKS[name] = sorted({html.unescape(u).split('#')[0] for u in re.findall(r'<a\b[^>]*\bhref="(https?://[^"]+)"', page)})
+    dead, canon = dead_urls(), canonical_map()
 
     def fix(m):
         tag, inner = m.group(1), m.group(2)
-        href = html.unescape(re.search(r'href="([^"]*)"', tag).group(1)).split('#')[0]
+        raw = re.search(r'href="([^"]*)"', tag).group(1)
+        href = html.unescape(raw).split('#')[0]
         if href not in dead:
+            if href in canon:   # link the page's own canonical URL
+                frag = raw[len(raw.split('#')[0]):]
+                return tag.replace('href="%s"' % raw, 'href="%s"' % html.escape(canon[href] + frag, quote=True)) + inner + '</a>'
             return m.group(0)
         whole = re.search(r'class="[^"]*\b(rel-a|brand)\b', tag)
         REMOVED_LINKS.setdefault(name, []).append((href, dead[href], re.sub(r'<[^>]+>', '', inner).strip()[:60],
@@ -893,6 +945,54 @@ def remove_dead_links(page, name):
     page = re.sub(r'(<a\b[^>]*\bhref="https?://[^"]+"[^>]*>)(.*?)</a>', fix, page, flags=re.S)
     # a molecule whose only brand chips were dead
     return page.replace('<div class="brands"></div>', '<div class="brands"><span class="brand none">no brands listed</span></div>')
+
+
+def write_link_report():
+    """build/link_check_report.md: dead, unverified, canonical swaps (and rejected canonicals), NOINDEX targets."""
+    st = link_status()
+    if not st:
+        return
+    rows = {u: v for u, v in st.items() if not u.startswith('_') and isinstance(v, dict)}
+    cm = canonical_map()
+    short = lambda u: u.replace('https://pharmeasy.in', '')
+    on = lambda v: ', '.join(p.replace('/index.html', '/').replace('index.html', '/') for p in v.get('found_on', []))
+
+    def kind(u):
+        if 'pharmeasy.in/cancer/' in u:
+            return 'Planned hub page, not built yet'
+        if 'online-medicine-order' in u:
+            return 'PharmEasy product (brand) page'
+        return 'PharmEasy page' if 'pharmeasy.in' in u else 'External source'
+    checked = max((v.get('checked', '') for v in rows.values()), default='')[:10]
+    c = collections.Counter(v['verdict'] for v in rows.values())
+    L = ['# Link check report', '',
+         'Crawled %s by build/check_links.py: %d unique links, %d OK, %d dead, %d unverified.' % (checked, len(rows), c['ok'], c['dead'], c['unverified']), '',
+         '- **Dead** (404/410): removed at build time (words kept; sidebar links and brand chips dropped).',
+         '- **Unverified**: the site blocked the checker or errored. Link kept.',
+         '- **Canonical swaps**: the linked page names a different canonical URL on the same site that works, so the page links the canonical.', '']
+    for verdict, title in (('dead', 'Dead links'), ('unverified', 'Unverified links')):
+        sel = sorted((u, v) for u, v in rows.items() if v['verdict'] == verdict)
+        L += ['## %s (%d)' % (title, len(sel)), '']
+        groups = collections.defaultdict(list)
+        for u, v in sel:
+            groups[kind(u)].append((u, v))
+        for k in ('Planned hub page, not built yet', 'PharmEasy product (brand) page', 'PharmEasy page', 'External source'):
+            if groups[k]:
+                L += ['### %s (%d)' % (k, len(groups[k])), '', '| # | Status | URL | Found on |', '|---|---|---|---|']
+                L += ['| %d | %s | %s | %s |' % (i, v['status'] or 'timeout', short(u), on(v)) for i, (u, v) in enumerate(groups[k], 1)]
+                L.append('')
+    L += ['## Canonical swaps (%d)' % len(cm), '', '| # | Linked URL | Now links (canonical) |', '|---|---|---|']
+    L += ['| %d | %s | %s |' % (i, short(u), short(cm[u])) for i, u in enumerate(sorted(cm), 1)]
+    rej = sorted((u, v['canonical']) for u, v in rows.items() if v['verdict'] == 'ok' and v.get('canonical') and v['canonical'] != u and u not in cm)
+    L += ['', '## Canonicals not used (%d)' % len(rej), '',
+          'Bot challenge pages (NCBI served a reCAPTCHA), another domain, a deep page whose canonical is the site homepage, or the same URL written differently.', '',
+          '| # | Linked URL | Declared canonical |', '|---|---|---|']
+    L += ['| %d | %s | %s |' % (i, short(u), short(c)) for i, (u, c) in enumerate(rej, 1)]
+    noidx = sorted(u for u, v in rows.items() if v.get('robots') == 'noindex')
+    L += ['', '## Linked pages that PharmEasy sets to NOINDEX (%d)' % len(noidx), '',
+          'Live pages (kept), but PharmEasy tells search engines not to index them; they have no canonical.', '']
+    L += ['- %s' % short(u) for u in noidx]
+    open(os.path.join(HERE, 'link_check_report.md'), 'w', encoding='utf8').write('\n'.join(L) + '\n')
 
 
 def write_removed_report():
@@ -910,6 +1010,9 @@ def write_removed_report():
                 uniq.append(list(r))
         data[name] = uniq
     json.dump(dict(sorted(data.items())), open(jf, 'w', encoding='utf8'), indent=1, ensure_ascii=False)
+    al = json.load(open(ALL_LINKS_FILE, encoding='utf8')) if os.path.exists(ALL_LINKS_FILE) else {}
+    al.update(ALL_LINKS)
+    json.dump(dict(sorted(al.items())), open(ALL_LINKS_FILE, 'w', encoding='utf8'), indent=1, ensure_ascii=False)
     lines = ['# Dead links removed at build time', '',
              'From build/link_status.json (python3 build/check_links.py). Dead = the server answered 404 or 410.',
              '"removed" = sidebar link or brand chip dropped; "unlinked" = words kept, link removed.', '']
@@ -978,6 +1081,7 @@ def main():
     assert '—' not in page and '–' not in page, [m.start() for m in re.finditer('[—–]', page)][:5]
     open(OUT, 'w', encoding='utf8').write(page)
     write_removed_report()
+    write_link_report()
     print('wrote', os.path.abspath(OUT), len(page), 'bytes; sections', len(toc), 'faqs', len(faqs))
     print('robots: indexable (production build)' if PRODUCTION else
           'robots: NOINDEX (GitHub Pages copy; build with --production for pharmeasy.in)')
