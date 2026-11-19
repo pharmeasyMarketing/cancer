@@ -484,3 +484,89 @@ html.mm-open { overflow: hidden; }
   .med-table .mol-list { gap: 14px; }
 }
 .art .related-box .pg-list { margin-bottom: 10px; }
+
+/* ============================================================
+   Presented tables (build/present.py): same words, laid out by kind
+   ============================================================ */
+.pv-wrap { margin: 0; }
+.art .pv-wrap + p, .art .pv-wrap + .lead-p, .pv-wrap + p, .pv-wrap + .lead-p { margin-top: 18px; }
+.pv { display: grid; gap: 12px; }
+.pv p { margin: 0; }
+.pv-lbl { display: block; font-size: 10.5px; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; color: #00736C; margin-bottom: 3px; }
+.pv-foot { font-size: 12px; line-height: 19px; color: #8E97A3; margin-top: 10px; }
+
+/* --- one card per row --- */
+.pv-cards.pv-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.pv-cards.pv-row { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+.pv-card { background: #fff; border: 1px solid #E6E9ED; border-radius: 12px; padding: 16px 18px; display: flex; flex-direction: column; gap: 12px; font-size: 14px; line-height: 22px; color: #5C636D; transition: border-color .15s, box-shadow .15s; }
+.pv-card:hover { border-color: #B8DEDB; box-shadow: 0 4px 16px rgba(15, 46, 44, 0.06); }
+.pv-head { display: flex; gap: 12px; align-items: flex-start; }
+.pv-n { flex-shrink: 0; width: 26px; height: 26px; border-radius: 8px; background: #E7F3F2; color: #00736C; font-size: 12px; font-weight: 800; display: flex; align-items: center; justify-content: center; margin-top: -1px; }
+.pv-title { color: #1C1F22; font-weight: 800; font-size: 15.5px; line-height: 23px; }
+.pv-title strong { font-weight: 800; }
+.pv-metas { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.pv-pill, .pv-badge { display: inline-block; font-size: 12.5px; line-height: 18px; padding: 4px 10px; border-radius: 8px; background: #F2F5F7; color: #30363C; font-weight: 600; }
+.pv-pill-l, .pv-badge-l { font-weight: 500; color: #6B747E; }
+.pv-pill-l { margin-right: 2px; }
+.pv-pill-l::after { content: ":"; }
+.pv-badge-l { margin-right: 2px; }
+.pv-badge.good { background: #E8F6EE; color: #12805A; }
+.pv-badge.bad { background: #FCE9E8; color: #A6231A; }
+.pv-badge.mid { background: #FEF3E1; color: #8A5A00; }
+.pv-badge.muted { background: #F2F5F7; color: #4F585E; }
+.pv-badge.good .pv-badge-l, .pv-badge.bad .pv-badge-l, .pv-badge.mid .pv-badge-l { color: inherit; opacity: .75; }
+.pv-body { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px 24px; }
+.pv-cards.pv-grid .pv-body, .pv-cards.pv-row .pv-body { grid-template-columns: 1fr; }
+.pv-notes { display: grid; gap: 8px; margin-top: auto; }
+.pv-note { border-radius: 10px; padding: 10px 12px; font-size: 13.5px; line-height: 21px; }
+.pv-note-l { display: flex; align-items: center; gap: 6px; font-size: 10.5px; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 3px; }
+.pv-note.warn { background: #FEF7EA; color: #5C4A26; } .pv-note.warn .pv-note-l { color: #A86A00; }
+.pv-note.alert { background: #FDEEEC; color: #5E2F2B; } .pv-note.alert .pv-note-l { color: #B33A32; }
+.pv-note.info { background: #F3F6F9; color: #3A434B; } .pv-note.info .pv-note-l { color: #4F6475; }
+.pv-note.tip { background: #EEF5FF; color: #2D3D52; } .pv-note.tip .pv-note-l { color: #1F5FA8; }
+.pv-note.do { background: #ECF7F5; color: #1F4A46; } .pv-note.do .pv-note-l { color: #00736C; }
+
+/* --- "Which applies to you?" --- */
+.pv-sits { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.pv-sit { background: #fff; border: 1px solid #E6E9ED; border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; font-size: 14px; line-height: 22px; color: #5C636D; transition: border-color .15s, box-shadow .15s; }
+.pv-sit:hover { border-color: #B8DEDB; box-shadow: 0 4px 16px rgba(15, 46, 44, 0.06); }
+.pv-sit-who { background: #F2F9F8; padding: 14px 16px; border-left: 3px solid #10847E; }
+.pv-sit-who p { color: #1C1F22; font-weight: 700; font-size: 14.5px; }
+.pv-sit-next { padding: 14px 16px 0; }
+.pv-sit-more { padding: 12px 16px 14px; margin-top: auto; }
+.pv-more-v { display: flex; gap: 6px; align-items: baseline; font-weight: 600; color: #00736C; }
+.pv-more-v svg { flex-shrink: 0; position: relative; top: 2px; }
+
+/* --- at-a-glance facts --- */
+.pv-facts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.pv-fact { background: #fff; border: 1px solid #E6E9ED; border-radius: 12px; padding: 14px 16px; font-size: 14px; line-height: 22px; color: #30363C; }
+.pv-fact-q { display: flex; gap: 6px; align-items: flex-start; font-weight: 800; color: #00736C; font-size: 13px; line-height: 19px; margin-bottom: 6px; }
+.pv-fact-q svg { flex-shrink: 0; margin-top: 2px; }
+
+/* --- India numbers --- */
+.pv-stats { grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); }
+.pv-stat { background: #fff; border: 1px solid #E6E9ED; border-radius: 12px; padding: 16px 18px; display: flex; flex-direction: column; gap: 8px; }
+.pv-stat-k { font-size: 13px; line-height: 19px; font-weight: 700; color: #4F585E; }
+.pv-stat-v { font-size: 26px; line-height: 32px; font-weight: 800; color: #0A534F; font-variant-numeric: tabular-nums; }
+.pv-stat.txt .pv-stat-v { font-size: 19px; line-height: 26px; }
+.pv-stat-v .pv-lbl { margin-bottom: 0; }
+.pv-split { display: flex; height: 6px; border-radius: 3px; overflow: hidden; background: #EEF1F4; }
+.pv-split-m { background: #10847E; } .pv-split-f { background: #F47779; }
+.pv-stat-mf { display: flex; flex-wrap: wrap; gap: 4px 16px; font-size: 12.5px; color: #6B747E; margin-top: auto; }
+.pv-stat-mf b { color: #30363C; font-weight: 700; font-variant-numeric: tabular-nums; }
+.pv-stat-mf .dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 5px; }
+.pv-stat-mf .dot.m { background: #10847E; } .pv-stat-mf .dot.f { background: #F47779; }
+
+@media (max-width: 720px) {
+  .pv-cards.pv-grid, .pv-cards.pv-row, .pv-sits, .pv-facts { grid-template-columns: 1fr; }
+  .pv-body { grid-template-columns: 1fr; }
+  .pv-card { padding: 14px 15px; }
+  .pv-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .pv-stat { padding: 13px 14px; }
+  .pv-stat-v { font-size: 21px; line-height: 28px; }
+  .pv-stat.txt .pv-stat-v { font-size: 16px; line-height: 22px; }
+}
+@container art (max-width: 640px) {
+  .pv-cards.pv-grid, .pv-cards.pv-row, .pv-sits, .pv-facts { grid-template-columns: 1fr; }
+  .pv-body { grid-template-columns: 1fr; }
+}
