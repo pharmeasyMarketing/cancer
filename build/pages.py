@@ -17,7 +17,6 @@ import base64, html, json, os, re, sys
 from collections import OrderedDict, Counter
 
 import build as B
-from present import present
 from lib import inline, unesc, clean_url, ref_html
 
 HERE = B.HERE
@@ -794,7 +793,7 @@ def build_page(fname, path, built):
         note(path, 'cited but not in the reference list: %s' % missing)
     out = os.path.join(ROOT, path, 'index.html')
     os.makedirs(os.path.dirname(out), exist_ok=True)
-    open(out, 'w', encoding='utf8').write(B.bust(present(page)))
+    open(out, 'w', encoding='utf8').write(B.bust(page))
     return out, len(toc), len(faqs), len(refs)
 
 

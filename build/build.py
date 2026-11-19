@@ -7,7 +7,6 @@ Run:  python3 build.py
 """
 import re, json, html, os, sys, collections
 from lib import *
-from present import present
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(HERE, '..', 'index.html')
@@ -1095,7 +1094,7 @@ def main():
     check_cancer_links(page)
     # the house rule: no em or en dashes in any output
     assert '—' not in page and '–' not in page, [m.start() for m in re.finditer('[—–]', page)][:5]
-    open(OUT, 'w', encoding='utf8').write(bust(present(page)))
+    open(OUT, 'w', encoding='utf8').write(bust(page))
     write_removed_report()
     write_link_report()
     print('wrote', os.path.abspath(OUT), len(page), 'bytes; sections', len(toc), 'faqs', len(faqs))
