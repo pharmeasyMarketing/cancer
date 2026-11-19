@@ -814,7 +814,7 @@ def main():
     for fname, path in PAGES:
         out, ns, nf, nr = build_page(fname, path, built)
         print('wrote /cancer/%-26s sections %2d  faqs %d  refs %d' % (path, ns, nf, nr))
-    print('robots: %s' % ('indexable (production build)' if B.PRODUCTION else 'NOINDEX (GitHub Pages copy)'))
+    print('robots: %s' % ('indexable (production build)' if B.INDEXABLE else 'NOINDEX (production build, --noindex)' if B.PRODUCTION else 'NOINDEX (GitHub Pages copy)'))
     print('sitemap.xml: %d urls' % write_sitemap())
     B.write_removed_report()
     with open(os.path.join(HERE, 'pages_report.md'), 'w', encoding='utf8') as f:

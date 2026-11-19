@@ -4,7 +4,7 @@ name: Deploy cancer hub to CyberPanel
 # the same way the GLP-1 hub is published to /glp-1/.
 #
 # The committed HTML is the GitHub Pages preview copy, which is noindexed. This workflow rebuilds
-# it with --production (no robots noindex tag), stages only the site files (index.html, assets/
+# it with --production (plus --noindex while KEEP_NOINDEX is "true"), stages only the site files (index.html, assets/
 # and the inner-page folders listed in build/pages.json) and rsyncs that to the server.
 #
 # The deploy key is locked to /home/pharmeasy.in/public_html/cancer with rrsync on the server:
@@ -29,6 +29,11 @@ on:
       - ".github/workflows/deploy.yml"
   workflow_dispatch:
 
+# Keep pharmeasy.in/cancer/ out of search until the hub has passed QA. Set to "false" (and push) to
+# make the production pages indexable; the stage check below enforces whichever state is set here.
+env:
+  KEEP_NOINDEX: "true"
+
 concurrency:
   group: cancer-deploy
   cancel-in-progress: false
@@ -46,8 +51,11 @@ jobs:
       - name: Build production pages
         run: |
           set -euo pipefail
-          python3 build/build.py --production
-          python3 build/pages.py --production
+          FLAGS="--production"
+          [ "$KEEP_NOINDEX" = "true" ] && FLAGS="$FLAGS --noindex"
+          echo "build flags: $FLAGS"
+          python3 build/build.py $FLAGS
+          python3 build/pages.py $FLAGS
 
       # ---- 2. stage only what belongs on the site, then check it ----
       - name: Stage site
@@ -62,9 +70,15 @@ jobs:
           done
           find dist -name '__pycache__' -prune -exec rm -rf {} +
           echo "staged:"; (cd dist && find . -name index.html | sort)
-          # production must be indexable and must not leak the preview noindex
-          if grep -rl 'name="robots" content="noindex' dist --include=index.html; then
-            echo "::error::a page still carries the preview noindex tag"; exit 1
+          # robots must match KEEP_NOINDEX on every page
+          total=$(find dist -name index.html | wc -l)
+          tagged=$(grep -rl 'name="robots" content="noindex' dist --include=index.html | wc -l || true)
+          if [ "$KEEP_NOINDEX" = "true" ]; then
+            [ "$tagged" -eq "$total" ] || { echo "::error::KEEP_NOINDEX is on but only $tagged of $total pages are noindex"; exit 1; }
+            echo "robots: all $total pages noindex (KEEP_NOINDEX)"
+          else
+            [ "$tagged" -eq 0 ] || { echo "::error::$tagged page(s) still carry the noindex tag"; exit 1; }
+            echo "robots: all $total pages indexable"
           fi
           # house rule: no em/en dashes in any published page
           if grep -rlP '[\x{2013}\x{2014}]' dist --include=index.html; then

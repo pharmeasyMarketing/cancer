@@ -32,7 +32,11 @@ CANON = 'https://pharmeasy.in/cancer/'
 # The committed index.html is what GitHub Pages serves (pharmeasymarketing.github.io/cancer/),
 # and that copy must stay out of search. Only a pharmeasy.in deploy builds with --production.
 PRODUCTION = '--production' in sys.argv
-ROBOTS = '' if PRODUCTION else '<meta name="robots" content="noindex, nofollow">\n'
+# --noindex keeps the robots noindex tag on a production build too (pharmeasy.in/cancer/ stays out of
+# search while it is still being QA'd). The deploy workflow passes it while KEEP_NOINDEX is "true".
+KEEP_NOINDEX = '--noindex' in sys.argv
+INDEXABLE = PRODUCTION and not KEEP_NOINDEX
+ROBOTS = '' if INDEXABLE else '<meta name="robots" content="noindex, nofollow">\n'
 
 REVIEWER = 'Dr. Ayush Shashikant Dubey'
 REVIEWER_URL = 'https://pharmeasy.in/legal/editorial-policy/-dr-ayush-shashikant-dubey-190'
@@ -1095,7 +1099,7 @@ def main():
     write_removed_report()
     write_link_report()
     print('wrote', os.path.abspath(OUT), len(page), 'bytes; sections', len(toc), 'faqs', len(faqs))
-    print('robots: indexable (production build)' if PRODUCTION else
+    print('robots: indexable (production build)' if INDEXABLE else 'robots: NOINDEX (production build, --noindex)' if PRODUCTION else
           'robots: NOINDEX (GitHub Pages copy; build with --production for pharmeasy.in)')
 
 
