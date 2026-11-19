@@ -1,4 +1,4 @@
-"""Present SOME editorial tables as components that suit their data, without touching the words.
+"""Present the editorial tables as components that suit their data, without touching the words.
 
 Every table the builds emit (build.rtable) is re-laid out here from its own <th>/<td> HTML:
   * "If this is you / What happens next / Where to read more"  -> situation cards
@@ -164,11 +164,6 @@ def one(m):
     if not rows:
         return m.group(0)
     h0 = text(hdr[0]).lower()
-    heads = ' | '.join(text(h).lower() for h in hdr)
-    # the mix Sarthak chose (19 Nov 2026): cards only where a grid reads badly; real comparisons stay tables
-    if not (h0.startswith('if this') or 'nums' in cls or len(rows) == 1
-            or 'when to call' in heads or 'can you change it' in heads or 'is it cancerous' in heads):
-        return m.group(0)
     if h0.startswith('if this') and len(hdr) in (2, 3):
         body = situations(hdr, rows)
     elif 'nums' in cls and len(hdr) == 4:
