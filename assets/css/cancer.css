@@ -608,3 +608,13 @@ main .ex-subs a, main .ctz-subs a, main .srcs a { text-decoration-line: none !im
 /* "+N more" brand card: last row links the molecule page */
 .mm-list .mm-all { grid-column: 1 / -1; }
 .mm-list .mm-all a { background: #fff; border-style: dashed; text-align: center; }
+
+/* card fields: a field much longer than the others spans the full width under them (present.py balance) */
+.pv-body .pv-f.pv-wide { grid-column: 1 / -1; padding-top: 12px; border-top: 1px dashed #E6E9ED; }
+.pv-body.pv-top-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.pv-body.pv-top-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+@media (max-width: 720px) { .pv-body.pv-top-2, .pv-body.pv-top-3 { grid-template-columns: 1fr; } }
+@container art (max-width: 640px) { .pv-body.pv-top-2, .pv-body.pv-top-3 { grid-template-columns: 1fr; } }
+.pv-lines { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 2px 18px; margin-top: 2px; }
+.pv-lines > span { position: relative; padding-left: 12px; }
+.pv-lines > span::before { content: ""; position: absolute; left: 0; top: 0.72em; width: 5px; height: 5px; border-radius: 50%; background: #9DCFCB; }

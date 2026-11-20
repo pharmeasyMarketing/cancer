@@ -123,6 +123,53 @@ def stats(hdr, rows):
     return '<div class="pv pv-stats">%s</div>' % ''.join(cards)
 
 
+def balance(body):
+    """Three or more fields side by side leave the short ones next to a tall empty space when one field is
+    much longer. Then the long field goes last and spans the full card width; the short ones stay in a row."""
+    if len(body) < 3:
+        return body
+    # rough height: characters, plus a line's worth for every forced line break (one-per-line lists)
+    lens = [len(text(f)) + 40 * f.count('<br') for f in body]
+    i = max(range(len(body)), key=lambda k: lens[k])
+    rest = sorted(lens[:i] + lens[i + 1:])
+    if lens[i] < 160 or lens[i] < 2 * rest[len(rest) // 2]:
+        return body
+    wide = flow_lines(body[i].replace('<div class="pv-f">', '<div class="pv-f pv-wide">', 1))
+    return body[:i] + body[i + 1:] + [wide]
+
+
+def flow_lines(field):
+    """In a full-width field, a run of 3+ short line-broken items (a list of cancers, one per line) is laid
+    out in columns instead of a tall single column. The words are not changed."""
+    m = re.match(r'(.*?<div>)(.*)(</div></div>)$', field, re.S)
+    if not m:
+        return field
+    segs = re.split(r'<br\s*/?>', m.group(2))
+    out, run = [], []
+
+    def flush():
+        if len(run) >= 2:
+            out.append('<span class="pv-lines">%s</span>' % ''.join('<span>%s</span>' % x.strip() for x in run))
+        else:
+            out.extend(run)
+        run.clear()
+    for k, seg in enumerate(segs):
+        t = text(seg)
+        heading = '<b>' in seg or '<strong>' in seg or t.rstrip().endswith(':')   # "Vinblastine:" starts a new group
+        if k and 0 < len(t) <= 40 and not heading:
+            run.append(seg)
+        else:
+            flush()
+            out.append(seg)
+    flush()
+    joined = ''
+    for part in out:          # <br> between plain segments; the column block breaks lines by itself
+        if joined and not joined.endswith('</span>') and not part.startswith('<span class="pv-lines">'):
+            joined += '<br>'
+        joined += part
+    return m.group(1) + joined + m.group(3)
+
+
 def cards(hdr, rows):
     kinds = [kind(h) for h in hdr]
     # a column that is short on every row reads as a pill under the title
@@ -145,10 +192,11 @@ def cards(hdr, rows):
                 notes.append('<div class="pv-note %s"><span class="pv-note-l">%s%s</span><div>%s</div></div>' % (k, ICON[k], h, v))
             else:
                 body.append('<div class="pv-f"><span class="pv-lbl">%s</span><div>%s</div></div>' % (h, v))
+        body = balance(body)
         out.append('<div class="pv-card"><div class="pv-head"><span class="pv-n">%d</span><div>%s%s</div></div>%s%s</div>'
                    % (i, ''.join(head),
                       '<div class="pv-metas">%s</div>' % ''.join(metas) if metas else '',
-                      '<div class="pv-body">%s</div>' % ''.join(body) if body else '',
+                      ('<div class="pv-body%s">%s</div>' % (' pv-top-%d' % (len(body) - 1) if 'pv-wide' in body[-1] else '', ''.join(body))) if body else '',
                       '<div class="pv-notes">%s</div>' % ''.join(notes) if notes else ''))
     # few rows, or light rows: lay the cards side by side; heavy rows read better one per line
     weight = sum(len(text(v)) for r in rows for v in r) / max(1, len(rows))
