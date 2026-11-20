@@ -658,3 +658,24 @@ main .ex-subs a, main .ctz-subs a, main .srcs a { text-decoration-line: none !im
 .pv-acc-top { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px 24px; }
 .pv-acc .pv-f.pv-wide { padding-top: 12px; border-top: 1px dashed #E6E9ED; }
 @container art (max-width: 520px) { .pv-acc > summary { padding: 13px 14px; } .pv-acc-body { padding: 12px 14px 14px; } .pv-acc-top { grid-template-columns: 1fr; } }
+
+/* chemotherapy "How it works": medicine types as icon cards, closing paragraph as a note */
+.mech-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 12px; margin: 0 0 18px; }
+.mech { display: flex; gap: 12px; align-items: flex-start; background: #fff; border: 1px solid #E6E9ED; border-radius: 12px; padding: 14px 16px; box-shadow: 0 1px 3px rgba(15,46,44,0.05); }
+.mech-ic { flex: none; width: 40px; height: 40px; border-radius: 10px; background: #EAF5F4; color: #00736C; display: flex; align-items: center; justify-content: center; }
+.mech-t { font-size: 15px; line-height: 21px; font-weight: 800; color: #1C1F22; margin: 0 0 4px; }
+.mech p { margin: 0; font-size: 14px; line-height: 22px; color: #5C636D; }
+.mech-note { display: flex; gap: 12px; align-items: flex-start; background: #F2F9F8; border: 1px solid #B8DEDB; border-left: 4px solid #008880; border-radius: 12px; padding: 14px 16px; margin: 0 0 18px; }
+.mech-note-ic { flex: none; color: #00736C; display: flex; padding-top: 2px; }
+.mech-note p { margin: 0; font-size: 15px; line-height: 25px; color: #30363C; }
+@container art (max-width: 520px) { .mech-grid { grid-template-columns: 1fr; gap: 10px; } .mech { padding: 12px 14px; } .mech-ic { width: 36px; height: 36px; } }
+/* five medicine types: three across, then two wider ones, so the grid has no empty slot */
+.mech-grid { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+.mech-grid > .mech { grid-column: span 2; }
+.mech-grid > .mech:nth-child(4):nth-last-child(2), .mech-grid > .mech:nth-child(5):last-child { grid-column: span 3; }
+@container art (max-width: 700px) {
+  .mech-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .mech-grid > .mech, .mech-grid > .mech:nth-child(4):nth-last-child(2) { grid-column: span 1; }
+  .mech-grid > .mech:nth-child(5):last-child { grid-column: 1 / -1; }
+}
+@container art (max-width: 520px) { .mech-grid { grid-template-columns: 1fr; } .mech-grid > .mech:nth-child(5):last-child { grid-column: auto; } }

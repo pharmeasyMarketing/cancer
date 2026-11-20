@@ -275,5 +275,39 @@ def one(m):
     return '    <div class="pv-wrap">%s%s</div>\n' % (body, foot.replace('rt-foot', 'pv-foot') if foot else '')
 
 
+MECH_ICON = {   # simple line icons for the chemotherapy "How it works" medicine types (by label keyword)
+    'alkylat': '<path d="M7 3c0 6 10 6 10 12M17 3c0 3-2.5 4.5-5 6M7 21c0-3 2.5-4.5 5-6M8.5 6h7M8 18h8"/><path d="m14 10 3 2" stroke-dasharray="2 2"/>',
+    'antimetab': '<rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><path d="M14 14h7v7h-7z" stroke-dasharray="2.5 2"/>',
+    'microtub': '<circle cx="7" cy="12" r="4"/><circle cx="17" cy="12" r="4"/><path d="M11 12h2" stroke-dasharray="1.5 1.5"/>',
+    'antibiot': '<rect x="3" y="8.5" width="18" height="7" rx="3.5" transform="rotate(-35 12 12)"/><path d="m9.2 15.9 5.6-7.8"/>',
+    'misc': '<circle cx="6" cy="12" r="1.6"/><circle cx="12" cy="12" r="1.6"/><circle cx="18" cy="12" r="1.6"/><circle cx="12" cy="12" r="9"/>',
+}
+CELL_ICON = '<svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.2"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2"/></g></svg>'
+
+
+def mech_icon(label):
+    l = text(label).lower()
+    key = next((k for k in MECH_ICON if k in l), 'misc')
+    return ('<span class="mech-ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22"><g fill="none" stroke="currentColor" '
+            'stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">%s</g></svg></span>' % MECH_ICON[key])
+
+
+HOW_RE = re.compile(r'(<h2 id="toc-how-it-works"[^>]*>.*?</h2>.*?)<ul class="pg-list">(.*?)</ul>\s*<p class="lead-p">(.*?)</p>', re.S)
+LI_RE = re.compile(r'<li><strong>([^<]{2,60}?):</strong>\s*(.*?)</li>', re.S)
+
+
+def how_it_works(page):
+    """Chemotherapy "How it works": the list of medicine types (every item a bold label + its sentence)
+    becomes a grid of cards with an icon each, and the closing paragraph a highlighted note. Same words."""
+    def fix(m):
+        items = LI_RE.findall(m.group(2))
+        if len(items) < 3 or len(items) != m.group(2).count('<li>'):
+            return m.group(0)
+        cards = ''.join('<div class="mech">%s<div><div class="mech-t">%s:</div><p>%s</p></div></div>' % (mech_icon(l), l, t) for l, t in items)
+        return ('%s<div class="mech-grid">%s</div>\n    <div class="mech-note"><span class="mech-note-ic">%s</span><p>%s</p></div>'
+                % (m.group(1), cards, CELL_ICON, m.group(3)))
+    return HOW_RE.sub(fix, page, count=1)
+
+
 def present(page):
-    return TABLE_RE.sub(one, page)
+    return how_it_works(TABLE_RE.sub(one, page))
