@@ -442,5 +442,116 @@ def chemo_sections(page):
     return page
 
 
+IC = {
+    'target': '<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/>',
+    'gauge': '<path d="M4 16a8 8 0 1 1 16 0"/><path d="m12 16 4-5"/><path d="M4 20h16"/>',
+    'heart': '<path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.5-7 10-7 10z"/>',
+    'person': '<circle cx="12" cy="8" r="3.5"/><path d="M5 20c0-3.9 3.1-7 7-7s7 3.1 7 7"/>',
+    'scalpel': '<path d="M4 20 15 9l3 3-8 8z"/><path d="m15 9 4-5 1 1-2 6"/>',
+    'pill': ROUTE_ICON['oral'],
+    'ray': '<circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4M5 5l2.5 2.5M16.5 16.5 19 19M5 19l2.5-2.5M16.5 7.5 19 5"/>',
+    'scope': '<path d="M6 18h8M10 18v-4M8 4h4v6a2 2 0 0 1-4 0zM14 10a6 6 0 0 1 0 8"/>',
+    'scan': '<rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 20h8M7 13l3-3 2 2 4-4"/>',
+    'shield': IC_SHIELD,
+    'rupee': '<path d="M7 5h10M7 9h10M7 5c5 0 6 8 0 8l7 6"/>',
+    'tag': '<path d="M3 12V4h8l10 10-8 8z"/><circle cx="7.5" cy="8.5" r="1.5"/>',
+}
+LABEL_LI = re.compile(r'<li>((?:<strong>[^<]+</strong>\s*)+):?\s*(.*?)</li>', re.S)
+
+
+def label_cards(ul_inner, icon_for, cls='mech-grid'):
+    """<li><strong>Label</strong>: text</li> items -> icon cards (None if the list is not all labelled)."""
+    items = LABEL_LI.findall(ul_inner)
+    if len(items) < 2 or len(items) != ul_inner.count('<li>'):
+        return None
+    out = []
+    for lab, body in items:
+        name = re.sub(r'\s+', ' ', re.sub(r'<[^>]+>', '', lab)).strip().rstrip(':')
+        out.append('<div class="mech">%s<div><div class="mech-t">%s:</div><p>%s</p></div></div>' % (_ic(IC[icon_for(name)]), name, body.lstrip(': ').strip()))
+    return '<div class="%s">%s</div>' % (cls, ''.join(out))
+
+
+def _note(seg, starts, cls='note-info'):
+    return re.sub(r'<p class="lead-p">(%s)' % re.escape(starts), r'<p class="%s">\1' % cls, seg, count=1)
+
+
+def _stat(seg, starts, number):
+    m = re.search(r'<p class="lead-p">(%s.*?)</p>' % re.escape(starts), seg, re.S)
+    if not m or number not in m.group(1):
+        return seg
+    return seg.replace(m.group(0), '<div class="statp"><span class="statp-n" aria-hidden="true">%s</span><p>%s</p></div>' % (number, m.group(1)), 1)
+
+
+def _t_cure(seg):
+    m = re.search(r'<ul class="pg-list">(.*?)</ul>', seg, re.S)
+    if m:
+        cards = label_cards(m.group(1), lambda n: 'target' if 'curative' in n.lower() else 'gauge' if 'control' in n.lower() else 'heart', 'mech-grid goals')
+        if cards:
+            seg = seg.replace(m.group(0), cards, 1)
+    return seg
+
+
+def _t_plan(seg):
+    m = re.search(r'<ul class="pg-list">(.*?)</ul>', seg, re.S)
+    if m:
+        role = lambda n: {'surgeon': 'scalpel', 'medical oncologist': 'pill', 'radiation oncologist': 'ray', 'pathologist': 'scope', 'radiologist': 'scan'}.get(n.lower(), 'person')
+        cards = label_cards(m.group(1), role, 'mech-grid team')
+        if cards:
+            seg = seg.replace(m.group(0), cards, 1)
+    seg = _note(seg, 'If you are receiving treatment at a smaller cancer centre')
+    return _note(seg, 'Ask your doctor which tests')
+
+
+def _t_types(seg):
+    return _note(seg, 'Medicine prices may change over time')
+
+
+def _t_support(seg):
+    m = re.search(r'(<p class="lead-p">They were shown to be less likely.*?median survival of (\d+(?:\.\d+)?) months compared with (\d+(?:\.\d+)?) months in the other group\..*?</p>)', seg, re.S)
+    if m:
+        a, b = float(m.group(2)), float(m.group(3))
+        bars = ('<div class="cmp" aria-hidden="true"><div class="cmp-row"><span class="cmp-l">early palliative care alongside standard cancer care</span>'
+                '<span class="cmp-bar"><i style="width:%d%%"></i></span><b>%s months</b></div><div class="cmp-row"><span class="cmp-l">the other group</span>'
+                '<span class="cmp-bar alt"><i style="width:%d%%"></i></span><b>%s months</b></div><div class="cmp-cap">median survival</div></div>'
+                % (100, m.group(2), round(100 * b / a), m.group(3)))
+        seg = seg.replace(m.group(1), m.group(1) + '\n    ' + bars, 1)
+    seg = _stat(seg, 'According to WHO, only about 14%', '14%')
+    return _note(seg, 'One more misunderstanding', 'note-key')
+
+
+def _t_pay(seg):
+    seg = _stat(seg, 'Cancer treatment is not just a medical concern', '75%')
+    m = re.search(r'<ul class="pg-list">((?:<li>.*?</li>)+)</ul>', seg, re.S)
+    if m:
+        lis = re.findall(r'<li>(.*?)</li>', m.group(1), re.S)
+        def icon(t):
+            l = t.lower()
+            return 'shield' if 'pm-jay' in l[:40] else 'rupee' if 'fund' in l[:80] else 'tag'
+        if len(lis) >= 2:
+            seg = seg.replace(m.group(0), '<div class="mech-grid relief">%s</div>' % ''.join('<div class="mech">%s<p>%s</p></div>' % (_ic(IC[icon(t)]), t) for t in lis), 1)
+    return _note(seg, "Contact your treating team's medical social worker")
+
+
+def _t_when(seg):
+    for starts, cls in (('Seek immediate medical care', 'panel-urgent'), ('Consult your oncology team within days', 'panel-soon')):
+        m = re.search(r'<p class="lead-p">(%s[^<]*)</p>\s*<ul class="pg-list">(.*?)</ul>' % re.escape(starts), seg, re.S)
+        if m:
+            seg = seg.replace(m.group(0), '<div class="%s"><p class="panel-t">%s</p><ul>%s</ul></div>' % (cls, m.group(1), m.group(2)), 1)
+    return seg
+
+
+def treatment_sections(page):
+    """Treatment page: sections laid out as components, same words."""
+    if 'id="toc-what-cure-actually-means-in-cancer-care"' not in page:
+        return page
+    for sid, fn in (('toc-what-cure-actually-means-in-cancer-care', _t_cure), ('toc-how-your-treatment-plan-is-decided', _t_plan),
+                    ('toc-the-main-types-of-cancer-treatment', _t_types), ('toc-supportive-care-palliative-care-and-side-effects', _t_support),
+                    ('toc-paying-for-cancer-treatment-in-india', _t_pay), ('toc-when-to-see-a-doctor', _t_when)):
+        sp = section_span(page, sid)
+        if sp:
+            page = page[:sp[0]] + fn(page[sp[0]:sp[1]]) + page[sp[1]:]
+    return page
+
+
 def present(page):
-    return chemo_sections(how_it_is_given(how_it_works(TABLE_RE.sub(one, page))))
+    return treatment_sections(chemo_sections(how_it_is_given(how_it_works(TABLE_RE.sub(one, page)))))
