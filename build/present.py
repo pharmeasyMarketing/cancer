@@ -465,7 +465,7 @@ IC = {
     'scope': '<path d="M6 18h8M10 18v-4M8 4h4v6a2 2 0 0 1-4 0zM14 10a6 6 0 0 1 0 8"/>',
     'scan': '<rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 20h8M7 13l3-3 2 2 4-4"/>',
     'shield': IC_SHIELD,
-    'rupee': '<path d="M7 5h10M7 9h10M7 5c5 0 6 8 0 8l7 6"/>',
+    'rupee': '<path d="M6 3h12M6 8h12M6 13h3M9 13c6.667 0 6.667-10 0-10M6 13l8.5 8"/>',
     'tag': '<path d="M3 12V4h8l10 10-8 8z"/><circle cx="7.5" cy="8.5" r="1.5"/>',
 }
 LABEL_LI = re.compile(r'<li>((?:<strong>[^<]+</strong>\s*)+):?\s*(.*?)</li>', re.S)
