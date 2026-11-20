@@ -798,10 +798,103 @@ def prevention_sections(page):
     return page
 
 
+IC['clock'] = '<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>'
+IC['syringe'] = ROUTE_ICON['injection']
+
+
+def _replace_ul(seg, after, render):
+    hit = first_ul(seg, after)
+    if not hit:
+        return seg
+    (a, e), inner = hit
+    out = render(top_items(inner))
+    return seg if out is None else seg[:a] + out + seg[e:]
+
+
+def _h_types(items):
+    if len(items) != 2:
+        return None
+    tone = lambda it: 'lo' if text(it).lower().startswith('low-risk') else 'hi'
+    return '<div class="hpvt">%s</div>' % ''.join('<div class="hpvt-%s"><p>%s</p></div>' % (tone(it), it.strip()) for it in items)
+
+
+def _h_schedule(items):
+    rows = ''.join('<li>%s<span>%s</span></li>' % (_ic(IC['syringe']), re.sub(r'(\([^()]*doses?[^()]*\))', r'<b class="dose">\1</b>', it.strip())) for it in items)
+    return '<ul class="sched">%s</ul>' % rows
+
+
+def _h_india(items):
+    def icon(it):
+        l = text(it).lower()
+        return ('clock' if '2008' in l else 'person' if 'girls only' in l or 'targets 14' in l else 'shield' if 'no evidence' in l
+                else 'scope' if 'np-ncd' in l or 'screening is offered' in l else 'target')
+    return '<div class="mech-grid infx">%s</div>' % ''.join('<div class="mech">%s<p>%s</p></div>' % (_ic(IC[icon(it)]), it.strip()) for it in items)
+
+
+def _h_measures(items):
+    out = []
+    for it in items:
+        lab = text(re.split(r'<ul>', it)[0]).lower()
+        if 'contact the doctor promptly' in lab or 'arrange an appointment' in lab:
+            head, _, rest = it.partition('<ul>')
+            cls = 'panel-urgent' if 'contact' in lab else 'panel-soon'
+            out.append('<div class="%s"><p class="panel-t">%s</p><ul>%s</div>' % (cls, head.strip(), rest))
+        else:
+            m = re.match(r'\s*<strong>([^<]+?):?</strong>:?\s*(.*)$', it, re.S)
+            if not m:
+                return None
+            icon = 'scope' if 'screening' in m.group(1).lower() else 'syringe'
+            out.append('<div class="mech">%s<div><div class="mech-t">%s:</div><p>%s</p></div></div>' % (_ic(IC[icon]), m.group(1), m.group(2).strip()))
+    cards = ''.join(x for x in out if x.startswith('<div class="mech"'))
+    panels = ''.join(x for x in out if not x.startswith('<div class="mech"'))
+    return '<div class="mech-grid tips3">%s</div>%s' % (cards, panels)
+
+
+def _h_myths(items):
+    out = []
+    for it in items:
+        m = re.match(r'\s*<strong>([^<]+?)</strong>\s*(.*)$', it, re.S)
+        if not m:
+            return None
+        out.append('<div class="mech myth">%s<div><div class="mech-t">%s</div><p>%s</p></div></div>' % (_ic(IC['nocarb']), m.group(1), m.group(2).strip()))
+    return '<div class="mech-grid myths">%s</div>' % ''.join(out)
+
+
+def hpv_sections(page):
+    if '/cancer/prevention/hpv/' not in PAGE.get('url', ''):
+        return page
+    def evidence(seg):
+        return _replace_ul(seg, 'HPV types are classified as low-risk or high-risk', _h_types)
+    def risk(seg):
+        seg = _replace_ul(seg, 'According to the World Health Organization (WHO), vaccine recommendations', _h_schedule)
+        return _stat(seg, 'An Indian multicentre study found that a single dose', '95.4%')
+    def india(seg):
+        m = re.search(r'sets three targets: (\d+)% of girls fully vaccinated by age 15, (\d+)% of women screened with a high-performance test by ages 35 and 45, and (\d+)% of women with cervical disease receiving treatment', seg)
+        seg = _replace_ul(seg, 'Some important points include', _h_india)
+        if m:
+            tiles = ('<div class="stat3" aria-hidden="true"><div><b>%s%%</b><span>of girls fully vaccinated by age 15</span></div>'
+                     '<div><b>%s%%</b><span>of women screened with a high-performance test by ages 35 and 45</span></div>'
+                     '<div><b>%s%%</b><span>of women with cervical disease receiving treatment</span></div></div>' % m.groups())
+            i = seg.find('<div class="mech-grid infx">')
+            j = seg.find('\n', i)
+            seg = seg[:j] + '\n    ' + tiles + seg[j:] if i >= 0 and j > 0 else seg
+        return seg
+    def measures(seg):
+        return _replace_ul(seg, 'Here’s what you can do to protect', _h_measures)
+    def myths(seg):
+        return _replace_ul(seg, 'Several myths about HPV', _h_myths)
+    for sid, fn in (('toc-what-the-evidence-shows', evidence), ('toc-how-it-changes-risk', risk), ('toc-the-india-picture', india),
+                    ('toc-measures-to-protect-and-prevent', measures), ('toc-what-the-evidence-does-not-support', myths)):
+        sp = section_span(page, sid)
+        if sp:
+            page = page[:sp[0]] + fn(page[sp[0]:sp[1]]) + page[sp[1]:]
+    return page
+
+
 PAGE = {}
 
 
 def present(page):
     m = re.search(r'<link rel="canonical" href="([^"]+)"', page)
     PAGE['url'] = m.group(1) if m else ''
-    return prevention_sections(nutrition_sections(treatment_sections(chemo_sections(how_it_is_given(how_it_works(TABLE_RE.sub(one, page)))))))
+    return hpv_sections(prevention_sections(nutrition_sections(treatment_sections(chemo_sections(how_it_is_given(how_it_works(TABLE_RE.sub(one, page))))))))
