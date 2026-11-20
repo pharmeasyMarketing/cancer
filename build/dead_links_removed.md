@@ -37,9 +37,7 @@ From build/link_status.json (python3 build/check_links.py). Dead = the server an
 - https://pharmeasy.in/online-medicine-order/4005285 (404, removed): "Lynparza"
 - https://pharmeasy.in/online-medicine-order/3104643 (404, removed): "Kyprolis"
 - https://pharmeasy.in/cancer/cost-and-support/ (404, unlinked): "cost and financial support"
-- https://pharmeasy.in/cancer/cost-and-support/ (404, unlinked): "cost and support"
 - https://pharmeasy.in/cancer/living-with/ (404, unlinked): "living with cancer"
-- https://pharmeasy.in/cancer/india/ (404, unlinked): "Cancer in India"
 - https://nhsrcindia.org/sites/default/files/2021-03/OperationalFrameworkManagementofCommonCancers.pdf (404, unlinked): "https://nhsrcindia.org/sites/default/files/2021-03/Operation"
 
 ## /cancer/nutrition/
@@ -55,7 +53,6 @@ From build/link_status.json (python3 build/check_links.py). Dead = the server an
 
 ## /cancer/prevention/
 
-- https://pharmeasy.in/cancer/prevention/tobacco/ (404, unlinked): "Tobacco"
 - https://pharmeasy.in/cancer/india/ (404, unlinked): "cancer in India"
 - https://pharmeasy.in/cancer/prevention/tobacco/ (404, unlinked): "tobacco and cancer"
 - https://pharmeasy.in/cancer/types/vaginal-and-vulvar-cancer/ (404, unlinked): "vaginal"
@@ -71,9 +68,6 @@ From build/link_status.json (python3 build/check_links.py). Dead = the server an
 
 ## /cancer/prevention/hpv/
 
-- https://pharmeasy.in/cancer/types/head-and-neck-cancer/throat-cancer/ (404, unlinked): "throat cancer"
-- https://pharmeasy.in/cancer/types/anal-cancer/ (404, unlinked): "anal cancer"
-- https://pharmeasy.in/cancer/types/vaginal-and-vulvar-cancer/ (404, unlinked): "vaginal and vulvar cancer"
 - https://pharmeasy.in/cancer/screening/ (404, unlinked): "screening"
 
 ## /cancer/symptoms/
@@ -141,8 +135,6 @@ From build/link_status.json (python3 build/check_links.py). Dead = the server an
 - https://pharmeasy.in/online-medicine-order/5896 (404, removed): "Celplat"
 - https://pharmeasy.in/cancer/treatment/surgery/ (404, unlinked): "Surgery"
 - https://pharmeasy.in/cancer/treatment/radiation-therapy/ (404, unlinked): "Radiotherapy"
-- https://pharmeasy.in/cancer/cost-and-support/ (404, unlinked): "cost and financial support"
-- https://pharmeasy.in/cancer/cost-and-support/ (404, unlinked): "Cost and financial support"
 
 ## /cancer/types/cervical-cancer/
 

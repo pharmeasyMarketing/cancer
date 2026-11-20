@@ -161,7 +161,7 @@ The stage of cancer describes how large a cancer lesion is and how far it has sp
 * Stages I to III refer to increasing tumour size or infiltration into surrounding tissues or lymph nodes.   
 * Stage IV indicates that cancer has spread to distant parts of the body. 
 
-The grade of a tumour is based on how abnormal the cancer cells are. A pathologist usually looks at a biopsy sample to determine the grade of a tumour. Cancer cells that resemble normal cells are referred to as well differentiated, whereas cancerous cells that are less like normal cells are called poorly differentiated. Poorly differentiated cells, also known as undifferentiated, are more aggressive and malignant than well differentiated cancer cells. Although different cancers have different grading systems, most utilise Grade 1 to Grade 4 classification, with Grade 1 being the least aggressive and Grade 4 being the most aggressive cancer cells[19](https://www.cancer.gov/about-cancer/diagnosis-staging/diagnosis/tumor-grade%20). 
+The grade of a tumour is based on how abnormal the cancer cells are. A pathologist usually looks at a biopsy sample to determine the grade of a tumour. Cancer cells that resemble normal cells are referred to as well differentiated, whereas cancerous cells that are less like normal cells are called poorly differentiated. Poorly differentiated cells, also known as undifferentiated, are more aggressive and malignant than well-differentiated cancer cells. Although different cancers have different grading systems, most utilise Grade 1 to Grade 4 classification, with Grade 1 being the least aggressive and Grade 4 being the most aggressive cancer cells[19](https://www.cancer.gov/about-cancer/diagnosis-staging/diagnosis/tumor-grade%20). 
 
 ## How is cancer treated? 
 
@@ -201,7 +201,7 @@ The choice depends on the type, subtype, and stage of cancer, as well as how wel
 
  
 
-You may check the generic molecule page on PharmEasy for each medicine or [medicines grouped by drug class](https://pharmeasy.in/molecules-by-class/) list. PharmEasy stocks every oncology medicine by drug class. All of these medicines are prescription-only. Price and availability are seen on each product page. You can check the full catalogue here: [medicines by drug class](https://pharmeasy.in/molecules-by-class/) 
+You may check the generic molecule page on PharmEasy for each medicine or medicines grouped by drug class list. PharmEasy stocks every oncology medicine by drug class. All of these medicines are prescription-only. Price and availability are seen on each product page. You can check the full catalogue here: [medicines by drug class](https://pharmeasy.in/molecules-by-class/) 
 
 The cost of medicine varies by city, hospital, stage, regimen, and whether care is public, trust-run, or a private institution. It also depends on how it is charged. For example, per-cycle cost adds up with each treatment cycle, while an ongoing monthly cost continues for as long as the treatment remains effective. In India, more than 75% of cancer-affected households experience catastrophic health expenditure[37](https://pubmed.ncbi.nlm.nih.gov/40368978/). For further details, check [cost and financial support](https://pharmeasy.in/cancer/cost-and-support/). 
 
@@ -225,11 +225,11 @@ Financial support for cancer treatment in India may be available through schemes
 
 However, the coverage depends on the scheme’s eligibility rules and approved treatment packages, not on the hospital alone[38](https://www.pib.gov.in/PressReleasePage.aspx?PRID=1738169&reg=48&lang=2). Verified as of {{CURRENT\_MONTH\_YEAR}}. 
 
-To know more, see [cost and support](https://pharmeasy.in/cancer/cost-and-support/). For the period after treatment ends, including follow-up schedules, late effects, and fertility, see [living with cancer](https://pharmeasy.in/cancer/living-with/).  
+To know more, see cost and support. For the period after treatment ends, including follow-up schedules, late effects, and fertility, see [living with cancer](https://pharmeasy.in/cancer/living-with/).  
 
 ## Screening and prevention 
 
-The prevalence of cancer screening in India remains relatively low. Data from the National Family Health Survey 5 found that only 0.9% of women aged 30 to 49 years had undergone breast cancer screening, while 1.9% had undergone cervical cancer screening[39](https://pubmed.ncbi.nlm.nih.gov/39629359/). Further details, including regional variation and the existing schemes, are listed in [Cancer in India](https://pharmeasy.in/cancer/india/). 
+The prevalence of cancer screening in India remains relatively low. Data from the National Family Health Survey 5 found that only 0.9% of women aged 30 to 49 years had undergone breast cancer screening, while 1.9% had undergone cervical cancer screening[39](https://pubmed.ncbi.nlm.nih.gov/39629359/). Further details, including regional variation and the existing schemes, are listed in Cancer in India. 
 
 Screening recommendations depend on the type of cancer, age, and individual risk factors. In India, population-based screening is recommended for oral, cervical, and breast cancers among people aged 30 to 65 years. 
 
@@ -249,7 +249,7 @@ Consult a doctor if you notice symptoms that persist, worsen, or keep coming bac
 
 Seek urgent medical attention for serious symptoms such as coughing up blood, seeing blood in your pee, a painful lump, a mouth sore that does not heal, or difficulty breathing, or any other symptom that you are concerned about[15](https://www.cancer.org/cancer/diagnosis-staging/signs-and-symptoms-of-cancer.html%20),[42](https://www.nhs.uk/conditions/cancer/%20). Do not wait for a routine appointment if symptoms are severe or rapidly worsening. 
 
-If you are unsure whether a symptom needs medical attention, an [online doctor consultation](https://pharmeasy.in/online-doctor-consultation/) can help you understand whether you should get it checked and how urgently you may need further evaluation. 
+If you are unsure whether a symptom needs medical attention, an online doctor consultation can help you understand whether you should get it checked and how urgently you may need further evaluation. 
 
 ​​￼​Latest on cancer in India — updated {{CURRENT\_MONTH\_YEAR}} 
 
@@ -383,7 +383,7 @@ Some cancers can be cured, especially when found and treated early. Please note 
 
 45\.	Can Getting a Biopsy Make Cancer Spread? Accessed October 8, 2026\. [https\://www\.cancer.org/cancer/latest-news/can-getting-a-biopsy-make-cancer-spread.html](https://www.cancer.org/cancer/latest-news/can-getting-a-biopsy-make-cancer-spread.html) 
 
- 
+
 
 
 

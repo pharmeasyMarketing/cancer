@@ -1,4 +1,4 @@
-Cancer symptoms and early signs 
+# Cancer Symptoms And Early Signs
 
 Written by PharmEasy Medical Team · Medically reviewed by \[reviewer\_name : Dr Ayush Dubey  
 
@@ -36,18 +36,18 @@ Many symptoms caused by common health conditions can be confused with cancer sym
 | A neck lump  | Bacterial or viral infections, swollen lymph nodes, thyroid disorders, allergic reactions, mumps, salivary gland stones[4](https://medlineplus.gov/ency/article/003098.htm)  | Painless, hard, and continues to change/grow  |
 | Itchy skin   | Dry skin, insect bites, hives (urticaria), heat rash, eczema, scabies, psoriasis, pregnancy-related cholestasis, medication side effects, kidney disease, liver disease, blood disorders, thyroid disorders, HIV infection[5](https://www.healthdirect.gov.au/itchy-skin)  | Accompanied by fever, no rash, keeps returning, disturbs your sleep, bleeds, forms scabs/produces pus, or develops during pregnancy[5](https://www.healthdirect.gov.au/itchy-skin)  |
 | Varicose veins  | Older age, female sex and hormonal changes, pregnancy, obesity, family history of varicose veins, defective vein valves, previous blood clots in the legs, prolonged standing or sitting[6](https://medlineplus.gov/ency/article/001109.htm)  | Become painful and cause swelling and are accompanied by fever, redness of the leg, or sores that do not heal[6](https://medlineplus.gov/ency/article/001109.htm) |
-| Digestive symptoms (bloating, gas, irregular stools, indigestion)  | Haemorrhoids, irritable bowel syndrome (IBS), inflammatory bowel disease (IBD), coeliac disease, gastrointestinal infections, food intolerances, dietary changes, certain medications[7](https://medlineplus.gov/ency/article/007447.htm)  | Accompanied by chest pain, severe abdominal pain, persistent vomiting or blood in vomit. Symptoms that make it difficult to eat, drink or sleep; unexplained weight loss; or changes in your stool, such as blood or unusual colour[8](https://www.healthdirect.gov.au/digestive-system)  |
+| Digestive symptoms (bloating, gas, irregular stools, indigestion)  | Haemorrhoids, irritable bowel syndrome (IBS), inflammatory bowel disease (IBD), coeliac disease, gastrointestinal infections, [food intolerances](https://pharmeasy.in/blog/diagnostic-food-intolerance-what-is-it-symptoms-causes-treatment-more/), dietary changes, certain medications[7](https://medlineplus.gov/ency/article/007447.htm)  | Accompanied by chest pain, severe abdominal pain, persistent vomiting or blood in vomit. Symptoms that make it difficult to eat, drink or sleep; unexplained weight loss; or changes in your stool, such as blood or unusual colour[8](https://www.healthdirect.gov.au/digestive-system)  |
 | A breast lump before menopause  | Fibrocystic breast changes, fibroadenomas, breast cysts, injury or haematoma, lipoma, milk cysts (galactoceles), breast abscesses[9](https://medlineplus.gov/ency/article/003155.htm)  | Wrinkling of the breast skin, a new breast lump, unexplained bruising, unusual nipple discharge (bloody, clear or pinkish), inverted nipple (recent)[9](https://medlineplus.gov/ency/article/003155.htm)  |
-| Headache  | Tension-type headaches, migraines, cluster headaches, sinusitis, alcohol consumption, dehydration, altitude changes, sleep apnoea[10](https://www.healthdirect.gov.au/headaches)  | Sudden headache, worsens when lying down or coughing[10](https://www.healthdirect.gov.au/headaches)  |
+| Headache  | Tension-[type headaches](https://pharmeasy.in/blog/diagnostic-types-of-headaches-causes-symptoms-treatment-and-prevention-guide/), migraines, cluster headaches, sinusitis, alcohol consumption, dehydration, altitude changes, sleep apnoea[10](https://www.healthdirect.gov.au/headaches)  | Sudden headache, worsens when lying down or coughing[10](https://www.healthdirect.gov.au/headaches)  |
 
 ## Health conditions that can mimic cancer symptoms 
 
-Tuberculosis (TB) may sometimes mimic cancer symptoms. This may occur more commonly in India due to its high TB burden.[11](https://pubmed.ncbi.nlm.nih.gov/35141090/) Nodal TB may resemble [lymphoma,](https://pharmeasy.in/cancer/types/blood-cancer/lymphoma/) abdominal TB may resemble [bowel cancer](https://pharmeasy.in/cancer/types/colorectal-cancer/), and pulmonary TB may resemble [lung cancer](https://pharmeasy.in/cancer/types/lung-cancer/) on a chest x-ray.[12](https://pmc.ncbi.nlm.nih.gov/articles/PMC5450601/),[13](https://pmc.ncbi.nlm.nih.gov/articles/PMC9129883/),[14](https://pmc.ncbi.nlm.nih.gov/articles/PMC5609136/) Other such examples include: 
+Tuberculosis (TB) may sometimes mimic cancer symptoms. This may occur more commonly in India due to its high TB burden.[11](https://pubmed.ncbi.nlm.nih.gov/35141090/) Nodal TB may resemble [lymphoma,](https://pharmeasy.in/cancer/types/blood-cancer/lymphoma/) abdominal TB may resemble [bowel cancer](https://pharmeasy.in/cancer/types/colorectal-cancer/), and pulmonary TB may resemble [lung cancer](https://pharmeasy.in/cancer/types/lung-cancer/) on a chest X-ray.[12](https://pmc.ncbi.nlm.nih.gov/articles/PMC5450601/),[13](https://pmc.ncbi.nlm.nih.gov/articles/PMC9129883/),[14](https://pmc.ncbi.nlm.nih.gov/articles/PMC5609136/) Other such examples include: 
 
 * Fibroadenomas may mimic [breast cancer](https://pharmeasy.in/cancer/types/breast-cancer/).[15](https://pubmed.ncbi.nlm.nih.gov/20804869/)    
 * Lipomas may mimic soft tissue sarcoma.[16](https://pubmed.ncbi.nlm.nih.gov/42598045/)    
 * Thyroid nodules are benign in most cases.[17](https://pubmed.ncbi.nlm.nih.gov/32351856/)    
-* Gallstones, fatty liver and reflux account for most upper abdominal discomfort.[18](https://pmc.ncbi.nlm.nih.gov/articles/PMC4565319/),[19](https://pmc.ncbi.nlm.nih.gov/articles/PMC1121646/) 
+* Gallstones, fatty liver, and reflux account for most upper abdominal discomfort.[18](https://pmc.ncbi.nlm.nih.gov/articles/PMC4565319/),[19](https://pmc.ncbi.nlm.nih.gov/articles/PMC1121646/) 
 
 Although most symptoms are more likely to have a noncancerous cause, it is important not to make this assumption without proper assessment. A medical checkup can help identify the cause and determine whether further tests are needed. If you are unsure about a symptom, explore our page, [Is It Cancer?](https://pharmeasy.in/cancer/symptoms/is-it-cancer/) which addresses the most common questions one at a time. 
 
@@ -59,12 +59,12 @@ Sometimes, one symptom may not be concerning by itself; however, when certain sy
 * Persistent cough with blood-streaked sputum and weight loss.[21](https://www.healthdirect.gov.au/haemoptysis-coughing-up-blood)   
 * Bloating with early satiety, pelvic/abdominal pain and urinary urgency.[22](https://www.nhs.uk/conditions/ovarian-cancer/symptoms/)   
 * Change in bowel habit with rectal bleeding or low blood counts.[23](https://www.cancer.org/cancer/types/colon-rectal-cancer/detection-diagnosis-staging/signs-and-symptoms.html)   
-* Painless neck swelling/lump with night sweats, fever, itchy skin and weight loss[.24](https://www.nhs.uk/conditions/non-hodgkin-lymphoma/symptoms/)   
+* Painless neck swelling/lump with night sweats, [fever](https://pharmeasy.in/blog/diagnostic-types-of-fever-stages-symptoms-management-tips-more/), itchy skin and weight loss[.24](https://www.nhs.uk/conditions/non-hodgkin-lymphoma/symptoms/)   
 * Bone pain with a lump/swelling, fractures or difficulty in moving.[25](https://www.nhs.uk/conditions/bone-cancer/symptoms/)  
 
 ## Early symptoms versus late symptoms 
 
-Early cancer symptoms are often mild and easy to overlook. These can include symptoms such as a small lump, a mouth patch, slight bleeding or a change in normal habits. As the disease progresses, symptoms may become more clearly indicative of cancer. These can include unexplained weight loss, severe fatigue, persistent pain, jaundice or breathlessness.[1](https://www.hopkinsmedicine.org/health/wellness-and-prevention/5-symptoms-of-cancer-you-might-be-ignoring-but-shouldnt),[2](https://www.cancerresearchuk.org/about-cancer/spot-cancer-early/cancer-symptoms) So the important thing is to not wait until a symptom becomes severe to get it checked. If a symptom is persistent, keeps getting worse, or has no obvious cause, speak to your doctor. 
+Early cancer symptoms are often mild and easy to overlook. These can include symptoms such as a small lump, a mouth patch, slight bleeding or a change in normal habits. As the disease progresses, symptoms may become more clearly indicative of cancer. These can include unexplained weight loss, severe fatigue, persistent pain, [jaundice](https://pharmeasy.in/blog/jaundice-symptoms-treatment-causes-and-types/) or breathlessness.[1](https://www.hopkinsmedicine.org/health/wellness-and-prevention/5-symptoms-of-cancer-you-might-be-ignoring-but-shouldnt),[2](https://www.cancerresearchuk.org/about-cancer/spot-cancer-early/cancer-symptoms) So the important thing is to not wait until a symptom becomes severe to get it checked. If a symptom is persistent, keeps getting worse, or has no obvious cause, speak to your doctor. 
 
 ## Variations by sex and site 
 
@@ -90,7 +90,7 @@ Cancer symptoms vary depending on the type of cancer and the organ affected. Som
 > > > * Tumours in solid organs (like the liver) do not show symptoms until they press on an internal structure.[36](https://pubmed.ncbi.nlm.nih.gov/24778418/),[37](https://www.sciencedirect.com/science/article/pii/S1534580710002480)   
 > > > * Tumours near a nerve may cause pain or weakness early.[38](https://pubmed.ncbi.nlm.nih.gov/18312658/)   
 > > > * Tumours in the marrow may lead to anaemia, infection, and bleeding.[39](https://pmc.ncbi.nlm.nih.gov/articles/PMC7912724/)   
-  To know more, see [types of cancer, symptoms and early signs](https://pharmeasy.in/blog/diagnostic-types-of-cancer-symptoms-early-signs-diagnosis-more/) or [early warning signs of cancer](https://pharmeasy.in/blog/diagnostic-early-warning-signs-of-cancer-you-should-know/). 
+  To know more, see [types of cancer, symptoms and early signs](https://pharmeasy.in/blog/diagnostic-types-of-cancer-symptoms-early-signs-diagnosis-more/). 
 
 ## When to see a doctor 
 
@@ -100,9 +100,9 @@ Cancer warning signs can resemble symptoms of other conditions, so medical asses
 * A painless lump, dull ache or any changes in the testicles.[29](https://www.cancer.gov/types/testicular/symptoms)   
 * Difficulty or pain when swallowing.[2](https://www.cancerresearchuk.org/about-cancer/spot-cancer-early/cancer-symptoms)   
 * Blood in the stool, urine, or a change in bowel habits.[2](https://www.cancerresearchuk.org/about-cancer/spot-cancer-early/cancer-symptoms)  
-* Painless swelling in the neck, armpit or groin that does not go away.[1](https://www.hopkinsmedicine.org/health/wellness-and-prevention/5-symptoms-of-cancer-you-might-be-ignoring-but-shouldnt),[2](https://www.cancerresearchuk.org/about-cancer/spot-cancer-early/cancer-symptoms)  
+* Painless swelling in the neck, armpit, or groin that does not go away.[1](https://www.hopkinsmedicine.org/health/wellness-and-prevention/5-symptoms-of-cancer-you-might-be-ignoring-but-shouldnt),[2](https://www.cancerresearchuk.org/about-cancer/spot-cancer-early/cancer-symptoms)  
 * Mouth or throat sore with a red or white patch or cough and hoarse voice that does not improve for a longer duration.[2](https://www.cancerresearchuk.org/about-cancer/spot-cancer-early/cancer-symptoms)  
-* Bloating, pelvic pain, unusual bleeding or any other unusual gynaecological symptoms.[2](https://www.cancerresearchuk.org/about-cancer/spot-cancer-early/cancer-symptoms),[26](https://www.cdc.gov/gynecologic-cancer/symptoms/index.html)   
+* Bloating, pelvic pain, unusual bleeding, or any other unusual gynaecological symptoms.[2](https://www.cancerresearchuk.org/about-cancer/spot-cancer-early/cancer-symptoms),[26](https://www.cdc.gov/gynecologic-cancer/symptoms/index.html)   
 * A new mole or sore that does not heal in a week.[2](https://www.cancerresearchuk.org/about-cancer/spot-cancer-early/cancer-symptoms)
 
 **Note:** See your doctor immediately if you cough up or vomit blood, have a seizure for the first time, develop a sudden severe headache with vomiting, experience new one-sided weakness or numbness, become breathless at rest, or develop rapid swelling in any body part, fever with a stiff neck, or severe pain anywhere in the body.[40](https://medlineplus.gov/ency/patientinstructions/000593.htm) 

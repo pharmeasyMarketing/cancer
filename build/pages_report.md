@@ -5,12 +5,8 @@ Mechanical changes the build made, and things for the editors to fix in the docs
 ## /cancer/treatment/
 
 - link removed (page not in the URL plan): "cancer treatments can cause side effects" -> /cancer/treatment/side-effects/
-- 11 em/en dash(es) replaced (colon between phrases, otherwise comma or hyphen)
-- typo fixed: "Section 5, ide effects" -> "Section 5, side effects"
-- editor note removed from the page: "Figures are CMS fields and are not populated in this prototype."
-- editor note removed from the page: "A field shown like {{EXAMPLE}} is populated by the platform; this prototype is not connected to a live feed."
+- 6 em/en dash(es) replaced (colon between phrases, otherwise comma or hyphen)
 - editor note removed from the page: "There are no rupee figures here."
-- left out the "Latest on ..." placeholder module (sample rows only)
 - 7 "Section N" pointer(s) linked to the heading they name (number offset 1)
 
 ## /cancer/related pages
@@ -28,16 +24,12 @@ Mechanical changes the build made, and things for the editors to fix in the docs
 
 - link removed (page not in the URL plan): "childhood cancers" -> /cancer/types/childhood-cancers/
 - link removed (page not in the URL plan): "side effects and management" -> /cancer/treatment/side-effects/
-- 12 em/en dash(es) replaced (colon between phrases, otherwise comma or hyphen)
+- 7 em/en dash(es) replaced (colon between phrases, otherwise comma or hyphen)
 - typo fixed: "duaorubicin" -> "daunorubicin"
 - typo fixed: "Ou can find" -> "You can find"
 - typo fixed: "can effect the total" -> "can affect the total"
-- editor note removed from the page: "Prices are entered through CMS fields and have not been added to this prototype."
-- editor note removed from the page: "This is a prototype module."
-- editor note removed from the page: "The platform fills in fields shown{{EXAMPLE}}; This prototype does not receive real-time updates."
 - editor note removed from the page: "This section does not give prices in rupees."
 - dropped table column "Price": every cell is an unfilled CMS field (Brand-specific)
-- left out the "Latest on ..." placeholder module (sample rows only)
 - dropped table column "Indicative figure": every cell is an unfilled CMS field ({{CHEMO_CYCLE_COST}}, {{DIAGNOSTIC_COST}}, {{RT_COURSE_COST}}, {{SUPPORTIVE_COST}}, {{SURGERY_COST_RANGE}}, {{TARGETED_MONTHLY_COST}})
 
 ## /cancer/nutrition/
@@ -54,15 +46,12 @@ Mechanical changes the build made, and things for the editors to fix in the docs
 - link removed (page not in the URL plan): "pancreas" -> /cancer/types/pancreatic-cancer/
 - link removed (page not in the URL plan): "gallbladder" -> /cancer/types/gallbladder-and-bile-duct-cancer/
 - 8 em/en dash(es) replaced (colon between phrases, otherwise comma or hyphen)
-- typo fixed: "child nis 14" -> "child is 14"
 - 7 "Section N" pointer(s) linked to the heading they name (number offset 1)
 
 ## /cancer/prevention/hpv/
 
-- link removed (page not in the URL plan): "tonsil cancer" -> /cancer/types/head-and-neck-cancer/throat-cancer/tonsil-cancer/
 - link removed (page not in the URL plan): "cervical cancer symptoms" -> /cancer/types/cervical-cancer/symptoms/
-- 11 em/en dash(es) replaced (colon between phrases, otherwise comma or hyphen)
-- editor note removed from the page: "A field shown like {{EXAMPLE}} is populated by the platform; this prototype is not connected to a live feed."
+- 6 em/en dash(es) replaced (colon between phrases, otherwise comma or hyphen)
 - left out the "Latest on ..." placeholder module (sample rows only)
 
 ## /cancer/symptoms/
@@ -73,10 +62,6 @@ Mechanical changes the build made, and things for the editors to fix in the docs
 ## /cancer/tests/
 
 - 2 em/en dash(es) replaced (colon between phrases, otherwise comma or hyphen)
-- typo fixed: "imgaing" -> "imaging"
-- typo fixed: "modality of choce" -> "modality of choice"
-- typo fixed: "CLosed" -> "Closed"
-- typo fixed: "pregant" -> "pregnant"
 - typo fixed: "lymphnodes" -> "lymph nodes"
 - 6 "Section N" pointer(s) linked to the heading they name (number offset 1)
 
@@ -88,9 +73,8 @@ Mechanical changes the build made, and things for the editors to fix in the docs
 - link removed (page not in the URL plan): "causes and risk factors" -> /cancer/types/cervical-cancer/causes-and-risk-factors/
 - link removed (page not in the URL plan): "treatment" -> /cancer/types/cervical-cancer/treatment/
 - link removed (page not in the URL plan): "treatment page" -> /cancer/types/cervical-cancer/treatment/
-- 8 em/en dash(es) replaced (colon between phrases, otherwise comma or hyphen)
+- 5 em/en dash(es) replaced (colon between phrases, otherwise comma or hyphen)
 - typo fixed: "precanceruous" -> "precancerous"
 - typo fixed: "Pharmeasy website" -> "PharmEasy website"
-- editor note removed from the page: "A field shown like {{EXAMPLE}} is populated by the platform; this prototype is not connected to a live feed."
 - left out the "Latest on ..." placeholder module (sample rows only)
 - 8 "Section N" pointer(s) linked to the heading they name (number offset 0)

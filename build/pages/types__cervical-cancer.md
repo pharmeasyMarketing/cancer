@@ -1,6 +1,6 @@
  
 
-# **H1- Cervical cancer: causes, symptoms, stages and treatment**
+# **H1- Cervical Cancer: Causes, Symptoms, Stages And Treatment**
 
 Written by PharmEasy Medical Team · Medically reviewed by : reviewer\_name :Dr Swetha Dama reviewer\_link: [https\://pharmeasy.in/legal/editorial-policy/dr-swetha-dama-194](https://pharmeasy.in/legal/editorial-policy/dr-swetha-dama-194)  reviewerr\_image: [https\://pharmeasy.in/blog/wp-content/uploads/2026/10/dr-swetha.webp](https://pharmeasy.in/blog/wp-content/uploads/2026/10/dr-swetha.webp)
 
@@ -12,7 +12,7 @@ Cervical cancer is one of the few cancers that can be prevented. A common virus 
 
 Even so, cervical cancer remains a serious health concern among women in India. It is the second most common cancer among Indian women, constituting upto 10.2% of all cancers in women. Cervical cancer accounted for 1,27,526 new cases and 79,906 deaths in India in 2022[1](https://pubmed.ncbi.nlm.nih.gov/36510887/),[2](https://pubmed.ncbi.nlm.nih.gov/41399754/),[3](https://gco.iarc.who.int/media/globocan/factsheets/populations/356-india-fact-sheet.pdf) About 1 in every 75 women are expected to develop cervical cancer at some point in their life[1](https://pubmed.ncbi.nlm.nih.gov/36510887/),[3](https://gco.iarc.who.int/media/globocan/factsheets/populations/356-india-fact-sheet.pdf). 
 
-India has taken a major step towards prevention of cervical cancer on 28 February 2026 by launching a nationwide HPV [vaccination](https://pharmeasy.in/vaccinations) programme at Ajmer, Rajasthan. A single dose of the quadrivalent [HPV vaccine](https://pharmeasy.in/blog/hpv-vaccine-what-is-it-when-to-be-taken-importance-side-effects/) (Gardasil, covering types 6, 11, 16 and 18\) is now offered free at government facilities every year to about 1.15 crore girls aged 14, with doses supplied through GAVI[4](https://www.pib.gov.in/PressReleasePage.aspx?PRID=2233906&reg=6&lang=1). In a large Swedish study of the HPV vaccine, girls vaccinated before 17 years of age, had an 88% lower risk of cervical cancer compared to unvaccinated girls[5](https://pubmed.ncbi.nlm.nih.gov/32997908/). 
+India has taken a major step towards prevention of cervical cancer on 28 February 2026 by launching a nationwide HPV [vaccination](https://pharmeasy.in/vaccinations) programme at Ajmer, Rajasthan. A single dose of the quadrivalent [HPV vaccine](https://pharmeasy.in/blog/hpv-vaccine-what-is-it-when-to-be-taken-importance-side-effects/) ([Gardasil](https://pharmeasy.in/online-medicine-order/gardasil-pre-filled-syringe-of-0-5ml-suspension-for-injection-3716666), covering types 6, 11, 16 and 18\) is now offered free at government facilities every year to about 1.15 crore girls aged 14, with doses supplied through GAVI[4](https://www.pib.gov.in/PressReleasePage.aspx?PRID=2233906&reg=6&lang=1). In a large Swedish study of the HPV vaccine, girls vaccinated before 17 years of age, had an 88% lower risk of cervical cancer compared to unvaccinated girls[5](https://pubmed.ncbi.nlm.nih.gov/32997908/). 
 
 ## **What is cervical cancer?** 
 
@@ -37,11 +37,11 @@ HPV: human papillomavirus; VIA: visual inspection with acetic acid
 
  
 
-The type of cervical cancer should be stated explicitly on your biopsy report (see [cervical cancer stages and types](https://pharmeasy.in/cancer/types/cervical-cancer/stages-and-types/)). 
+The type of cervical cancer should be stated explicitly on your biopsy report (To learn more check our page on [cervical cancer stages and types](https://pharmeasy.in/cancer/types/cervical-cancer/stages-and-types/)). 
 
 ## **The Indian picture** 
 
-Two key features impact the current scenario [in India](https://pharmeasy.in/cancer/india/). First, HPV types 16 and 18 account for a high proportion of cases. An estimated 83% of invasive cervical cancers in India are attributed to these two types, compared with the global figure of approximately 76% reported by the World Health Organization (WHO)[8](https://www.who.int/news-room/fact-sheets/detail/cervical-cancer),[30](https://hpvcentre.net/statistics/reports/IND.pdf) Therefore, a vaccine that protects against HPV types 16 and 18 can address a larger proportion of cervical cancer cases in India. 
+Two key features impact the current scenario [in India](https://pharmeasy.in/cancer/india/). First, HPV types 16 and 18 account for a high proportion of cases. An estimated 83% of invasive cervical cancers in India are attributed to these two types, compared with the global figure of approximately 76% reported by the World Health Organization (WHO)[8](https://www.who.int/news-room/fact-sheets/detail/cervical-cancer),[30](https://hpvcentre.net/statistics/reports/IND.pdf). Therefore, a vaccine that protects against HPV types 16 and 18 can address a larger proportion of cervical cancer cases in India. 
 
 The second key feature is the extent of screening coverage. India has a cervical cancer screening programme under the National Programme for Prevention and Control of Non-Communicable Diseases (NP-NCD), implemented through Ayushman Arogya Mandirs. Under this programme, women aged 30–65 years are offered visual inspection with acetic acid (VIA) at sub-health centres and primary health centres, with women who test positive referred for further assessment[13](https://newsonair.gov.in/union-health-minister-jp-nadda-reaffirms-indias-commitment-to-eliminate-cervical-cancer/),[31](https://newsonair.gov.in/over-10-crore-women-screened-for-cervical-cancer-under-ayushman-arogya-mandirs-and-nhm/). In July 2025, the Ministry of Health and Family Welfare reported that more than 10.18 crore women had been screened for cervical cancer[31](https://newsonair.gov.in/over-10-crore-women-screened-for-cervical-cancer-under-ayushman-arogya-mandirs-and-nhm/). However, screening coverage across the eligible population remains very low, and most Indian women visiting a cancer clinic have never undergone cervical cancer screening[32](https://www.researchgate.net/publication/371870588_Patterns_in_the_prevalence_and_wealth-based_inequality_of_cervical_cancer_screening_in_India) .
 
@@ -56,7 +56,7 @@ Women with early cervical cancer and precancer usually experience no symptoms, w
 * Watery, blood-stained or foul-smelling vaginal discharge    
 * Long-lasting pain in back, leg or hip region 
 
-Advanced disease can cause leg swelling, difficulties passing urine or stool, or blood in urine[33](https://www.cancer.org/cancer/types/cervical-cancer/detection-diagnosis-staging/signs-symptoms.html). None of these symptoms is specific to cancer. Cervicitis, polyps, fibroids and hormonal irregularity often cause similar bleeding patterns[34](https://pubmed.ncbi.nlm.nih.gov/25045355/),[35](https://pubmed.ncbi.nlm.nih.gov/37696551/). Any bleeding after intercourse or bleeding after menopause should be evaluated by a doctor[36](https://www.england.nhs.uk/south/wp-content/uploads/sites/6/2016/10/guidance-20to24.pdf),[37](https://www.asccp.org/Assets/9d92e617-858f-43f3-af62-44adf76cfc67/636220616039000000/vaginal-bleeding-statement-final-02-06-17-pdf) You can read more on our [cervical cancer symptoms](https://pharmeasy.in/cancer/types/cervical-cancer/symptoms/) page. 
+Advanced disease can cause leg swelling, difficulties passing urine or stool, or blood in urine[33](https://www.cancer.org/cancer/types/cervical-cancer/detection-diagnosis-staging/signs-symptoms.html). None of these symptoms is specific to cancer. Cervicitis, polyps, fibroids and hormonal irregularity often cause similar bleeding patterns[34](https://pubmed.ncbi.nlm.nih.gov/25045355/),[35](https://pubmed.ncbi.nlm.nih.gov/37696551/). Any bleeding after intercourse or bleeding after menopause should be evaluated by a doctor[36](https://www.england.nhs.uk/south/wp-content/uploads/sites/6/2016/10/guidance-20to24.pdf),[37](https://www.asccp.org/Assets/9d92e617-858f-43f3-af62-44adf76cfc67/636220616039000000/vaginal-bleeding-statement-final-02-06-17-pdf). You can read more on our [cervical cancer symptoms](https://pharmeasy.in/cancer/types/cervical-cancer/symptoms/) page. 
 
 ## **Causes and risk factors**
 
@@ -85,10 +85,10 @@ The [diagnosis and Pap smear](https://pharmeasy.in/cancer/types/cervical-cancer/
 
 The staging of cervical cancer is done using the FIGO 2018 system and its revision in 2019 as follows: 
 
-* Stage I: The cancer is in the cervix. The cancer is confined to the cervix, the lower part of the uterus. Early cancers may be very small and visible only under a microscope. Includes stages IA and IB.   
-* Stage II: Cancer has spread beyond the cervix. It may spread to the upper part of the vagina or the tissues surrounding the cervix but has not reached the pelvic wall or lower third of the vagina. Includes stages IIA and IIB.   
-* Stage III: Cancer has more extensive local spread. It may reach the lower part of the vagina, the pelvic wall, or the nearby lymph nodes. It can also obstruct the urinary tract and affect kidney function. Includes stage IIIA, IIIB and IIIC.   
-* Stage IV: The cancer reaches other organs. It may invade nearby organs such as the bladder or rectum or spread to distant organs such as the lungs or liver. Includes IVA (nearby organs) and IVB (distant spread)[40](https://pubmed.ncbi.nlm.nih.gov/30656645/),[41](https://pubmed.ncbi.nlm.nih.gov/31571232/). 
+* **Stage I:** The cancer is in the cervix. The cancer is confined to the cervix, the lower part of the uterus. Early cancers may be very small and visible only under a microscope. Includes stages IA and IB.   
+* **Stage II:** Cancer has spread beyond the cervix. It may spread to the upper part of the vagina or the tissues surrounding the cervix but has not reached the pelvic wall or lower third of the vagina. Includes stages IIA and IIB.   
+* **Stage III:** Cancer has more extensive local spread. It may reach the lower part of the vagina, the pelvic wall, or the nearby lymph nodes. It can also obstruct the urinary tract and affect kidney function. Includes stage IIIA, IIIB and IIIC.   
+* **Stage IV:** The cancer reaches other organs. It may invade nearby organs such as the bladder or rectum or spread to distant organs such as the lungs or liver. Includes IVA (nearby organs) and IVB (distant spread)[40](https://pubmed.ncbi.nlm.nih.gov/30656645/),[41](https://pubmed.ncbi.nlm.nih.gov/31571232/). 
 
 ## **Treatment** 
 
@@ -119,11 +119,11 @@ Each of these molecules have a page on PharmEasy, and [medicines grouped by drug
 
 ## **Prevention and screening**
 
-**Vaccination.** A single dose of quadrivalent HPV vaccine is given free of charge to 14-year-old girls under India's national programme[58](https://www.pib.gov.in/PressReleseDetailm.aspx?PRID=2233906&lang=2&reg=3&). WHO’s Strategic Advisory Group of Experts on Immunization endorsed single-dose schedules in April 2022 following a 10-year follow-up of approximately 17,000 females in India. An International Agency for Research on Cancer (IARC) study demonstrated that one dose of the quadrivalent vaccine against persistent infections of HPV 16 and 18 provided protection comparable to two or three vaccines[59](https://www.iarc.who.int/news-events/vaccine-efficacy-against-persistent-human-papillomavirus-hpv-16-18-infection-at-10-years-after-one-two-and-three-doses-of-quadrivalent-hpv-vaccine-in-girls-in-india-a-multicentre-prospective-co/),[60](https://www.who.int/news/item/11-04-2022-one-dose-human-papillomavirus-%28hpv%29-vaccine-offers-solid-protection-against-cervical-cancer). Cervavac, the quadrivalent vaccine made by Serum Institute of India, uses a two-dose schedule and has received WHO-prequalification in 2026[61](https://extranet.who.int/prequal/vaccines/p/cervavac-0). The questions parents ask most often are covered in: [who the cervical cancer vaccine is for, the age limits and its side effects](https://pharmeasy.in/blog/cancer-care-cervical-cancer-vaccine-benefits-age-limit-side-effects/), and [what the HPV vaccine is and when it should be taken](https://pharmeasy.in/blog/vaccine-hpv-vaccine-what-is-it-when-to-be-taken-importance-side-effects/). 
+**Vaccination.** A single dose of quadrivalent HPV vaccine is given free of charge to 14-year-old girls under India's national programme[58](https://www.pib.gov.in/PressReleseDetailm.aspx?PRID=2233906&lang=2&reg=3&). WHO’s Strategic Advisory Group of Experts on Immunization endorsed single-dose schedules in April 2022 following a 10-year follow-up of approximately 17,000 females in India. An International Agency for Research on Cancer (IARC) study demonstrated that one dose of the quadrivalent vaccine against persistent infections of HPV 16 and 18 provided protection comparable to two or three vaccines[59](https://www.iarc.who.int/news-events/vaccine-efficacy-against-persistent-human-papillomavirus-hpv-16-18-infection-at-10-years-after-one-two-and-three-doses-of-quadrivalent-hpv-vaccine-in-girls-in-india-a-multicentre-prospective-co/),[60](https://www.who.int/news/item/11-04-2022-one-dose-human-papillomavirus-%28hpv%29-vaccine-offers-solid-protection-against-cervical-cancer). Cervavac, the quadrivalent vaccine made by Serum Institute of India, uses a two-dose schedule and has received WHO-prequalification in 2026[61](https://extranet.who.int/prequal/vaccines/p/cervavac-0). The questions parents ask most often are covered in: [who the cervical cancer vaccine is for, the age limits and its side effects](https://pharmeasy.in/blog/cancer-care-cervical-cancer-vaccine-benefits-age-limit-side-effects/)
 
 **Screening.** For general population (from age 30 onwards), WHO recommends high-performance HPV testing at intervals of 5 to 10 years, and for women living with HIV, from age 25, at intervals of 3-5 years. Screening programme approved by Govt of India includes VIA for women aged 30-65 years. Self-collected samples have proved to be of equal efficacy in screening of cervical cancer. Any abnormality detected in the result requires consultation with health care provider. As current vaccine does not cover each type of cancer, screening is essential even after vaccination, as per the same schedule mentioned above[62](https://www.ncbi.nlm.nih.gov/books/NBK604757/)[,63](https://www.cancer.gov/about-cancer/causes-prevention/risk/infectious-agents/hpv-vaccine-fact-sheet). 
 
-General women's health panels are also available at private institutions outside the public programme: a [cancer screening package for women](https://pharmeasy.in/diagnostics/packages/cancer-screening-female-1418) aimed at women with no symptoms who want a baseline set of investigations, and a broader [advanced women's cancer screening package](https://pharmeasy.in/diagnostics/packages/womens-cancer-screening-advanced-1972) for those whose doctor wants a wider panel.  The cervix is screened by HPV testing, VIA, or cytology and not a a blood sample[62](https://www.ncbi.nlm.nih.gov/books/NBK604757/),[64](https://www.cancer.gov/about-cancer/diagnosis-staging/diagnosis/tumor-markers-fact-sheet). 
+General women's health panels are also available at private institutions outside the public programme: a [cancer screening package for women](https://pharmeasy.in/diagnostics/packages/cancer-screening-female-1418) aimed at women with no symptoms who want a baseline set of investigations, and a broader [advanced women's cancer screening package](https://pharmeasy.in/diagnostics/packages/womens-cancer-screening-advanced-1972) for those whose doctor wants a wider panel. The cervix is screened by HPV testing, VIA, or cytology and not a a blood sample[62](https://www.ncbi.nlm.nih.gov/books/NBK604757/),[64](https://www.cancer.gov/about-cancer/diagnosis-staging/diagnosis/tumor-markers-fact-sheet). 
 
 ## **Which applies to you?** 
 
@@ -165,7 +165,7 @@ Cervical cancer is different from [uterine (endometrial) cancer](https://pharmea
 
  
 
-### **Medicines on PharmEasy for this cancer:** 
+### **Medicines on PharmEasy for this cancer** 
 
 The list below shows molecules used in the treatment of cervical cancer, and its brands available on the Pharmeasy website. It is divided based on the class of each drug. Only your oncologist can decide which of these may be right for you. 
 
@@ -219,17 +219,9 @@ Whether your treatment is covered depends on your policy, your insurer and the h
 * **Room-rent caps:** Check the room-rent limit, as choosing a room above this limit can proportionally reduce your entire claim, not just the room charges.   
 * **Pre-authorisation for cashless claims:** Check the insurer’s timelines, as cashless requests must be decided within one hour and discharge authorisation granted within three hours. 
 
-[Cost and financial support](https://pharmeasy.in/cancer/cost-and-support/) covers all of it, including government schemes. Verified as of {MONTH\_YEAR}.
+[Cost and financial support](https://pharmeasy.in/cancer/cost-and-support/) covers all of it, including government schemes. Verified as of {{CURRENT\_MONTH\_YEAR}}
 
 Latest on cervical cancer — updated {MONTH\_YEAR}. 
-
-* SAMPLE **Placeholder — national cancer incidence estimate updated**{{PUBLISHED\_DATE}} · ICMR-NCDIRSource: [ICMR-NCDIR NCRP](https://ncdirindia.org/)   
-* SAMPLE **Placeholder — GLOBOCAN country factsheet revision**{{PUBLISHED\_DATE}} · IARCSource: [IARC Global Cancer Observatory](https://gco.iarc.who.int/today/)   
-* SAMPLE **Placeholder — WHO guidance or fact-sheet revision**{{PUBLISHED\_DATE}} · WHOSource: [WHO cancer fact sheet](https://www.who.int/news-room/fact-sheets/detail/cancer) 
-
-**Prototype module.** The three entries above are placeholders showing the shape of the feed, not real headlines. A CMS, editorial process or API populates title, date, source and link. Feeds this module is designed to draw from: [ICMR-NCDIR National Cancer Registry Programme](https://ncdirindia.org/) · [IARC Global Cancer Observatory](https://gco.iarc.who.int/today/) · [WHO cancer fact sheet](https://www.who.int/news-room/fact-sheets/detail/cancer) · [data.gov.in \- cancer datasets](https://data.gov.in/keywords/Cancer). 
-
-The dates and prices on this page are CMS fields, not text. A field shown like {{EXAMPLE}} is populated by the platform; this prototype is not connected to a live feed. 
 
 ## **Related pages** 
 
@@ -240,8 +232,6 @@ The dates and prices on this page are CMS fields, not text. A field shown like {
 * [Nutrition & diet](https://pharmeasy.in/cancer/nutrition/): eating well during treatment   
 * [Living with cancer & caregivers](https://pharmeasy.in/cancer/living-with/): follow-up, late effects and caregiving   
 * [Cost & financial support](https://pharmeasy.in/cancer/cost-and-support/): schemes and funds that reduce the cost of treatment 
-
-**Related reading:** [the cervical cancer vaccine, its age limits and side effects](https://pharmeasy.in/blog/cancer-care-cervical-cancer-vaccine-benefits-age-limit-side-effects/) · [what the HPV vaccine is and when to take it](https://pharmeasy.in/blog/vaccine-hpv-vaccine-what-is-it-when-to-be-taken-importance-side-effects/) 
 
 ## **Frequently asked questions** 
 

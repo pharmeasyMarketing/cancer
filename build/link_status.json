@@ -239,7 +239,8 @@
   "https://pharmeasy.in/online-medicine-order/valodex-10mg-tablet-23848": 200,
   "https://pharmeasy.in/online-medicine-order/vinelbine-20mg-inj-5ml-64092": 200,
   "https://pharmeasy.in/online-medicine-order/xovoltib-40mg-strip-of-7-tablets-178576": 200,
-  "https://pharmeasy.in/online-medicine-order/zavedos-10mg-inj-64885": 200
+  "https://pharmeasy.in/online-medicine-order/zavedos-10mg-inj-64885": 200,
+  "https://pharmeasy.in/blog/vaccine-hpv-vaccine-what-is-it-when-to-be-taken-importance-side-effects/": 200
  },
  "http://www.ncbi.nlm.nih.gov/books/NBK493191/": {
   "status": 200,
@@ -893,6 +894,114 @@
   "final_url": "https://pharmeasy.in/blog/",
   "canonical": "https://pharmeasy.in/blog/"
  },
+ "https://pharmeasy.in/blog/10-cancer-fighting-foods-you-should-befriend/": {
+  "status": 200,
+  "verdict": "ok",
+  "checked": "2026-11-20T13:10:32",
+  "found_on": [
+   "/cancer/nutrition/"
+  ],
+  "canonical": "https://pharmeasy.in/blog/10-cancer-fighting-foods-you-should-befriend/"
+ },
+ "https://pharmeasy.in/blog/11-incredible-health-benefits-of-coconut-water/": {
+  "status": 200,
+  "verdict": "ok",
+  "checked": "2026-11-20T13:10:33",
+  "found_on": [
+   "/cancer/nutrition/"
+  ],
+  "canonical": "https://pharmeasy.in/blog/11-incredible-health-benefits-of-coconut-water/"
+ },
+ "https://pharmeasy.in/blog/8-unusual-benefits-of-eating-ripe-tomatoes-daily/": {
+  "status": 200,
+  "verdict": "ok",
+  "checked": "2026-11-20T13:10:34",
+  "found_on": [
+   "/cancer/nutrition/"
+  ],
+  "canonical": "https://pharmeasy.in/blog/8-unusual-benefits-of-eating-ripe-tomatoes-daily/"
+ },
+ "https://pharmeasy.in/blog/ayurved-uses-benefits-side-effects-of-black-chana/": {
+  "status": 200,
+  "verdict": "ok",
+  "checked": "2026-11-20T13:10:36",
+  "found_on": [
+   "/cancer/nutrition/"
+  ],
+  "canonical": "https://pharmeasy.in/blog/ayurved-uses-benefits-side-effects-of-black-chana/"
+ },
+ "https://pharmeasy.in/blog/ayurveda-uses-benefits-side-effects-of-besan/": {
+  "status": 200,
+  "verdict": "ok",
+  "checked": "2026-11-20T13:10:37",
+  "found_on": [
+   "/cancer/nutrition/"
+  ],
+  "canonical": "https://pharmeasy.in/blog/ayurveda-uses-benefits-side-effects-of-besan/"
+ },
+ "https://pharmeasy.in/blog/ayurveda-uses-benefits-side-effects-of-buffalo-milk/": {
+  "status": 200,
+  "verdict": "ok",
+  "checked": "2026-11-20T13:10:39",
+  "found_on": [
+   "/cancer/nutrition/"
+  ],
+  "canonical": "https://pharmeasy.in/blog/ayurveda-uses-benefits-side-effects-of-buffalo-milk/"
+ },
+ "https://pharmeasy.in/blog/ayurveda-uses-benefits-side-effects-of-coconut-milk/": {
+  "status": 200,
+  "verdict": "ok",
+  "checked": "2026-11-20T13:10:40",
+  "found_on": [
+   "/cancer/nutrition/"
+  ],
+  "canonical": "https://pharmeasy.in/blog/ayurveda-uses-benefits-side-effects-of-coconut-milk/"
+ },
+ "https://pharmeasy.in/blog/ayurveda-uses-benefits-side-effects-of-eggs/": {
+  "status": 200,
+  "verdict": "ok",
+  "checked": "2026-11-20T13:10:42",
+  "found_on": [
+   "/cancer/nutrition/"
+  ],
+  "canonical": "https://pharmeasy.in/blog/ayurveda-uses-benefits-side-effects-of-eggs/"
+ },
+ "https://pharmeasy.in/blog/ayurveda-uses-benefits-side-effects-of-paneer/": {
+  "status": 200,
+  "verdict": "ok",
+  "checked": "2026-11-20T13:10:43",
+  "found_on": [
+   "/cancer/nutrition/"
+  ],
+  "canonical": "https://pharmeasy.in/blog/ayurveda-uses-benefits-side-effects-of-paneer/"
+ },
+ "https://pharmeasy.in/blog/ayurveda-uses-benefits-side-effects-of-rajma-kidney-beans/": {
+  "status": 200,
+  "verdict": "ok",
+  "checked": "2026-11-20T13:10:45",
+  "found_on": [
+   "/cancer/nutrition/"
+  ],
+  "canonical": "https://pharmeasy.in/blog/ayurveda-uses-benefits-side-effects-of-rajma-kidney-beans/"
+ },
+ "https://pharmeasy.in/blog/ayurveda-uses-benefits-side-effects-of-soya-chunks/": {
+  "status": 200,
+  "verdict": "ok",
+  "checked": "2026-11-20T13:10:46",
+  "found_on": [
+   "/cancer/nutrition/"
+  ],
+  "canonical": "https://pharmeasy.in/blog/ayurveda-uses-benefits-side-effects-of-soya-chunks/"
+ },
+ "https://pharmeasy.in/blog/ayurveda-uses-benefits-side-effects-of-tofu/": {
+  "status": 200,
+  "verdict": "ok",
+  "checked": "2026-11-20T13:10:48",
+  "found_on": [
+   "/cancer/nutrition/"
+  ],
+  "canonical": "https://pharmeasy.in/blog/ayurveda-uses-benefits-side-effects-of-tofu/"
+ },
  "https://pharmeasy.in/blog/breast-cancer-foods-to-have-and-avoid-during-and-after-treatment/": {
   "status": 200,
   "verdict": "ok",
@@ -934,7 +1043,6 @@
   "verdict": "ok",
   "checked": "2026-11-18T09:30:30",
   "found_on": [
-   "/cancer/prevention/hpv/",
    "/cancer/types/cervical-cancer/"
   ],
   "canonical": "https://pharmeasy.in/blog/cancer-care-cervical-cancer-vaccine-benefits-age-limit-side-effects/"
@@ -957,16 +1065,6 @@
   ],
   "canonical": "https://pharmeasy.in/blog/cancer-care-how-to-prevent-breast-cancer-in-women/"
  },
- "https://pharmeasy.in/blog/cancer-care-how-to-prevent-cancer-effective-ways-to-reduce-your-cancer-risk/": {
-  "status": 200,
-  "verdict": "ok",
-  "checked": "2026-11-18T09:30:00",
-  "found_on": [
-   "/cancer/nutrition/",
-   "/cancer/prevention/"
-  ],
-  "canonical": "https://pharmeasy.in/blog/cancer-care-how-to-prevent-cancer-effective-ways-to-reduce-your-cancer-risk/"
- },
  "https://pharmeasy.in/blog/crp-blood-test-cancer-understanding-its-significance-in-diagnosis-and-treatment/": {
   "status": 200,
   "verdict": "ok",
@@ -976,14 +1074,23 @@
   ],
   "canonical": "https://pharmeasy.in/blog/crp-blood-test-cancer-understanding-its-significance-in-diagnosis-and-treatment/"
  },
- "https://pharmeasy.in/blog/diagnostic-early-warning-signs-of-cancer-you-should-know/": {
+ "https://pharmeasy.in/blog/diagnostic-food-intolerance-what-is-it-symptoms-causes-treatment-more/": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-18T09:30:45",
+  "checked": "2026-11-20T13:10:57",
   "found_on": [
    "/cancer/symptoms/"
   ],
-  "canonical": "https://pharmeasy.in/blog/diagnostic-early-warning-signs-of-cancer-you-should-know/"
+  "canonical": "https://pharmeasy.in/blog/diagnostic-food-intolerance-what-is-it-symptoms-causes-treatment-more/"
+ },
+ "https://pharmeasy.in/blog/diagnostic-hepatitis-b-what-it-is-causes-symptoms-treatment/": {
+  "status": 200,
+  "verdict": "ok",
+  "checked": "2026-11-20T13:10:54",
+  "found_on": [
+   "/cancer/prevention/"
+  ],
+  "canonical": "https://pharmeasy.in/blog/diagnostic-hepatitis-b-what-it-is-causes-symptoms-treatment/"
  },
  "https://pharmeasy.in/blog/diagnostic-is-cancer-a-genetic-disease-hereditary-risk-genetic-testing-guide/": {
   "status": 200,
@@ -1003,6 +1110,33 @@
    "/cancer/symptoms/"
   ],
   "canonical": "https://pharmeasy.in/blog/diagnostic-types-of-cancer-symptoms-early-signs-diagnosis-more/"
+ },
+ "https://pharmeasy.in/blog/diagnostic-types-of-fever-stages-symptoms-management-tips-more/": {
+  "status": 200,
+  "verdict": "ok",
+  "checked": "2026-11-20T13:10:58",
+  "found_on": [
+   "/cancer/symptoms/"
+  ],
+  "canonical": "https://pharmeasy.in/blog/diagnostic-types-of-fever-stages-symptoms-management-tips-more/"
+ },
+ "https://pharmeasy.in/blog/diagnostic-types-of-headaches-causes-symptoms-treatment-and-prevention-guide/": {
+  "status": 200,
+  "verdict": "ok",
+  "checked": "2026-11-20T13:11:00",
+  "found_on": [
+   "/cancer/symptoms/"
+  ],
+  "canonical": "https://pharmeasy.in/blog/diagnostic-types-of-headaches-causes-symptoms-treatment-and-prevention-guide/"
+ },
+ "https://pharmeasy.in/blog/diagnostic-what-is-a-dangerous-white-blood-cell-count-how-to-increase-white-blood-cells/": {
+  "status": 200,
+  "verdict": "ok",
+  "checked": "2026-11-20T13:11:15",
+  "found_on": [
+   "/cancer/treatment/chemotherapy/"
+  ],
+  "canonical": "https://pharmeasy.in/blog/diagnostic-what-is-a-dangerous-white-blood-cell-count-how-to-increase-white-blood-cells/"
  },
  "https://pharmeasy.in/blog/does-air-fryer-cause-cancer-unveiling-the-facts-behind-the-question/": {
   "status": 200,
@@ -1040,6 +1174,15 @@
   ],
   "canonical": "https://pharmeasy.in/blog/home-remedies-for-constipation-by-dr-siddharth-gupta/"
  },
+ "https://pharmeasy.in/blog/home-remedies-for-fissure/": {
+  "status": 200,
+  "verdict": "ok",
+  "checked": "2026-11-20T13:11:03",
+  "found_on": [
+   "/cancer/tests/"
+  ],
+  "canonical": "https://pharmeasy.in/blog/home-remedies-for-fissure/"
+ },
  "https://pharmeasy.in/blog/home-remedies-for-nausea-by-dr-rajeev-singh/": {
   "status": 200,
   "verdict": "ok",
@@ -1057,15 +1200,6 @@
    "/cancer/treatment/chemotherapy/"
   ],
   "canonical": "https://pharmeasy.in/blog/home-remedies-for-vomiting/"
- },
- "https://pharmeasy.in/blog/how-exercise-can-help-you-deal-with-breast-cancer/": {
-  "status": 200,
-  "verdict": "ok",
-  "checked": "2026-11-18T09:32:12",
-  "found_on": [
-   "/cancer/treatment/chemotherapy/"
-  ],
-  "canonical": "https://pharmeasy.in/blog/how-exercise-can-help-you-deal-with-breast-cancer/"
  },
  "https://pharmeasy.in/blog/hpv-vaccine-what-is-it-when-to-be-taken-importance-side-effects/": {
   "status": 200,
@@ -1086,6 +1220,33 @@
   ],
   "final_url": "https://pharmeasy.in/blog/vaccine-human-papillomavirus-hpv-what-is-it-causes-symptoms-and-prevention/",
   "canonical": "https://pharmeasy.in/blog/vaccine-human-papillomavirus-hpv-what-is-it-causes-symptoms-and-prevention/"
+ },
+ "https://pharmeasy.in/blog/jaundice-symptoms-treatment-causes-and-types/": {
+  "status": 200,
+  "verdict": "ok",
+  "checked": "2026-11-20T13:11:01",
+  "found_on": [
+   "/cancer/symptoms/"
+  ],
+  "canonical": "https://pharmeasy.in/blog/jaundice-symptoms-treatment-causes-and-types/"
+ },
+ "https://pharmeasy.in/blog/ragi-health-benefits-and-tasty-recipes-for-losing-weight/": {
+  "status": 200,
+  "verdict": "ok",
+  "checked": "2026-11-20T13:10:49",
+  "found_on": [
+   "/cancer/nutrition/"
+  ],
+  "canonical": "https://pharmeasy.in/blog/ragi-health-benefits-and-tasty-recipes-for-losing-weight/"
+ },
+ "https://pharmeasy.in/blog/sattu-uses-benefits-side-effects-more/": {
+  "status": 200,
+  "verdict": "ok",
+  "checked": "2026-11-20T13:10:52",
+  "found_on": [
+   "/cancer/nutrition/"
+  ],
+  "canonical": "https://pharmeasy.in/blog/sattu-uses-benefits-side-effects-more/"
  },
  "https://pharmeasy.in/blog/uncover-the-link-between-obesity-and-cancer-risk/": {
   "status": 404,
@@ -1113,15 +1274,14 @@
   ],
   "canonical": "https://pharmeasy.in/blog/vaccine-hpv-in-women-causes-symptoms-and-treatment-options/"
  },
- "https://pharmeasy.in/blog/vaccine-hpv-vaccine-what-is-it-when-to-be-taken-importance-side-effects/": {
+ "https://pharmeasy.in/blog/vaccine-human-papillomavirus-hpv-what-is-it-causes-symptoms-and-prevention/": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-18T09:30:36",
+  "checked": "2026-11-20T13:10:55",
   "found_on": [
-   "/cancer/prevention/hpv/",
-   "/cancer/types/cervical-cancer/"
+   "/cancer/prevention/"
   ],
-  "canonical": "https://pharmeasy.in/blog/vaccine-hpv-vaccine-what-is-it-when-to-be-taken-importance-side-effects/"
+  "canonical": "https://pharmeasy.in/blog/vaccine-human-papillomavirus-hpv-what-is-it-causes-symptoms-and-prevention/"
  },
  "https://pharmeasy.in/cancer/": {
   "status": 200,
@@ -1145,7 +1305,6 @@
   "found_on": [
    "/cancer/",
    "/cancer/treatment/",
-   "/cancer/treatment/chemotherapy/",
    "/cancer/types/cervical-cancer/"
   ]
  },
@@ -1385,7 +1544,6 @@
   "verdict": "dead",
   "checked": "2026-11-18T09:30:37",
   "found_on": [
-   "/cancer/prevention/hpv/",
    "/cancer/types/cervical-cancer/"
   ]
  },
@@ -1487,14 +1645,6 @@
   "found_on": [
    "/cancer/treatment/",
    "/cancer/treatment/chemotherapy/"
-  ]
- },
- "https://pharmeasy.in/cancer/types/head-and-neck-cancer/throat-cancer/": {
-  "status": 404,
-  "verdict": "dead",
-  "checked": "2026-11-18T09:30:37",
-  "found_on": [
-   "/cancer/prevention/hpv/"
   ]
  },
  "https://pharmeasy.in/cancer/types/kidney-cancer/": {
@@ -1608,7 +1758,6 @@
   "checked": "2026-11-18T09:30:26",
   "found_on": [
    "/cancer/prevention/",
-   "/cancer/prevention/hpv/",
    "/cancer/types/cervical-cancer/"
   ]
  },
@@ -1681,6 +1830,15 @@
   ],
   "canonical": "https://pharmeasy.in/diagnostics/packages/cancer-screening-male-1420"
  },
+ "https://pharmeasy.in/diagnostics/packages/coagulation-profile-1944": {
+  "status": 200,
+  "verdict": "ok",
+  "checked": "2026-11-20T13:11:05",
+  "found_on": [
+   "/cancer/tests/"
+  ],
+  "canonical": "https://pharmeasy.in/diagnostics/packages/coagulation-profile-1944"
+ },
  "https://pharmeasy.in/diagnostics/packages/comprehensive-gold-full-body-checkup-with-arthritis-and-cancer-screening-2151": {
   "status": 200,
   "verdict": "ok",
@@ -1695,18 +1853,37 @@
   "verdict": "ok",
   "checked": "2026-11-18T09:33:02",
   "found_on": [
+   "/cancer/prevention/hpv/",
    "/cancer/types/cervical-cancer/"
   ],
   "canonical": "https://pharmeasy.in/diagnostics/packages/womens-cancer-screening-advanced-1972"
  },
- "https://pharmeasy.in/diagnostics/packages/womens-cancer-screening-advanced-1972?utm_source=chatgpt.com": {
+ "https://pharmeasy.in/diagnostics/profile/complete-blood-count-cbc-408": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-18T09:30:38",
+  "checked": "2026-11-20T13:11:07",
   "found_on": [
-   "/cancer/prevention/hpv/"
+   "/cancer/tests/"
   ],
-  "canonical": "https://pharmeasy.in/diagnostics/packages/womens-cancer-screening-advanced-1972"
+  "canonical": "https://pharmeasy.in/diagnostics/profile/complete-blood-count-cbc-408"
+ },
+ "https://pharmeasy.in/diagnostics/profile/liver-function-test-lft-254": {
+  "status": 200,
+  "verdict": "ok",
+  "checked": "2026-11-20T13:11:08",
+  "found_on": [
+   "/cancer/tests/"
+  ],
+  "canonical": "https://pharmeasy.in/diagnostics/profile/liver-function-test-lft-254"
+ },
+ "https://pharmeasy.in/diagnostics/profile/renalkidney-function-test-rftkft-364": {
+  "status": 200,
+  "verdict": "ok",
+  "checked": "2026-11-20T13:11:09",
+  "found_on": [
+   "/cancer/tests/"
+  ],
+  "canonical": "https://pharmeasy.in/diagnostics/profile/renalkidney-function-test-rftkft-364"
  },
  "https://pharmeasy.in/diagnostics/profile/thyroid-profile-t3-t4-tsh-1804": {
   "status": 200,
@@ -1718,6 +1895,15 @@
   ],
   "canonical": "https://pharmeasy.in/diagnostics/profile/thyroid-profile-t3-t4-tsh-1804"
  },
+ "https://pharmeasy.in/diagnostics/tests/albumin-4": {
+  "status": 200,
+  "verdict": "ok",
+  "checked": "2026-11-20T13:11:12",
+  "found_on": [
+   "/cancer/tests/"
+  ],
+  "canonical": "https://pharmeasy.in/diagnostics/tests/albumin-4"
+ },
  "https://pharmeasy.in/diagnostics/tests/alpha-fetoprotein-afp-7": {
   "status": 200,
   "verdict": "ok",
@@ -1726,6 +1912,15 @@
    "/cancer/tests/"
   ],
   "canonical": "https://pharmeasy.in/diagnostics/tests/alpha-fetoprotein-afp-7"
+ },
+ "https://pharmeasy.in/diagnostics/tests/ana-elisa-671": {
+  "status": 200,
+  "verdict": "ok",
+  "checked": "2026-11-20T13:11:13",
+  "found_on": [
+   "/cancer/tests/"
+  ],
+  "canonical": "https://pharmeasy.in/diagnostics/tests/ana-elisa-671"
  },
  "https://pharmeasy.in/diagnostics/tests/beta-2-microglobulin-26": {
   "status": 200,
@@ -1773,6 +1968,15 @@
   ],
   "canonical": "https://pharmeasy.in/diagnostics/tests/ca-199-38"
  },
+ "https://pharmeasy.in/diagnostics/tests/calcium-39": {
+  "status": 200,
+  "verdict": "ok",
+  "checked": "2026-11-20T13:11:15",
+  "found_on": [
+   "/cancer/tests/"
+  ],
+  "canonical": "https://pharmeasy.in/diagnostics/tests/calcium-39"
+ },
  "https://pharmeasy.in/diagnostics/tests/cea-46": {
   "status": 200,
   "verdict": "ok",
@@ -1782,6 +1986,17 @@
    "/cancer/tests/"
   ],
   "canonical": "https://pharmeasy.in/diagnostics/tests/cea-46"
+ },
+ "https://pharmeasy.in/diagnostics/tests/crp-quantitative-60": {
+  "status": 200,
+  "verdict": "ok",
+  "checked": "2026-11-20T13:10:53",
+  "found_on": [
+   "/cancer/nutrition/",
+   "/cancer/tests/",
+   "/cancer/treatment/"
+  ],
+  "canonical": "https://pharmeasy.in/diagnostics/tests/crp-quantitative-60"
  },
  "https://pharmeasy.in/diagnostics/tests/psa-for-men-119": {
   "status": 200,
@@ -3511,6 +3726,7 @@
   "checked": "2026-11-20T12:29:32",
   "found_on": [
    "/cancer/",
+   "/cancer/treatment/",
    "/cancer/treatment/chemotherapy/",
    "/cancer/types/cervical-cancer/"
   ],
@@ -3586,6 +3802,7 @@
   "checked": "2026-11-20T12:29:35",
   "found_on": [
    "/cancer/",
+   "/cancer/treatment/",
    "/cancer/treatment/chemotherapy/"
   ],
   "canonical": "https://pharmeasy.in/molecules/vinblastine-4518"
@@ -3607,6 +3824,7 @@
   "checked": "2026-11-20T12:29:38",
   "found_on": [
    "/cancer/",
+   "/cancer/treatment/",
    "/cancer/treatment/chemotherapy/"
   ],
   "canonical": "https://pharmeasy.in/molecules/vinorelbine-1272"
@@ -6052,7 +6270,9 @@
   "verdict": "ok",
   "checked": "2026-11-20T12:34:25",
   "found_on": [
-   "/cancer/prevention/hpv/"
+   "/cancer/prevention/",
+   "/cancer/prevention/hpv/",
+   "/cancer/types/cervical-cancer/"
   ],
   "canonical": "https://pharmeasy.in/online-medicine-order/gardasil-pre-filled-syringe-of-0-5ml-suspension-for-injection-3716666"
  },
@@ -6298,6 +6518,15 @@
    "/cancer/symptoms/"
   ],
   "canonical": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5609136/"
+ },
+ "https://pmc.ncbi.nlm.nih.gov/articles/PMC5764364/": {
+  "status": 200,
+  "verdict": "ok",
+  "checked": "2026-11-20T13:10:32",
+  "found_on": [
+   "/cancer/treatment/"
+  ],
+  "canonical": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5764364/"
  },
  "https://pmc.ncbi.nlm.nih.gov/articles/PMC6020165/": {
   "status": 200,
@@ -7193,6 +7422,7 @@
   "verdict": "ok",
   "checked": "2026-11-18T09:24:20",
   "found_on": [
+   "/cancer/treatment/",
    "/cancer/treatment/chemotherapy/"
   ]
  },

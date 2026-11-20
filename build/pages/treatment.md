@@ -1,4 +1,4 @@
-Can cancer be cured? How cancer treatment works 
+Can Cancer Be Cured? How Cancer Treatment Works
 
 Written by PharmEasy Medical Team · Medically reviewed by: reviewer\_name : Dr. Sarthak Moharir  reviewer\_link: [https\://pharmeasy.in/legal/editorial-policy/dr-sarthak-moharir-195](https://pharmeasy.in/legal/editorial-policy/dr-sarthak-moharir-195) reviewerr\_image: [https\://pharmeasy.in/blog/wp-content/uploads/2026/10/Sarthak-Moharir.webp](https://pharmeasy.in/blog/wp-content/uploads/2026/10/Sarthak-Moharir.webp) 
 
@@ -90,7 +90,7 @@ Doctors may combine two or more treatments or give them in a planned sequence. F
 
 ### The medicines used in cancer treatment 
 
-Cancer treatment may involve one or more medicines, depending on the type and stage of cancer. A few examples are [Cisplatin](https://pharmeasy.in/molecules/cisplatin-76), used for [head and neck](https://pharmeasy.in/cancer/types/head-and-neck-cancer/oral-cancer/), [lung](https://pharmeasy.in/cancer/types/lung-cancer/), [cervical](https://pharmeasy.in/cancer/types/cervical-cancer/), [bladder](https://pharmeasy.in/cancer/types/bladder-cancer/) and ​ 	​​[testicular cancers](https://pharmeasy.in/cancer/types/testicular-cancer/)​, usually along with radiation.[23](http://www.ncbi.nlm.nih.gov/books/NBK547695/) Other examples are [Trastuzumab](https://pharmeasy.in/molecules/trastuzumab-272), [Pembrolizumab](https://pharmeasy.in/molecules/pembrolizumab-491468), and [Letrozole](https://pharmeasy.in/molecules/letrozole-404). 
+Cancer treatment may involve one or more medicines, depending on the type and stage of cancer. A few examples are Cisplatin, used for [head and neck](https://pharmeasy.in/cancer/types/head-and-neck-cancer/oral-cancer/), [lung](https://pharmeasy.in/cancer/types/lung-cancer/), [cervical](https://pharmeasy.in/cancer/types/cervical-cancer/), [bladder](https://pharmeasy.in/cancer/types/bladder-cancer/) and ​ 	​​[testicular cancers](https://pharmeasy.in/cancer/types/testicular-cancer/)​, usually along with radiation.[23](http://www.ncbi.nlm.nih.gov/books/NBK547695/) Other examples are Trastuzumab, Pembrolizumab, and Letrozole. 
 
 All medicines are not suitable for all patients; your oncologist will make a call to start or stop a particular treatment based on your health and disease status. The examples below can help you understand the medicines your doctor may prescribe. 
 
@@ -105,7 +105,7 @@ Medicine prices may change over time. Check the linked medicine pages for the la
 | Drug group  | Molecules used in India  | How it is given  | What it is used for  |
 | :---- | :---- | :---- | :---- |
 | Platinum chemotherapy  | [cisplatin](https://pharmeasy.in/molecules/cisplatin-76), [carboplatin](https://pharmeasy.in/molecules/carboplatin-935), [oxaliplatin](https://pharmeasy.in/molecules/oxaliplatin-7396)[24](http://www.ncbi.nlm.nih.gov/books/NBK617056/)  | Through a vein (intravenously), in treatment cycles[23](http://www.ncbi.nlm.nih.gov/books/NBK547695/) every week, or three-weekly or every 28 days: alone or in combination with other medicines  | Works by destroying the DNA of cancer cells.[25](https://www.cancer.org/cancer/treatment-types/chemotherapy/types-of-chemo-drugs.html) Used for: Head and neck cancers  Cervical cancer  Lung cancer  Stomach cancer  Colorectal cancer  Bladder cancer  Ovarian and testicular cancer[24](http://www.ncbi.nlm.nih.gov/books/NBK617056/)  |
-| Taxanes, vinca alkaloids and topoisomerase inhibitors    | **Taxanes:** [paclitaxel](https://pharmeasy.in/molecules/paclitaxel-7097) and [docetaxel](https://pharmeasy.in/molecules/docetaxel-281)  **Vinca alkaloids:** [vincristine](https://pharmeasy.in/molecules/vincristine-774), vinblastine, and vinorelbine  **Topoisomerase inhibitors:**    [etoposide](https://pharmeasy.in/molecules/etoposide-1560), [irinotecan](https://pharmeasy.in/molecules/irinotecan-890), and topotecan.[26](http://www.ncbi.nlm.nih.gov/books/NBK564367/)  | Usually through a vein, in treatment cycles: 3 weekly or weekly  | Works by stopping the formation of new cancer cells[.25](https://www.cancer.org/cancer/treatment-types/chemotherapy/types-of-chemo-drugs.html) Used for:  **Taxanes:** Breast, lung, prostate, ovarian, and cervical cancers.  **Vinca alkaloids:** Certain blood cancers, including acute lymphoblastic leukaemia (ALL), Hodgkin lymphoma (HL) and non-Hodgkin lymphoma (NHL), and neuroblastoma and small-cell lung cancer (SCLC).  **Topoisomerase inhibitors:** Colorectal, oesophageal, pancreatic, lung, ovarian, breast, bladder, thyroid and different other types of cancer.[26](http://www.ncbi.nlm.nih.gov/books/NBK564367/)  |
+| Taxanes, vinca alkaloids and topoisomerase inhibitors    | **Taxanes:** [paclitaxel](https://pharmeasy.in/molecules/paclitaxel-7097) and [docetaxel](https://pharmeasy.in/molecules/docetaxel-281)  **Vinca alkaloids:** [vincristine](https://pharmeasy.in/molecules/vincristine-774), [vinblastine](https://pharmeasy.in/molecules/vinblastine-4518), and [vinorelbine](https://pharmeasy.in/molecules/vinorelbine-1272)  **Topoisomerase inhibitors:**    [etoposide](https://pharmeasy.in/molecules/etoposide-1560), [irinotecan](https://pharmeasy.in/molecules/irinotecan-890), and [topotecan](https://pharmeasy.in/molecules/topotecan-3292).[26](http://www.ncbi.nlm.nih.gov/books/NBK564367/)  | Usually through a vein, in treatment cycles: 3 weekly or weekly  | Works by stopping the formation of new cancer cells[.25](https://www.cancer.org/cancer/treatment-types/chemotherapy/types-of-chemo-drugs.html) Used for:  **Taxanes:** Breast, lung, prostate, ovarian, and cervical cancers.  **Vinca alkaloids:** Certain blood cancers, including acute lymphoblastic leukaemia (ALL), Hodgkin lymphoma (HL) and non-Hodgkin lymphoma (NHL), and neuroblastoma and small-cell lung cancer (SCLC).  **Topoisomerase inhibitors:** Colorectal, oesophageal, pancreatic, lung, ovarian, breast, bladder, thyroid and different other types of cancer.[26](http://www.ncbi.nlm.nih.gov/books/NBK564367/)  |
 | Anthracyclines and alkylating agents  | **Anthracyclines:** [doxorubicin](https://pharmeasy.in/molecules/doxorubicin-7116) and [epirubicin](https://pharmeasy.in/molecules/epirubicin-7209)  **Alkylating agents:** [cyclophosphamide](https://pharmeasy.in/molecules/cyclophosphamide-7050) and [ifosfamide](https://pharmeasy.in/molecules/ifosfamide-1813)[26](http://www.ncbi.nlm.nih.gov/books/NBK564367/)  | Intravenous, in cycles  | Inhibits and blocks DNA and RNA production.[26](http://www.ncbi.nlm.nih.gov/books/NBK564367/) Used for: **Anthracyclines:** ALL, acute myeloid leukaemia (AML), acute promyelocytic leukaemia (APL), Wilms tumour, neuroblastoma, sarcomas, breast, ovarian, bladder and thyroid cancers, HL and NHL.[26](http://www.ncbi.nlm.nih.gov/books/NBK564367/)  **Alkylating agents:** Cancers of lung, breast, ovary, and blood (leukaemia and lymphoma).[25](https://www.cancer.org/cancer/treatment-types/chemotherapy/types-of-chemo-drugs.html)  |
 | Antimetabolites  | [gemcitabine](https://pharmeasy.in/molecules/gemcitabine-944), [fluorouracil](https://pharmeasy.in/molecules/fluorouracil-1742), [capecitabine](https://pharmeasy.in/molecules/capecitabine-496), [pemetrexed](https://pharmeasy.in/molecules/pemetrexed-12374), [methotrexate](https://pharmeasy.in/molecules/methotrexate-13), [cytarabine](https://pharmeasy.in/molecules/cytarabine-1317),[25](https://www.cancer.org/cancer/treatment-types/chemotherapy/types-of-chemo-drugs.html) [calcium folinate](https://pharmeasy.in/molecules/calcium-folinate-86)  | Intravenous, or as tablets in the case of capecitabine  | Disrupts how cancer cells make and copy their DNA and RNA. As a result, the cells cannot make copies of their genetic material properly or multiply. Mainly used for: Breast, ovarian, and intestinal tract cancers.[25](https://www.cancer.org/cancer/treatment-types/chemotherapy/types-of-chemo-drugs.html)  |
 | Targeted therapy and tyrosine kinase inhibitors  | [imatinib](https://pharmeasy.in/molecules/imatinib-7881), [erlotinib](https://pharmeasy.in/molecules/erlotinib-596), [gefitinib](https://pharmeasy.in/molecules/gefitinib-224),[27](http://www.ncbi.nlm.nih.gov/books/NBK563322/) [osimertinib](https://pharmeasy.in/molecules/osimertinib-2485), [sorafenib](https://pharmeasy.in/molecules/sorafenib-3392), [lenvatinib](https://pharmeasy.in/molecules/lenvatinib-9114)  | Daily tablets  | Block specific faulty proteins that help cancer cells grow. They work when the cancer has the target protein the medicine acts on, such as BCR-ABL1 in chronic myeloid leukaemia or EGFR in lung adenocarcinoma. Other medicines target proteins involved in the growth of liver, kidney, and thyroid cancers.[27](http://www.ncbi.nlm.nih.gov/books/NBK563322/)  |
@@ -142,7 +142,7 @@ Almost all [cancer treatments can cause side effects](https://pharmeasy.in/cance
 
 During treatment, routine blood tests help the team monitor your health by checking how well your organs are working and identifying possible treatment side effects, in addition to monitoring the cancer.[38](https://www.cancer.gov/publications/patient-education/chemo-and-you) The blood count can indicate whether the bone marrow has recovered before the next cycle. 
 
-The treating team sometimes request a C-reactive protein (CRP) test, which is a general measure of inflammation in the body, when they think the infection is present. However, CRP is not a specific cancer test; it can rise with inflammation or infection in any part of the body, and cannot, on its own, confirm or rule out cancer.[41](https://medlineplus.gov/lab-tests/c-reactive-protein-crp-test/) Your treatment team will decide which tests you exactly need and how often they should be done. 
+The treating team sometimes request a [C-reactive protein (CRP) test](https://pharmeasy.in/diagnostics/tests/crp-quantitative-60), which is a general measure of inflammation in the body, when they think the infection is present. However, CRP is not a specific cancer test; it can rise with inflammation or infection in any part of the body, and cannot, on its own, confirm or rule out cancer.[41](https://medlineplus.gov/lab-tests/c-reactive-protein-crp-test/) Your treatment team will decide which tests you exactly need and how often they should be done. 
 
 One more misunderstanding needs a clear explanation. Side effects do not show how efficiently chemotherapy is managing your cancer.[18](https://www.cancer.gov/about-cancer/treatment/types/chemotherapy) Completing six chemotherapy cycles with only mild tiredness does not mean the treatment is weak. Similarly, experiencing severe nausea does not mean the treatment is more effective. The side effects and management page explains this further, including what to do if problems arise at night. 
 
@@ -150,7 +150,7 @@ One more misunderstanding needs a clear explanation. Side effects do not show ho
 
 ## Paying for cancer treatment in India 
 
-Cancer treatment is not just a medical concern but also a financial one, because financial difficulty can lead people to stop treatment midway. More than 75% of cancer-affected households in India had to pay bills that severely affected their financial conditions, called catastrophic health expenditures (CHE).42 A study at Tata Memorial Centre in Mumbai, conducted among around 500 breast cancer patients, found that 84.2%  of patients' households were affected by CHE with 72.4% distress financing, like borrowing money or selling assets, to pay for the treatment.43 
+Cancer treatment is not just a medical concern but also a financial one, because financial difficulty can lead people to stop treatment midway. More than 75% of cancer-affected households in India had to pay bills that severely affected their financial conditions, called catastrophic health expenditures (CHE).[42](https://pubmed.ncbi.nlm.nih.gov/40368978/) A study at Tata Memorial Centre in Mumbai, conducted among around 500 breast cancer patients, found that 84.2%  of patients' households were affected by CHE with 72.4% distress financing, like borrowing money or selling assets, to pay for the treatment.[43](https://pubmed.ncbi.nlm.nih.gov/39044204/) 
 
 The following measures may help reduce these costs: 
 
@@ -168,7 +168,7 @@ Seek immediate medical care for the following:
 
 * A temperature of 38°C (100.5°F) or higher while receiving chemotherapy[47](https://www.cancer.gov/about-cancer/treatment/side-effects/infection)   
 * Bleeding that does not stop    
-*  sudden breathlessness   
+* Sudden breathlessness   
 * Severe vomiting   
 * New weakness or numbness in the hands or legs   
 * Difficulty controlling your bladder or not being able to pass urine[48](https://www.cancer.nsw.gov.au/about-cancer/document-library/cancer-treatment-side-effects-a-guide-for-aborigin/side-effects-from-anticancer-medicines-immune-rela) 
@@ -181,11 +181,11 @@ Consult your oncology team within days if you have:
 * New swelling or pain at the IV site   
 * Yellowing of the eyes (jaundice)[49](https://medlineplus.gov/ency/patientinstructions/000012.htm) 
 
-If you need help in understanding a report, clarifying a prescription or obtaining an informed second opinion before committing to a plan, an [online doctor appointment](https://pharmeasy.in/online-doctor-consultation/) can provide access to qualified medical advice in between hospital visits. However, it is not meant that you should replace your oncologist. 
+If you need help in understanding a report, clarifying a prescription or obtaining an informed second opinion before committing to a plan, an [online doctor appointment](https://pharmeasy.in/online-doctor-consultation/) can provide access to qualified medical advice in between hospital visits. However, it does not mean that you should replace your oncologist. 
 
 ## Which applies to you? 
 
-The first column will define your own situation; find that first. The second column explains what will happen next, and the third one mentions the section to read more about it. 
+The first column will define your own situation. The second column explains what will happen next, and the third one mentions the section to read more about it. 
 
 | If this is you  | What usually happens next?  | Where to read more?  |
 | :---- | :---- | :---- |
@@ -193,7 +193,7 @@ The first column will define your own situation; find that first. The second col
 | Chemotherapy is advised even if your scans are clear.  | Adjuvant treatment, aimed at removing cancer cells that may remain[9](https://www.cancer.gov/publications/dictionaries/cancer-terms/def/adjuvant-chemotherapy)  | Section 2: Discusses what cancer treatment does to the body  |
 | You are proposed a medicine, but biomarker results are still pending.  | A plan is made before results arrive, which might demand revising; ask your doctor what was tested on your biopsy tissue and what is outstanding  | Section 3: Describes the planning of your treatment  |
 | You have been given palliative care, but you think it means quitting.  | It can start on the day of diagnosis and is given along with the active treatment to control symptoms[10](https://www.cancer.gov/about-cancer/advanced-cancer/care-choices/palliative-care-fact-sheet) | Section 5: Mentions what palliative care actually is  |
-| You are experiencing side effects and believe that the treatment is weak.  | Side effects have nothing to do with how well chemotherapy is fighting your cancer[18](https://www.cancer.gov/about-cancer/treatment/types/chemotherapy)  | Section 5, ide effects: Explains what they mean and what they do not  |
+| You are experiencing side effects and believe that the treatment is weak.  | Side effects have nothing to do with how well chemotherapy is fighting your cancer[18](https://www.cancer.gov/about-cancer/treatment/types/chemotherapy)  | Section 5, Side effects: Explains what they mean and what they do not  |
 | You are delaying or stopping treatment due to the cost.  | Before borrowing money, you can ask the treating team's medical social worker to check PM-JAY, the Health Minister's Cancer Patient Fund and drug price control[45](https://www.pib.gov.in/PressReleasePage.aspx?PRID=2154159&reg=48&lang=2)  | Section 6: Explains paying for cancer treatment in India  |
 | You would like to take a second opinion.  | A second-opinion oncologist may request your pathology slides, biopsy blocks, imaging, and reports to review your diagnosis and treatment options[50](https://www.cancer.org/cancer/making-treatment-decisions/seeking-a-second-opinion.html)  | The frequently asked questions below.  |
 | During chemotherapy, your temperature is 38°C or higher  | Ask for emergency care immediately. Do not wait for the next appointment[47](https://www.cancer.gov/about-cancer/treatment/side-effects/infection)  | Section 7: Explains when to see a doctor  |
@@ -285,18 +285,18 @@ There are no rupee figures here. Cost varies depending on the city, hospital, st
 
 | Component  | How it is billed  | What changes the total  |
 | :---- | :---- | :---- |
-| **Surgery**  | One-time procedure  | The operation type, the hospital grade, length of stay and any complications.51  |
+| **Surgery**  | One-time procedure  | The operation type, the hospital grade, length of stay and any complications.[51](https://pmc.ncbi.nlm.nih.gov/articles/PMC5764364/)  |
 | **Radiotherapy**  | Per fraction, billed as a course  | The method and quantity of fractions. Delivered daily for several weeks, commonly as day care.[52](https://www.cancer.gov/about-cancer/treatment/types/radiation-therapy/external-beam)  |
 | **Chemotherapy**  | Per cycle  | The regimen, the number of cycles, day-care charges, and the supportive medicines given alongside to manage side effects.  |
-| **Targeted therapy and immunotherapy**  | Charges may apply per dose, treatment cycle, or month, depending on the medicine and billing arrangement.  | The specific medicine, dose, frequency, and duration of treatment may affect the overall expense. The treatment period varies according to the cancer, medicine used and response to treatment.53  |
+| **Targeted therapy and immunotherapy**  | Charges may apply per dose, treatment cycle, or month, depending on the medicine and billing arrangement.  | The specific medicine, dose, frequency, and duration of treatment may affect the overall expense. The treatment period varies according to the cancer, medicine used and response to treatment.[53](https://pubmed.ncbi.nlm.nih.gov/40573244/)  |
 | **Diagnosis and staging**  | Usually charged separately for each test or procedure.  | Imaging, biopsy, histopathology and, increasingly, molecular testing that decides which drug is appropriate.[54](https://www.cancer.gov/types/breast/hp/breast-treatment-pdq)  |
 | **Supportive care**  | May be charged per cycle, per hospital visit or whenever needed.  | Anti-sickness medicines, growth factors, transfusions and the management of complications.[26](http://www.ncbi.nlm.nih.gov/books/NBK564367/),[32](http://www.ncbi.nlm.nih.gov/books/NBK559282/) These costs are often underestimated when planning.  |
 
  
 
-The unit is more important than the headline figure as per-cycle cost multiplies by the number of cycles given, and in case of ongoing treatment, the monthly cost is continuous. . In India, about 75% of households with cancer experience catastrophic costs.[42](https://pubmed.ncbi.nlm.nih.gov/40368978/) 
+The unit is more important than the headline figure as per-cycle cost multiplies by the number of cycles given, and in case of ongoing treatment, the monthly cost is continuous. In India, about 75% of households with cancer experience catastrophic costs.[42](https://pubmed.ncbi.nlm.nih.gov/40368978/) 
 
-Figures are CMS fields and are not populated in this prototype. Full cost guidance and the schemes available in India are available on [cost and financial support](https://pharmeasy.in/cancer/cost-and-support/). 
+Full cost guidance and the schemes available in India are available on [cost and financial support](https://pharmeasy.in/cancer/cost-and-support/). 
 
 ### Insurance in India- what to check 
 
@@ -315,16 +315,6 @@ There are several factors to consider here; your policy, your insurer, the hospi
  
 
 For eligible families, cancer treatment is covered by government schemes, including Ayushman Bharat PM-JAY and state schemes, at empanelled hospitals; the scheme sets the package list and eligibility, not the hospital.[46](https://www.pib.gov.in/PressReleseDetailm.aspx?PRID=1670707&reg=48&lang=2) Verified as of {{CURRENT\_MONTH\_YEAR}}. 
-
-Latest on treatment — updated {{CURRENT\_MONTH\_YEAR}} 
-
-* SAMPLE **Placeholder — national cancer incidence estimate updated**{{PUBLISHED\_DATE}} · ICMR-NCDIRSource: [ICMR-NCDIR NCRP](https://ncdirindia.org/)   
-* SAMPLE **Placeholder — GLOBOCAN country factsheet revision**{{PUBLISHED\_DATE}} · IARCSource: [IARC Global Cancer Observatory](https://gco.iarc.who.int/today/)   
-* SAMPLE **Placeholder — WHO guidance or fact-sheet revision**{{PUBLISHED\_DATE}} · WHOSource: [WHO cancer fact sheet](https://www.who.int/news-room/fact-sheets/detail/cancer) 
-
-**Prototype module.** The three entries which are given above are not actual headlines; instead, they are placeholders that show the feed's format.  This module is designed to draw from: [ICMR-NCDIR National Cancer Registry Programme](https://ncdirindia.org/) · [IARC Global Cancer Observatory](https://gco.iarc.who.int/today/) · [WHO cancer fact sheet](https://www.who.int/news-room/fact-sheets/detail/cancer) · [data.gov.in — cancer datasets](https://data.gov.in/keywords/Cancer). 
-
-The dates and prices on this page are CMS fields, not text. A field shown like {{EXAMPLE}} is populated by the platform; this prototype is not connected to a live feed. 
 
 Related pages   
  
@@ -470,11 +460,11 @@ If you have any doubt, it's good to go for a second opinion. A professional onco
 
 50\.	Second opinions for cancer treatment. American Cancer Society. 2025\. Accessed October 19, 2026\. [https\://www\.cancer.org/cancer/making-treatment-decisions/seeking-a-second-opinion.html](https://www.cancer.org/cancer/making-treatment-decisions/seeking-a-second-opinion.html) 
 
-51\.	Chauhan AS, Prinja S, Ghoshal S, Verma R, Oinam AS. Cost of treatment for head and neck cancer in India. *PLoS One*. 2018;13(1):e0191132. doi:10.1371/journal.pone.0191132 
+51\.	Chauhan AS, Prinja S, Ghoshal S, Verma R, Oinam AS. Cost of treatment for head and neck cancer in India. *PLoS One*. 2018;13(1):e0191132. doi:10.1371/journal.pone.0191132. https\://pmc.ncbi.nlm.nih.gov/articles/PMC5764364/ 
 
 52\.	External beam radiation therapy for Cancer. NCI. 2025\. Accessed October 19, 2026\. [https\://www\.cancer.gov/about-cancer/treatment/types/radiation-therapy/external-beam](https://www.cancer.gov/about-cancer/treatment/types/radiation-therapy/external-beam) 
 
-53\.	Levêque D. Improving the dosing schedules of targeted anticancer agents. *Pharmaceuticals*. 2025;18(6):848. doi:10.3390/ph18060848 
+53\.	Levêque D. Improving the dosing schedules of targeted anticancer agents. *Pharmaceuticals*. 2025;18(6):848. doi:10.3390/ph18060848. [https\://pubmed.ncbi.nlm.nih.gov/40573244/](https://pubmed.ncbi.nlm.nih.gov/40573244/) 
 
 54\.	Breast cancer treatment (PDQ®) \- NCI. Accessed October 19, 2026\. [https\://www\.cancer.gov/types/breast/hp/breast-treatment-pdq](https://www.cancer.gov/types/breast/hp/breast-treatment-pdq) 
 

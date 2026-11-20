@@ -1,6 +1,6 @@
  
 
-HPV and cancer 
+HPV and Cancer 
 
 Written by PharmEasy Medical Team · Medically reviewed by : Medically reviewed by : reviewer\_name : Dr Swetha Dama  reviewer\_link: [https\://pharmeasy.in/legal/editorial-policy/dr-swetha-dama-194](https://pharmeasy.in/legal/editorial-policy/dr-swetha-dama-194)  reviewerr\_image: [https\://pharmeasy.in/blog/wp-content/uploads/2026/10/dr-swetha.webp](https://pharmeasy.in/blog/wp-content/uploads/2026/10/dr-swetha.webp)   
 Published {{PUBLISHED\_DATE}} · Updated {{LAST\_UPDATED}} 
@@ -15,7 +15,7 @@ Nearly all cases of cervical cancer are caused by persistent infection with high
 
 HPV is a group of more than 200 related viruses that infect the skin and mucosal surfaces (the inner linings of your body's cavities and organs)[7](https://www.who.int/news-room/fact-sheets/detail/human-papilloma-virus-and-cancer). Among these around 30 to 40 types can infect the genital tract[8](https://pubmed.ncbi.nlm.nih.gov/18701931/).
 
-HPV spreads primarily through intimate skin-to-skin or mucosal contact during sexual activity even without penetrationv. This is why condoms can reduce the risk of HPV transmission but cannot eliminate it completely as the virus may infect areas of the skin not covered by condoms[10](https://pmc.ncbi.nlm.nih.gov/articles/PMC9735321/). 
+HPV spreads primarily through intimate skin-to-skin or mucosal contact during sexual activity even without penetration. This is why condoms can reduce the risk of HPV transmission but cannot eliminate it completely, as the virus may infect areas of the skin not covered by condoms[10](https://pmc.ncbi.nlm.nih.gov/articles/PMC9735321/). 
 
 | Cancer site  | HPV's role  | What the evidence shows  |
 | :---- | :---- | :---- |
@@ -34,19 +34,19 @@ HPV types are classified as low-risk or high-risk based on their potential to ca
 * Low-risk types 6 and 11 cause approximately 90% of genital warts[18](https://www.cdc.gov/std/treatment-guidelines/anogenital-warts.htm).    
 * High-risk types 16 and 18 are responsible for about 70% of cervical cancers worldwide. Other types 31, 33,35, 45,51,39, 52 and 58,56,59  account for a further 10-20% of cases[19](https://pubmed.ncbi.nlm.nih.gov/40745336/). 
 
-Our explainer on how HPV infection can progress to cancer walks you through the process step by step. See also [throat cancer](https://pharmeasy.in/cancer/types/head-and-neck-cancer/throat-cancer/) and [tonsil cancer](https://pharmeasy.in/cancer/types/head-and-neck-cancer/throat-cancer/tonsil-cancer/), [anal cancer](https://pharmeasy.in/cancer/types/anal-cancer/), and [vaginal and vulvar cancer](https://pharmeasy.in/cancer/types/vaginal-and-vulvar-cancer/). 
+Our explainer on how HPV infection can progress to cancer walks you through the process step by step. 
 
 ## How it changes risk 
 
 Most sexually active people acquire HPV at some point in their lives. In most cases an HPV infection clears naturally within one to two years without causing symptoms. Cancer develops in only a small proportion of people whose high-risk HPV infection persists for many years[7](https://www.who.int/news-room/fact-sheets/detail/human-papilloma-virus-and-cancer). Some important points to keep in mind: 
 
 * Low-risk HPV types can cause genital warts. They appear as soft, flesh-coloured growths that may occur singly or in clusters. Genital warts are not cancer and are usually caused by different HPV types from those responsible for cancer[20](https://pubmed.ncbi.nlm.nih.gov/22768354/).   
-* High-risk HPV types can cause cancer but they usually cause no symptoms. This is one of the most important things to understand about HPV. A woman may have a persistent high-risk HPV infection and develop precancerous changes in the cervix while staying asymptomatic  (sometimes for up to 15 to 20 years)[5](https://www.who.int/news-room/fact-sheets/detail/cervical-cancer%20).  
-*  symptoms such as bleeding between periods, after sex or after menopause may be present in early stages,  foul smelling vaginal discharge, and pelvic pain may appear in advanced cases[5](https://www.who.int/news-room/fact-sheets/detail/cervical-cancer%20). These are signs of cervical disease and not HPV infection itself. Learn more about these symptoms on our [cervical cancer symptoms](https://pharmeasy.in/cancer/types/cervical-cancer/symptoms/) page. 
+* High-risk HPV types can cause cancer, but they usually cause no symptoms. This is one of the most important things to understand about HPV. A woman may have a persistent high-risk HPV infection and develop precancerous changes in the cervix while staying asymptomatic (sometimes for up to 15 to 20 years)[5](https://www.who.int/news-room/fact-sheets/detail/cervical-cancer%20).  
+* Symptoms such as bleeding between periods, after sex or after menopause may be present in early stages,  foul smelling vaginal discharge, and pelvic pain may appear in advanced cases[5](https://www.who.int/news-room/fact-sheets/detail/cervical-cancer%20). These are signs of cervical disease and not HPV infection itself. Learn more about these symptoms on our [cervical cancer symptoms](https://pharmeasy.in/cancer/types/cervical-cancer/symptoms/) page. 
 
 **Vaccination changes risk by preventing the infection, which is why timing matters.**  
 
-According to the World Health Organization (WHO) vaccine recommendations include the following[21](https://www.who.int/news/item/11-04-2022-one-dose-human-papillomavirus-\(hpv\)-vaccine-offers-solid-protection-against-cervical-cancer):
+According to the World Health Organization (WHO), vaccine recommendations include the following[21](https://www.who.int/news/item/11-04-2022-one-dose-human-papillomavirus-\(hpv\)-vaccine-offers-solid-protection-against-cervical-cancer):
 
 * Girls aged 9 to 14 years (one or two doses) before their sexual debut    
 * Girls and women aged 15 to 20 years (one or two doses)   
@@ -54,27 +54,27 @@ According to the World Health Organization (WHO) vaccine recommendations include
 * Immunocompromised individuals, including those living with HIV (at least two doses and, where possible, three doses)   
 * Alternative single dose (off label) – single dose schedule can be used for girls and boys aged 9-20 years  
 
-An Indian multicentre study found that a single dose of the quadrivalent HPV vaccine provided 95.4% efficacy against persistent HPV-16/18 infection after long-term follow-up, which is comparable to two- and three-dose schedules[22](https://pubmed.ncbi.nlm.nih.gov/34634254/).
+An Indian multicentre study found that a single dose of the [quadrivalent HPV vaccine](https://pharmeasy.in/molecules/human-papilloma-virus-vaccine-quadrivalent-2857) provided 95.4% efficacy against persistent HPV-16/18 infection after long-term follow-up, which is comparable to two- and three-dose schedules[22](https://pubmed.ncbi.nlm.nih.gov/34634254/).
 
 ## The India picture 
 
-India’s national HPV vaccination campaign uses the [quadrivalent](https://pharmeasy.in/molecules/human-papilloma-virus-vaccine-quadrivalent-2857) [Gardasil](https://pharmeasy.in/online-medicine-order/gardasil-pre-filled-syringe-of-0-5ml-suspension-for-injection-3716666) vaccine, which protects against HPV types 6, 11, 16 and 18 and is administered as a single dose[2](https://www.pib.gov.in/PressReleasePage.aspx?PRID=2233632&reg=48&lang=2%20). Some important points include: 
+India’s national HPV vaccination campaign uses the quadrivalent [Gardasil vaccine](https://pharmeasy.in/online-medicine-order/gardasil-pre-filled-syringe-of-0-5ml-suspension-for-injection-3716666), which protects against HPV types 6, 11, 16 and 18 and is administered as a single dose[2](https://www.pib.gov.in/PressReleasePage.aspx?PRID=2233632&reg=48&lang=2%20). Some important points include: 
 
-* HPV vaccination was introduced in India in 2008 but faced safety concerns, misinformation, sociocultural resistance and logistical challenges[23](https://pmc.ncbi.nlm.nih.gov/articles/PMC13436836/). Since then, extensive safety data from millions of doses worldwide have strengthened confidence in its safety. Common side effects include injection-site pain, mild fever, headache and occasional fainting, which is why brief observation after vaccination is recommended. Serious adverse events are very rare[24](https://www.cdc.gov/vaccine-safety/vaccines/hpv.html).  
-* India’s current national HPV vaccination programme targets 14 year old girls only and does not currently include boys[2](https://www.pib.gov.in/PressReleasePage.aspx?PRID=2233632&reg=48&lang=2%20).  
+* HPV vaccination was introduced in India in 2008 but faced safety concerns, misinformation, sociocultural resistance, and logistical challenges[23](https://pmc.ncbi.nlm.nih.gov/articles/PMC13436836/). Since then, extensive safety data from millions of doses worldwide have strengthened confidence in its safety. Common side effects include injection-site pain, mild fever, headache, and occasional fainting, which is why brief observation after vaccination is recommended. Serious adverse events are very rare[24](https://www.cdc.gov/vaccine-safety/vaccines/hpv.html).  
+* India’s current national HPV vaccination programme targets 14-year-old girls only and does not currently include boys[2](https://www.pib.gov.in/PressReleasePage.aspx?PRID=2233632&reg=48&lang=2%20).  
 * Research has also found no evidence that HPV vaccination encourages earlier sexual activity in teenagers[25](https://pubmed.ncbi.nlm.nih.gov/30002026/). Therefore, parents are encouraged to discuss any concerns with their doctor before vaccination and not avoid/delay vaccinations due to such fears.   
 * Under the National Programme for Prevention and Control of Non-Communicable Diseases (NP-NCD), cervical cancer screening is offered to women aged 30 to 65 years at Ayushman Arogya Mandirs and primary health centres, primarily using visual inspection with acetic acid (VIA). As of 20 July 2025, over 10.18 crore women had been screened[26](https://www.pib.gov.in/www.pib.gov.in/Pressreleaseshare.aspx?PRID=2148754). However, overall screening coverage among eligible women remains low.   
-* Vaccination is only one part of the strategy because screening and timely treatment are equally essential. WHO’s cervical cancer elimination strategy sets three targets: 90% of girls fully vaccinated by age 15, 70% of women screened with a high-performance test by ages 35 and 45, and 90% of women with cervical disease receiving treatment (90% of women with per cancer are treated and 90% of women with invasive cancer are managed)[27](https://www.pib.gov.in/PressReleasePage.aspx?PRID=2148754&reg=48&lang=2).  
+* Vaccination is only one part of the strategy because screening and timely treatment are equally essential. WHO’s cervical cancer elimination strategy sets three targets: 90% of girls fully vaccinated by age 15, 70% of women screened with a high-performance test by ages 35 and 45, and 90% of women with cervical disease receiving treatment (90% of women with pre-cancer are treated and 90% of women with invasive cancer are managed)[27](https://www.pib.gov.in/PressReleasePage.aspx?PRID=2148754&reg=48&lang=2).  
 
 ## Measures to protect and prevent  
 
 Here’s what you can do to protect yourself and your family against cervical cancer: 
 
-* **Get eligible girls vaccinated:** The campaign offers free HPV vaccination at government health facilities to girls aged 14\. Girls turning 15 within 90 days of the launch are also eligible. You can register through the U-WIN portal with the help of  health worker or by visiting a vaccination centre. The programme aligns with the Government’s vision of ‘Swasth Nari Sashakt Parivar ’, placing prevention, protection and equitable access at the heart of women’s healthcare to promote healthier families[1](https://www.pib.gov.in/PressReleasePage.aspx?PRID=2234009&reg=3&lang=2). HPV vaccination is available at private sectors for those outside the government programme’s age group[28](https://www.who.int/initiatives/cervical-cancer-elimination-initiative%20). To know more, discuss its suitability at your age with a doctor, as protection is best done before exposure to HPV. Our pages on [the cervical cancer vaccine: benefits, age limit and side effects](https://pharmeasy.in/blog/cancer-care-cervical-cancer-vaccine-benefits-age-limit-side-effects/) and [what the HPV vaccine is and when to take it](https://pharmeasy.in/blog/vaccine-hpv-vaccine-what-is-it-when-to-be-taken-importance-side-effects/) cover the practical questions parents ask most often.   
-* **Continue screening, whether vaccinated or not:** Those vaccinated as girls still need cervical screening as an adult[29](https://journal.waocp.org/article_92201.html). Cervical screening methods primarily include  HPV DNA  testing, with LBC (liquid based cytology) , colposcopy and VIA (visual inspection with acetic acid as triage test[30](https://www.cancer.gov/about-cancer/causes-prevention/risk/infectious-agents/hpv-vaccine-fact-sheet). Our [screening](https://pharmeasy.in/cancer/screening/) page explains what the process involves, while the [risk and prevention](https://pharmeasy.in/cancer/prevention/) hub covers the broader picture. PharmEasy's [cancer screening package for women](https://pharmeasy.in/diagnostics/packages/cancer-screening-female-1418) and its more extensive [advanced women’s cancer screening package](https://pharmeasy.in/diagnostics/packages/womens-cancer-screening-advanced-1972?utm_source=chatgpt.com) offer private blood-based checks and tumour markers. It is important to understand their limits, as neither package provides cervical screening. No blood test or tumour marker can confirm or rule out cancer on its own. Doctors use these markers to support diagnosis, monitor treatment response, and check whether cancer has returned in someone already under care[31](https://pubmed.ncbi.nlm.nih.gov/35510117/).   
-* **Contact the doctor promptly** if you notice[32](https://www.cancer.gov/about-cancer/diagnosis-staging/diagnosis):   
-> > > * Vaginal bleeding between periods, after sex or after menopause.   
-> > > * Unusual vaginal discharge that persists, particularly if it contains blood or smells unpleasant.   
+* **Get eligible girls vaccinated:** The campaign offers free HPV vaccination at government health facilities to girls aged 14\. Girls turning 15 within 90 days of the launch are also eligible. You can register through the U-WIN portal with the help of a health worker or by visiting a vaccination centre. The programme aligns with the Government’s vision of ‘Swasth Nari Sashakt Parivar ’, placing prevention, protection and equitable access at the heart of women’s healthcare to promote healthier families[1](https://www.pib.gov.in/PressReleasePage.aspx?PRID=2234009&reg=3&lang=2). HPV vaccination is available at private sectors for those outside the government programme’s age group[28](https://www.who.int/initiatives/cervical-cancer-elimination-initiative%20). To know more, discuss its suitability at your age with a doctor, as protection is best done before exposure to HPV.   
+* **Continue screening, whether vaccinated or not:** Those vaccinated as girls still need cervical screening as an adult[29](https://journal.waocp.org/article_92201.html). Cervical screening methods primarily include  HPV DNA  testing, with LBC (liquid based cytology) , colposcopy and VIA (visual inspection with acetic acid as triage test[30](https://www.cancer.gov/about-cancer/causes-prevention/risk/infectious-agents/hpv-vaccine-fact-sheet). Our [screening](https://pharmeasy.in/cancer/screening/) page explains what the process involves, while the [risk and prevention](https://pharmeasy.in/cancer/prevention/) hub covers the broader picture. PharmEasy's [cancer screening package for women](https://pharmeasy.in/diagnostics/packages/cancer-screening-female-1418) and its more extensive [advanced women’s cancer screening package](https://pharmeasy.in/diagnostics/packages/womens-cancer-screening-advanced-1972?) offer private blood-based checks and tumour markers. It is important to understand their limits, as neither package provides cervical screening. No blood test or tumour marker can confirm or rule out cancer on its own. Doctors use these markers to support diagnosis, monitor treatment response, and check whether cancer has returned in someone already under care[31](https://pubmed.ncbi.nlm.nih.gov/35510117/).   
+* **Contact the doctor promptly if you notice**[32](https://www.cancer.gov/about-cancer/diagnosis-staging/diagnosis):   
+> > > * Vaginal bleeding between periods, after sex or after menopause.  
+> > > * Unusual vaginal discharge that persists, particularly if it contains blood or smells unpleasant.  
 > > > * Pelvic pain or any pain occurring during sex.   
 > > > * New pelvic pain that does not go away.   
 > > > * Painful bowel movements or pain while urinating   
@@ -93,23 +93,15 @@ If visiting a clinic is difficult, an [online doctor consultation](https://pharm
 
 Several myths about HPV and its vaccine can cause unnecessary worry and confusion. Here are the actual facts behind some common misconceptions. 
 
-* **Vaccination replaces screening**: A common misconception among people is that vaccination can replace screening which is absolutely wrong. The quadrivalent vaccine targets HPV types 16 and 18 which cause most but not all cervical cancers. So, women vaccinated as girls still need cervical screening as adults[29](https://journal.waocp.org/article_92201.html).  
+* **Vaccination replaces screening:** A common misconception among people is that vaccination can replace screening, which is absolutely wrong. The quadrivalent vaccine targets HPV types 16 and 18, which cause most but not all cervical cancers. So, women vaccinated as girls still need cervical screening as adults[29](https://journal.waocp.org/article_92201.html).  
 * **Vulval cancer is the same as HPV cancer:** Other than HPV, vulval cancer may also be associated with lichen sclerosus or TP53 gene mutations. Vulval cancer associated with lichen sclerosus or TP53 mutations is not prevented by HPV vaccination[14](https://pubmed.ncbi.nlm.nih.gov/35914776/),[34](https://pubmed.ncbi.nlm.nih.gov/41191678/). So, not  all vulval cancers are  HPV-related    
-* **Genital warts signal developing cancer:no,** 90 percent of genital warts are caused by low-risk HPV types 6 and 11, which are different from the types that cause cancer[7](https://www.who.int/news-room/fact-sheets/detail/human-papilloma-virus-and-cancer).  
+* **Genital warts signal developing cancer:** No, 90 percent of genital warts are caused by low-risk HPV types 6 and 11, which are different from the types that cause cancer[7](https://www.who.int/news-room/fact-sheets/detail/human-papilloma-virus-and-cancer).  
 * **HPV vaccination causes infertility:** Monitoring of vaccine side effects has not revealed a link between HPV vaccination and infertility. Additionally, across many countries, safety monitoring has not identified serious safety concerns with HPV vaccines[24](https://www.cdc.gov/vaccine-safety/vaccines/hpv.html).  
-* **Two or three doses are necessarily required:** Latest recommendations by WHO , suggest that one dose provides reliable protection . However, people with a weak immune system need at least two doses and if possible three doses of the HPV vaccine for better protection[35](https://www.who.int/news/item/20-12-2022-WHO-updates-recommendations-on-HPV-vaccination-schedule).  
-* **India has no national programme or that the campaign uses Cervavac:** India now has a nationwide HPV vaccination programme for 14-year-old girls that offers free Gardasil-4 vaccination (not Cervavac) at government health facilities[2](https://www.pib.gov.in/PressReleasePage.aspx?PRID=2233632&reg=48&lang=2%20),[26](https://www.pib.gov.in/www.pib.gov.in/Pressreleaseshare.aspx?PRID=2148754).  
-* **There is a treatment for HPV itself.** There is no role of antiviral treatment for for Hpv infection. Instead, treatment addresses the health problems caused by HPV.[5](https://www.who.int/news-room/fact-sheets/detail/cervical-cancer%20),[7](https://www.who.int/news-room/fact-sheets/detail/human-papilloma-virus-and-cancer) 
+* **Two or three doses are necessarily required:** The latest recommendations by WHO suggest that one dose provides reliable protection. However, people with a weak immune system need at least two doses and, if possible, three doses of the HPV vaccine for better protection[35](https://www.who.int/news/item/20-12-2022-WHO-updates-recommendations-on-HPV-vaccination-schedule).  
+* **India has no national programme that the campaign uses Cervavac:** India now has a nationwide HPV vaccination programme for 14-year-old girls that offers free Gardasil-4 vaccination (not Cervavac) at government health facilities[2](https://www.pib.gov.in/PressReleasePage.aspx?PRID=2233632&reg=48&lang=2%20),[26](https://www.pib.gov.in/www.pib.gov.in/Pressreleaseshare.aspx?PRID=2148754).  
+* **There is no treatment for HPV itself:** There is no role of antiviral treatment for for Hpv infection. Instead, treatment addresses the health problems caused by HPV.[5](https://www.who.int/news-room/fact-sheets/detail/cervical-cancer%20),[7](https://www.who.int/news-room/fact-sheets/detail/human-papilloma-virus-and-cancer) 
 
 ​​ 	​Latest on prevention hpv — updated {{CURRENT\_MONTH\_YEAR}} 
-
-* SAMPLE **Placeholder — national cancer incidence estimate updated**{{PUBLISHED\_DATE}} · ICMR-NCDIRSource: [ICMR-NCDIR NCRP](https://ncdirindia.org/)   
-* SAMPLE **Placeholder — GLOBOCAN country factsheet revision**{{PUBLISHED\_DATE}} · IARCSource: [IARC Global Cancer Observatory](https://gco.iarc.who.int/today/)   
-* SAMPLE **Placeholder — WHO guidance or fact-sheet revision**{{PUBLISHED\_DATE}} · WHOSource: [WHO cancer fact sheet](https://www.who.int/news-room/fact-sheets/detail/cancer) 
-
-**Prototype module.** The three entries above are placeholders showing the shape of the feed, not real headlines. A CMS, editorial process or API populates title, date, source and link. Feeds this module is designed to draw from: [ICMR-NCDIR National Cancer Registry Programme](https://ncdirindia.org/) · [IARC Global Cancer Observatory](https://gco.iarc.who.int/today/) · [WHO cancer fact sheet](https://www.who.int/news-room/fact-sheets/detail/cancer) · [data.gov.in — cancer datasets](https://data.gov.in/keywords/Cancer). 
-
-The dates and prices on this page are CMS fields, not text. A field shown like {{EXAMPLE}} is populated by the platform; this prototype is not connected to a live feed. 
 
 Related pages 
 
@@ -117,13 +109,11 @@ Related pages
 * [HPV in men: what it is, causes, symptoms, treatment](https://pharmeasy.in/blog/vaccine-hpv-in-men-what-it-is-causes-symptoms-treatment/) — why vaccination is gender-neutral   
 * [Tests & tumour markers](https://pharmeasy.in/cancer/tests/) — what each cancer test can and cannot tell you 
 
-**Related reading:** [the cervical cancer vaccine — benefits, age limit and side effects](https://pharmeasy.in/blog/cancer-care-cervical-cancer-vaccine-benefits-age-limit-side-effects/) · [what the HPV vaccine is and when to take it](https://pharmeasy.in/blog/vaccine-hpv-vaccine-what-is-it-when-to-be-taken-importance-side-effects/) 
-
 ## Frequently Asked Questions 
 
 ### ▾ What is the full form of HPV? 
 
-HPV stands for human papillomavirus. It is a group of more than 200 related viruses, out of which more than 40 types may be transmitted through sexual contact.[7](https://www.who.int/news-room/fact-sheets/detail/human-papilloma-virus-and-cancer),[8](https://pubmed.ncbi.nlm.nih.gov/18701931/) 
+HPV stands for human papillomavirus. It is a group of more than 200 related viruses, out of which more than 40 types may be transmitted through sexual contact[7](https://www.who.int/news-room/fact-sheets/detail/human-papilloma-virus-and-cancer),[8](https://pubmed.ncbi.nlm.nih.gov/18701931/). 
 
 ### ▾ What is the right age for the HPV vaccine? 
 
@@ -147,7 +137,7 @@ Yes, boys and men can receive HPV vaccine, however, India’s national programme
 
 ### ▾ If I am vaccinated, do I still need cervical screening? 
 
-Yes you still need screening. The quadrivalent vaccine does not protect against every high-risk HPV type, so vaccinated women still need cervical screening.[24](https://www.cdc.gov/vaccine-safety/vaccines/hpv.html),[29](https://journal.waocp.org/article_92201.html) Believing that vaccination replaces screening is the most common and most consequential misunderstanding about the vaccine. 
+Yes you still need screening. The quadrivalent vaccine does not protect against every high-risk HPV type, so vaccinated women still need cervical screening[24](https://www.cdc.gov/vaccine-safety/vaccines/hpv.html),[29](https://journal.waocp.org/article_92201.html). Believing that vaccination replaces screening is the most common and most consequential misunderstanding about the vaccine. 
 
 ### ▾ Does the HPV vaccine cause infertility? 
 

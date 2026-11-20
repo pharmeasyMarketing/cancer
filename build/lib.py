@@ -12,7 +12,7 @@ def line(n):
 
 def clean_url(u):
     u = u.replace('%20', '').replace('\\', '').strip()
-    return u
+    return u[:-1] if u.endswith('?') else u     # an empty query left by a doc edit ("...-1972?")
 
 
 def unesc(s):
@@ -94,6 +94,11 @@ def ref_html(text):
     if m:
         url = clean_url(m.group(2))
         t = t[:m.start()].rstrip()
+    else:   # a bare url at the end, written as plain text in the doc ("https\\://pmc...")
+        m = re.search(r'(https?\\?://\S+)\s*$', t)
+        if m:
+            url = clean_url(m.group(1))
+            t = t[:m.start()].rstrip()
     t = unesc(t)
     t = re.sub(r'\*(.+?)\*', r'<em>\1</em>', t)
     t = t.replace('&', '&amp;').replace('<em>', '\x03').replace('</em>', '\x04')
