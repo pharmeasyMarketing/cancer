@@ -1119,7 +1119,8 @@ def tests_sections(page):
                     return None
             for n, (title, bodies) in enumerate(merged):
                 lab = (title, None, '</p><p>'.join(bodies))
-                rows.append('<details class="pv-acc sym"%s><summary>%s<span class="pv-title">%s</span><span class="pv-acc-chev" aria-hidden="true">%s</span></summary>'
+                # plain bold titles, not headings: the marker cards above already head these markers (Sarthak, 20 Nov)
+                rows.append('<details class="pv-acc sym"%s><summary>%s<strong class="pv-title nohead">%s</strong><span class="pv-acc-chev" aria-hidden="true">%s</span></summary>'
                             '<div class="pv-acc-body"><p>%s</p></div></details>' % (' open' if n == 0 else '', _ic(IC['flask']), lab[0], ICON['chev'], lab[2]))
             return '<div class="pv pv-accs">%s</div>' % ''.join(rows)
         return _replace_ul(seg, 'how doctors use different tumour markers', markers)
