@@ -679,3 +679,21 @@ main .ex-subs a, main .ctz-subs a, main .srcs a { text-decoration-line: none !im
   .mech-grid > .mech:nth-child(5):last-child { grid-column: 1 / -1; }
 }
 @container art (max-width: 520px) { .mech-grid { grid-template-columns: 1fr; } .mech-grid > .mech:nth-child(5):last-child { grid-column: auto; } }
+
+/* chemotherapy "How it is given": route cards (two across, an odd last one full width) + session timeline */
+.mech-grid.routes { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.mech-grid.routes > .mech, .mech-grid.routes > .mech:nth-child(4):nth-last-child(2), .mech-grid.routes > .mech:nth-child(5):last-child { grid-column: span 1; }
+.mech-grid.routes > .mech:last-child:nth-child(odd) { grid-column: 1 / -1; }
+.tl-box { background: #fff; border: 1px solid #E6E9ED; border-radius: 12px; padding: 16px 18px; margin: 0 0 18px; box-shadow: 0 1px 3px rgba(15,46,44,0.05); }
+.tl-t { font-size: 15.5px; line-height: 22px; font-weight: 800; color: #1C1F22; margin: 0 0 12px; }
+.tl { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; }
+.tl li { position: relative; display: flex; gap: 12px; align-items: flex-start; padding: 0 0 14px; }
+.tl li:last-child { padding-bottom: 0; }
+.tl li:not(:last-child)::before { content: ""; position: absolute; left: 13px; top: 28px; bottom: 2px; width: 2px; background: #D3E8E6; }
+.tl-n { flex: none; width: 28px; height: 28px; border-radius: 50%; background: #008880; color: #fff; font-size: 13px; font-weight: 800; display: flex; align-items: center; justify-content: center; position: relative; z-index: 1; }
+.tl p { margin: 3px 0 0; font-size: 14.5px; line-height: 23px; color: #30363C; }
+@container art (max-width: 520px) { .mech-grid.routes { grid-template-columns: 1fr; } .mech-grid.routes > .mech:last-child:nth-child(odd) { grid-column: auto; } .tl-box { padding: 14px; } }
+/* route cards: two flowing columns (no row gaps when card heights differ) */
+.mech-grid.routes { display: block; columns: 2; column-gap: 12px; }
+.mech-grid.routes > .mech { break-inside: avoid; margin: 0 0 12px; }
+@container art (max-width: 520px) { .mech-grid.routes { columns: 1; } .mech-grid.routes > .mech { margin-bottom: 10px; } }

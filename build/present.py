@@ -309,5 +309,52 @@ def how_it_works(page):
     return HOW_RE.sub(fix, page, count=1)
 
 
+ROUTE_ICON = {   # "How it is given" routes (by label keyword)
+    'oral': '<rect x="3" y="8.5" width="18" height="7" rx="3.5" transform="rotate(-35 12 12)"/><path d="m9.2 15.9 5.6-7.8"/>',
+    'injection': '<path d="m18 2 4 4M15 5l4 4M16.5 7.5 8 16l-3 1 1-3 8.5-8.5M10 9l2 2M7.5 11.5l2 2M5 17l-3 3"/>',
+    'intravenous': '<path d="M8 2h8v9a4 4 0 0 1-8 0z"/><path d="M8 6h8M12 15v3a3 3 0 0 0 3 3h5"/>',
+    'topical': '<path d="M7 3h10l-1 4H8z"/><path d="M8 7h8v11a3 3 0 0 1-3 3h-2a3 3 0 0 1-3-3z"/><path d="M10 12h4"/>',
+    'intrathecal': '<rect x="9" y="2" width="6" height="4" rx="1.5"/><rect x="9" y="8" width="6" height="4" rx="1.5"/><rect x="9" y="14" width="6" height="4" rx="1.5"/><path d="M12 18v4M5 10h3M16 10h3"/>',
+    'intraperitoneal': '<path d="M6 4c-2 4-2 12 1 16M18 4c2 4 2 12-1 16"/><path d="M9 9c1.5-1 4.5-1 6 0M9 13c1.5 1 4.5 1 6 0M10 17h4"/>',
+    'intra-arterial': '<path d="M3 12c3-4 6-4 9 0s6 4 9 0"/><path d="M3 8c3-4 6-4 9 0M12 16c3 4 6 4 9 0" opacity=".5"/>',
+}
+
+
+def route_icon(label):
+    l = text(label).lower()
+    key = next((k for k in ROUTE_ICON if k in l), None)
+    body = ROUTE_ICON[key] if key else MECH_ICON['misc']
+    return ('<span class="mech-ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22"><g fill="none" stroke="currentColor" '
+            'stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">%s</g></svg></span>' % body)
+
+
+GIVEN_RE = re.compile(r'(<h2 id="toc-how-it-is-given"[^>]*>.*?</h2>.*?)<ul class="pg-list">(.*?)</ul>\s*<p class="lead-p"><strong>([^<]+:)</strong>\s*(.*?)</p>', re.S)
+
+
+def sentences(h):
+    """Split html text into sentences at ". " + capital letter (citations stay with their sentence)."""
+    out, i = [], 0
+    for m in re.finditer(r'(?<=[.!?])(?:</sup>)?\s+(?=[A-Z])', h):
+        out.append(h[i:m.start()] + (m.group(0).strip() if m.group(0).strip().startswith('</sup>') else ''))
+        i = m.end()
+    out.append(h[i:])
+    return [x.strip() for x in out if x.strip()]
+
+
+def how_it_is_given(page):
+    """Chemotherapy "How it is given": the routes become icon cards, and the "What to expect during a
+    chemotherapy session" paragraph a numbered timeline, one sentence per step. Same words, same order."""
+    def fix(m):
+        items = LI_RE.findall(m.group(2))
+        if len(items) < 3 or len(items) != m.group(2).count('<li>'):
+            return m.group(0)
+        cards = ''.join('<div class="mech">%s<div><div class="mech-t">%s:</div><p>%s</p></div></div>' % (route_icon(l), l, t) for l, t in items)
+        steps = sentences(m.group(4))
+        tl = ''.join('<li><span class="tl-n">%d</span><p>%s</p></li>' % (k, st) for k, st in enumerate(steps, 1))
+        return ('%s<div class="mech-grid routes">%s</div>\n    <div class="tl-box"><div class="tl-t">%s</div><ol class="tl">%s</ol></div>'
+                % (m.group(1), cards, m.group(3), tl))
+    return GIVEN_RE.sub(fix, page, count=1)
+
+
 def present(page):
-    return how_it_works(TABLE_RE.sub(one, page))
+    return how_it_is_given(how_it_works(TABLE_RE.sub(one, page)))
