@@ -258,8 +258,11 @@ a.brand:hover { border-color: #008880; color: #008880; text-decoration: none; ba
 /* ---- two-column page: article column is the container the blocks respond to ---- */
 .art { container: art / inline-size; }
 @media (max-width: 560px) {
-  .asec[style*="padding:36px 0 0"] { padding-top: 20px !important; }
+  .asec[style*="padding:36px 0 0"] { padding-top: 28px !important; }
 }
+/* the gap between sections is the section's top padding alone: the last block of the section before
+   does not add its own bottom margin on top (it made section breaks ~54px on desktop) */
+.art > .asec > :last-child, .art > .asec > :last-child > :last-child { margin-bottom: 0 !important; }
 
 /* ---- opening description: clamped with a Read more toggle (GLP-1 home pattern) ---- */
 .hero-intro.is-clamped { max-height: 196px; overflow: hidden; -webkit-mask-image: linear-gradient(180deg, #000 58%, transparent 100%); mask-image: linear-gradient(180deg, #000 58%, transparent 100%); }
