@@ -330,7 +330,12 @@ def render_blocks(lines, page, images):
             i += 1
             continue
         if re.match(r'^\*\*Related reading:?\*\*', s):
-            out.append('    <p class="lead-p rel-reading">%s</p>\n' % il(s))
+            h = il(s)
+            m = re.match(r'(<strong>Related reading:?</strong>)\s*(.*)$', h, re.S)
+            parts = re.split(r'\s*\u00b7\s*', m.group(2)) if m else [h]
+            if m and len(parts) > 1:      # one link per line instead of "a · b" on one line
+                h = m.group(1) + ''.join('<br>' + x.strip() for x in parts)
+            out.append('    <p class="lead-p rel-reading">%s</p>\n' % h)
             i += 1
             continue
         out.append('    <p class="lead-p">%s</p>\n' % il(s))
