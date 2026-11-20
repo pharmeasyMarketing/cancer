@@ -649,6 +649,8 @@ def labelled_cards(seg, after, icon_for, cls='mech-grid', card='mech'):
             return seg
         name = re.sub(r'\s+', ' ', re.sub(r'<[^>]+>', '', m.group(1))).strip()
         body = m.group(2).strip()
+        if body.startswith(':') and not name.endswith(':'):
+            name, body = name + ':', body[1:].strip()
         body_html = body if body.startswith('<') and not body.startswith('<a') and not body.startswith('<sup') else '<p>%s</p>' % body
         body_html = re.sub(r'^<p>(.*?)(<ul class="pg-list">.*)</p>$', r'<p>\1</p>\2', body_html, flags=re.S)
         cards.append('<div class="%s">%s<div><div class="mech-t">%s</div>%s</div></div>' % (card, _ic(IC[icon_for(name)]), name, body_html))
@@ -985,10 +987,73 @@ def semantic(page):
     return page[:a] + art + page[b:]
 
 
+IC.update({
+    'lump': '<circle cx="12" cy="12" r="8"/><circle cx="14" cy="10" r="3"/>',
+    'mouth': '<path d="M4 12c2-3 5-4 8-4s6 1 8 4c-2 3-5 4-8 4s-6-1-8-4z"/><path d="M4 12h16"/>',
+    'lungs': '<path d="M12 4v8M12 12c-1 0-2 1-3 2l-3 3c-1 1-3 0-3-2V11c0-3 2-5 4-5 1 0 2 1 2 2M12 12c1 0 2 1 3 2l3 3c1 1 3 0 3-2V11c0-3-2-5-4-5-1 0-2 1-2 2"/>',
+    'gut': '<path d="M7 4c-2 2-2 5 0 6h8c2 0 3 2 2 4s-3 2-5 2H9c-2 0-3 2-2 3s3 1 4 1"/>',
+    'throat': '<path d="M9 3v6c0 2-2 3-2 6v6M15 3v6c0 2 2 3 2 6v6"/><path d="M10 13h4"/>',
+    'flame': '<path d="M12 3c1 4 6 6 6 11a6 6 0 0 1-12 0c0-3 2-4 3-6 0 2 1 3 2 3 0-3-1-5 1-8z"/>',
+    'drop': '<path d="M12 3s6 7 6 11a6 6 0 0 1-12 0c0-4 6-11 6-11z"/>',
+    'skin': '<rect x="4" y="4" width="16" height="16" rx="4"/><circle cx="10" cy="10" r="1.5"/><circle cx="15" cy="14" r="2"/>',
+    'battery': '<rect x="3" y="8" width="16" height="8" rx="2"/><path d="M21 11v2M6 11v2"/>',
+    'thermo': '<path d="M14 14.8V5a2 2 0 0 0-4 0v9.8a4 4 0 1 0 4 0z"/><path d="M12 9v7"/>',
+    'wind': '<path d="M3 9h11a3 3 0 1 0-3-3M3 15h15a3 3 0 1 1-3 3M3 12h7"/>',
+    'female': '<circle cx="12" cy="9" r="5"/><path d="M12 14v7M9 18h6"/>',
+    'male': '<circle cx="10" cy="14" r="5"/><path d="M14 10l6-6M15 4h5v5"/>',
+    'child': '<circle cx="12" cy="6" r="3"/><path d="M8 21v-6l-2-3 3-2h6l3 2-2 3v6"/>',
+    'pin': '<path d="M12 21s7-6 7-11a7 7 0 0 0-14 0c0 5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/>',
+    'approx': '<path d="M5 9c2-2 4-2 7 0s5 2 7 0M5 15c2-2 4-2 7 0s5 2 7 0"/>',
+    'flag': '<path d="M5 21V4M5 4h11l-2 4 2 4H5"/>',
+})
+
+
+def _sym_icon(n):
+    l = n.lower()
+    for k, ic in (('lump', 'lump'), ('mouth', 'mouth'), ('cough', 'lungs'), ('bowel', 'gut'), ('swallow', 'throat'), ('heartburn', 'flame'),
+                  ('bleeding', 'drop'), ('weight', 'scale'), ('skin', 'skin'), ('fatigue', 'battery'), ('fever', 'thermo'), ('breath', 'wind'),
+                  ('women', 'female'), ('men', 'male'), ('children', 'child'), ('site', 'pin')):
+        if k in l:
+            return ic
+    return 'target'
+
+
+def _plain_cards(items, icon, cls):
+    return '<div class="mech-grid %s">%s</div>' % (cls, ''.join('<div class="mech">%s<p>%s</p></div>' % (_ic(IC[icon]), it.strip()) for it in items))
+
+
+def symptoms_sections(page):
+    if '/cancer/symptoms/' not in PAGE.get('url', ''):
+        return page
+    def warrant(seg):
+        return labelled_cards(seg, None, _sym_icon, 'mech-grid infx')
+    def mimic(seg):
+        return _replace_ul(seg, 'Other such examples include', lambda it: _plain_cards(it, 'approx', 'mimic'))
+    def redflag(seg):
+        return _replace_ul(seg, 'Some common red-flag symptoms include', lambda it: _plain_cards(it, 'flag', 'redflags'))
+    def sexsite(seg):
+        for after in ('Some changes to watch out for', 'Check our guide for more details'):
+            seg = labelled_cards(seg, after, _sym_icon, 'mech-grid groups')
+        seg = re.sub(r'(<div class="mech-grid groups">.*?)(?=\n    <p)', lambda m: m.group(1).replace('<ul>', '<ul class="pg-list checks">'), seg, flags=re.S)
+        return _stat(seg, '<strong>Note:</strong> Only 0.9%', '0.9%')
+    def when(seg):
+        hit = first_ul(seg, 'Contact your doctor if you notice')
+        if hit:
+            (a, e), inner = hit
+            seg = seg[:a] + '<div class="panel-soon"><ul>%s</ul></div>' % inner + seg[e:]
+        return re.sub(r'<p class="lead-p">(<strong>Note:</strong>\s*See your doctor immediately)', r'<p class="note-warn">\1', seg, count=1)
+    for sid, fn in (('toc-the-symptoms-that-genuinely-warrant-assessment', warrant), ('toc-health-conditions-that-can-mimic-cancer-symptoms', mimic),
+                    ('toc-red-flag-combinations', redflag), ('toc-variations-by-sex-and-site', sexsite), ('toc-when-to-see-a-doctor', when)):
+        sp = section_span(page, sid)
+        if sp:
+            page = page[:sp[0]] + fn(page[sp[0]:sp[1]]) + page[sp[1]:]
+    return page
+
+
 PAGE = {}
 
 
 def present(page):
     m = re.search(r'<link rel="canonical" href="([^"]+)"', page)
     PAGE['url'] = m.group(1) if m else ''
-    return semantic(hpv_sections(prevention_sections(nutrition_sections(treatment_sections(chemo_sections(how_it_is_given(how_it_works(TABLE_RE.sub(one, page)))))))))
+    return semantic(symptoms_sections(hpv_sections(prevention_sections(nutrition_sections(treatment_sections(chemo_sections(how_it_is_given(how_it_works(TABLE_RE.sub(one, page))))))))))

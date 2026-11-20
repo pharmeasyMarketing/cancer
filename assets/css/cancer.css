@@ -821,3 +821,17 @@ ul:is(.mech-grid, .medex-grid, .pv, .hpvt) > li { margin: 0; }
 .pv-kicker { display: block; margin: 0 0 2px; }
 /* notes straight under the title start there (no gap); with fields above them they still align to the card bottom */
 .pv-head + .pv-notes { margin-top: 0; }
+
+/* symptoms page components */
+.mech-grid.mimic { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.mech-grid.mimic > .mech, .mech-grid.redflags > .mech, .mech-grid.groups > .mech { grid-column: auto !important; }
+.mech-grid.mimic .mech, .mech-grid.redflags .mech { align-items: center; padding: 12px 14px; }
+.mech-grid.mimic .mech p, .mech-grid.redflags .mech p { font-size: 14.5px; line-height: 22px; color: #30363C; }
+.mech-grid.redflags { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.mech-grid.redflags .mech { background: #FFF8F6; border-color: #F6D5CD; }
+.mech-grid.redflags .mech-ic { background: #FFE9E3; color: #C0462B; }
+.mech-grid.groups { grid-template-columns: 1fr; gap: 10px; margin-bottom: 14px; }
+.mech-grid.groups .mech > div { min-width: 0; flex: 1; }
+.mech-grid.groups ul.checks { margin: 8px 0 0; font-size: 14px; line-height: 22px; }
+@container art (max-width: 640px) { .mech-grid.mimic, .mech-grid.redflags { grid-template-columns: 1fr; } }
+.mech-grid.groups ul.checks { padding-left: 0; }
