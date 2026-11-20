@@ -818,3 +818,4 @@ ul:is(.mech-grid, .medex-grid, .pv, .hpvt) > li { margin: 0; }
 .pv-acc > summary > .pv-acc-chev { grid-column: 3; grid-row: 1 / span 2; align-self: center; }
 .pv-acc[open] > summary > .pv-title { grid-row: 1 / span 2; align-self: center; }
 :is(h3, h4).med-label { margin: 0; } :is(h3, h4).dg-name { margin: 0 0 6px; }
+.pv-kicker { display: block; margin: 0 0 2px; }

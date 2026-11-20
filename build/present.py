@@ -190,6 +190,9 @@ def flow_lines(field, heads=()):
     return m.group(1) + joined + m.group(3)
 
 
+SHOW_FIRST_LABEL = {'cancer site'}     # first-column headings shown above each card title (Sarthak, 20 Nov)
+
+
 def cards(hdr, rows):
     kinds = [kind(h) for h in hdr]
     # a column that is short on every row reads as a pill under the title
@@ -204,6 +207,8 @@ def cards(hdr, rows):
             v = split_labels(v)
             k = kinds[j]
             if j == 0:
+                if text(h).lower() in SHOW_FIRST_LABEL:   # the title alone would not say what it is ("Cervix")
+                    head.append('<span class="pv-lbl pv-kicker">%s</span>' % h)
                 head.append('<div class="pv-title">%s</div>' % v)
             elif k == 'badge':
                 metas.append('<span class="pv-badge %s"><span class="pv-badge-l">%s</span> %s</span>' % (badge(v, h), h, v))
