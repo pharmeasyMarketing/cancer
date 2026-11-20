@@ -1023,11 +1023,32 @@ def _plain_cards(items, icon, cls):
     return '<div class="mech-grid %s">%s</div>' % (cls, ''.join('<div class="mech">%s<p>%s</p></div>' % (ic, it.strip()) for it in items))
 
 
+def labelled_accordion(seg, after, icon_for, cls):
+    """A list whose every item opens with a bold label -> one accordion row per item (icon + label as the
+    row heading, the rest inside). First row open."""
+    hit = first_ul(seg, after)
+    if not hit:
+        return seg
+    (a, e), inner = hit
+    rows = []
+    for n, it in enumerate(top_items(inner)):
+        m = re.match(r'\s*((?:<strong>[^<]+</strong>\s*)+)(.*)$', it, re.S)
+        if not m:
+            return seg
+        name = re.sub(r'\s+', ' ', re.sub(r'<[^>]+>', '', m.group(1))).strip()
+        body = m.group(2).strip()
+        if body.startswith(':') and not name.endswith(':'):
+            name, body = name + ':', body[1:].strip()
+        rows.append('<details class="pv-acc %s"%s><summary>%s<span class="pv-title">%s</span><span class="pv-acc-chev" aria-hidden="true">%s</span></summary>'
+                    '<div class="pv-acc-body"><p>%s</p></div></details>' % (cls, ' open' if n == 0 else '', _ic(IC[icon_for(name)]), name, ICON['chev'], body))
+    return seg[:a] + '<div class="pv pv-accs">%s</div>' % ''.join(rows) + seg[e:]
+
+
 def symptoms_sections(page):
     if '/cancer/symptoms/' not in PAGE.get('url', ''):
         return page
     def warrant(seg):
-        return labelled_cards(seg, None, _sym_icon, 'mech-grid infx')
+        return labelled_accordion(seg, None, _sym_icon, 'sym')     # accordion (Sarthak, 20 Nov)
     def mimic(seg):
         return _replace_ul(seg, 'Other such examples include', lambda it: _plain_cards(it, None, 'mimic'))
     def redflag(seg):

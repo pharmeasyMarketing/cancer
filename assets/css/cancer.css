@@ -836,3 +836,9 @@ ul:is(.mech-grid, .medex-grid, .pv, .hpvt) > li { margin: 0; }
 @container art (max-width: 640px) { .mech-grid.mimic, .mech-grid.redflags { grid-template-columns: 1fr; } }
 .mech-grid.groups ul.checks { padding-left: 0; }
 .mech-grid.mimic .mech { border-left: 3px solid #9DCFCB; }
+
+/* symptoms: warning-symptom accordion (icon | symptom | chevron) */
+.pv-acc.sym > summary > .mech-ic { grid-row: 1 / span 2; align-self: center; width: 38px; height: 38px; }
+.pv-acc.sym > summary > .pv-title { grid-row: 1 / span 2; align-self: center; font-size: 15.5px; line-height: 22px; }
+.pv-acc.sym .pv-acc-body { display: block; }
+.pv-acc.sym .pv-acc-body p { margin: 0; font-size: 15px; line-height: 25px; color: #4A525B; }
