@@ -661,7 +661,6 @@ def _n_eating(seg):
     seg = _checks(seg, 'Avoiding these in Indian cooking')
     seg = _note(seg, 'A dental checkup before treatment')
     seg = _note(seg, 'Call your doctor if mouth, lip or throat pain', 'note-warn')
-    seg = _note(seg, 'Nausea during cancer treatment is best managed', 'note-key')
     seg = _checks(seg, 'Now comes the dietary adjustment part')
     seg = _note(seg, 'If nausea begins even before you reach the hospital')
     seg = _checks(seg, 'Appetite loss without nausea')
