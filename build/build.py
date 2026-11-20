@@ -330,6 +330,9 @@ def slug(s):
 # Mobile only (CSS): the desktop column header is hidden there, so each group's list gets its own key.
 MOL_KEY = ('<div class="mol-key" aria-hidden="true"><span class="k-mol">Molecule</span>'
            '<span class="k-brand">Brands on PharmEasy</span><span class="k-all">Molecules and brands on PharmEasy</span></div>')
+# the key of a group in which no molecule has a brand listed (tidy_brands)
+MOL_KEY_ONLY = ('<div class="mol-key" aria-hidden="true"><span class="k-mol">Molecule</span>'
+                '<span class="k-all">Molecules on PharmEasy</span></div>')
 
 
 def drug_table():
@@ -1092,6 +1095,24 @@ def brand_popups(page):
     return MOL_ROW.sub(row, page)
 
 
+def tidy_brands(page):
+    """A molecule with no brand on PharmEasy (none in the doc, or every brand link dead) shows the molecule
+    alone, with no "no brands listed" placeholder. A drug group in which no molecule has a brand gets the
+    key "Molecules on PharmEasy" instead of "Molecules and brands on PharmEasy"."""
+    page = re.sub(r'<div class="brands">(?:<span class="brand none">no brands listed</span>)?</div>', '', page)
+    starts = [m.start() for m in re.finditer(r'<div class="(?:dg-item|med-group)"', page)]
+    for k in reversed(range(len(starts))):
+        a = starts[k]
+        b = starts[k + 1] if k + 1 < len(starts) else len(page)
+        nxt = page.find('<div class="rt-wrap', a)
+        if 0 <= nxt < b:
+            b = nxt
+        seg = page[a:b]
+        if MOL_KEY in seg and 'class="brands"' not in seg:
+            page = page[:a] + seg.replace(MOL_KEY, MOL_KEY_ONLY) + page[b:]
+    return page
+
+
 URLS_FILE = os.path.join(HERE, 'cancer_urls.txt')
 
 
@@ -1134,7 +1155,7 @@ def main():
     check_cancer_links(page)
     # the house rule: no em or en dashes in any output
     assert '—' not in page and '–' not in page, [m.start() for m in re.finditer('[—–]', page)][:5]
-    open(OUT, 'w', encoding='utf8').write(bust(present(brand_popups(page))))
+    open(OUT, 'w', encoding='utf8').write(bust(present(tidy_brands(brand_popups(page)))))
     write_removed_report()
     write_link_report()
     print('wrote', os.path.abspath(OUT), len(page), 'bytes; sections', len(toc), 'faqs', len(faqs))

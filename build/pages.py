@@ -797,7 +797,7 @@ def build_page(fname, path, built):
         note(path, 'cited but not in the reference list: %s' % missing)
     out = os.path.join(ROOT, path, 'index.html')
     os.makedirs(os.path.dirname(out), exist_ok=True)
-    open(out, 'w', encoding='utf8').write(B.bust(present(B.brand_popups(page))))
+    open(out, 'w', encoding='utf8').write(B.bust(present(B.tidy_brands(B.brand_popups(page)))))
     return out, len(toc), len(faqs), len(refs)
 
 
