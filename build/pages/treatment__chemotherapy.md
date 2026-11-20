@@ -79,7 +79,6 @@ Doctors prescribe chemotherapy medicines by their generic names. Knowing which g
 
 **The medicines used:** The chemotherapy medicines a doctor selects depend on the type of cancer, its stage, the goal of treatment and the patient's ability to handle the side effects. The same medicine may be used for different cancers, but the dose and combination of medicines can vary. This information is for general understanding only. Never buy or start these medicines without a qualified doctor's valid prescription. 
 
-**Medicine Prices and Prescription Requirements:** Medicine prices may change over time. Check the linked product page for the latest listed price. These medicines require a doctor's prescription before they can be purchased. 
 
 | Medicine group  | Molecules used in India  | How it is given  | What it is used for  | Brands on PharmEasy  | Price  |
 | :---- | :---- | :---- | :---- | :---- | :---- |
