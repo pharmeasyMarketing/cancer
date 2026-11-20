@@ -190,7 +190,9 @@ def flow_lines(field, heads=()):
     return m.group(1) + joined + m.group(3)
 
 
-SHOW_FIRST_LABEL = {'cancer site'}     # first-column headings shown above each card title (Sarthak, 20 Nov)
+# first-column headings shown above each card title where the title alone does not say what it is (Sarthak, 20 Nov)
+SHOW_FIRST_LABEL = {'cancer site', 'marker', 'type of biopsies', 'test', 'symptom', 'how the taste has shifted',
+                    'cancer or situation', 'type of cancer/situation', 'subtype'}
 
 
 def cards(hdr, rows):

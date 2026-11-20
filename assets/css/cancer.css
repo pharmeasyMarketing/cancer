@@ -794,7 +794,7 @@ ul.checks > li { break-inside: avoid; margin: 0 0 8px; }
 
 /* HPV page components */
 .hpvt { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin: 0 0 18px; }
-.hpvt > div { border-radius: 12px; padding: 14px 16px; }
+.hpvt > :is(div, li) { border-radius: 12px; padding: 14px 16px; }
 .hpvt p { margin: 0; font-size: 15px; line-height: 24px; color: #30363C; }
 .hpvt-lo { background: #F2F9F8; border: 1px solid #B8DEDB; border-top: 4px solid #008880; }
 .hpvt-hi { background: #FFF4F2; border: 1px solid #F6C9C1; border-top: 4px solid #D9472B; }
@@ -819,3 +819,5 @@ ul:is(.mech-grid, .medex-grid, .pv, .hpvt) > li { margin: 0; }
 .pv-acc[open] > summary > .pv-title { grid-row: 1 / span 2; align-self: center; }
 :is(h3, h4).med-label { margin: 0; } :is(h3, h4).dg-name { margin: 0 0 6px; }
 .pv-kicker { display: block; margin: 0 0 2px; }
+/* notes straight under the title start there (no gap); with fields above them they still align to the card bottom */
+.pv-head + .pv-notes { margin-top: 0; }
