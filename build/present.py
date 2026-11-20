@@ -705,10 +705,81 @@ def nutrition_sections(page):
     return page
 
 
+IC['virus'] = ('<circle cx="12" cy="12" r="5"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1 7 17M17 7l2.1-2.1"/>'
+               '<circle cx="12" cy="12" r="1" fill="currentColor"/>')
+
+
+def _cmp_pct(seg, starts, rx, la, lb):
+    """Comparison bar for two percentages found in a paragraph (labels are the doc's own phrases)."""
+    m = re.search(r'(<p class="lead-p">%s.*?</p>)' % re.escape(starts), seg, re.S)
+    n = m and re.search(rx, m.group(1))
+    if not n:
+        return seg
+    a, b = float(n.group(1)), float(n.group(2))
+    hi = max(a, b)
+    bars = ('<div class="cmp" aria-hidden="true"><div class="cmp-row"><span class="cmp-l">%s</span><span class="cmp-bar"><i style="width:%d%%"></i></span><b>%s%%</b></div>'
+            '<div class="cmp-row"><span class="cmp-l">%s</span><span class="cmp-bar alt"><i style="width:%d%%"></i></span><b>%s%%</b></div></div>'
+            % (la, round(100 * a / hi), n.group(1), lb, round(100 * b / hi), n.group(2)))
+    return seg.replace(m.group(1), m.group(1) + '\n    ' + bars, 1)
+
+
+def _p_tobacco(seg):
+    m = re.search(r'<p class="lead-p">(Tobacco use in India takes.*?)</p>', seg, re.S)
+    n = m and re.search(r'([\d.]+)% of Indian adults use tobacco, with ([\d.]+)% using smokeless tobacco and ([\d.]+)% smoking', m.group(1))
+    if n:
+        tiles = ('<div class="stat3" aria-hidden="true"><div><b>%s%%</b><span>of Indian adults use tobacco</span></div>'
+                 '<div><b>%s%%</b><span>using smokeless tobacco</span></div><div><b>%s%%</b><span>smoking</span></div></div>' % n.groups())
+        seg = seg.replace(m.group(0), m.group(0) + '\n    ' + tiles, 1)
+    return _cmp_pct(seg, 'Health advice focused mainly on cigarettes', r'([\d.]+)% of smokers were advised to quit by a doctor, compared with just ([\d.]+)% of smokeless',
+                    'smokers were advised to quit by a doctor', 'smokeless tobacco users')
+
+
+def _p_infections(seg):
+    hit = first_ul(seg, 'Several viruses and one bacterium')
+    if not hit:
+        return seg
+    (a, e), inner = hit
+    items = top_items(inner)
+    if len(items) < 3 or not all(it.lstrip().startswith(('<strong>', '<a href')) for it in items):
+        return seg
+    cards = ''.join('<div class="mech">%s<p>%s</p></div>' % (_ic(IC['virus']), it.strip()) for it in items)
+    return seg[:a] + '<div class="mech-grid infx">%s</div>' % cards + seg[e:]
+
+
+def _p_plan(seg):
+    hit = first_ul(seg, 'Prioritise changes by how much they help')
+    if not hit:
+        return seg
+    (a, e), inner = hit
+    items = top_items(inner)
+    lis = ''.join('<li><span class="tl-n" aria-hidden="true">%d</span><p>%s</p></li>' % (k, it.strip()) for k, it in enumerate(items, 1))
+    return seg[:a] + '<ol class="tl prio">%s</ol>' % lis + seg[e:]
+
+
+def _p_when(seg):
+    for starts, cls in (('Seek care within days if you notice', 'panel-urgent'), ('Contact a doctor within a few weeks', 'panel-soon')):
+        m = re.search(r'<p class="lead-p">((?:<strong>)?%s.*?)</p>\s*<ul class="pg-list">(.*?)</ul>' % re.escape(starts), seg, re.S)
+        if m:
+            head = re.sub(r'</?strong>', '', m.group(1))          # the panel title is bold already
+            seg = seg.replace(m.group(0), '<div class="%s"><p class="panel-t">%s</p><ul>%s</ul></div>' % (cls, head, m.group(2)), 1)
+    return re.sub(r'<p class="lead-p">(<strong>Note:</strong>\s*The information on this page)', r'<p class="note-info">\1', seg, count=1)
+
+
+def prevention_sections(page):
+    if 'id="toc-how-much-cancer-is-actually-preventable"' not in page:
+        return page
+    for sid, fn in (('toc-tobacco-the-single-largest-modifiable-cause-in-india', _p_tobacco), ('toc-infections-alcohol-weight-and-diet', _p_infections),
+                    ('toc-sorting-real-risks-from-rumours', _p_plan), ('toc-when-to-see-a-doctor', _p_when)):
+        sp = section_span(page, sid)
+        if sp:
+            page = page[:sp[0]] + fn(page[sp[0]:sp[1]]) + page[sp[1]:]
+    return page
+
+
 PAGE = {}
 
 
 def present(page):
     m = re.search(r'<link rel="canonical" href="([^"]+)"', page)
     PAGE['url'] = m.group(1) if m else ''
-    return nutrition_sections(treatment_sections(chemo_sections(how_it_is_given(how_it_works(TABLE_RE.sub(one, page))))))
+    return prevention_sections(nutrition_sections(treatment_sections(chemo_sections(how_it_is_given(how_it_works(TABLE_RE.sub(one, page)))))))

@@ -763,3 +763,16 @@ ul.checks > li { display: block !important; }
 ul.checks { display: block; columns: 2; column-gap: 24px; }
 ul.checks > li { break-inside: avoid; margin: 0 0 8px; }
 @container art (max-width: 640px) { ul.checks { columns: 1; } }
+
+/* prevention page components */
+.stat3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin: 0 0 18px; }
+.stat3 > div { background: #fff; border: 1px solid #E6E9ED; border-radius: 12px; padding: 12px 14px; display: flex; flex-direction: column; gap: 2px; }
+.stat3 b { font-size: 26px; line-height: 32px; font-weight: 800; color: #00736C; font-variant-numeric: tabular-nums; }
+.stat3 span { font-size: 13px; line-height: 18px; color: #5C636D; }
+.mech-grid.infx { display: block; columns: 2; column-gap: 12px; }
+.mech-grid.infx > .mech { break-inside: avoid; margin: 0 0 12px; }
+.mech-grid.infx .mech p { font-size: 14.5px; line-height: 23px; color: #30363C; }
+.tl.prio { margin: 0 0 18px; }
+.tl.prio p { font-size: 15px; line-height: 25px; color: #30363C; margin-top: 2px; }
+@container art (max-width: 640px) { .mech-grid.infx { columns: 1; } }
+@container art (max-width: 420px) { .stat3 { grid-template-columns: 1fr 1fr; } .stat3 > div:first-child { grid-column: 1 / -1; } }
