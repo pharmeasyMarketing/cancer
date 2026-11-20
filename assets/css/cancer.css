@@ -587,3 +587,8 @@ main a:not(.cx-btn-primary):not(.cx-btn-ghost):not(.brand):not(.dc-toc-link):not
 main sup.cite a, main .glp-crumb a, main a[style*="background"] { text-decoration-line: none !important; }
 :where(main) :where(p, li, td:not(.k), .refs span, .byline span, .srcs, .src, .pv-more-v) > a:not(.brand):not(.cx-btn-primary):not(.cx-btn-ghost) { font-weight: 600; }
 :where(main) :where(.glp-crumb li) > a { font-weight: inherit; }
+
+/* Two CTAs stacked one above the other beside a note, so the note text keeps more width */
+.cx-btn-stack { display: flex; flex-direction: column; gap: 10px; flex: 0 0 auto; }
+.cx-btn-stack a { text-align: center; }
+@container art (max-width: 640px) { .cx-btn-stack { flex: 1 1 100%; } }

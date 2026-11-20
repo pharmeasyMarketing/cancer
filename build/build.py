@@ -540,8 +540,9 @@ def build_sections():
     b += P(236) + P(238)
     b += ('    <div class="note-box" style="display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap">'
           '<div style="flex:1 1 340px"><p>%s</p></div>'
+          '<div class="cx-btn-stack">'
           '<a class="cx-btn-primary" href="https://pharmeasy.in/diagnostics/packages/cancer-screening-male-1420">Screening for men</a>'
-          '<a class="cx-btn-ghost" href="https://pharmeasy.in/diagnostics/packages/cancer-screening-female-1418">Screening for women</a></div>\n' % T(240))
+          '<a class="cx-btn-ghost" href="https://pharmeasy.in/diagnostics/packages/cancer-screening-female-1418">Screening for women</a></div></div>\n' % T(240))
     b += '    <p class="lead-p" style="margin-top:16px">%s</p>\n' % T(242)
     b += P(244)
     add('toc-screening', 'Screening and prevention', b)
