@@ -160,6 +160,13 @@ def flow_lines(field, heads=()):
     out, run = [], []
 
     def flush():
+        # "... Used for: Head and neck cancers" then one item per line: the item after the colon is the
+        # first of the list
+        if len(run) >= 2 and out and not out[-1].startswith('<span class="pv-lines">'):
+            t = re.match(r'^(.*:)\s*([^:<>]{1,40})\s*$', out[-1], re.S)
+            if t and not t.group(2).strip().endswith(':'):
+                out[-1] = t.group(1)
+                run.insert(0, t.group(2).strip())
         if len(run) >= 2:
             out.append('<span class="pv-lines">%s</span>' % ''.join('<span>%s</span>' % x.strip() for x in run))
         else:
