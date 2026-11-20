@@ -331,7 +331,7 @@ def slug(s):
 MOL_KEY = ('<div class="mol-key" aria-hidden="true"><span class="k-mol">Molecule</span>'
            '<span class="k-brand">Brands on PharmEasy</span><span class="k-all">Molecules and brands on PharmEasy</span></div>')
 # the key of a group in which no molecule has a brand listed (tidy_brands)
-MOL_KEY_ONLY = ('<div class="mol-key" aria-hidden="true"><span class="k-mol">Molecule</span>'
+MOL_KEY_ONLY = ('<div class="mol-key only" aria-hidden="true"><span class="k-mol">Molecule</span>'
                 '<span class="k-all">Molecules on PharmEasy</span></div>')
 
 
