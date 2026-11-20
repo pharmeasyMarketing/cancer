@@ -1154,6 +1154,68 @@ def tests_sections(page):
     return page
 
 
+def _wrap_p(seg, starts, cls, icon=None):
+    """A paragraph beginning with a phrase -> a styled block (same paragraph inside)."""
+    m = re.search(r'<p class="lead-p">(%s.*?)</p>' % re.escape(starts), seg, re.S)
+    if not m:
+        return seg
+    if icon:
+        return seg.replace(m.group(0), '<div class="mech %s">%s<p>%s</p></div>' % (cls, _ic(IC[icon]), m.group(1)), 1)
+    return seg.replace(m.group(0), '<div class="%s"><p>%s</p></div>' % (cls, m.group(1)), 1)
+
+
+def cervical_sections(page):
+    if not PAGE.get('url', '').endswith('/cancer/types/cervical-cancer/'):
+        return page
+    def symptoms(seg):
+        hit = first_ul(seg, 'When symptoms do appear')
+        if hit:
+            (a, e), inner = hit
+            seg = seg[:a] + '<div class="panel-soon"><ul class="cols2">%s</ul></div>' % inner + seg[e:]
+        return seg
+    def diagnosis(seg):
+        icon = lambda n: 'scan' if 'imag' in n.lower() else 'scope'
+        seg = labelled_cards(seg, 'may be done to reach a diagnosis', icon, 'mech-grid tips3')   # one column keeps "Biopsy: ...are:" before its types
+        return labelled_cards(seg, 'the extent of its spread', icon, 'mech-grid infx')
+    def stages(seg):
+        hit = first_ul(seg, 'FIGO 2018 system')
+        if not hit:
+            return seg
+        (a, e), inner = hit
+        out = []
+        for it in top_items(inner):
+            lab = _lab(it)
+            if not lab:
+                return seg
+            n = re.search(r'Stage\s+([IV]+)', lab[1])
+            lvl = {'I': 1, 'II': 2, 'III': 3, 'IV': 4}.get(n.group(1), 1) if n else 1
+            out.append('<div class="medex stg stg-%d"><span class="stg-b" aria-hidden="true">%s</span><div><div class="medex-t">%s</div><p>%s</p></div></div>'
+                       % (lvl, n.group(1) if n else '', lab[0], lab[2]))
+        return seg[:a] + '<div class="medex-grid stages">%s</div>' % ''.join(out) + seg[e:]
+    def treatment(seg):
+        return _replace_ul(seg, 'treatment at each stage includes the following',
+                           lambda items: '<ol class="tl prio">%s</ol>' % ''.join('<li><span class="tl-n" aria-hidden="true">%d</span><p>%s</p></li>' % (k, it.strip()) for k, it in enumerate(items, 1)))
+    def prevention(seg):
+        seg = _wrap_p(seg, '<strong>Vaccination.</strong>', 'prev-card', 'syringe')
+        seg = _wrap_p(seg, '<strong>Screening.</strong>', 'prev-card', 'scope')
+        seg = re.sub(r'(<div class="mech prev-card">.*?</div>)\s*(<div class="mech prev-card">.*?</div>)', r'<div class="mech-grid prev2">\1\2</div>', seg, count=1, flags=re.S)
+        return _note(seg, "General women's health panels are also available")
+    def applies(seg):
+        seg = _wrap_p(seg, 'Seek care within days if you have any of the following types of bleeding', 'panel-soon')
+        return _note(seg, 'Go to an emergency department for heavy bleeding', 'note-warn')
+    def related(seg):
+        seg = _note(seg, '<strong>Disclaimer:</strong>')
+        seg = _note(seg, '<strong>Tip:</strong>')
+        icon = lambda n: {'day-care cover:': 'clock', 'waiting periods:': 'clock'}.get(n.lower(), 'shield')
+        return labelled_cards(seg, 'Four things that often people are unaware of', icon, 'mech-grid infx')
+    for sid, fn in (('toc-symptoms', symptoms), ('toc-diagnosis-of-precancer-and-cancer', diagnosis), ('toc-stages', stages), ('toc-treatment', treatment),
+                    ('toc-prevention-and-screening', prevention), ('toc-which-applies-to-you', applies), ('toc-related-cancers', related)):
+        sp = section_span(page, sid)
+        if sp:
+            page = page[:sp[0]] + fn(page[sp[0]:sp[1]]) + page[sp[1]:]
+    return page
+
+
 def symptoms_sections(page):
     if '/cancer/symptoms/' not in PAGE.get('url', ''):
         return page
@@ -1188,4 +1250,4 @@ PAGE = {}
 def present(page):
     m = re.search(r'<link rel="canonical" href="([^"]+)"', page)
     PAGE['url'] = m.group(1) if m else ''
-    return semantic(tests_sections(symptoms_sections(hpv_sections(prevention_sections(nutrition_sections(treatment_sections(chemo_sections(how_it_is_given(how_it_works(TABLE_RE.sub(one, page)))))))))))
+    return semantic(cervical_sections(tests_sections(symptoms_sections(hpv_sections(prevention_sections(nutrition_sections(treatment_sections(chemo_sections(how_it_is_given(how_it_works(TABLE_RE.sub(one, page))))))))))))

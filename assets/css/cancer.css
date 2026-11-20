@@ -851,3 +851,19 @@ ul:is(.mech-grid, .medex-grid, .pv, .hpvt) { list-style: none; padding-left: 0; 
 .note-panel { background: #F5F7F8; border: 1px solid #E6E9ED; border-left: 4px solid #8E97A3; border-radius: 12px; padding: 14px 16px; margin: 0 0 14px; }
 :is(.panel-urgent, .panel-soon, .note-panel) > p:not(.panel-t) { margin: 0; font-size: 14.5px; line-height: 23px; color: #30363C; }
 .pv-acc.sym .pv-acc-body p + p { margin-top: 10px; }
+
+/* cervical cancer page components */
+.panel-soon ul.cols2 { display: block; columns: 2; column-gap: 24px; }
+.panel-soon ul.cols2 li { break-inside: avoid; margin: 0 0 6px; }
+.medex-grid.stages { columns: 1; display: grid; gap: 10px; }
+.medex-grid.stages .medex { display: flex; gap: 14px; align-items: flex-start; margin: 0; border-left-width: 4px; }
+.stg-b { flex: none; width: 40px; height: 40px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 14px; }
+.stg-1 { border-left-color: #9DCFCB; } .stg-1 .stg-b { background: #EAF5F4; color: #00736C; }
+.stg-2 { border-left-color: #D9B44A; } .stg-2 .stg-b { background: #FFF6DB; color: #8A6A00; }
+.stg-3 { border-left-color: #E08A3C; } .stg-3 .stg-b { background: #FFEBD9; color: #A3530F; }
+.stg-4 { border-left-color: #D9472B; } .stg-4 .stg-b { background: #FFE6E0; color: #A3321F; }
+.mech-grid.prev2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin: 0 0 18px; }
+.mech-grid.prev2 > .mech { grid-column: auto !important; }
+.mech.prev-card p { font-size: 14.5px; line-height: 24px; color: #30363C; }
+.panel-soon > p { margin: 0; font-size: 14.5px; line-height: 23px; color: #30363C; }
+@container art (max-width: 640px) { .panel-soon ul.cols2 { columns: 1; } .mech-grid.prev2 { grid-template-columns: 1fr; } }
