@@ -111,7 +111,7 @@ def note_box(html_):
 def numbered_tiles(items, minw=230):
     out = ['    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(%dpx,1fr));gap:12px;margin:0 0 18px">' % minw]
     for i, t in enumerate(items, 1):
-        out.append('      <div class="cx-tile step-tile"><div class="num" style="width:26px;height:26px;border-radius:999px;background:#00736C;color:#fff;font-size:12px;font-weight:800;'
+        out.append('      <div class="cx-tile step-tile"><div class="num" style="width:26px;height:26px;border-radius:999px;background:#008880;color:#fff;font-size:12px;font-weight:800;'
                    'display:flex;align-items:center;justify-content:center;margin-bottom:10px">%d</div>'
                    '<p style="font-size:14px;line-height:21px;color:#5C636D">%s</p></div>' % (i, t))
     out.append('    </div>\n')
@@ -485,7 +485,7 @@ def build_sections():
           '<div class="cx-card" style="border-left:3px solid #008880;padding:18px"><div style="font-size:15px;font-weight:800;color:#1C1F22;margin-bottom:6px">Diagnostic tests</div>'
           '<p style="font-size:14px;line-height:22px;color:#5C636D">%s</p></div></div>\n' % (T(146), T(148)))
     b += ('    <div class="note-box" style="display:flex;gap:12px;align-items:center;flex-wrap:wrap">'
-          '<span style="width:32px;height:32px;border-radius:10px;background:#fff;border:1px solid #B8DEDB;color:#00736C;display:flex;align-items:center;justify-content:center;flex-shrink:0">%s</span>'
+          '<span style="width:32px;height:32px;border-radius:10px;background:#fff;border:1px solid #B8DEDB;color:#008880;display:flex;align-items:center;justify-content:center;flex-shrink:0">%s</span>'
           '<p style="flex:1 1 260px">%s</p></div>\n' % (svg(IC['flask'], 17), T(150)))
     add('toc-diagnosis', 'How is cancer diagnosed?', b)
 
@@ -524,7 +524,7 @@ def build_sections():
     t226 = T(226).replace('Verified as of %s.' % CURRENT_MONTH_YEAR, '')
     b += '    <p class="lead-p" style="margin-bottom:10px">%s</p>\n' % t226.strip()
     b += '    <p style="margin:0 0 16px"><span class="verified">%s Verified as of %s</span></p>\n' % (svg(IC['check'], 14), CURRENT_MONTH_YEAR)
-    b += ('    <div class="note-box" style="display:flex;gap:12px;align-items:center;flex-wrap:wrap"><span style="width:32px;height:32px;border-radius:10px;background:#fff;border:1px solid #B8DEDB;color:#00736C;display:flex;align-items:center;justify-content:center;flex-shrink:0">%s</span>'
+    b += ('    <div class="note-box" style="display:flex;gap:12px;align-items:center;flex-wrap:wrap"><span style="width:32px;height:32px;border-radius:10px;background:#fff;border:1px solid #B8DEDB;color:#008880;display:flex;align-items:center;justify-content:center;flex-shrink:0">%s</span>'
           '<p style="flex:1 1 260px">%s</p></div>\n' % (svg(IC['wallet'], 17), T(228)))
     add('toc-insurance', 'What to check for insurance in India', b)
 
@@ -796,7 +796,7 @@ def hero():
     <button type="button" class="hero-toggle" id="hero-toggle" aria-expanded="false" aria-controls="hero-intro" hidden><span>Read more</span>{svg(IC['chev'], 16)}</button>
 
     <div style="background:#fff;border:1px solid #DCE6E5;border-radius:12px;padding:20px;display:flex;gap:14px;align-items:flex-start;box-shadow:0 2px 10px rgba(15,46,44,0.05)">
-      <div style="width:30px;height:30px;border-radius:8px;background:#00736C;color:#fff;display:flex;align-items:center;justify-content:center;flex-shrink:0">{stetho}</div>
+      <div style="width:30px;height:30px;border-radius:8px;background:#008880;color:#fff;display:flex;align-items:center;justify-content:center;flex-shrink:0">{stetho}</div>
       <div>
         <p style="font-size:14px;line-height:22px;color:#25282B;margin:0 0 14px"><strong style="font-weight:800">Worried about a symptom or a test result?</strong> A lump, a shadow on a scan or a raised blood test value does not automatically mean cancer. If you are unsure whether it needs to be checked, an online doctor consultation can help you understand how urgently you may need further evaluation.</p>
         <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:12px">
@@ -826,10 +826,10 @@ def rail(toc):
         '          <div style="font-size:11px;font-weight:800;letter-spacing:0.06em;text-transform:uppercase;color:#6B747E;margin-bottom:12px">On this page</div>\n'
         '          <div style="display:flex;flex-direction:column;gap:10px">%s</div>\n        </div>\n'
         '        <div class="pad" style="background:#F2F9F8;border:1px solid #B8DEDB;border-radius:12px;padding:18px">\n'
-        '          <div style="display:flex;gap:10px;align-items:center;margin-bottom:8px"><span style="width:32px;height:32px;border-radius:10px;background:#fff;border:1px solid #B8DEDB;color:#00736C;display:flex;align-items:center;justify-content:center;flex-shrink:0">%s</span>'
+        '          <div style="display:flex;gap:10px;align-items:center;margin-bottom:8px"><span style="width:32px;height:32px;border-radius:10px;background:#fff;border:1px solid #B8DEDB;color:#008880;display:flex;align-items:center;justify-content:center;flex-shrink:0">%s</span>'
         '<div style="font-size:15px;font-weight:800;color:#004D48">Consult a doctor</div></div>\n'
         '          <p style="font-size:13px;line-height:20px;color:#5C636D;margin:0 0 12px">Unsure whether a symptom or a test result needs attention? A doctor can help you understand how urgently it needs to be checked.</p>\n'
-        '          <a href="%s" style="display:block;text-align:center;background:#00736C;color:#fff;font-weight:700;font-size:13px;padding:11px 16px;border-radius:12px;margin-bottom:10px">Consult a doctor</a>\n'
+        '          <a href="%s" style="display:block;text-align:center;background:#008880;color:#fff;font-weight:700;font-size:13px;padding:11px 16px;border-radius:12px;margin-bottom:10px">Consult a doctor</a>\n'
         '          <a href="#toc-screening" style="font-size:13px;font-weight:700;color:#00736C">Or read about screening and prevention</a>\n        </div>\n'
         '        <div class="pad" style="background:#fff;border:1px solid #E6E9ED;border-radius:12px;padding:18px">\n'
         '          <div style="font-size:11px;font-weight:800;letter-spacing:0.06em;text-transform:uppercase;color:#6B747E;margin-bottom:12px">Related pages</div>\n'

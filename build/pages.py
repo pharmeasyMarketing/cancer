@@ -551,7 +551,7 @@ def hero(doc, path):
     <button type="button" class="hero-toggle" id="hero-toggle" aria-expanded="false" aria-controls="hero-intro" hidden><span>Read more</span>{B.svg(B.IC['chev'], 16)}</button>
 
     <div style="background:#fff;border:1px solid #DCE6E5;border-radius:12px;padding:20px;display:flex;gap:14px;align-items:flex-start;box-shadow:0 2px 10px rgba(15,46,44,0.05)">
-      <div style="width:30px;height:30px;border-radius:8px;background:#00736C;color:#fff;display:flex;align-items:center;justify-content:center;flex-shrink:0">{stetho}</div>
+      <div style="width:30px;height:30px;border-radius:8px;background:#008880;color:#fff;display:flex;align-items:center;justify-content:center;flex-shrink:0">{stetho}</div>
       <div>
         <p style="font-size:14px;line-height:22px;color:#25282B;margin:0 0 14px"><strong style="font-weight:800">Have a question about your situation?</strong> An online doctor consultation can help you understand what applies to you and how urgently you may need further evaluation.</p>
         <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:12px">
@@ -576,10 +576,10 @@ def rail(toc, rel, has_faq, has_refs):
         '          <div style="font-size:11px;font-weight:800;letter-spacing:0.06em;text-transform:uppercase;color:#6B747E;margin-bottom:12px">On this page</div>\n'
         '          <div style="display:flex;flex-direction:column;gap:10px">%s</div>\n        </div>\n'
         '        <div class="pad" style="background:#F2F9F8;border:1px solid #B8DEDB;border-radius:12px;padding:18px">\n'
-        '          <div style="display:flex;gap:10px;align-items:center;margin-bottom:8px"><span style="width:32px;height:32px;border-radius:10px;background:#fff;border:1px solid #B8DEDB;color:#00736C;display:flex;align-items:center;justify-content:center;flex-shrink:0">%s</span>'
+        '          <div style="display:flex;gap:10px;align-items:center;margin-bottom:8px"><span style="width:32px;height:32px;border-radius:10px;background:#fff;border:1px solid #B8DEDB;color:#008880;display:flex;align-items:center;justify-content:center;flex-shrink:0">%s</span>'
         '<div style="font-size:15px;font-weight:800;color:#004D48">Consult a doctor</div></div>\n'
         '          <p style="font-size:13px;line-height:20px;color:#5C636D;margin:0 0 12px">Unsure whether a symptom or a test result needs attention? A doctor can help you understand how urgently it needs to be checked.</p>\n'
-        '          <a href="%s" style="display:block;text-align:center;background:#00736C;color:#fff;font-weight:700;font-size:13px;padding:11px 16px;border-radius:12px">Consult a doctor</a>\n        </div>\n'
+        '          <a href="%s" style="display:block;text-align:center;background:#008880;color:#fff;font-weight:700;font-size:13px;padding:11px 16px;border-radius:12px">Consult a doctor</a>\n        </div>\n'
         '        <div class="pad" style="background:#fff;border:1px solid #E6E9ED;border-radius:12px;padding:18px">\n'
         '          <div style="font-size:11px;font-weight:800;letter-spacing:0.06em;text-transform:uppercase;color:#6B747E;margin-bottom:12px">Related pages</div>\n'
         '          <div style="display:flex;flex-direction:column;gap:10px">%s</div>\n        </div>\n'

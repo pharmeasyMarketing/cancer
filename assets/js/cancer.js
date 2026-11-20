@@ -24,8 +24,8 @@
   });
 
   apply();
-  var t;
-  window.addEventListener('resize', function () { clearTimeout(t); t = setTimeout(apply, 120); });
+  var t, w0 = window.innerWidth;     // width-only: the phone address bar fires height-only resizes while scrolling
+  window.addEventListener('resize', function () { if (window.innerWidth === w0) return; w0 = window.innerWidth; clearTimeout(t); t = setTimeout(apply, 120); });
 })();
 
 /* Phone only (CSS does the hiding): long drug groups show 4 molecules, the reference
@@ -226,7 +226,7 @@
     });
   }
   fit();
-  var timer;
-  window.addEventListener('resize', function () { clearTimeout(timer); timer = setTimeout(fit, 150); });
+  var timer, fw = window.innerWidth;
+  window.addEventListener('resize', function () { if (window.innerWidth === fw) return; fw = window.innerWidth; clearTimeout(timer); timer = setTimeout(fit, 150); });
   window.addEventListener('load', fit);
 })();

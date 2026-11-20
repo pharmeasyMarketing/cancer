@@ -186,7 +186,10 @@
     singleOpenFaqs();
     heroReadMore();
     if (!window.__dcHeroResize) {
-      window.__dcHeroResize = function () { heroReadMore(); };
+      // only a width change can change the clamp; a phone's address bar showing/hiding on scroll fires a
+      // height-only resize, and re-folding the hero then pulled the page back to the bottom (20 Nov)
+      var heroW = window.innerWidth;
+      window.__dcHeroResize = function () { if (window.innerWidth === heroW) return; heroW = window.innerWidth; heroReadMore(); };
       window.addEventListener('resize', window.__dcHeroResize);
     }
 
