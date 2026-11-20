@@ -869,3 +869,4 @@ ul:is(.mech-grid, .medex-grid, .pv, .hpvt) { list-style: none; padding-left: 0; 
 @container art (max-width: 640px) { .panel-soon ul.cols2 { columns: 1; } .mech-grid.prev2 { grid-template-columns: 1fr; } }
 /* text after an accordion list keeps the normal gap */
 ul.pv-accs, div.pv-accs { margin-bottom: 18px; }
+.pv-acc.tacc.nokick > summary > .pv-title, .pv-acc.tacc.nokick[open] > summary > .pv-title { grid-row: 1 / span 2; align-self: center; }

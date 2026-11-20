@@ -308,12 +308,15 @@ def table_accordion(hdr, rows):
                 notes.append('<div class="pv-note %s"><span class="pv-note-l">%s%s</span><div>%s</div></div>' % (k, ICON[k], hdr[j], split_labels(v)))
             else:
                 fields.append('<div class="pv-f"><span class="pv-lbl">%s</span><div>%s</div></div>' % (hdr[j], split_labels(v)))
-        out.append('<details class="pv-acc tacc"%s><summary><span class="pv-n">%d</span><span class="pv-lbl pv-kicker">%s</span>'
+        kicker = '' if text(hdr[0]).lower() in NO_KICKER else '<span class="pv-lbl pv-kicker">%s</span>' % hdr[0]
+        out.append('<details class="pv-acc tacc%s"%s><summary><span class="pv-n">%d</span>%s'
                    '<span class="pv-title">%s</span><span class="pv-acc-chev" aria-hidden="true">%s</span></summary>'
                    '<div class="pv-acc-body"><div class="pv-acc-top">%s</div>%s</div></details>'
-                   % (' open' if n == 1 else '', n, hdr[0], r[0], ICON['chev'], ''.join(fields), '<div class="pv-notes">%s</div>' % ''.join(notes) if notes else ''))
+                   % ('' if kicker else ' nokick', ' open' if n == 1 else '', n, kicker, r[0], ICON['chev'], ''.join(fields), '<div class="pv-notes">%s</div>' % ''.join(notes) if notes else ''))
     return '<div class="pv pv-accs">%s</div>' % ''.join(out)
 
+
+NO_KICKER = {'subtype'}     # the section heading "Subtypes" already says it (Sarthak, 20 Nov)
 
 ACCORDION_TABLES = {'/cancer/tests/': {'type of biopsies', 'test', 'marker'},                  # Sarthak, 20 Nov
                     '/cancer/types/cervical-cancer/': {'subtype', 'treatment', 'component'}}
