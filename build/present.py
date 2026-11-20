@@ -762,7 +762,9 @@ def _p_infections(seg):
     items = top_items(inner)
     if len(items) < 3 or not all(it.lstrip().startswith(('<strong>', '<a href')) for it in items):
         return seg
-    cards = ''.join('<div class="mech">%s<p>%s</p></div>' % (_ic(IC['virus']), it.strip()) for it in items)
+    # HPV: the vaccination programme starts its own paragraph (Sarthak, 20 Nov)
+    body = lambda it: re.sub(r'(\.(?:<sup class="cite">.*?</sup>)?\.?)\s+(India launched a nationwide)', r'\1</p><p>\2', it.strip(), count=1)
+    cards = ''.join('<div class="mech">%s<div>%s</div></div>' % (_ic(IC['virus']), '<p>%s</p>' % body(it)) for it in items)
     return seg[:a] + '<div class="mech-grid infx">%s</div>' % cards + seg[e:]
 
 

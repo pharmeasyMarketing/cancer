@@ -790,3 +790,4 @@ ul.checks > li { break-inside: avoid; margin: 0 0 8px; }
 .rk-do { background: #F2F9F8; border-radius: 10px; padding: 10px 12px; align-self: start; font-size: 14px; line-height: 22px; color: #30363C; }
 .rk-do .pv-note-l { display: flex; align-items: center; gap: 5px; font-size: 10.5px; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; color: #00736C; margin-bottom: 4px; }
 @container art (max-width: 720px) { .rk { grid-template-columns: 1fr; gap: 10px; padding: 14px; } }
+.mech-grid.infx .mech p + p { margin-top: 10px; }
