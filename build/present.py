@@ -1017,6 +1017,10 @@ def semantic(page):
     # accordion summary: the group name is the heading, the molecule preview stays beside it
     art = re.sub(r'<span class="pv-acc-h">(<span class="pv-title">.*?</span>)(<span class="pv-acc-sub"[^>]*>.*?</span>)</span>', r'\1\2', art, flags=re.S)
     art = _titles(_listify(art))
+    # accordion titles end without the doc's trailing colon (Sarthak, 20 Nov): "A lump ... persistent:" -> "...persistent"
+    def nocolon(m):
+        return m.group(1) + re.sub(r':(\s*(?:</[a-z]+>\s*)*)$', r'\1', m.group(3)) + m.group(4)
+    art = re.sub(r'(<summary>.*?<(h3|h4|strong|span) class="pv-title[^"]*">)(.*?)(</\2>)', nocolon, art, flags=re.S)
     return page[:a] + art + page[b:]
 
 
