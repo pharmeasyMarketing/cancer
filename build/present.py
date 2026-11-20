@@ -229,7 +229,11 @@ def is_medicine_groups(hdr):
     """The chemotherapy page's "Medicine group | Molecules used in India | How it is given | What it is used
     for | Brands on PharmEasy" table."""
     heads = [text(h).lower() for h in hdr]
-    return heads and heads[0] == 'medicine group' and 'brands on pharmeasy' in heads and 'what it is used for' in heads
+    if heads and heads[0] == 'medicine group' and 'brands on pharmeasy' in heads and 'what it is used for' in heads:
+        return True
+    # treatment page "Medicine prices": the 9 drug groups (Sarthak, 20 Nov: accordion, first open)
+    return (PAGE.get('url', '').endswith('/cancer/treatment/') and heads and heads[0] == 'drug group'
+            and 'molecules used in india' in heads and 'what it is used for' in heads)
 
 
 def accordion(hdr, rows):
@@ -248,10 +252,11 @@ def accordion(hdr, rows):
         return '<div class="pv-f%s"><span class="pv-lbl">%s</span><div>%s</div></div>' % (extra, hdr[j], split_labels(r[j]))
     out = []
     for n, r in enumerate(rows, 1):
-        preview = text(re.sub(r'\s*<br\s*/?>\s*', ', ', r[i_mol])) if i_mol is not None else ''
+        preview = re.sub(r':\s*,', ':', text(re.sub(r'\s*<br\s*/?>\s*', ', ', r[i_mol]))) if i_mol is not None else ''
         mols = {x.strip().lower() for x in re.split(r'[,;]|\band\b', preview) if x.strip()}
         top = field(i_mol, r) + field(i_how, r) + ''.join(field(j, r) for j in other)
         use = field(i_use, r, ' pv-wide')
+        use = flow_lines(use, mols) if use else ''
         br = field(i_br, r, ' pv-wide')
         br = flow_lines(br, mols) if br else ''
         out.append('<details class="pv-acc"%s><summary><span class="pv-n">%d</span><span class="pv-acc-h"><span class="pv-title">%s</span>'
@@ -560,5 +565,10 @@ def treatment_sections(page):
     return page
 
 
+PAGE = {}
+
+
 def present(page):
+    m = re.search(r'<link rel="canonical" href="([^"]+)"', page)
+    PAGE['url'] = m.group(1) if m else ''
     return treatment_sections(chemo_sections(how_it_is_given(how_it_works(TABLE_RE.sub(one, page)))))
