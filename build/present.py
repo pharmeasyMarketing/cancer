@@ -123,6 +123,17 @@ def stats(hdr, rows):
     return '<div class="pv pv-stats">%s</div>' % ''.join(cards)
 
 
+LABEL_RE = re.compile(r'(?<!<br>)(?<!^)\s*(<(strong|b)>[^<]{1,60}:</\2>)')
+
+
+def split_labels(v):
+    """A field that lists two or more groups by bold label ("Anthracyclines: ... Alkylating agents: ...")
+    starts each label on its own line, even where the doc ran the first one into the sentence."""
+    if len(re.findall(r'<(strong|b)>[^<]{1,60}:</\1>', v)) < 2:
+        return v
+    return LABEL_RE.sub(lambda m: '<br>' + m.group(1), v)
+
+
 def balance(body):
     """Three or more fields side by side leave the short ones next to a tall empty space when one field is
     much longer. Then the long field goes last and spans the full card width; the short ones stay in a row."""
@@ -181,6 +192,7 @@ def cards(hdr, rows):
         for j, (h, v) in enumerate(zip(hdr, r)):
             if is_empty(v):
                 continue
+            v = split_labels(v)
             k = kinds[j]
             if j == 0:
                 head.append('<div class="pv-title">%s</div>' % v)
