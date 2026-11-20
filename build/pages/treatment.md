@@ -200,7 +200,7 @@ The first column will define your own situation. The second column explains what
 
  
 
-### Medicines on PharmEasy for this cancer 
+### Cancer treatment medicines on PharmEasy, by drug group 
 
 PharmEasy carries all oncology medications in these categories. Your oncologist will decide which, if any, applies to you. 
 
