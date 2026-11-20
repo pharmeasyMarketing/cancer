@@ -867,3 +867,5 @@ ul:is(.mech-grid, .medex-grid, .pv, .hpvt) { list-style: none; padding-left: 0; 
 .mech.prev-card p { font-size: 14.5px; line-height: 24px; color: #30363C; }
 .panel-soon > p { margin: 0; font-size: 14.5px; line-height: 23px; color: #30363C; }
 @container art (max-width: 640px) { .panel-soon ul.cols2 { columns: 1; } .mech-grid.prev2 { grid-template-columns: 1fr; } }
+/* text after an accordion list keeps the normal gap */
+ul.pv-accs, div.pv-accs { margin-bottom: 18px; }

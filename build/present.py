@@ -239,8 +239,8 @@ def is_medicine_groups(hdr):
     if heads and heads[0] == 'medicine group' and 'brands on pharmeasy' in heads and 'what it is used for' in heads:
         return True
     # treatment page "Medicine prices": the 9 drug groups (Sarthak, 20 Nov: accordion, first open)
-    return (PAGE.get('url', '').endswith('/cancer/treatment/') and heads and heads[0] == 'drug group'
-            and 'molecules used in india' in heads and 'what it is used for' in heads)
+    return (PAGE.get('url', '').endswith(('/cancer/treatment/', '/cancer/types/cervical-cancer/')) and heads and heads[0] == 'drug group'
+            and 'molecules used in india' in heads and ('what it is used for' in heads or 'what is it used for' in heads))
 
 
 def accordion(hdr, rows):
@@ -249,7 +249,8 @@ def accordion(hdr, rows):
     its name and a plain-text preview of its molecules. The first group starts open."""
     heads = [text(h).lower() for h in hdr]
     col = lambda name: heads.index(name) if name in heads else None
-    i_mol, i_how, i_use, i_br = col('molecules used in india'), col('how it is given'), col('what it is used for'), col('brands on pharmeasy')
+    i_mol, i_how, i_br = col('molecules used in india'), col('how it is given'), col('brands on pharmeasy')
+    i_use = col('what it is used for') if col('what it is used for') is not None else col('what is it used for')
     used = {0, i_mol, i_how, i_use, i_br}
     other = [j for j in range(len(hdr)) if j not in used and any(not is_empty(r[j]) for r in rows)]   # e.g. a filled Price column
 
@@ -314,7 +315,8 @@ def table_accordion(hdr, rows):
     return '<div class="pv pv-accs">%s</div>' % ''.join(out)
 
 
-ACCORDION_TABLES = {'/cancer/tests/': {'type of biopsies', 'test', 'marker'}}   # Sarthak, 20 Nov
+ACCORDION_TABLES = {'/cancer/tests/': {'type of biopsies', 'test', 'marker'},                  # Sarthak, 20 Nov
+                    '/cancer/types/cervical-cancer/': {'subtype', 'treatment', 'component'}}
 
 
 def one(m):
@@ -1175,8 +1177,8 @@ def cervical_sections(page):
         return seg
     def diagnosis(seg):
         icon = lambda n: 'scan' if 'imag' in n.lower() else 'scope'
-        seg = labelled_cards(seg, 'may be done to reach a diagnosis', icon, 'mech-grid tips3')   # one column keeps "Biopsy: ...are:" before its types
-        return labelled_cards(seg, 'the extent of its spread', icon, 'mech-grid infx')
+        seg = labelled_accordion(seg, 'may be done to reach a diagnosis', icon, 'sym')     # accordions (Sarthak, 20 Nov)
+        return labelled_accordion(seg, 'the extent of its spread', icon, 'sym')
     def stages(seg):
         hit = first_ul(seg, 'FIGO 2018 system')
         if not hit:
