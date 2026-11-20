@@ -803,3 +803,18 @@ ul.sched li { display: flex; align-items: center; gap: 12px; background: #fff; b
 ul.sched .mech-ic { width: 34px; height: 34px; }
 b.dose { font-weight: 700; color: #00736C; background: #EAF5F4; border-radius: 999px; padding: 1px 8px; white-space: normal; }
 @container art (max-width: 640px) { .hpvt { grid-template-columns: 1fr; } .stat3 { grid-template-columns: 1fr; } }
+
+/* card titles are real headings now (present.py semantic): keep their card look, drop default heading margins */
+:is(h3, h4):is(.mech-t, .medex-t, .pv-title, .rk-t, .panel-t, .tl-t) { margin-top: 0; }
+:is(h3, h4):is(.pv-title, .rk-t) { margin-bottom: 0; }
+/* card sets are real lists now */
+ul:is(.mech-grid, .medex-grid, .pv, .hpvt) { list-style: none; padding-left: 0; margin-top: 0; }
+ul:is(.mech-grid, .medex-grid, .pv, .hpvt) > li { margin: 0; }
+/* accordion row: number | name over molecule preview | chevron */
+.pv-acc > summary { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; grid-template-rows: auto auto; column-gap: 12px; row-gap: 2px; }
+.pv-acc > summary > .pv-n { grid-row: 1 / span 2; align-self: center; }
+.pv-acc > summary > .pv-title { grid-column: 2; grid-row: 1; margin: 0; }
+.pv-acc > summary > .pv-acc-sub { grid-column: 2; grid-row: 2; }
+.pv-acc > summary > .pv-acc-chev { grid-column: 3; grid-row: 1 / span 2; align-self: center; }
+.pv-acc[open] > summary > .pv-title { grid-row: 1 / span 2; align-self: center; }
+:is(h3, h4).med-label { margin: 0; } :is(h3, h4).dg-name { margin: 0 0 6px; }

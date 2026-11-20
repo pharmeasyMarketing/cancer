@@ -891,10 +891,97 @@ def hpv_sections(page):
     return page
 
 
+# ---------------------------------------------------------------- semantics
+# The components above are laid out with <div>s. Search engines read a page's structure from its tags, so a
+# last pass gives them back what the doc had: a card set that came from a list is a <ul> of <li> cards, and a
+# card's title is a heading one level below the section it sits in (h3 under an h2, h4 under an h3).
+
+LIST_SETS = (('mech-grid', 'mech'), ('medex-grid', 'medex'), ('pv pv-cards', 'pv-card'), ('pv pv-risks', 'rk'),
+             ('hpvt', 'hpvt-'), ('pv pv-sits', 'pv-sit'), ('pv pv-facts', 'pv-fact'), ('pv pv-stats', 'pv-stat'))
+TITLE_CLASSES = ('mech-t', 'medex-t', 'pv-title', 'rk-t', 'panel-t', 'tl-t', 'dg-name', 'med-label')
+TAG_RE = re.compile(r'<(/?)div\b[^>]*>')
+
+
+def _match_div(h, start):
+    """Index just past the </div> that closes the <div> opening at start."""
+    depth = 0
+    for m in TAG_RE.finditer(h, start):
+        depth += -1 if m.group(1) else 1
+        if depth == 0:
+            return m.end()
+    return -1
+
+
+def _listify(h):
+    out, i = [], 0
+    pat = re.compile(r'<div class="(%s)(?: [^"]*)?">' % '|'.join(re.escape(c) for c, _ in LIST_SETS))
+    while True:
+        m = pat.search(h, i)
+        if not m:
+            out.append(h[i:])
+            return ''.join(out)
+        end = _match_div(h, m.start())
+        if end < 0:
+            out.append(h[i:])
+            return ''.join(out)
+        child = dict(LIST_SETS)[m.group(1)]
+        inner = h[m.end():end - len('</div>')]
+        kids, j, ok = [], 0, True
+        while j < len(inner):
+            cm = re.match(r'<div class="%s[^"]*"[^>]*>' % re.escape(child), inner[j:])
+            if not cm:
+                ok = False
+                break
+            ce = _match_div(inner, j)
+            body = inner[j + cm.end():ce - len('</div>')]
+            kids.append('<li' + cm.group(0)[4:] + _listify(body) + '</li>')
+            j = ce
+        if ok and kids:
+            out.append(h[i:m.start()] + '<ul' + m.group(0)[4:] + ''.join(kids) + '</ul>')
+        else:
+            out.append(h[i:m.end()])
+            end = m.end()
+        i = end
+
+
+def _titles(h):
+    """Card titles -> h3/h4, one level below the closest section heading (h2 or a doc h3) above them."""
+    tag_re = re.compile(r'<(h2|h3)\b(?![^>]*class="(?:%s)")|<(div|span|p) class="(%s)"' % ('|'.join(TITLE_CLASSES), '|'.join(TITLE_CLASSES)))
+    out, i, level = [], 0, 2
+    for m in tag_re.finditer(h):
+        if m.group(1):
+            level = int(m.group(1)[1])
+            continue
+        if m.start() < i:
+            continue
+        tag, cls = m.group(2), m.group(3)
+        close = h.find('</%s>' % tag, m.end())
+        if tag == 'div':            # titles hold no nested divs
+            close = h.find('</div>', m.end())
+        hx = 'h%d' % min(level + 1, 4)
+        out.append(h[i:m.start()] + '<%s class="%s"' % (hx, cls) + h[m.end():close] + '</%s>' % hx)
+        i = close + len('</%s>' % tag)
+    out.append(h[i:])
+    return ''.join(out)
+
+
+def semantic(page):
+    a = page.find('<div class="art"')
+    if a < 0:
+        return page
+    b = page.find('id="references"', a)
+    b = len(page) if b < 0 else b
+    art = page[a:b]
+    # accordion summary: the group name is the heading, the molecule preview stays beside it
+    art = re.sub(r'<span class="pv-acc-h">(<span class="pv-title">.*?</span>)(<span class="pv-acc-sub"[^>]*>.*?</span>)</span>', r'\1\2', art, flags=re.S)
+    art = _titles(_listify(art))
+    return page[:a] + art + page[b:]
+
+
 PAGE = {}
 
 
 def present(page):
     m = re.search(r'<link rel="canonical" href="([^"]+)"', page)
     PAGE['url'] = m.group(1) if m else ''
-    return hpv_sections(prevention_sections(nutrition_sections(treatment_sections(chemo_sections(how_it_is_given(how_it_works(TABLE_RE.sub(one, page))))))))
+    return semantic(hpv_sections(prevention_sections(nutrition_sections(treatment_sections(chemo_sections(how_it_is_given(how_it_works(TABLE_RE.sub(one, page)))))))))
