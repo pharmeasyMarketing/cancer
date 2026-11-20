@@ -766,7 +766,7 @@ def _p_when(seg):
 
 
 def prevention_sections(page):
-    if 'id="toc-how-much-cancer-is-actually-preventable"' not in page:
+    if 'id="toc-tobacco-the-single-largest-modifiable-cause-in-india"' not in page:
         return page
     for sid, fn in (('toc-tobacco-the-single-largest-modifiable-cause-in-india', _p_tobacco), ('toc-infections-alcohol-weight-and-diet', _p_infections),
                     ('toc-sorting-real-risks-from-rumours', _p_plan), ('toc-when-to-see-a-doctor', _p_when)):

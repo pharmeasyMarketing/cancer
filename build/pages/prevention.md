@@ -15,7 +15,7 @@ In India tobacco-related cancers were estimated to account for 27.1% of all canc
 
 This page explains what can be changed to reduce cancer risk, what cannot, and where to go next. Keep in mind that prevention reduces risk but cannot guarantee that cancer will not occur. Even people who take every precaution can develop cancer, and this should never be seen as their fault. 
 
-## How much cancer is actually preventable 
+## How preventable is cancer? 
 
 | Risk factor  | What the evidence shows  | What it contributes  | Can you change it?  | What to do  |
 | :---- | :---- | :---- | :---- | :---- |
