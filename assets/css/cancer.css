@@ -842,3 +842,13 @@ ul:is(.mech-grid, .medex-grid, .pv, .hpvt) > li { margin: 0; }
 .pv-acc.sym > summary > .pv-title { grid-row: 1 / span 2; align-self: center; font-size: 15.5px; line-height: 22px; }
 .pv-acc.sym .pv-acc-body { display: block; }
 .pv-acc.sym .pv-acc-body p { margin: 0; font-size: 15px; line-height: 25px; color: #4A525B; }
+
+/* tests page: table accordions (number | label over name | chevron), report parts, when-to-see panels */
+.pv-acc.tacc > summary > .pv-kicker { grid-column: 2; grid-row: 1; margin: 0; }
+.pv-acc.tacc > summary > .pv-title, .pv-acc.tacc[open] > summary > .pv-title { grid-column: 2; grid-row: 2; align-self: start; }
+.pv-acc.tacc .pv-acc-body { display: grid; gap: 12px; }
+.pv-acc.tacc .pv-f > div { font-size: 14px; line-height: 22px; color: #4A525B; }
+.medex-grid.rpt .medex { border-left-color: #9DCFCB; }
+.note-panel { background: #F5F7F8; border: 1px solid #E6E9ED; border-left: 4px solid #8E97A3; border-radius: 12px; padding: 14px 16px; margin: 0 0 14px; }
+:is(.panel-urgent, .panel-soon, .note-panel) > p:not(.panel-t) { margin: 0; font-size: 14.5px; line-height: 23px; color: #30363C; }
+.pv-acc.sym .pv-acc-body p + p { margin-top: 10px; }

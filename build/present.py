@@ -292,6 +292,31 @@ def risks(hdr, rows):
     return '<div class="pv pv-risks">%s</div>' % ''.join(out)
 
 
+def table_accordion(hdr, rows):
+    """A long card set as an accordion: closed = number, the first-column label and the row name; open = the
+    other columns as fields (limitations / other causes keep their note styling). First row open."""
+    out = []
+    for n, r in enumerate(rows, 1):
+        fields, notes = [], []
+        for j in range(1, len(hdr)):
+            v = r[j]
+            if is_empty(v):
+                continue
+            k = kind(hdr[j])
+            if k in ('warn', 'info', 'alert', 'tip', 'do'):
+                notes.append('<div class="pv-note %s"><span class="pv-note-l">%s%s</span><div>%s</div></div>' % (k, ICON[k], hdr[j], split_labels(v)))
+            else:
+                fields.append('<div class="pv-f"><span class="pv-lbl">%s</span><div>%s</div></div>' % (hdr[j], split_labels(v)))
+        out.append('<details class="pv-acc tacc"%s><summary><span class="pv-n">%d</span><span class="pv-lbl pv-kicker">%s</span>'
+                   '<span class="pv-title">%s</span><span class="pv-acc-chev" aria-hidden="true">%s</span></summary>'
+                   '<div class="pv-acc-body"><div class="pv-acc-top">%s</div>%s</div></details>'
+                   % (' open' if n == 1 else '', n, hdr[0], r[0], ICON['chev'], ''.join(fields), '<div class="pv-notes">%s</div>' % ''.join(notes) if notes else ''))
+    return '<div class="pv pv-accs">%s</div>' % ''.join(out)
+
+
+ACCORDION_TABLES = {'/cancer/tests/': {'type of biopsies', 'test', 'marker'}}   # Sarthak, 20 Nov
+
+
 def one(m):
     cls, thead, tbody, foot = m.groups()
     hdr = [h.strip() for h in TH_RE.findall(thead)]
@@ -300,8 +325,11 @@ def one(m):
     if not rows:
         return m.group(0)
     h0 = text(hdr[0]).lower()
+    acc_pages = [v for k, v in ACCORDION_TABLES.items() if PAGE.get('url', '').endswith(k)]
     if is_medicine_groups(hdr):
         body = accordion(hdr, rows)
+    elif acc_pages and text(hdr[0]).lower() in acc_pages[0]:
+        body = table_accordion(hdr, rows)
     elif h0 == 'risk factor' and 'can you change it?' in [text(h).lower() for h in hdr]:
         body = risks(hdr, rows)
     elif h0.startswith('if this') and len(hdr) in (2, 3):
@@ -1044,6 +1072,87 @@ def labelled_accordion(seg, after, icon_for, cls):
     return seg[:a] + '<div class="pv pv-accs">%s</div>' % ''.join(rows) + seg[e:]
 
 
+LAB_LI = re.compile(r'\s*<strong>(.*?)</strong>\s*(.*)$', re.S)
+
+
+def _lab(it):
+    """(title html, title text, body) of an item that opens with a bold label (links inside the label kept)."""
+    # "[**C-Reactive Protein Test (CRP)**](link)**:**" -> one bold label holding the link
+    it = re.sub(r'^\s*<a ([^>]*)><strong>(.*?)</strong></a>\s*<strong>:</strong>', r'<strong><a \1>\2</a>:</strong>', it, flags=re.S)
+    m = LAB_LI.match(it)
+    if not m:
+        return None
+    title, body = m.group(1).strip(), m.group(2).strip()
+    c = re.match(r'(<sup class="cite">.*?</sup>)\s*:\s*', body, re.S)     # "**Immunohistochemistry**[46]:"
+    if c:
+        title, body = title + c.group(1) + ':', body[c.end():]
+    if body.startswith(':') and not re.sub(r'<[^>]+>', '', title).rstrip().endswith(':'):
+        title, body = title + ':', body[1:].strip()
+    return title, re.sub(r'<[^>]+>', '', title), body
+
+
+def tests_sections(page):
+    if not PAGE.get('url', '').endswith('/cancer/tests/'):
+        return page
+    def biopsy(seg):
+        return re.sub(r'<p class="lead-p">(<strong>Note:</strong>\s*Biopsies may cause)', r'<p class="note-info">\1', seg, count=1)
+    def blood(seg):
+        def nonmarkers(items):
+            out = []
+            for it in items:
+                lab = _lab(it)
+                if not lab:
+                    return None
+                icon = 'drop' if 'blood' in lab[1].lower() or 'crp' in lab[1].lower() or 'ana' in lab[1].lower() else 'flask'
+                out.append('<div class="mech">%s<div><div class="mech-t">%s</div><p>%s</p></div></div>' % (_ic(IC[icon]), lab[0], lab[2]))
+            return '<div class="mech-grid infx">%s</div>' % ''.join(out)
+        seg = _replace_ul(seg, 'Blood tests that are not tumour markers', nonmarkers)
+        def markers(items):
+            rows, merged = [], []
+            for it in items:                     # an unlabelled item continues the one above it (AFP in testicular cancer)
+                lab = _lab(it)
+                if lab:
+                    merged.append([lab[0], [lab[2]]])
+                elif merged:
+                    merged[-1][1].append(it.strip())
+                else:
+                    return None
+            for n, (title, bodies) in enumerate(merged):
+                lab = (title, None, '</p><p>'.join(bodies))
+                rows.append('<details class="pv-acc sym"%s><summary>%s<span class="pv-title">%s</span><span class="pv-acc-chev" aria-hidden="true">%s</span></summary>'
+                            '<div class="pv-acc-body"><p>%s</p></div></details>' % (' open' if n == 0 else '', _ic(IC['flask']), lab[0], ICON['chev'], lab[2]))
+            return '<div class="pv pv-accs">%s</div>' % ''.join(rows)
+        return _replace_ul(seg, 'how doctors use different tumour markers', markers)
+    def report(seg):
+        def parts(items):
+            out = []
+            for it in items:
+                lab = _lab(it)
+                if not lab:
+                    return None
+                out.append('<div class="medex"><div class="medex-t">%s</div><p>%s</p></div>' % (lab[0], lab[2]))
+            return '<div class="medex-grid rpt">%s</div>' % ''.join(out)
+        return _replace_ul(seg, 'The main details in a report may include', parts)
+    def when(seg):
+        def panels(items):
+            out = []
+            for it in items:
+                lab = _lab(it)
+                if not lab:
+                    return None
+                l = lab[1].lower()
+                cls = 'panel-urgent' if 'same day' in l else 'panel-soon' if 'soon' in l else 'note-panel'
+                out.append('<div class="%s"><p class="panel-t">%s</p><p>%s</p></div>' % (cls, lab[0], lab[2]))
+            return ''.join(out)                  # the doc's order
+        return _replace_ul(seg, 'Consult a doctor if you notice any of the following', panels)
+    for sid, fn in (('toc-biopsy-what-it-is-and-how-it-is-done', biopsy), ('toc-blood-tests-and-tumour-markers', blood),
+                    ('toc-what-a-pathology-report-actually-says', report), ('toc-when-to-see-a-doctor', when)):
+        sp = section_span(page, sid)
+        if sp:
+            page = page[:sp[0]] + fn(page[sp[0]:sp[1]]) + page[sp[1]:]
+    return page
+
+
 def symptoms_sections(page):
     if '/cancer/symptoms/' not in PAGE.get('url', ''):
         return page
@@ -1078,4 +1187,4 @@ PAGE = {}
 def present(page):
     m = re.search(r'<link rel="canonical" href="([^"]+)"', page)
     PAGE['url'] = m.group(1) if m else ''
-    return semantic(symptoms_sections(hpv_sections(prevention_sections(nutrition_sections(treatment_sections(chemo_sections(how_it_is_given(how_it_works(TABLE_RE.sub(one, page))))))))))
+    return semantic(tests_sections(symptoms_sections(hpv_sections(prevention_sections(nutrition_sections(treatment_sections(chemo_sections(how_it_is_given(how_it_works(TABLE_RE.sub(one, page)))))))))))
