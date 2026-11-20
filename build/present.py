@@ -29,6 +29,7 @@ ICON = {
     'do': '<svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="m5 12 5 5L20 7"/></svg>',
     'info': '<svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 16v-4m0-4h.01M22 12a10 10 0 1 1-20 0 10 10 0 0 1 20 0z"/></svg>',
     'arrow': '<svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-6 6 6-6 6"/></svg>',
+    'chev': '<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="m6 9 6 6 6-6"/></svg>',
     'q': '<svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M9.1 9a3 3 0 0 1 5.8 1c0 2-3 3-3 3m.1 4h.01M22 12a10 10 0 1 1-20 0 10 10 0 0 1 20 0z"/></svg>',
 }
 
@@ -149,7 +150,7 @@ def balance(body):
     return body[:i] + body[i + 1:] + [wide]
 
 
-def flow_lines(field):
+def flow_lines(field, heads=()):
     """In a full-width field, a run of 3+ short line-broken items (a list of cancers, one per line) is laid
     out in columns instead of a tall single column. The words are not changed."""
     m = re.match(r'(.*?<div>)(.*)(</div></div>)$', field, re.S)
@@ -166,7 +167,8 @@ def flow_lines(field):
         run.clear()
     for k, seg in enumerate(segs):
         t = text(seg)
-        heading = '<b>' in seg or '<strong>' in seg or t.rstrip().endswith(':')   # "Vinblastine:" starts a new group
+        heading = ('<b>' in seg or '<strong>' in seg or t.rstrip().endswith(':')    # "Vinblastine:" starts a new group
+                   or t.strip().rstrip(':').lower() in heads)                       # "Oxaliplatin" (a molecule of this group)
         if k and 0 < len(t) <= 40 and not heading:
             run.append(seg)
         else:
@@ -216,6 +218,42 @@ def cards(hdr, rows):
     return '<div class="pv pv-cards %s">%s</div>' % (layout, ''.join(out))
 
 
+def is_medicine_groups(hdr):
+    """The chemotherapy page's "Medicine group | Molecules used in India | How it is given | What it is used
+    for | Brands on PharmEasy" table."""
+    heads = [text(h).lower() for h in hdr]
+    return heads and heads[0] == 'medicine group' and 'brands on pharmeasy' in heads and 'what it is used for' in heads
+
+
+def accordion(hdr, rows):
+    """One accordion per medicine group, every group in the same order: molecules and how it is given side by
+    side, then what it is used for, then the brands (grouped by molecule, in columns). Closed, a group shows
+    its name and a plain-text preview of its molecules. The first group starts open."""
+    heads = [text(h).lower() for h in hdr]
+    col = lambda name: heads.index(name) if name in heads else None
+    i_mol, i_how, i_use, i_br = col('molecules used in india'), col('how it is given'), col('what it is used for'), col('brands on pharmeasy')
+    used = {0, i_mol, i_how, i_use, i_br}
+    other = [j for j in range(len(hdr)) if j not in used and any(not is_empty(r[j]) for r in rows)]   # e.g. a filled Price column
+
+    def field(j, r, extra=''):
+        if j is None or is_empty(r[j]):
+            return ''
+        return '<div class="pv-f%s"><span class="pv-lbl">%s</span><div>%s</div></div>' % (extra, hdr[j], split_labels(r[j]))
+    out = []
+    for n, r in enumerate(rows, 1):
+        preview = text(re.sub(r'\s*<br\s*/?>\s*', ', ', r[i_mol])) if i_mol is not None else ''
+        mols = {x.strip().lower() for x in re.split(r'[,;]|\band\b', preview) if x.strip()}
+        top = field(i_mol, r) + field(i_how, r) + ''.join(field(j, r) for j in other)
+        use = field(i_use, r, ' pv-wide')
+        br = field(i_br, r, ' pv-wide')
+        br = flow_lines(br, mols) if br else ''
+        out.append('<details class="pv-acc"%s><summary><span class="pv-n">%d</span><span class="pv-acc-h"><span class="pv-title">%s</span>'
+                   '<span class="pv-acc-sub" aria-hidden="true">%s</span></span><span class="pv-acc-chev" aria-hidden="true">%s</span></summary>'
+                   '<div class="pv-acc-body"><div class="pv-acc-top">%s</div>%s%s</div></details>'
+                   % (' open' if n == 1 else '', n, r[0], preview, ICON['chev'], top, use, br))
+    return '<div class="pv pv-accs">%s</div>' % ''.join(out)
+
+
 def one(m):
     cls, thead, tbody, foot = m.groups()
     hdr = [h.strip() for h in TH_RE.findall(thead)]
@@ -224,7 +262,9 @@ def one(m):
     if not rows:
         return m.group(0)
     h0 = text(hdr[0]).lower()
-    if h0.startswith('if this') and len(hdr) in (2, 3):
+    if is_medicine_groups(hdr):
+        body = accordion(hdr, rows)
+    elif h0.startswith('if this') and len(hdr) in (2, 3):
         body = situations(hdr, rows)
     elif 'nums' in cls and len(hdr) == 4:
         body = stats(hdr, rows)
