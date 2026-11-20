@@ -882,7 +882,6 @@ ul.pv-accs, div.pv-accs { margin-bottom: 18px; }
   .brands .brand, .brands .brand.more, .mol-more-row .brand { min-height: 30px; display: inline-flex; align-items: center; padding: 3px 11px; }
   .brands { gap: 6px; }
 }
-.pv-acc-top > .pv-f.pv-src { grid-column: 1 / -1; }
 .pv-foot { color: #5C636D !important; }
 @container art (max-width: 640px) { .mol-name a { display: inline-block; padding: 5px 0; } }
 .glp-crumb [aria-current="page"] { color: #00736C !important; }
