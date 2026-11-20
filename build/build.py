@@ -25,9 +25,10 @@ def bust(page):
 
 # ---- CMS fields (the doc's {{...}} placeholders) ----
 PUBLISHED_DATE = '6 November 2026'
-LAST_UPDATED = '6 November 2026'
+LAST_UPDATED = '20 November 2026'
 CURRENT_MONTH_YEAR = 'November 2026'
-LAST_UPDATED_ISO = '2026-11-06T09:00:00+05:30'
+PUBLISHED_ISO = '2026-11-06T09:00:00+05:30'
+LAST_UPDATED_ISO = '2026-11-20T18:30:00+05:30'
 CANON = 'https://pharmeasy.in/cancer/'
 # The committed index.html is what GitHub Pages serves (pharmeasymarketing.github.io/cancer/),
 # and that copy must stay out of search. Only a pharmeasy.in deploy builds with --production.
@@ -855,7 +856,7 @@ def head(faqs, desc, title):
                   'isPartOf': {'@id': 'https://pharmeasy.in/#Website'}, 'breadcrumb': {'@id': CANON + '#breadcrumb'},
                   'publisher': {'@id': 'https://pharmeasy.in/#Organization'},
                   'author': {'@type': 'Organization', 'name': 'PharmEasy Medical Team', 'url': 'https://pharmeasy.in/legal/editorial-policy'},
-                  'dateModified': LAST_UPDATED_ISO,
+                  'datePublished': PUBLISHED_ISO, 'dateModified': LAST_UPDATED_ISO,
                   **medical_page_props(json.load(open(os.path.join(HERE, 'pages.json'), encoding='utf8'))['home_about']),
                   'reviewedBy': {'@type': 'Person', 'name': REVIEWER, 'url': REVIEWER_URL, 'image': REVIEWER_IMG}})
     graph.append({'@type': 'BreadcrumbList', '@id': CANON + '#breadcrumb', 'itemListElement': [

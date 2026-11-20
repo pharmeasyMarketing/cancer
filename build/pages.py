@@ -644,7 +644,7 @@ def head(doc, path, faqs, desc, title, prefix):
                   'isPartOf': {'@id': 'https://pharmeasy.in/#Website'}, 'breadcrumb': {'@id': canon + '#breadcrumb'},
                   'publisher': {'@id': 'https://pharmeasy.in/#Organization'},
                   'author': {'@type': 'Organization', 'name': 'PharmEasy Medical Team', 'url': 'https://pharmeasy.in/legal/editorial-policy'},
-                  'dateModified': B.LAST_UPDATED_ISO, 'reviewedBy': rev, **B.medical_page_props(ABOUT.get(path, []))})
+                  'datePublished': B.PUBLISHED_ISO, 'dateModified': B.LAST_UPDATED_ISO, 'reviewedBy': rev, **B.medical_page_props(ABOUT.get(path, []))})
     cr = crumbs(path, doc['h1'])
     graph.append({'@type': 'BreadcrumbList', '@id': canon + '#breadcrumb', 'itemListElement': [
         {'@type': 'ListItem', 'position': i + 1, 'name': t, 'item': u or canon} for i, (t, u) in enumerate(cr)]})
