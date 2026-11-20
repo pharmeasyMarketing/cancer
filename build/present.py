@@ -266,6 +266,25 @@ def accordion(hdr, rows):
     return '<div class="pv pv-accs">%s</div>' % ''.join(out)
 
 
+def risks(hdr, rows):
+    """Prevention "Risk factor | What the evidence shows | What it contributes | Can you change it? | What to do":
+    one full-width row per factor (factor + changeability | evidence + contribution | what to do), the row edge
+    coloured by whether it can be changed."""
+    heads = [text(h).lower() for h in hdr]
+    ci = heads.index('can you change it?')
+    di = next((k for k, h in enumerate(heads) if h == 'what to do'), None)
+    mid = [k for k in range(1, len(hdr)) if k not in (ci, di)]
+    out = []
+    for r in rows:
+        tone = badge(r[ci], hdr[ci]) if not is_empty(r[ci]) else 'muted'
+        left = ('<div class="rk-l"><span class="pv-lbl">%s</span><div class="rk-t">%s</div>%s</div>'
+                % (hdr[0], r[0], '<span class="pv-badge %s"><span class="pv-badge-l">%s</span> %s</span>' % (tone, hdr[ci], r[ci]) if not is_empty(r[ci]) else ''))
+        midh = ''.join('<div class="pv-f"><span class="pv-lbl">%s</span><div>%s</div></div>' % (hdr[k], r[k]) for k in mid if not is_empty(r[k]))
+        do = ('<div class="rk-do"><span class="pv-note-l">%s%s</span><div>%s</div></div>' % (ICON['do'], hdr[di], r[di])) if di is not None and not is_empty(r[di]) else ''
+        out.append('<div class="rk rk-%s">%s<div class="rk-m">%s</div>%s</div>' % (tone, left, midh, do))
+    return '<div class="pv pv-risks">%s</div>' % ''.join(out)
+
+
 def one(m):
     cls, thead, tbody, foot = m.groups()
     hdr = [h.strip() for h in TH_RE.findall(thead)]
@@ -276,6 +295,8 @@ def one(m):
     h0 = text(hdr[0]).lower()
     if is_medicine_groups(hdr):
         body = accordion(hdr, rows)
+    elif h0 == 'risk factor' and 'can you change it?' in [text(h).lower() for h in hdr]:
+        body = risks(hdr, rows)
     elif h0.startswith('if this') and len(hdr) in (2, 3):
         body = situations(hdr, rows)
     elif 'nums' in cls and len(hdr) == 4:
@@ -730,8 +751,7 @@ def _p_tobacco(seg):
         tiles = ('<div class="stat3" aria-hidden="true"><div><b>%s%%</b><span>of Indian adults use tobacco</span></div>'
                  '<div><b>%s%%</b><span>using smokeless tobacco</span></div><div><b>%s%%</b><span>smoking</span></div></div>' % n.groups())
         seg = seg.replace(m.group(0), m.group(0) + '\n    ' + tiles, 1)
-    return _cmp_pct(seg, 'Health advice focused mainly on cigarettes', r'([\d.]+)% of smokers were advised to quit by a doctor, compared with just ([\d.]+)% of smokeless',
-                    'smokers were advised to quit by a doctor', 'smokeless tobacco users')
+    return seg     # quit-advice comparison bar removed (Sarthak, 20 Nov)
 
 
 def _p_infections(seg):

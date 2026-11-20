@@ -776,3 +776,17 @@ ul.checks > li { break-inside: avoid; margin: 0 0 8px; }
 .tl.prio p { font-size: 15px; line-height: 25px; color: #30363C; margin-top: 2px; }
 @container art (max-width: 640px) { .mech-grid.infx { columns: 1; } }
 @container art (max-width: 420px) { .stat3 { grid-template-columns: 1fr 1fr; } .stat3 > div:first-child { grid-column: 1 / -1; } }
+
+/* prevention risk factors: one comparison row per factor */
+.pv-risks { gap: 10px; }
+.rk { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.5fr) minmax(0, 1fr); gap: 14px 22px; background: #fff; border: 1px solid #E6E9ED; border-left: 4px solid #9DCFCB; border-radius: 12px; padding: 16px 18px; box-shadow: 0 1px 3px rgba(15,46,44,0.05); }
+.rk-good { border-left-color: #008880; }
+.rk-mid { border-left-color: #D99A1E; }
+.rk-bad, .rk-muted { border-left-color: #B9C0C8; }
+.rk-l { display: flex; flex-direction: column; gap: 6px; align-items: flex-start; }
+.rk-t { font-size: 15.5px; line-height: 23px; font-weight: 800; color: #1C1F22; }
+.rk-m { display: grid; gap: 10px; align-content: start; }
+.rk-m .pv-f > div { font-size: 14px; line-height: 22px; color: #4A525B; }
+.rk-do { background: #F2F9F8; border-radius: 10px; padding: 10px 12px; align-self: start; font-size: 14px; line-height: 22px; color: #30363C; }
+.rk-do .pv-note-l { display: flex; align-items: center; gap: 5px; font-size: 10.5px; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; color: #00736C; margin-bottom: 4px; }
+@container art (max-width: 720px) { .rk { grid-template-columns: 1fr; gap: 10px; padding: 14px; } }
