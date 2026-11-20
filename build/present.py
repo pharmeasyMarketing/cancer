@@ -356,5 +356,91 @@ def how_it_is_given(page):
     return GIVEN_RE.sub(fix, page, count=1)
 
 
+def _ic(paths):
+    return ('<span class="mech-ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22"><g fill="none" stroke="currentColor" '
+            'stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">%s</g></svg></span>' % paths)
+
+
+IC_LEAF = '<path d="M5 19c0-8 5-13 14-14-1 9-6 14-14 14z"/><path d="M5 19 13 11"/>'
+IC_SLIDERS = '<path d="M4 7h10M18 7h2M4 17h4M12 17h8"/><circle cx="16" cy="7" r="2"/><circle cx="10" cy="17" r="2"/>'
+IC_SHIELD = '<path d="M12 3 5 6v6c0 4 3 7 7 9 4-2 7-5 7-9V6z"/><path d="m9 12 2 2 4-4"/>'
+IC_DNA = MECH_ICON['alkylat']
+IC_PILL = ROUTE_ICON['oral']
+
+
+def section_span(page, sid):
+    a = page.find('id="%s"' % sid)
+    if a < 0:
+        return None
+    b = page.find('<div class="asec"', a)
+    return a, (b if b > 0 else len(page))
+
+
+def _course(seg):
+    ps = re.findall(r'\n    <p class="lead-p">(.*?)</p>', seg, re.S)
+    if len(ps) != 3 or not all(k in ps[0] for k in ('two weeks', 'one-week break', '21 days')):
+        return seg
+    diagram = ('<div class="cyc" aria-hidden="true"><div class="cyc-bar"><span class="cyc-on">treatment for two weeks</span>'
+               '<span class="cyc-off">a one-week break</span></div><div class="cyc-loop">%s repeated every 21 days</div></div>'
+               % '<svg viewBox="0 0 24 24" width="15" height="15"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M20 12a8 8 0 1 1-2.3-5.7M20 4v4h-4"/></svg>')
+    duo = ('<div class="duo"><div class="mech">%s<p>%s</p></div><div class="mech">%s<p>%s</p></div></div>'
+           % (_ic(IC_LEAF), ps[1], _ic(IC_SLIDERS), ps[2]))
+    seg = seg.replace('<p class="lead-p">%s</p>' % ps[0], '<p class="lead-p">%s</p>\n    %s' % (ps[0], diagram), 1)
+    seg = seg.replace('<p class="lead-p">%s</p>' % ps[1], duo, 1).replace('\n    <p class="lead-p">%s</p>' % ps[2], '', 1)
+    return seg
+
+
+MED_LI = re.compile(r'<li>(<a href="[^"]+">[^<]+</a>):\s*(.*?)</li>', re.S)
+
+
+def _medicines(seg):
+    m = re.search(r'<ul class="pg-list">((?:<li><a href="[^"]+">[^<]+</a>:.*?</li>)+)</ul>', seg, re.S)
+    if m and len(MED_LI.findall(m.group(1))) >= 3:
+        cards = ''.join('<div class="medex"><div class="medex-t">%s:</div><p>%s</p></div>' % x for x in MED_LI.findall(m.group(1)))
+        seg = seg.replace(m.group(0), '<div class="medex-grid">%s</div>' % cards, 1)
+    seg = seg.replace('<p class="lead-p"><strong>A note of caution:</strong>', '<p class="note-warn"><strong>A note of caution:</strong>', 1)
+    for lbl in ('The medicines used:', 'Medicine Prices and Prescription Requirements:'):
+        seg = seg.replace('<p class="lead-p"><strong>%s</strong>' % lbl, '<p class="note-info"><strong>%s</strong>' % lbl, 1)
+    return seg
+
+
+def _changed(seg):
+    m = re.search(r'\n    <p class="lead-p">(.*?)</p>', seg, re.S)
+    if not m:
+        return seg
+    groups = []
+    for st in sentences(m.group(1)):
+        if groups and re.match(r'(This|These|It)\b', st):
+            groups[-1] += ' ' + st
+        else:
+            groups.append(st)
+    if len(groups) < 2:
+        return seg
+    def icon(g):
+        l = g.lower()
+        return _ic(IC_PILL if 'olanzapine' in l or 'sickness' in l else IC_SHIELD if 'white blood' in l or 'infection' in l else IC_DNA if 'gene' in l else MECH_ICON['misc'])
+    cards = ''.join('<div class="mech">%s<p>%s</p></div>' % (icon(g), g) for g in groups)
+    return seg.replace(m.group(0), '\n    <div class="news-grid">%s</div>' % cards, 1)
+
+
+def _questions(seg):
+    m = re.search(r'(</h2>\s*)<ul class="pg-list">((?:<li>[^<]*\?</li>)+)</ul>', seg)
+    if not m:
+        return seg
+    qs = re.findall(r'<li>([^<]*\?)</li>', m.group(2))
+    items = ''.join('<li><span class="q-n" aria-hidden="true">%d</span><span>%s</span></li>' % (k, q) for k, q in enumerate(qs, 1))
+    return seg.replace(m.group(0), m.group(1) + '<ol class="qlist">%s</ol>' % items, 1)
+
+
+def chemo_sections(page):
+    """Chemotherapy page: the sections not yet laid out as components, same words."""
+    for sid, fn in (('toc-what-a-course-looks-like', _course), ('toc-the-medicines-used', _medicines),
+                    ('toc-what-has-changed-recently', _changed), ('toc-questions-to-ask-your-oncologist', _questions)):
+        sp = section_span(page, sid)
+        if sp:
+            page = page[:sp[0]] + fn(page[sp[0]:sp[1]]) + page[sp[1]:]
+    return page
+
+
 def present(page):
-    return how_it_is_given(how_it_works(TABLE_RE.sub(one, page)))
+    return chemo_sections(how_it_is_given(how_it_works(TABLE_RE.sub(one, page))))

@@ -294,12 +294,19 @@ def render_blocks(lines, page, images):
             continue
         if LIST_RE.match(l):
             items = []
-            while i < n and (LIST_RE.match(lines[i]) or not lines[i].strip()):
+            # an indented "[Name](url): ..." line right after an item is the next item whose bullet the doc
+            # export dropped (chemotherapy: Paclitaxel after Cisplatin)
+            SIBLING = re.compile(r'^\s{2,}(\[[^\]]+\]\([^)\s]+\):.*)$')
+            while i < n and (LIST_RE.match(lines[i]) or not lines[i].strip() or (items and SIBLING.match(lines[i]))):
                 m = LIST_RE.match(lines[i])
                 if m:
                     lvl = 1 if (len(m.group(1)) >= 2 or m.group(2)) else 0
+                    if not any(l0 == 0 for l0, _ in items):
+                        lvl = 0       # a list cannot open with a sub-item: a quoted/indented first item is top level
                     if m.group(3).strip():
                         items.append((lvl, m.group(3)))
+                elif lines[i].strip():
+                    items.append((items[-1][0], SIBLING.match(lines[i]).group(1)))
                 i += 1
                 # stop a list at a blank line followed by non-list content
                 if i < n and not lines[i].strip():

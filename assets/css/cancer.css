@@ -697,3 +697,25 @@ main .ex-subs a, main .ctz-subs a, main .srcs a { text-decoration-line: none !im
 .mech-grid.routes { display: block; columns: 2; column-gap: 12px; }
 .mech-grid.routes > .mech { break-inside: avoid; margin: 0 0 12px; }
 @container art (max-width: 520px) { .mech-grid.routes { columns: 1; } .mech-grid.routes > .mech { margin-bottom: 10px; } }
+
+/* chemotherapy: course cycle, medicine examples, notes, recent changes, questions checklist */
+.cyc { margin: 0 0 16px; }
+.cyc-bar { display: grid; grid-template-columns: 2fr 1fr; border-radius: 10px; overflow: hidden; font-size: 13px; line-height: 18px; font-weight: 700; }
+.cyc-on { background: #008880; color: #fff; padding: 10px 12px; }
+.cyc-off { background: #EAF5F4; color: #00736C; padding: 10px 12px; border: 1px dashed #9DCFCB; border-left: 0; border-radius: 0 10px 10px 0; }
+.cyc-loop { display: flex; align-items: center; gap: 6px; margin-top: 6px; font-size: 12.5px; color: #5C636D; font-weight: 600; }
+.duo { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin: 0 0 18px; }
+.duo .mech p, .news-grid .mech p { font-size: 14.5px; line-height: 23px; color: #30363C; }
+.medex-grid { columns: 2; column-gap: 12px; margin: 0 0 18px; }
+.medex { break-inside: avoid; margin: 0 0 12px; background: #fff; border: 1px solid #E6E9ED; border-left: 3px solid #008880; border-radius: 10px; padding: 12px 14px; }
+.medex-t { font-size: 15px; line-height: 21px; font-weight: 800; margin: 0 0 4px; }
+.medex p { margin: 0; font-size: 14px; line-height: 22px; color: #5C636D; }
+.note-warn, .note-info { margin: 0 0 12px; border-radius: 10px; padding: 12px 14px; font-size: 14.5px; line-height: 23px; }
+.note-warn { background: #FFF4F2; border: 1px solid #F6C9C1; color: #7A2617; }
+.note-warn strong { color: #A3321F; }
+.note-info { background: #F5F7F8; border: 1px solid #E6E9ED; color: #4A525B; font-size: 14px; line-height: 22px; }
+.news-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin: 0 0 18px; }
+.qlist { list-style: none; margin: 0 0 18px; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.qlist li { display: flex; gap: 10px; align-items: flex-start; background: #fff; border: 1px solid #E6E9ED; border-radius: 10px; padding: 12px 14px; font-size: 14.5px; line-height: 22px; color: #30363C; }
+.q-n { flex: none; width: 26px; height: 26px; border-radius: 50%; background: #EAF5F4; color: #00736C; font-size: 12.5px; font-weight: 800; display: flex; align-items: center; justify-content: center; }
+@container art (max-width: 560px) { .duo, .qlist { grid-template-columns: 1fr; } .medex-grid { columns: 1; } .cyc-bar { font-size: 12px; } }
