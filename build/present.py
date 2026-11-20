@@ -518,7 +518,7 @@ IC = {
     'scalpel': '<path d="M4 20 15 9l3 3-8 8z"/><path d="m15 9 4-5 1 1-2 6"/>',
     'pill': ROUTE_ICON['oral'],
     'ray': '<circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4M5 5l2.5 2.5M16.5 16.5 19 19M5 19l2.5-2.5M16.5 7.5 19 5"/>',
-    'scope': '<path d="M6 18h8M10 18v-4M8 4h4v6a2 2 0 0 1-4 0zM14 10a6 6 0 0 1 0 8"/>',
+    'scope': '<path d="M6 18h8M3 22h18M14 22a7 7 0 1 0 0-14h-1M9 14h2M9 12a2 2 0 0 1-2-2V6h6v4a2 2 0 0 1-2 2zM12 6V3a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v3"/>',
     'scan': '<rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 20h8M7 13l3-3 2 2 4-4"/>',
     'shield': IC_SHIELD,
     'rupee': '<path d="M6 3h12M6 8h12M6 13h3M9 13c6.667 0 6.667-10 0-10M6 13l8.5 8"/>',
