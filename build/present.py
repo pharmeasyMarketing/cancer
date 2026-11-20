@@ -262,7 +262,7 @@ def accordion(hdr, rows):
     for n, r in enumerate(rows, 1):
         preview = re.sub(r':\s*,', ':', text(re.sub(r'\s*<br\s*/?>\s*', ', ', r[i_mol]))) if i_mol is not None else ''
         mols = {x.strip().lower() for x in re.split(r'[,;]|\band\b', preview) if x.strip()}
-        top = field(i_mol, r) + field(i_how, r) + ''.join(field(j, r) for j in other)
+        top = title_field(hdr[0], r[0]) + field(i_mol, r) + field(i_how, r) + ''.join(field(j, r) for j in other)
         use = field(i_use, r, ' pv-wide')
         use = flow_lines(use, mols) if use else ''
         br = field(i_br, r, ' pv-wide')
@@ -270,7 +270,7 @@ def accordion(hdr, rows):
         out.append('<details class="pv-acc"%s><summary><span class="pv-n">%d</span><span class="pv-acc-h"><span class="pv-title">%s</span>'
                    '<span class="pv-acc-sub" aria-hidden="true">%s</span></span><span class="pv-acc-chev" aria-hidden="true">%s</span></summary>'
                    '<div class="pv-acc-body"><div class="pv-acc-top">%s</div>%s%s</div></details>'
-                   % (' open' if n == 1 else '', n, r[0], preview, ICON['chev'], top, use, br))
+                   % (' open' if n == 1 else '', n, plain_title(r[0]), preview, ICON['chev'], top, use, br))
     return '<div class="pv pv-accs">%s</div>' % ''.join(out)
 
 
@@ -293,6 +293,16 @@ def risks(hdr, rows):
     return '<div class="pv pv-risks">%s</div>' % ''.join(out)
 
 
+def plain_title(h):
+    """An accordion row title without links or citation markers (a link inside the clickable row is a nested
+    control). The original, with its link/citations, goes inside the row as the first field."""
+    return re.sub(r'<a\b[^>]*>(.*?)</a>', r'\1', re.sub(r'\s*<sup class="cite">.*?</sup>', '', h, flags=re.S), flags=re.S).strip()
+
+
+def title_field(label, h):
+    return '' if plain_title(h) == h.strip() else '<div class="pv-f pv-src"><span class="pv-lbl">%s</span><div>%s</div></div>' % (label, h)
+
+
 def table_accordion(hdr, rows):
     """A long card set as an accordion: closed = number, the first-column label and the row name; open = the
     other columns as fields (limitations / other causes keep their note styling). First row open."""
@@ -309,10 +319,11 @@ def table_accordion(hdr, rows):
             else:
                 fields.append('<div class="pv-f"><span class="pv-lbl">%s</span><div>%s</div></div>' % (hdr[j], split_labels(v)))
         kicker = '' if text(hdr[0]).lower() in NO_KICKER else '<span class="pv-lbl pv-kicker">%s</span>' % hdr[0]
+        fields.insert(0, title_field(hdr[0], r[0]))
         out.append('<details class="pv-acc tacc%s"%s><summary><span class="pv-n">%d</span>%s'
                    '<span class="pv-title">%s</span><span class="pv-acc-chev" aria-hidden="true">%s</span></summary>'
                    '<div class="pv-acc-body"><div class="pv-acc-top">%s</div>%s</div></details>'
-                   % ('' if kicker else ' nokick', ' open' if n == 1 else '', n, kicker, r[0], ICON['chev'], ''.join(fields), '<div class="pv-notes">%s</div>' % ''.join(notes) if notes else ''))
+                   % ('' if kicker else ' nokick', ' open' if n == 1 else '', n, kicker, plain_title(r[0]), ICON['chev'], ''.join(fields), '<div class="pv-notes">%s</div>' % ''.join(notes) if notes else ''))
     return '<div class="pv pv-accs">%s</div>' % ''.join(out)
 
 

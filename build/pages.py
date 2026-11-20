@@ -551,13 +551,13 @@ def hero(doc, path):
     <button type="button" class="hero-toggle" id="hero-toggle" aria-expanded="false" aria-controls="hero-intro" hidden><span>Read more</span>{B.svg(B.IC['chev'], 16)}</button>
 
     <div style="background:#fff;border:1px solid #DCE6E5;border-radius:12px;padding:20px;display:flex;gap:14px;align-items:flex-start;box-shadow:0 2px 10px rgba(15,46,44,0.05)">
-      <div style="width:30px;height:30px;border-radius:8px;background:#008880;color:#fff;display:flex;align-items:center;justify-content:center;flex-shrink:0">{stetho}</div>
+      <div style="width:30px;height:30px;border-radius:8px;background:#00736C;color:#fff;display:flex;align-items:center;justify-content:center;flex-shrink:0">{stetho}</div>
       <div>
         <p style="font-size:14px;line-height:22px;color:#25282B;margin:0 0 14px"><strong style="font-weight:800">Have a question about your situation?</strong> An online doctor consultation can help you understand what applies to you and how urgently you may need further evaluation.</p>
         <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:12px">
           <a class="cx-btn-primary" href="{B.ODC}">Consult a doctor</a>
         </div>
-        <p style="font-size:12px;line-height:19px;color:#8E97A3;margin:0">This information is meant for educational purposes and does not replace advice from your doctor. All oncology medicines are prescription-only.</p>
+        <p style="font-size:12px;line-height:19px;color:#6B747E;margin:0">This information is meant for educational purposes and does not replace advice from your doctor. All oncology medicines are prescription-only.</p>
       </div>
     </div>
   </div>
@@ -573,15 +573,15 @@ def rail(toc, rel, has_faq, has_refs):
     return (
         '      <div class="toc" style="order:1;flex:0 1 250px;min-width:230px;position:sticky;top:16px;max-height:calc(100vh - 32px);overflow-y:auto;display:flex;flex-direction:column;gap:14px">\n'
         '        <div class="pad toc-nav" style="background:#fff;border:1px solid #E6E9ED;border-radius:12px;padding:18px">\n'
-        '          <div style="font-size:11px;font-weight:800;letter-spacing:0.06em;text-transform:uppercase;color:#8E97A3;margin-bottom:12px">On this page</div>\n'
+        '          <div style="font-size:11px;font-weight:800;letter-spacing:0.06em;text-transform:uppercase;color:#6B747E;margin-bottom:12px">On this page</div>\n'
         '          <div style="display:flex;flex-direction:column;gap:10px">%s</div>\n        </div>\n'
         '        <div class="pad" style="background:#F2F9F8;border:1px solid #B8DEDB;border-radius:12px;padding:18px">\n'
-        '          <div style="display:flex;gap:10px;align-items:center;margin-bottom:8px"><span style="width:32px;height:32px;border-radius:10px;background:#fff;border:1px solid #B8DEDB;color:#008880;display:flex;align-items:center;justify-content:center;flex-shrink:0">%s</span>'
+        '          <div style="display:flex;gap:10px;align-items:center;margin-bottom:8px"><span style="width:32px;height:32px;border-radius:10px;background:#fff;border:1px solid #B8DEDB;color:#00736C;display:flex;align-items:center;justify-content:center;flex-shrink:0">%s</span>'
         '<div style="font-size:15px;font-weight:800;color:#004D48">Consult a doctor</div></div>\n'
         '          <p style="font-size:13px;line-height:20px;color:#5C636D;margin:0 0 12px">Unsure whether a symptom or a test result needs attention? A doctor can help you understand how urgently it needs to be checked.</p>\n'
-        '          <a href="%s" style="display:block;text-align:center;background:#008880;color:#fff;font-weight:700;font-size:13px;padding:11px 16px;border-radius:12px">Consult a doctor</a>\n        </div>\n'
+        '          <a href="%s" style="display:block;text-align:center;background:#00736C;color:#fff;font-weight:700;font-size:13px;padding:11px 16px;border-radius:12px">Consult a doctor</a>\n        </div>\n'
         '        <div class="pad" style="background:#fff;border:1px solid #E6E9ED;border-radius:12px;padding:18px">\n'
-        '          <div style="font-size:11px;font-weight:800;letter-spacing:0.06em;text-transform:uppercase;color:#8E97A3;margin-bottom:12px">Related pages</div>\n'
+        '          <div style="font-size:11px;font-weight:800;letter-spacing:0.06em;text-transform:uppercase;color:#6B747E;margin-bottom:12px">Related pages</div>\n'
         '          <div style="display:flex;flex-direction:column;gap:10px">%s</div>\n        </div>\n'
         '      </div>\n' % (links, B.svg(B.IC['steth'], 17), B.ODC, r))
 
@@ -593,7 +593,7 @@ def faq_html(faqs):
         items.append('      <details class="faq"%s style="background:#fff;border:1px solid #E6E9ED;border-radius:12px;overflow:hidden;box-shadow:0 1px 3px rgba(15,46,44,0.06),0 4px 14px rgba(15,46,44,0.05)">\n'
                      '        <summary style="padding:20px 24px;display:flex;justify-content:space-between;gap:16px;align-items:center">'
                      '<h3 style="margin:0;font-size:17px;line-height:25px;font-weight:800;color:#25282B;text-wrap:pretty">%s</h3>'
-                     '<span class="chev" style="color:#8E97A3;flex-shrink:0;display:flex">%s</span></summary>\n'
+                     '<span class="chev" style="color:#6B747E;flex-shrink:0;display:flex">%s</span></summary>\n'
                      '        <div style="padding:0 24px 12px">%s</div>\n      </details>' % (' open' if i == 0 else '', esc(q), B.svg(B.IC['chev'], 18), ans))
     return ('\n  <div class="asec" style="padding:36px 0 0">\n'
             '    <h2 id="toc-faq" style="font-size:24px;line-height:32px;font-weight:800;margin:0 0 16px;color:#1C1F22;scroll-margin-top:20px">Frequently Asked Questions</h2>\n'
@@ -604,7 +604,7 @@ def refs_html(refs):
     rows = []
     for k in sorted(refs):
         t, _ = ref_html(refs[k])
-        rows.append('        <div style="display:flex;gap:10px;font-size:13px;line-height:21px;color:#5C636D"><span id="ref-%d" style="font-weight:800;color:#8E97A3;flex-shrink:0;scroll-margin-top:20px">%d.</span><span>%s</span></div>' % (k, k, t))
+        rows.append('        <div style="display:flex;gap:10px;font-size:13px;line-height:21px;color:#5C636D"><span id="ref-%d" style="font-weight:800;color:#6B747E;flex-shrink:0;scroll-margin-top:20px">%d.</span><span>%s</span></div>' % (k, k, t))
     return ('\n  <div class="asec" style="padding:36px 0 0">\n    <div id="references">\n'
             '      <h2 style="font-size:24px;line-height:32px;font-weight:800;margin:0 0 14px;color:#1C1F22;scroll-margin-top:20px">References</h2>\n'
             '      <div class="pad refs" id="refs-list" style="background:#fff;border:1px solid #E6E9ED;border-radius:12px;padding:22px;display:flex;flex-direction:column;gap:10px">\n%s\n      </div>\n    </div>\n  </div>\n' % '\n'.join(rows))
