@@ -1,0 +1,105 @@
+name: Daily link crawl (canonical URLs)
+
+# Every day: crawl the links on the cancer hub pages and point every medicine and molecule link at the
+# URL its PharmEasy page declares as canonical (or, for PharmEasy NOINDEX pages that have no canonical,
+# the page's own slug URL). Dead links (404/410) are dropped at build time as before.
+#
+#   1. build the pages from the committed sources and fingerprint the result
+#   2. python3 build/fetch_mol_medicines.py  (the medicine list behind each "+N more" brand chip)
+#      python3 build/check_links.py --daily   (every medicine/molecule link + its canonical target,
+#      other links when older than 7 days; a blocked recheck keeps the last good result)
+#   3. rebuild and fingerprint again
+#   4. commit build/link_status.json and the link reports
+#   5. only if the pages changed (a link moved to a new canonical, or died): run the deploy workflow,
+#      which rebuilds for production (noindex still follows KEEP_NOINDEX there) and uploads
+#
+# Safety: if one run finds more than MAX_NEW_DEAD newly dead links, it stops without committing or
+# deploying (a PharmEasy outage must not strip the pages of their medicine links).
+
+on:
+  schedule:
+    - cron: "30 0 * * *"      # 06:00 IST
+  workflow_dispatch:
+
+permissions:
+  contents: write             # commit link_status.json
+  actions: write              # start deploy.yml (a push made with GITHUB_TOKEN does not trigger it)
+
+concurrency:
+  group: cancer-links
+  cancel-in-progress: false
+
+env:
+  MAX_NEW_DEAD: "20"
+
+jobs:
+  crawl:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+
+      - name: Build from committed sources and fingerprint
+        run: |
+          set -euo pipefail
+          python3 build/build.py >/dev/null
+          python3 build/pages.py >/dev/null
+          cp build/link_status.json /tmp/link_status.before.json
+          find . -name index.html -not -path './.git/*' -print0 | sort -z | xargs -0 cat assets/data/drug-more.json assets/data/mol-brands.json | sha256sum > /tmp/pages.before
+
+      - name: Fetch molecule medicine lists ("+N more" cards)
+        run: python3 build/fetch_mol_medicines.py
+
+      - name: Crawl links and canonicals
+        run: python3 build/check_links.py --daily
+
+      - name: Guard against a bad crawl
+        run: |
+          set -euo pipefail
+          python3 - <<'EOF'
+          import json, os, sys
+          dead = lambda f: {u for u, v in json.load(open(f)).items() if isinstance(v, dict) and v.get('verdict') == 'dead'}
+          new = sorted(dead('build/link_status.json') - dead('/tmp/link_status.before.json'))
+          print('newly dead links: %d' % len(new))
+          for u in new:
+              print('  ' + u)
+          if len(new) > int(os.environ['MAX_NEW_DEAD']):
+              print('::error::%d newly dead links in one run (limit %s): not committing or deploying' % (len(new), os.environ['MAX_NEW_DEAD']))
+              sys.exit(1)
+          EOF
+
+      - name: Rebuild and compare
+        id: diff
+        run: |
+          set -euo pipefail
+          python3 build/build.py >/dev/null
+          python3 build/pages.py >/dev/null
+          find . -name index.html -not -path './.git/*' -print0 | sort -z | xargs -0 cat assets/data/drug-more.json assets/data/mol-brands.json | sha256sum > /tmp/pages.after
+          if cmp -s /tmp/pages.before /tmp/pages.after; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"; echo "pages unchanged"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"; echo "pages changed: links moved or died"
+          fi
+          grep -A3 '^## Canonical swaps' build/link_check_report.md | head -4 || true
+
+      - name: Commit link data
+        run: |
+          set -euo pipefail
+          git config user.name "cancer-hub link crawl"
+          git config user.email "pharmeasyMarketing@users.noreply.github.com"
+          git add build/link_status.json build/link_check_report.md build/dead_links_removed.json build/dead_links_removed.md build/all_links.json assets/data/mol-brands.json
+          if git diff --cached --quiet; then echo "nothing to commit"; exit 0; fi
+          git commit -q -m "Daily link crawl $(date -u +%Y-%m-%d): canonical URLs for medicine and molecule links"
+          for attempt in 1 2 3; do
+            git push origin HEAD:main && exit 0
+            git pull --rebase -q origin main
+          done
+          echo "::error::push failed"; exit 1
+
+      - name: Deploy if the pages changed
+        if: steps.diff.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run deploy.yml --ref main

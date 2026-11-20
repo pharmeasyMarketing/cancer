@@ -400,12 +400,15 @@ html.mm-open { overflow: hidden; }
 .mol-key span { font-size: 10.5px; line-height: 16px; font-weight: 800; letter-spacing: 0.05em; text-transform: uppercase; border-radius: 999px; padding: 2px 9px; width: fit-content; }
 .mol-key .k-mol { color: #fff; background: #00736C; }
 .mol-key .k-brand { color: #5C636D; background: #F5F7F8; border: 1px solid #E6E9ED; }
+.mol-key .k-all { display: none; color: #00736C; background: #EAF5F4; border: 1px solid #B8DEDB; }
 @container art (max-width: 640px) {
   .mol-key { display: grid; grid-template-columns: minmax(96px, 130px) 1fr; gap: 4px 14px; align-items: center; padding-bottom: 8px; border-bottom: 1px dashed #E6E9ED; }
 }
 @container art (max-width: 520px) {
-  /* rows stack (name above chips), so the key reads as a legend on one line */
-  .mol-key { display: flex; gap: 8px; }
+  /* rows stack (name above chips), so the key is one label for both */
+  .mol-key { display: flex; }
+  .mol-key .k-mol, .mol-key .k-brand { display: none; }
+  .mol-key .k-all { display: inline-block; }
 }
 
 /* A to Z on mobile: one column of full-width rows under letter markers; types with subpages fold */
@@ -576,13 +579,13 @@ html.mm-open { overflow: hidden; }
    bolder. Headings/titles that are links keep their own weight. Not underlined: buttons, brand
    chips, the "On this page" menu, breadcrumbs and the [n] citation markers.
    ============================================================ */
-main a:not(.cx-btn-primary):not(.cx-btn-ghost):not(.brand):not(.dc-toc-link):not(.skip) {
+main a:not(.cx-btn-primary):not(.cx-btn-ghost):not(.brand):not(.dc-toc-link):not(.dc-toc-chip):not(.skip) {
   text-decoration-line: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 3px;
   text-decoration-color: color-mix(in srgb, currentColor 45%, transparent);
 }
-main a:not(.cx-btn-primary):not(.cx-btn-ghost):not(.brand):not(.dc-toc-link):not(.skip):hover { text-decoration-color: currentColor; }
+main a:not(.cx-btn-primary):not(.cx-btn-ghost):not(.brand):not(.dc-toc-link):not(.dc-toc-chip):not(.skip):hover { text-decoration-color: currentColor; }
 /* citation markers, breadcrumbs and inline-styled buttons (the rail's "Consult a doctor") stay plain */
 main sup.cite a, main .glp-crumb a, main a[style*="background"] { text-decoration-line: none !important; }
 :where(main) :where(p, li, td:not(.k), .refs span, .byline span, .srcs, .src, .pv-more-v) > a:not(.brand):not(.cx-btn-primary):not(.cx-btn-ghost) { font-weight: 600; }
@@ -592,3 +595,13 @@ main sup.cite a, main .glp-crumb a, main a[style*="background"] { text-decoratio
 .cx-btn-stack { display: flex; flex-direction: column; gap: 10px; flex: 0 0 auto; }
 .cx-btn-stack a { text-align: center; }
 @container art (max-width: 640px) { .cx-btn-stack { flex: 1 1 100%; } }
+
+/* A to Z: the row for the page you are on is plain text (no self link) */
+.ctz-item.is-current .ctz-type { color: #00736C; cursor: default; display: inline-flex; flex-wrap: wrap; align-items: center; gap: 4px 8px; }
+.ctz-item.is-current .ctz-type::after { content: "You are here"; white-space: nowrap; font-size: 11px; font-weight: 700; color: #5C636D; background: #EAF5F4; border-radius: 999px; padding: 2px 8px; vertical-align: 1px; }
+/* pill-shaped links (quick-link chips, guide chips, source chips) are already marked as links: no underline */
+main .ex-subs a, main .ctz-subs a, main .srcs a { text-decoration-line: none !important; }
+
+/* "+N more" brand card: last row links the molecule page */
+.mm-list .mm-all { grid-column: 1 / -1; }
+.mm-list .mm-all a { background: #fff; border-style: dashed; text-align: center; }

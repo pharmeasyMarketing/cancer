@@ -1,6 +1,6 @@
 # Link check report
 
-Crawled 2026-11-18 by build/check_links.py: 963 unique links, 875 OK, 61 dead, 27 unverified.
+Crawled 2026-11-20 by build/check_links.py: 963 unique links, 876 OK, 61 dead, 26 unverified.
 
 - **Dead** (404/410): removed at build time (words kept; sidebar links and brand chips dropped).
 - **Unverified**: the site blocked the checker or errored. Link kept.
@@ -14,11 +14,11 @@ Crawled 2026-11-18 by build/check_links.py: 963 unique links, 875 OK, 61 dead, 2
 |---|---|---|---|
 | 1 | 404 | /cancer/cost-and-support/ | /cancer/, /cancer/treatment/, /cancer/treatment/chemotherapy/, /cancer/types/cervical-cancer/ |
 | 2 | 404 | /cancer/india/ | /cancer/, /cancer/prevention/, /cancer/types/cervical-cancer/ |
-| 3 | 404 | /cancer/living-with/ | /cancer/, /cancer/nutrition/, /cancer/treatment/, /cancer/treatment/chemotherapy/, /cancer/types/cervical-cancer/ |
+| 3 | 404 | /cancer/living-with/ | /cancer/, /cancer/nutrition/ |
 | 4 | 404 | /cancer/prevention/lifestyle/ | /cancer/prevention/ |
 | 5 | 404 | /cancer/prevention/myths/ | /cancer/prevention/ |
 | 6 | 404 | /cancer/prevention/tobacco/ | /cancer/prevention/ |
-| 7 | 404 | /cancer/screening/ | /cancer/, /cancer/prevention/, /cancer/prevention/hpv/, /cancer/symptoms/, /cancer/tests/ |
+| 7 | 404 | /cancer/screening/ | /cancer/, /cancer/prevention/, /cancer/prevention/hpv/, /cancer/tests/ |
 | 8 | 404 | /cancer/symptoms/is-it-cancer/ | /cancer/, /cancer/symptoms/ |
 | 9 | 404 | /cancer/treatment/hormone-therapy/ | /cancer/, /cancer/treatment/ |
 | 10 | 404 | /cancer/treatment/immunotherapy/ | /cancer/, /cancer/treatment/, /cancer/types/cervical-cancer/ |
@@ -89,13 +89,7 @@ Crawled 2026-11-18 by build/check_links.py: 963 unique links, 875 OK, 61 dead, 2
 | 3 | 404 | https://www.pib.gov.in/www.pib.gov.in/Pressreleaseshare.aspx?PRID=2148754 | /cancer/prevention/ |
 | 4 | 404 | https://www.pib.gov.in/www.pib.gov.in/Pressreleaseshare.aspx?PRID=2152535 | /cancer/prevention/ |
 
-## Unverified links (27)
-
-### PharmEasy product (brand) page (1)
-
-| # | Status | URL | Found on |
-|---|---|---|---|
-| 1 | 500 | /online-medicine-order/3822038 | /cancer/, /cancer/treatment/ |
+## Unverified links (26)
 
 ### External source (26)
 
@@ -128,7 +122,7 @@ Crawled 2026-11-18 by build/check_links.py: 963 unique links, 875 OK, 61 dead, 2
 | 25 | 403 | https://www.researchgate.net/publication/401678027_Alkylating_agents_in_cancer_Current_developments | /cancer/ |
 | 26 | 403 | https://www.sciencedirect.com/science/article/pii/S1534580710002480 | /cancer/symptoms/ |
 
-## Canonical swaps (172)
+## Canonical swaps (236)
 
 | # | Linked URL | Now links (canonical) |
 |---|---|---|
@@ -138,172 +132,236 @@ Crawled 2026-11-18 by build/check_links.py: 963 unique links, 875 OK, 61 dead, 2
 | 4 | /conditions | /conditions/ |
 | 5 | /diagnostics/packages/womens-cancer-screening-advanced-1972?utm_source=chatgpt.com | /diagnostics/packages/womens-cancer-screening-advanced-1972 |
 | 6 | /diagnostics?src=homecard | /diagnostics |
-| 7 | /molecules/folic-acid-10494 | /molecules/vitamin-b9-folic-acid-folate-10494 |
-| 8 | /online-doctor-consultation | /online-doctor-consultation/ |
-| 9 | /online-medicine-order/101137 | /online-medicine-order/proteoz-inj-101137 |
-| 10 | /online-medicine-order/101218 | /online-medicine-order/aksiplat-50mg-inj-101218 |
-| 11 | /online-medicine-order/104741 | /online-medicine-order/episar-10mg-inj-104741 |
-| 12 | /online-medicine-order/114594 | /online-medicine-order/mabtas-100mg-injection-10ml-114594 |
-| 13 | /online-medicine-order/11717 | /online-medicine-order/aprecap-kit-strip-of-3-capsules-11717 |
-| 14 | /online-medicine-order/118623 | /online-medicine-order/boletraaz-10mg-tab-118623 |
-| 15 | /online-medicine-order/128322 | /online-medicine-order/5-flucel-inj-10ml-128322 |
-| 16 | /online-medicine-order/134013 | /online-medicine-order/abirapro-250mg-bottle-of-120-tablets-134013 |
-| 17 | /online-medicine-order/136220 | /online-medicine-order/giolen-10mg-cap-136220 |
-| 18 | /online-medicine-order/136232 | /online-medicine-order/oxaliptin-inj-25ml-136232 |
-| 19 | /online-medicine-order/13902 | /online-medicine-order/neukine-300mcg-pfs-inj-13902 |
-| 20 | /online-medicine-order/140975 | /online-medicine-order/pamifect-100mg-inj-140975 |
-| 21 | /online-medicine-order/14944 | /online-medicine-order/folitrax-20mg-injection-1ml-14944 |
-| 22 | /online-medicine-order/155559 | /online-medicine-order/rituxirel-100mg-inj-155559 |
-| 23 | /online-medicine-order/155571 | /online-medicine-order/temorel-20mg-cap-155571 |
-| 24 | /online-medicine-order/15709 | /online-medicine-order/mamofen-20mg-tablet-15709 |
-| 25 | /online-medicine-order/165552 | /online-medicine-order/epiget-10mg-inj-165552 |
-| 26 | /online-medicine-order/165562 | /online-medicine-order/ipoget-1gm-inj-165562 |
-| 27 | /online-medicine-order/165567 | /online-medicine-order/giopem-500mg-inj-165567 |
-| 28 | /online-medicine-order/166634 | /online-medicine-order/irnocel-40mg-inj-166634 |
-| 29 | /online-medicine-order/1691 | /online-medicine-order/fineova-40mg-tab-5-s-193030 |
-| 30 | /online-medicine-order/182149 | /online-medicine-order/carbozar-150mg-inj-15ml-182149 |
-| 31 | /online-medicine-order/182746 | /online-medicine-order/chemoflura-250mg-inj-182746 |
-| 32 | /online-medicine-order/184406 | /online-medicine-order/chemotinib-100mg-tab-184406 |
-| 33 | /online-medicine-order/184408 | /online-medicine-order/distamine-500mg-strip-of-10-tablets-184408 |
-| 34 | /online-medicine-order/187205 | /online-medicine-order/abatitor-250mg-tab-60-s-187206 |
-| 35 | /online-medicine-order/187229 | /online-medicine-order/anastronat-1mg-tablet-187229 |
-| 36 | /online-medicine-order/192044 | /online-medicine-order/opdivo-10mg-ml-inj-10ml-192044 |
-| 37 | /online-medicine-order/193552 | /online-medicine-order/osicent-80mg-bottle-of-30-tablets-193552 |
-| 38 | /online-medicine-order/195586 | /online-medicine-order/ovulet-2-5-mg-tablet-5-195586 |
-| 39 | /online-medicine-order/198354 | /online-medicine-order/taxonab-100-mg-injection-100-ml-198354 |
-| 40 | /online-medicine-order/199544 | /online-medicine-order/toritz-500-mg-injection-1-199544 |
-| 41 | /online-medicine-order/205126 | /online-medicine-order/vivitra-440-mg-injection-1-205126 |
-| 42 | /online-medicine-order/205274 | /online-medicine-order/bevatas-100-mg-injection-4-ml-205274 |
-| 43 | /online-medicine-order/205895 | /online-medicine-order/erlokem-150-mg-tablet-10-205895 |
-| 44 | /online-medicine-order/21440 | /online-medicine-order/meditrex-5mg-tablet-21440 |
-| 45 | /online-medicine-order/215324 | /online-medicine-order/pomahope-1mg-cap-21-s-215324 |
-| 46 | /online-medicine-order/216401 | /online-medicine-order/leucorin-15mg-inj-2ml-216401 |
-| 47 | /online-medicine-order/229842 | /online-medicine-order/grastim-300mcg-injection-1ml-229842 |
-| 48 | /online-medicine-order/230656 | /online-medicine-order/kryxana-200mg-tablet-21-s-230656 |
-| 49 | /online-medicine-order/231636 | /online-medicine-order/bendashil-100mg-injection-1-s-231636 |
-| 50 | /online-medicine-order/231639 | /online-medicine-order/docshil-20mg-injection-1-s-231639 |
-| 51 | /online-medicine-order/232630 | /online-medicine-order/mestrolyst-40mg-tablet-10-s-232630 |
-| 52 | /online-medicine-order/235267 | /online-medicine-order/lenshil-4mg-strip-of-10-capsules-235267 |
-| 53 | /online-medicine-order/25037 | /online-medicine-order/lupride-1mg-inj-0-5ml-25037 |
-| 54 | /online-medicine-order/25319 | /online-medicine-order/veenat-100mg-bottle-of-120-capsules-63828 |
-| 55 | /online-medicine-order/25453 | /online-medicine-order/lenalid-10mg-capsule-25453 |
-| 56 | /online-medicine-order/25454 | /online-medicine-order/bandrone-50mg-tablet-25454 |
-| 57 | /online-medicine-order/25610 | /online-medicine-order/natzold-inf-100ml-25610 |
-| 58 | /online-medicine-order/28254 | /online-medicine-order/thalide-100mg-capsule-28254 |
-| 59 | /online-medicine-order/28667 | /online-medicine-order/moxifen-20mg-tablet-28667 |
-| 60 | /online-medicine-order/30363 | /online-medicine-order/mexate-2-5mg-strip-of-4-tablets-53925 |
-| 61 | /online-medicine-order/3045128 | /online-medicine-order/zynesp-200-mg-injection-1-3045128 |
-| 62 | /online-medicine-order/31016 | /online-medicine-order/alstar-1mg-tablet-31016 |
-| 63 | /online-medicine-order/3101975 | /online-medicine-order/abevmy-100-mg-injection-1-3101975 |
-| 64 | /online-medicine-order/3105993 | /online-medicine-order/pomacel-2-mg-capsule-21-3105993 |
-| 65 | /online-medicine-order/33979 | /online-medicine-order/altaxel-100mg-inj-33979 |
-| 66 | /online-medicine-order/3441822 | /online-medicine-order/eleftha-440mg-vial-of-1-injection-3441822 |
-| 67 | /online-medicine-order/3462610 | /online-medicine-order/ibrunat-140mg-bottle-of-30-capsules-3462610 |
-| 68 | /online-medicine-order/3482587 | /online-medicine-order/bdenza-40mg-strip-of-28-capsules-3482587 |
-| 69 | /online-medicine-order/3489025 | /online-medicine-order/lenvenib-4mg-strip-of-7-capsules-3489025 |
-| 70 | /online-medicine-order/3734127 | /online-medicine-order/hervycta-440-injection-1-no-s-3734127 |
-| 71 | /online-medicine-order/3735578 | /online-medicine-order/mesna-200-mg-injection-2-ml-3735578 |
-| 72 | /online-medicine-order/3743110 | /online-medicine-order/versavo-injection-16-ml-3743110 |
-| 73 | /online-medicine-order/3867489 | /online-medicine-order/nitnib-12-5mg-strip-of-7-capsules-3867489 |
-| 74 | /online-medicine-order/3875821 | /online-medicine-order/enzyl-capsule-28-no-s-3875821 |
-| 75 | /online-medicine-order/3917431 | /online-medicine-order/spnib-100mg-bottle-of-30-tablets-3917431 |
-| 76 | /online-medicine-order/3995137 | /online-medicine-order/ramiven-150mg-strip-of-7-tablets-3995137 |
-| 77 | /online-medicine-order/3999204 | /online-medicine-order/ifowem-box-of-1-combipack-injection-3999204 |
-| 78 | /online-medicine-order/4002 | /online-medicine-order/zoladex-3-6mg-inj-4002 |
-| 79 | /online-medicine-order/4011 | /online-medicine-order/iressa-250mg-tablet-4011 |
-| 80 | /online-medicine-order/4012 | /online-medicine-order/casodex-150mg-tablet-4012 |
-| 81 | /online-medicine-order/40872 | /online-medicine-order/cisteen-10mg-inj-10ml-40872 |
-| 82 | /online-medicine-order/4113763 | /online-medicine-order/atnab-paclitix-100-mg-injection-1-no-s-4113763 |
-| 83 | /online-medicine-order/4113855 | /online-medicine-order/adcilib-75-mg-capsule-21-no-s-4113855 |
-| 84 | /online-medicine-order/4113995 | /online-medicine-order/gem-rtu-1-4-g-injection-1-no-s-4113995 |
-| 85 | /online-medicine-order/4114079 | /online-medicine-order/knilonat-200-capsule-10-no-s-4114079 |
-| 86 | /online-medicine-order/4114086 | /online-medicine-order/soratib-tablet-30-no-s-4114086 |
-| 87 | /online-medicine-order/4114340 | /online-medicine-order/vinbix-10-mg-injection-1-no-s-4114340 |
-| 88 | /online-medicine-order/4114582 | /online-medicine-order/afadel-30-tablet-10-no-s-4114582 |
-| 89 | /online-medicine-order/4114825 | /online-medicine-order/beedan-20-mg-tablet-60-no-s-4114825 |
-| 90 | /online-medicine-order/4115185 | /online-medicine-order/adflu-50-injection-1-no-s-4115185 |
-| 91 | /online-medicine-order/4116640 | /online-medicine-order/emetant-125-80-capsule-3-no-s-4116640 |
-| 92 | /online-medicine-order/4116922 | /online-medicine-order/lupitux-infusion-20-ml-4116922 |
-| 93 | /online-medicine-order/4117196 | /online-medicine-order/pazeqol-200-tablet-30-no-s-4117196 |
-| 94 | /online-medicine-order/4117432 | /online-medicine-order/cydekin-125-mg-capsule-21-no-s-4117432 |
-| 95 | /online-medicine-order/4117483 | /online-medicine-order/capebel-dt-500-mg-tablet-10-no-s-4117483 |
-| 96 | /online-medicine-order/4117889 | /online-medicine-order/nelova-200-mg-capsule-28-no-s-4117889 |
-| 97 | /online-medicine-order/4118123 | /online-medicine-order/peg-filtero-injection-1-no-s-4118123 |
-| 98 | /online-medicine-order/4119051 | /online-medicine-order/palozest-injection-5-ml-4119051 |
-| 99 | /online-medicine-order/4119324 | /online-medicine-order/atpeme-500-mg-injection-1-no-s-4119324 |
-| 100 | /online-medicine-order/4119358 | /online-medicine-order/bdfoie-4-mg-capsule-10-no-s-4119358 |
-| 101 | /online-medicine-order/4119652 | /online-medicine-order/bdnab-100-mg-injection-10-ml-4119652 |
-| 102 | /online-medicine-order/4119866 | /online-medicine-order/atgemci-200-mg-injection-1-no-s-4119866 |
-| 103 | /online-medicine-order/4119925 | /online-medicine-order/atleuco-50-mg-injection-1-no-s-4119925 |
-| 104 | /online-medicine-order/4120803 | /online-medicine-order/arbaz-60-mg-injection-1-5-ml-4120803 |
-| 105 | /online-medicine-order/4121837 | /online-medicine-order/cetuxa-100-mg-infusion-20-ml-4121837 |
-| 106 | /online-medicine-order/4122171 | /online-medicine-order/admatop-2-5-mg-injection-1-no-s-4122171 |
-| 107 | /online-medicine-order/4122290 | /online-medicine-order/comcapsy-400-mg-20-mg-tablet-7-no-s-4122290 |
-| 108 | /online-medicine-order/4122603 | /online-medicine-order/adben-100-injection-1-no-s-4122603 |
-| 109 | /online-medicine-order/4122824 | /online-medicine-order/nab-taxhal-100-mg-injection-1-no-s-4122824 |
-| 110 | /online-medicine-order/4122968 | /online-medicine-order/carfimib-injection-1-no-s-4122968 |
-| 111 | /online-medicine-order/4128405 | /online-medicine-order/bleoace-15iu-dry-vial-of-1-powder-for-injection-4128405 |
-| 112 | /online-medicine-order/4133716 | /online-medicine-order/denosta-60-mg-ml-inj-4133716 |
-| 113 | /online-medicine-order/4199688 | /online-medicine-order/bdparp-150mg-bottle-of-56-tablets-4199688 |
-| 114 | /online-medicine-order/42761 | /online-medicine-order/dacarin-100mg-inj-42761 |
-| 115 | /online-medicine-order/42888 | /online-medicine-order/daxotel-80mg-inj-2ml-42888 |
-| 116 | /online-medicine-order/4375504 | /online-medicine-order/flu-stim-vial-of-2-ml-injection-4375504 |
-| 117 | /online-medicine-order/45455 | /online-medicine-order/endace-40mg-tablet-45455 |
-| 118 | /online-medicine-order/4577 | /online-medicine-order/luprodex-depot-3-75mg-inj-4577 |
-| 119 | /online-medicine-order/47616 | /online-medicine-order/fluonco-250mg-inj-5ml-47616 |
-| 120 | /online-medicine-order/4819243 | /online-medicine-order/anemiax-s-100mg-bottle-of-100ml-syrup-4819243 |
-| 121 | /online-medicine-order/4819745 | /online-medicine-order/granizee-3mg-dry-vial-of-1-powder-for-injection-4819745 |
-| 122 | /online-medicine-order/4819794 | /online-medicine-order/intazumab-420mg-vial-of-14ml-injection-4819794 |
-| 123 | /online-medicine-order/4827801 | /online-medicine-order/doxorex-pl-50-mg-dry-vial-of-1-powder-for-injection-4827801 |
-| 124 | /online-medicine-order/4827821 | /online-medicine-order/drocid-4-mg-pouch-of-100ml-infusion-4827821 |
-| 125 | /online-medicine-order/4827822 | /online-medicine-order/idarubitec-5-mg-vial-of-5ml-injection-4827822 |
-| 126 | /online-medicine-order/4827913 | /online-medicine-order/meszee-200-mg-dry-vial-of-1-powder-for-injection-4827913 |
-| 127 | /online-medicine-order/4828084 | /online-medicine-order/captomac-10-mg-strip-of-10-tablets-4828084 |
-| 128 | /online-medicine-order/4828089 | /online-medicine-order/adgorif-40-mg-bottle-of-28-tablets-4828089 |
-| 129 | /online-medicine-order/4828101 | /online-medicine-order/apristar-125-80-mg-kit-strip-of-3-capsules-4828101 |
-| 130 | /online-medicine-order/50366 | /online-medicine-order/holoxan-1gm-with-uromitexan-200mg-vial-of-1gm-powder-for-injection-50366 |
-| 131 | /online-medicine-order/54137 | /online-medicine-order/mitodus-10mg-inj-54137 |
-| 132 | /online-medicine-order/56510 | /online-medicine-order/oncocin-10mg-inj-56510 |
-| 133 | /online-medicine-order/56519 | /online-medicine-order/oncodria-10mg-inj-56519 |
-| 134 | /online-medicine-order/57927 | /online-medicine-order/placid-100mg-inj-57927 |
-| 135 | /online-medicine-order/67977 | /online-medicine-order/dabaz-100mg-inj-67977 |
-| 136 | /online-medicine-order/68118 | /online-medicine-order/duxocin-10mg-injection-1-s-68118 |
-| 137 | /online-medicine-order/69377 | /online-medicine-order/lipodox-inj-5ml-69377 |
-| 138 | /online-medicine-order/69379 | /online-medicine-order/gemtaz-1g-injection-1-s-69379 |
-| 139 | /online-medicine-order/69826 | /online-medicine-order/faslodex-250mg-inj-5ml-69826 |
-| 140 | /online-medicine-order/70287 | /online-medicine-order/erbitux-100mg-inj-50ml-70287 |
-| 141 | /online-medicine-order/70712 | /online-medicine-order/neupeg-6mg-inj-1ml-70712 |
-| 142 | /online-medicine-order/70750 | /online-medicine-order/palnox-inj-5ml-70750 |
-| 143 | /online-medicine-order/72961 | /online-medicine-order/xabine-150mg-tab-72961 |
-| 144 | /online-medicine-order/74759 | /online-medicine-order/5-for-500mg-inj-74759 |
-| 145 | /online-medicine-order/74801 | /online-medicine-order/celtax-100mg-inj-74801 |
-| 146 | /online-medicine-order/76403 | /online-medicine-order/oncophos-1gm-inj-76403 |
-| 147 | /online-medicine-order/77111 | /online-medicine-order/karplat-10mg-inj-20ml-77111 |
-| 148 | /online-medicine-order/80653 | /online-medicine-order/religrast-300mcg-pre-filled-syringe-injection-0-5ml-80653 |
-| 149 | /online-medicine-order/81197 | /online-medicine-order/arzi-1gm-inj-81197 |
-| 150 | /online-medicine-order/81662 | /online-medicine-order/cancyt-1gm-inj-81662 |
-| 151 | /online-medicine-order/8277 | /online-medicine-order/tabi-50mg-tab-30-s-8496 |
-| 152 | /online-medicine-order/83763 | /online-medicine-order/borviz-2mg-inj-83763 |
-| 153 | /online-medicine-order/85270 | /online-medicine-order/afinitor-10mg-tab-30-s-85270 |
-| 154 | /online-medicine-order/88389 | /online-medicine-order/herlet-2-5-mg-tablet-10-195593 |
-| 155 | /online-medicine-order/92253 | /online-medicine-order/cysmide-200mg-inj-92253 |
-| 156 | /online-medicine-order/92266 | /online-medicine-order/gliogen-20mg-cap-92266 |
-| 157 | /online-medicine-order/96678 | /online-medicine-order/tamimex-10mg-tab-96678 |
-| 158 | /online-medicine-order/98039 | /online-medicine-order/adpaxil-100mg-inj-98039 |
-| 159 | /online-medicine-order/99481 | /online-medicine-order/adgef-250mg-strip-of-10-tablets-99481 |
-| 160 | /online-medicine-order/99503 | /online-medicine-order/admine-100mg-cap-99503 |
-| 161 | /online-medicine-order/99520 | /online-medicine-order/adricin-50mg-inj-99520 |
-| 162 | /online-medicine-order/99526 | /online-medicine-order/adthal-50mg-capsule-99526 |
-| 163 | /online-medicine-order/99553 | /online-medicine-order/erlotad-100mg-tab-99553 |
-| 164 | /online-medicine-order/99748 | /online-medicine-order/tubitere-20mg-inj-99748 |
-| 165 | https://www.businesstoday.in/amp/personal-finance/insurance/story/irdai-reduces-pre-existing-disease-waiting-period-from-4-to-3-years-here-is-what-existing-policyholders-should-know-425325-2024-04-12 | https://www.businesstoday.in/personal-finance/insurance/story/irdai-reduces-pre-existing-disease-waiting-period-from-4-to-3-years-here-is-what-existing-policyholders-should-know-425325-2024-04-12 |
-| 166 | https://www.cancer.gov/types/testicular/hp/testicular-treatment-pdq?cid=eb_govdel&utm | https://www.cancer.gov/types/testicular/hp/testicular-treatment-pdq |
-| 167 | https://www.cancer.org/cancer/types/vaginal-cancer/causes-risks-prevention/what-causes.html | https://www.cancer.org/cancer/types/vaginal-cancer/causes-risks-prevention.html |
-| 168 | https://www.healthdirect.gov.au/digestive-system | https://www.healthdirect.gov.au/anatomy/digestive-system |
-| 169 | https://www.healthdirect.gov.au/haemoptysis-coughing-up-blood | https://www.healthdirect.gov.au/symptoms/haemoptysis-coughing-up-blood |
-| 170 | https://www.healthdirect.gov.au/headaches | https://www.healthdirect.gov.au/symptoms/aches-and-pains/headaches |
-| 171 | https://www.healthdirect.gov.au/itchy-skin | https://www.healthdirect.gov.au/symptoms/itchy-skin |
-| 172 | https://www.healthdirect.gov.au/leukaemia | https://www.healthdirect.gov.au/conditions/cancer/leukaemia |
+| 7 | /molecules/4128388 | /molecules/docetaxel-polysorbate-alcohol-4128388 |
+| 8 | /molecules/4175362 | /molecules/tegafur-gimeracil-oteracil-4175362 |
+| 9 | /molecules/folic-acid-10494 | /molecules/vitamin-b9-folic-acid-folate-10494 |
+| 10 | /online-doctor-consultation | /online-doctor-consultation/ |
+| 11 | /online-medicine-order/101137 | /online-medicine-order/proteoz-inj-101137 |
+| 12 | /online-medicine-order/101218 | /online-medicine-order/aksiplat-50mg-inj-101218 |
+| 13 | /online-medicine-order/104741 | /online-medicine-order/episar-10mg-inj-104741 |
+| 14 | /online-medicine-order/11353 | /online-medicine-order/exeget-25mg-strip-of-10-tablets-11353 |
+| 15 | /online-medicine-order/114594 | /online-medicine-order/mabtas-100mg-injection-10ml-114594 |
+| 16 | /online-medicine-order/114600 | /online-medicine-order/azadine-inj-114600 |
+| 17 | /online-medicine-order/11717 | /online-medicine-order/aprecap-kit-strip-of-3-capsules-11717 |
+| 18 | /online-medicine-order/118623 | /online-medicine-order/boletraaz-10mg-tab-118623 |
+| 19 | /online-medicine-order/128322 | /online-medicine-order/5-flucel-inj-10ml-128322 |
+| 20 | /online-medicine-order/128335 | /online-medicine-order/celofos-500mg-inj-128335 |
+| 21 | /online-medicine-order/134013 | /online-medicine-order/abirapro-250mg-bottle-of-120-tablets-134013 |
+| 22 | /online-medicine-order/134639 | /online-medicine-order/hycamtin-1mg-cap-134639 |
+| 23 | /online-medicine-order/136220 | /online-medicine-order/giolen-10mg-cap-136220 |
+| 24 | /online-medicine-order/136232 | /online-medicine-order/oxaliptin-inj-25ml-136232 |
+| 25 | /online-medicine-order/13902 | /online-medicine-order/neukine-300mcg-pfs-inj-13902 |
+| 26 | /online-medicine-order/140975 | /online-medicine-order/pamifect-100mg-inj-140975 |
+| 27 | /online-medicine-order/14944 | /online-medicine-order/folitrax-20mg-injection-1ml-14944 |
+| 28 | /online-medicine-order/154532 | /online-medicine-order/egymelan-2mg-tab-154532 |
+| 29 | /online-medicine-order/155559 | /online-medicine-order/rituxirel-100mg-inj-155559 |
+| 30 | /online-medicine-order/155571 | /online-medicine-order/temorel-20mg-cap-155571 |
+| 31 | /online-medicine-order/15709 | /online-medicine-order/mamofen-20mg-tablet-15709 |
+| 32 | /online-medicine-order/165552 | /online-medicine-order/epiget-10mg-inj-165552 |
+| 33 | /online-medicine-order/165562 | /online-medicine-order/ipoget-1gm-inj-165562 |
+| 34 | /online-medicine-order/165567 | /online-medicine-order/giopem-500mg-inj-165567 |
+| 35 | /online-medicine-order/165861 | /online-medicine-order/fosfa-1gm-inj-165861 |
+| 36 | /online-medicine-order/166634 | /online-medicine-order/irnocel-40mg-inj-166634 |
+| 37 | /online-medicine-order/1691 | /online-medicine-order/fineova-40mg-tab-5-s-193030 |
+| 38 | /online-medicine-order/17099 | /online-medicine-order/luporal-strip-of-10-capsules-17099 |
+| 39 | /online-medicine-order/177640 | /online-medicine-order/tegafi-strip-of-14-capsules-177640 |
+| 40 | /online-medicine-order/178576 | /online-medicine-order/xovoltib-40mg-strip-of-7-tablets-178576 |
+| 41 | /online-medicine-order/182149 | /online-medicine-order/carbozar-150mg-inj-15ml-182149 |
+| 42 | /online-medicine-order/182559 | /online-medicine-order/neoben-50mg-inj-182559 |
+| 43 | /online-medicine-order/182746 | /online-medicine-order/chemoflura-250mg-inj-182746 |
+| 44 | /online-medicine-order/184406 | /online-medicine-order/chemotinib-100mg-tab-184406 |
+| 45 | /online-medicine-order/184408 | /online-medicine-order/distamine-500mg-strip-of-10-tablets-184408 |
+| 46 | /online-medicine-order/187205 | /online-medicine-order/abatitor-250mg-tab-60-s-187206 |
+| 47 | /online-medicine-order/187229 | /online-medicine-order/anastronat-1mg-tablet-187229 |
+| 48 | /online-medicine-order/192044 | /online-medicine-order/opdivo-10mg-ml-inj-10ml-192044 |
+| 49 | /online-medicine-order/193552 | /online-medicine-order/osicent-80mg-bottle-of-30-tablets-193552 |
+| 50 | /online-medicine-order/195122 | /online-medicine-order/granitero-1-mg-tablet-4-195122 |
+| 51 | /online-medicine-order/195586 | /online-medicine-order/ovulet-2-5-mg-tablet-5-195586 |
+| 52 | /online-medicine-order/196587 | /online-medicine-order/fulviglen-250-mg-prefilled-syringe-5-ml-196587 |
+| 53 | /online-medicine-order/196747 | /online-medicine-order/holoxan-uromitexan-comb-pck-1000-mg-inj-2-ml-196747 |
+| 54 | /online-medicine-order/198354 | /online-medicine-order/taxonab-100-mg-injection-100-ml-198354 |
+| 55 | /online-medicine-order/199433 | /online-medicine-order/nublexa-40mg-tab-28-s-199433 |
+| 56 | /online-medicine-order/199544 | /online-medicine-order/toritz-500-mg-injection-1-199544 |
+| 57 | /online-medicine-order/201917 | /online-medicine-order/abiratas-250-mg-tablet-30-201917 |
+| 58 | /online-medicine-order/205126 | /online-medicine-order/vivitra-440-mg-injection-1-205126 |
+| 59 | /online-medicine-order/205274 | /online-medicine-order/bevatas-100-mg-injection-4-ml-205274 |
+| 60 | /online-medicine-order/205301 | /online-medicine-order/bufatas-60-mg-injection-10-ml-205301 |
+| 61 | /online-medicine-order/205304 | /online-medicine-order/jevtana-60-mg-injection-1-ml-205304 |
+| 62 | /online-medicine-order/205895 | /online-medicine-order/erlokem-150-mg-tablet-10-205895 |
+| 63 | /online-medicine-order/21440 | /online-medicine-order/meditrex-5mg-tablet-21440 |
+| 64 | /online-medicine-order/215324 | /online-medicine-order/pomahope-1mg-cap-21-s-215324 |
+| 65 | /online-medicine-order/216401 | /online-medicine-order/leucorin-15mg-inj-2ml-216401 |
+| 66 | /online-medicine-order/226015 | /online-medicine-order/idromet-50mg-tablet-10-s-226015 |
+| 67 | /online-medicine-order/229842 | /online-medicine-order/grastim-300mcg-injection-1ml-229842 |
+| 68 | /online-medicine-order/230656 | /online-medicine-order/kryxana-200mg-tablet-21-s-230656 |
+| 69 | /online-medicine-order/231636 | /online-medicine-order/bendashil-100mg-injection-1-s-231636 |
+| 70 | /online-medicine-order/231639 | /online-medicine-order/docshil-20mg-injection-1-s-231639 |
+| 71 | /online-medicine-order/232630 | /online-medicine-order/mestrolyst-40mg-tablet-10-s-232630 |
+| 72 | /online-medicine-order/235267 | /online-medicine-order/lenshil-4mg-strip-of-10-capsules-235267 |
+| 73 | /online-medicine-order/23848 | /online-medicine-order/valodex-10mg-tablet-23848 |
+| 74 | /online-medicine-order/25037 | /online-medicine-order/lupride-1mg-inj-0-5ml-25037 |
+| 75 | /online-medicine-order/25319 | /online-medicine-order/veenat-100mg-bottle-of-120-capsules-63828 |
+| 76 | /online-medicine-order/25453 | /online-medicine-order/lenalid-10mg-capsule-25453 |
+| 77 | /online-medicine-order/25454 | /online-medicine-order/bandrone-50mg-tablet-25454 |
+| 78 | /online-medicine-order/25610 | /online-medicine-order/natzold-inf-100ml-25610 |
+| 79 | /online-medicine-order/28254 | /online-medicine-order/thalide-100mg-capsule-28254 |
+| 80 | /online-medicine-order/28667 | /online-medicine-order/moxifen-20mg-tablet-28667 |
+| 81 | /online-medicine-order/30363 | /online-medicine-order/mexate-2-5mg-strip-of-4-tablets-53925 |
+| 82 | /online-medicine-order/3045128 | /online-medicine-order/zynesp-200-mg-injection-1-3045128 |
+| 83 | /online-medicine-order/30892 | /online-medicine-order/etovel-100mg-capsule-30892 |
+| 84 | /online-medicine-order/31016 | /online-medicine-order/alstar-1mg-tablet-31016 |
+| 85 | /online-medicine-order/3101975 | /online-medicine-order/abevmy-100-mg-injection-1-3101975 |
+| 86 | /online-medicine-order/3105993 | /online-medicine-order/pomacel-2-mg-capsule-21-3105993 |
+| 87 | /online-medicine-order/33979 | /online-medicine-order/altaxel-100mg-inj-33979 |
+| 88 | /online-medicine-order/3441822 | /online-medicine-order/eleftha-440mg-vial-of-1-injection-3441822 |
+| 89 | /online-medicine-order/3462610 | /online-medicine-order/ibrunat-140mg-bottle-of-30-capsules-3462610 |
+| 90 | /online-medicine-order/3482587 | /online-medicine-order/bdenza-40mg-strip-of-28-capsules-3482587 |
+| 91 | /online-medicine-order/3489025 | /online-medicine-order/lenvenib-4mg-strip-of-7-capsules-3489025 |
+| 92 | /online-medicine-order/35413 | /online-medicine-order/aromasin-25mg-tablet-35413 |
+| 93 | /online-medicine-order/3611424 | /online-medicine-order/biopanib-400mg-bottle-of-30-tablets-3611424 |
+| 94 | /online-medicine-order/3623823 | /online-medicine-order/cabotres-40mg-bottle-of-30-tablets-3623823 |
+| 95 | /online-medicine-order/3713299 | /online-medicine-order/cipla-bleomycin-sulphate-15-iu-injection-1-ml-3713299 |
+| 96 | /online-medicine-order/3732306 | /online-medicine-order/cytocristin-1-mg-1-ml-injection-1-no-s-3732306 |
+| 97 | /online-medicine-order/3734127 | /online-medicine-order/hervycta-440-injection-1-no-s-3734127 |
+| 98 | /online-medicine-order/3735578 | /online-medicine-order/mesna-200-mg-injection-2-ml-3735578 |
+| 99 | /online-medicine-order/3743110 | /online-medicine-order/versavo-injection-16-ml-3743110 |
+| 100 | /online-medicine-order/37620 | /online-medicine-order/biocristin-1mg-inj-37620 |
+| 101 | /online-medicine-order/37930 | /online-medicine-order/bleochem-inj-37930 |
+| 102 | /online-medicine-order/3822038 | /online-medicine-order/denoci-120mg-vial-of-1-7ml-solution-for-injection-3822038 |
+| 103 | /online-medicine-order/3867489 | /online-medicine-order/nitnib-12-5mg-strip-of-7-capsules-3867489 |
+| 104 | /online-medicine-order/3875821 | /online-medicine-order/enzyl-capsule-28-no-s-3875821 |
+| 105 | /online-medicine-order/3899764 | /online-medicine-order/azatend-o-200mg-bottle-of-14-tablets-3899764 |
+| 106 | /online-medicine-order/3899771 | /online-medicine-order/foiri-100mg-vial-of-5ml-injection-3899771 |
+| 107 | /online-medicine-order/39069 | /online-medicine-order/carboplatin-150mg-inj-15ml-39069 |
+| 108 | /online-medicine-order/3917431 | /online-medicine-order/spnib-100mg-bottle-of-30-tablets-3917431 |
+| 109 | /online-medicine-order/3995137 | /online-medicine-order/ramiven-150mg-strip-of-7-tablets-3995137 |
+| 110 | /online-medicine-order/3999204 | /online-medicine-order/ifowem-box-of-1-combipack-injection-3999204 |
+| 111 | /online-medicine-order/4002 | /online-medicine-order/zoladex-3-6mg-inj-4002 |
+| 112 | /online-medicine-order/4011 | /online-medicine-order/iressa-250mg-tablet-4011 |
+| 113 | /online-medicine-order/4012 | /online-medicine-order/casodex-150mg-tablet-4012 |
+| 114 | /online-medicine-order/40872 | /online-medicine-order/cisteen-10mg-inj-10ml-40872 |
+| 115 | /online-medicine-order/4113763 | /online-medicine-order/atnab-paclitix-100-mg-injection-1-no-s-4113763 |
+| 116 | /online-medicine-order/4113855 | /online-medicine-order/adcilib-75-mg-capsule-21-no-s-4113855 |
+| 117 | /online-medicine-order/4113995 | /online-medicine-order/gem-rtu-1-4-g-injection-1-no-s-4113995 |
+| 118 | /online-medicine-order/4114079 | /online-medicine-order/knilonat-200-capsule-10-no-s-4114079 |
+| 119 | /online-medicine-order/4114086 | /online-medicine-order/soratib-tablet-30-no-s-4114086 |
+| 120 | /online-medicine-order/4114340 | /online-medicine-order/vinbix-10-mg-injection-1-no-s-4114340 |
+| 121 | /online-medicine-order/4114508 | /online-medicine-order/bdfucil-100-mg-224-mg-capsule-14-no-s-4114508 |
+| 122 | /online-medicine-order/4114582 | /online-medicine-order/afadel-30-tablet-10-no-s-4114582 |
+| 123 | /online-medicine-order/4114825 | /online-medicine-order/beedan-20-mg-tablet-60-no-s-4114825 |
+| 124 | /online-medicine-order/4115185 | /online-medicine-order/adflu-50-injection-1-no-s-4115185 |
+| 125 | /online-medicine-order/4115888 | /online-medicine-order/cabozanib-40-tablet-30-no-s-4115888 |
+| 126 | /online-medicine-order/4116496 | /online-medicine-order/adtrinib-tablet-30-no-s-4116496 |
+| 127 | /online-medicine-order/4116640 | /online-medicine-order/emetant-125-80-capsule-3-no-s-4116640 |
+| 128 | /online-medicine-order/4116922 | /online-medicine-order/lupitux-infusion-20-ml-4116922 |
+| 129 | /online-medicine-order/4117196 | /online-medicine-order/pazeqol-200-tablet-30-no-s-4117196 |
+| 130 | /online-medicine-order/4117432 | /online-medicine-order/cydekin-125-mg-capsule-21-no-s-4117432 |
+| 131 | /online-medicine-order/4117483 | /online-medicine-order/capebel-dt-500-mg-tablet-10-no-s-4117483 |
+| 132 | /online-medicine-order/4117889 | /online-medicine-order/nelova-200-mg-capsule-28-no-s-4117889 |
+| 133 | /online-medicine-order/4118123 | /online-medicine-order/peg-filtero-injection-1-no-s-4118123 |
+| 134 | /online-medicine-order/4119051 | /online-medicine-order/palozest-injection-5-ml-4119051 |
+| 135 | /online-medicine-order/4119324 | /online-medicine-order/atpeme-500-mg-injection-1-no-s-4119324 |
+| 136 | /online-medicine-order/4119358 | /online-medicine-order/bdfoie-4-mg-capsule-10-no-s-4119358 |
+| 137 | /online-medicine-order/4119652 | /online-medicine-order/bdnab-100-mg-injection-10-ml-4119652 |
+| 138 | /online-medicine-order/4119866 | /online-medicine-order/atgemci-200-mg-injection-1-no-s-4119866 |
+| 139 | /online-medicine-order/4119925 | /online-medicine-order/atleuco-50-mg-injection-1-no-s-4119925 |
+| 140 | /online-medicine-order/4120803 | /online-medicine-order/arbaz-60-mg-injection-1-5-ml-4120803 |
+| 141 | /online-medicine-order/4121837 | /online-medicine-order/cetuxa-100-mg-infusion-20-ml-4121837 |
+| 142 | /online-medicine-order/4122171 | /online-medicine-order/admatop-2-5-mg-injection-1-no-s-4122171 |
+| 143 | /online-medicine-order/4122290 | /online-medicine-order/comcapsy-400-mg-20-mg-tablet-7-no-s-4122290 |
+| 144 | /online-medicine-order/4122603 | /online-medicine-order/adben-100-injection-1-no-s-4122603 |
+| 145 | /online-medicine-order/4122824 | /online-medicine-order/nab-taxhal-100-mg-injection-1-no-s-4122824 |
+| 146 | /online-medicine-order/4122968 | /online-medicine-order/carfimib-injection-1-no-s-4122968 |
+| 147 | /online-medicine-order/4128405 | /online-medicine-order/bleoace-15iu-dry-vial-of-1-powder-for-injection-4128405 |
+| 148 | /online-medicine-order/4133716 | /online-medicine-order/denosta-60-mg-ml-inj-4133716 |
+| 149 | /online-medicine-order/4199688 | /online-medicine-order/bdparp-150mg-bottle-of-56-tablets-4199688 |
+| 150 | /online-medicine-order/42761 | /online-medicine-order/dacarin-100mg-inj-42761 |
+| 151 | /online-medicine-order/42876 | /online-medicine-order/daunocin-20mg-inj-42876 |
+| 152 | /online-medicine-order/42888 | /online-medicine-order/daxotel-80mg-inj-2ml-42888 |
+| 153 | /online-medicine-order/4375504 | /online-medicine-order/flu-stim-vial-of-2-ml-injection-4375504 |
+| 154 | /online-medicine-order/45455 | /online-medicine-order/endace-40mg-tablet-45455 |
+| 155 | /online-medicine-order/45494 | /online-medicine-order/endoxan-n-1gm-injection-1-s-45494 |
+| 156 | /online-medicine-order/4577 | /online-medicine-order/luprodex-depot-3-75mg-inj-4577 |
+| 157 | /online-medicine-order/47616 | /online-medicine-order/fluonco-250mg-inj-5ml-47616 |
+| 158 | /online-medicine-order/47752 | /online-medicine-order/foliripe-2-5mg-tablet-47752 |
+| 159 | /online-medicine-order/4798248 | /online-medicine-order/calmac-50mg-bottle-of-10-tablets-4798248 |
+| 160 | /online-medicine-order/4798265 | /online-medicine-order/tishtha-100mg-vial-of-10ml-injection-4798265 |
+| 161 | /online-medicine-order/4819243 | /online-medicine-order/anemiax-s-100mg-bottle-of-100ml-syrup-4819243 |
+| 162 | /online-medicine-order/4819745 | /online-medicine-order/granizee-3mg-dry-vial-of-1-powder-for-injection-4819745 |
+| 163 | /online-medicine-order/4819794 | /online-medicine-order/intazumab-420mg-vial-of-14ml-injection-4819794 |
+| 164 | /online-medicine-order/4827801 | /online-medicine-order/doxorex-pl-50-mg-dry-vial-of-1-powder-for-injection-4827801 |
+| 165 | /online-medicine-order/4827821 | /online-medicine-order/drocid-4-mg-pouch-of-100ml-infusion-4827821 |
+| 166 | /online-medicine-order/4827822 | /online-medicine-order/idarubitec-5-mg-vial-of-5ml-injection-4827822 |
+| 167 | /online-medicine-order/4827913 | /online-medicine-order/meszee-200-mg-dry-vial-of-1-powder-for-injection-4827913 |
+| 168 | /online-medicine-order/4828084 | /online-medicine-order/captomac-10-mg-strip-of-10-tablets-4828084 |
+| 169 | /online-medicine-order/4828089 | /online-medicine-order/adgorif-40-mg-bottle-of-28-tablets-4828089 |
+| 170 | /online-medicine-order/4828101 | /online-medicine-order/apristar-125-80-mg-kit-strip-of-3-capsules-4828101 |
+| 171 | /online-medicine-order/499871 | /online-medicine-order/ibrushil-140mg-bottle-of-30-capsules-499871 |
+| 172 | /online-medicine-order/50366 | /online-medicine-order/holoxan-1gm-with-uromitexan-200mg-vial-of-1gm-powder-for-injection-50366 |
+| 173 | /online-medicine-order/54137 | /online-medicine-order/mitodus-10mg-inj-54137 |
+| 174 | /online-medicine-order/5462 | /online-medicine-order/posid-50mg-capsule-5462 |
+| 175 | /online-medicine-order/56510 | /online-medicine-order/oncocin-10mg-inj-56510 |
+| 176 | /online-medicine-order/56512 | /online-medicine-order/oncocristin-aq-1mg-inj-1ml-56512 |
+| 177 | /online-medicine-order/56519 | /online-medicine-order/oncodria-10mg-inj-56519 |
+| 178 | /online-medicine-order/56999 | /online-medicine-order/oxiplat-100mg-tab-56999 |
+| 179 | /online-medicine-order/57927 | /online-medicine-order/placid-100mg-inj-57927 |
+| 180 | /online-medicine-order/58783 | /online-medicine-order/purinetone-50mg-tab-58783 |
+| 181 | /online-medicine-order/64092 | /online-medicine-order/vinelbine-20mg-inj-5ml-64092 |
+| 182 | /online-medicine-order/64885 | /online-medicine-order/zavedos-10mg-inj-64885 |
+| 183 | /online-medicine-order/6594 | /online-medicine-order/erlocip-150mg-tab-10-s-6594 |
+| 184 | /online-medicine-order/67977 | /online-medicine-order/dabaz-100mg-inj-67977 |
+| 185 | /online-medicine-order/68118 | /online-medicine-order/duxocin-10mg-injection-1-s-68118 |
+| 186 | /online-medicine-order/68605 | /online-medicine-order/topotel-inj-2-5ml-68605 |
+| 187 | /online-medicine-order/69191 | /online-medicine-order/irinotel-40mg-inj-2ml-69191 |
+| 188 | /online-medicine-order/69377 | /online-medicine-order/lipodox-inj-5ml-69377 |
+| 189 | /online-medicine-order/69379 | /online-medicine-order/gemtaz-1g-injection-1-s-69379 |
+| 190 | /online-medicine-order/69826 | /online-medicine-order/faslodex-250mg-inj-5ml-69826 |
+| 191 | /online-medicine-order/70195 | /online-medicine-order/chloramax-2mg-tab-70195 |
+| 192 | /online-medicine-order/70287 | /online-medicine-order/erbitux-100mg-inj-50ml-70287 |
+| 193 | /online-medicine-order/70712 | /online-medicine-order/neupeg-6mg-inj-1ml-70712 |
+| 194 | /online-medicine-order/70726 | /online-medicine-order/oxitan-100mg-inj-50ml-70726 |
+| 195 | /online-medicine-order/70750 | /online-medicine-order/palnox-inj-5ml-70750 |
+| 196 | /online-medicine-order/72591 | /online-medicine-order/granicip-inj-1ml-72591 |
+| 197 | /online-medicine-order/72961 | /online-medicine-order/xabine-150mg-tab-72961 |
+| 198 | /online-medicine-order/74759 | /online-medicine-order/5-for-500mg-inj-74759 |
+| 199 | /online-medicine-order/74801 | /online-medicine-order/celtax-100mg-inj-74801 |
+| 200 | /online-medicine-order/75033 | /online-medicine-order/sutent-25mg-capsule-7-s-75033 |
+| 201 | /online-medicine-order/75882 | /online-medicine-order/g-nib-tab-75882 |
+| 202 | /online-medicine-order/76403 | /online-medicine-order/oncophos-1gm-inj-76403 |
+| 203 | /online-medicine-order/77111 | /online-medicine-order/karplat-10mg-inj-20ml-77111 |
+| 204 | /online-medicine-order/78742 | /online-medicine-order/biobin-100mg-inj-1ml-78742 |
+| 205 | /online-medicine-order/80653 | /online-medicine-order/religrast-300mcg-pre-filled-syringe-injection-0-5ml-80653 |
+| 206 | /online-medicine-order/81197 | /online-medicine-order/arzi-1gm-inj-81197 |
+| 207 | /online-medicine-order/81662 | /online-medicine-order/cancyt-1gm-inj-81662 |
+| 208 | /online-medicine-order/8277 | /online-medicine-order/tabi-50mg-tab-30-s-8496 |
+| 209 | /online-medicine-order/83763 | /online-medicine-order/borviz-2mg-inj-83763 |
+| 210 | /online-medicine-order/83917 | /online-medicine-order/alkacel-5mg-tab-83917 |
+| 211 | /online-medicine-order/83920 | /online-medicine-order/celkeran-5mg-bottle-of-30-tablets-83920 |
+| 212 | /online-medicine-order/84628 | /online-medicine-order/bucelon-60mg-inj-10ml-84628 |
+| 213 | /online-medicine-order/85270 | /online-medicine-order/afinitor-10mg-tab-30-s-85270 |
+| 214 | /online-medicine-order/8544 | /online-medicine-order/cresp-100mcg-pfs-inj-8544 |
+| 215 | /online-medicine-order/86485 | /online-medicine-order/uniblastin-10mg-inj-86485 |
+| 216 | /online-medicine-order/88389 | /online-medicine-order/herlet-2-5-mg-tablet-10-195593 |
+| 217 | /online-medicine-order/92253 | /online-medicine-order/cysmide-200mg-inj-92253 |
+| 218 | /online-medicine-order/92266 | /online-medicine-order/gliogen-20mg-cap-92266 |
+| 219 | /online-medicine-order/94372 | /online-medicine-order/tamoxilon-10mg-tablet-94372 |
+| 220 | /online-medicine-order/96678 | /online-medicine-order/tamimex-10mg-tab-96678 |
+| 221 | /online-medicine-order/98039 | /online-medicine-order/adpaxil-100mg-inj-98039 |
+| 222 | /online-medicine-order/99481 | /online-medicine-order/adgef-250mg-strip-of-10-tablets-99481 |
+| 223 | /online-medicine-order/99503 | /online-medicine-order/admine-100mg-cap-99503 |
+| 224 | /online-medicine-order/99513 | /online-medicine-order/adrea-500mg-cap-99513 |
+| 225 | /online-medicine-order/99520 | /online-medicine-order/adricin-50mg-inj-99520 |
+| 226 | /online-medicine-order/99526 | /online-medicine-order/adthal-50mg-capsule-99526 |
+| 227 | /online-medicine-order/99553 | /online-medicine-order/erlotad-100mg-tab-99553 |
+| 228 | /online-medicine-order/99748 | /online-medicine-order/tubitere-20mg-inj-99748 |
+| 229 | https://www.businesstoday.in/amp/personal-finance/insurance/story/irdai-reduces-pre-existing-disease-waiting-period-from-4-to-3-years-here-is-what-existing-policyholders-should-know-425325-2024-04-12 | https://www.businesstoday.in/personal-finance/insurance/story/irdai-reduces-pre-existing-disease-waiting-period-from-4-to-3-years-here-is-what-existing-policyholders-should-know-425325-2024-04-12 |
+| 230 | https://www.cancer.gov/types/testicular/hp/testicular-treatment-pdq?cid=eb_govdel&utm | https://www.cancer.gov/types/testicular/hp/testicular-treatment-pdq |
+| 231 | https://www.cancer.org/cancer/types/vaginal-cancer/causes-risks-prevention/what-causes.html | https://www.cancer.org/cancer/types/vaginal-cancer/causes-risks-prevention.html |
+| 232 | https://www.healthdirect.gov.au/digestive-system | https://www.healthdirect.gov.au/anatomy/digestive-system |
+| 233 | https://www.healthdirect.gov.au/haemoptysis-coughing-up-blood | https://www.healthdirect.gov.au/symptoms/haemoptysis-coughing-up-blood |
+| 234 | https://www.healthdirect.gov.au/headaches | https://www.healthdirect.gov.au/symptoms/aches-and-pains/headaches |
+| 235 | https://www.healthdirect.gov.au/itchy-skin | https://www.healthdirect.gov.au/symptoms/itchy-skin |
+| 236 | https://www.healthdirect.gov.au/leukaemia | https://www.healthdirect.gov.au/conditions/cancer/leukaemia |
 
 ## Canonicals not used (41)
 
@@ -355,7 +413,7 @@ Bot challenge pages (NCBI served a reCAPTCHA), another domain, a deep page whose
 
 ## Linked pages that PharmEasy sets to NOINDEX (63)
 
-Live pages (kept), but PharmEasy tells search engines not to index them; they have no canonical.
+Live pages (kept), but PharmEasy tells search engines not to index them; they have no canonical. Medicine and molecule pages among them are linked by their own slug URL from the page data (in the swaps above).
 
 - /molecules/4128388
 - /molecules/4175362

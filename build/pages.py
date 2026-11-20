@@ -773,7 +773,7 @@ def build_page(fname, path, built):
             + '<div style="background:#F5F7F8;font-family:var(--glp-font,Inter,Mulish,sans-serif);color:#25282B;padding-bottom:48px;container-type:inline-size">\n'
             + hero(doc, path) + '\n  <div class="sec" style="max-width:1120px;margin:0 auto;padding:24px 20px 0">\n    <div style="display:flex;flex-wrap:wrap;gap:24px;align-items:flex-start">\n\n'
             + rail(toc, related_links(path), bool(faqs), bool(refs))
-            + '\n      <div class="art" style="order:2;flex:1 1 560px;min-width:0">\n' + ''.join(body) + B.explore_band()
+            + '\n      <div class="art" style="order:2;flex:1 1 560px;min-width:0">\n' + ''.join(body) + B.explore_band(path)
             + (faq_html(faqs) if faqs else '') + (refs_html(refs) if refs else '')
             + '\n      </div>\n    </div>\n  </div>\n' + B.disclaimer()
             + '\n</div>\n</div></main>\n<div data-pe-footer></div>\n'
@@ -794,7 +794,7 @@ def build_page(fname, path, built):
         note(path, 'cited but not in the reference list: %s' % missing)
     out = os.path.join(ROOT, path, 'index.html')
     os.makedirs(os.path.dirname(out), exist_ok=True)
-    open(out, 'w', encoding='utf8').write(B.bust(present(page)))
+    open(out, 'w', encoding='utf8').write(B.bust(present(B.brand_popups(page))))
     return out, len(toc), len(faqs), len(refs)
 
 

@@ -55,6 +55,20 @@ built copy (they are not live on pharmeasy.in yet); production links are unchang
 
 Full rebuild: `python3 check_links.py && python3 build.py && python3 pages.py`.
 
+### Medicine and molecule links: canonical URL, crawled daily
+
+Every link to a PharmEasy medicine (`/online-medicine-order/...`) or molecule (`/molecules/...`) page is
+written to the URL that page declares in `<link rel="canonical">`, whatever URL the doc or the molecule
+sheet used (a short `/online-medicine-order/11353` becomes the slug URL). PharmEasy leaves the canonical out
+on pages it sets to NOINDEX; for those the checker takes the page's own slug URL (same id) from the page
+data and records it as `self_url`. The target must answer 200 before the build uses it.
+
+`.github/workflows/link-canonicals.yml` runs `check_links.py --daily` every day at 06:00 IST (and on
+demand from the Actions tab). It rechecks every medicine/molecule link and its canonical target, other
+links when older than 7 days, commits `link_status.json` and the reports, and starts the deploy only if
+the built pages changed. A recheck that is blocked keeps the last good result; a run that finds more than
+20 newly dead links stops without committing or deploying.
+
 ## Drug table: "+N more molecules" popups
 
 Each drug-group row ends with a "+N more molecules" chip. Clicking it opens a popup listing that

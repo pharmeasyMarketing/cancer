@@ -13,8 +13,20 @@ its 405 "Human Verification" response. /cancer/ links are checked against the Cy
 (72.60.200.28) because CloudFront does not route /cancer to it yet; once it does, they are checked
 like any other pharmeasy.in URL.
 
+Medicine and molecule links (pharmeasy.in/online-medicine-order/..., /molecules/...) always point at the
+URL the PharmEasy page itself declares: its <link rel="canonical">. PharmEasy leaves the canonical out on
+pages it sets to NOINDEX; for those the checker records the page's own slug URL (same product or molecule
+id, taken from the page data) as "self_url", so a short numeric link like /online-medicine-order/11353
+still becomes /online-medicine-order/exeget-25mg-strip-of-10-tablets-11353. The builders link whichever
+of the two was found, once the target itself answers 200.
+
 Run:  python3 check_links.py            check URLs not checked in the last 7 days
+      python3 check_links.py --daily    as above, plus every medicine/molecule link and its canonical
+                                        target, whatever their age (the daily GitHub job runs this)
       python3 check_links.py --all      recheck everything
+
+A recheck that only fails to get through (bot challenge, timeout, 5xx) keeps the last good result, so a
+bad crawl day never reverts a link to its short URL. 404/410 still replaces it.
 """
 import collections, concurrent.futures as cf, datetime as dt, html, json, os, re, ssl, subprocess, sys, threading, time
 import urllib.error, urllib.request
@@ -27,6 +39,28 @@ UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML,
 MAX_AGE_DAYS = 7
 DEAD = {404, 410}
 CTX = ssl._create_unverified_context()
+PRODUCT = re.compile(r'^https://(?:www\.)?pharmeasy\.in/(online-medicine-order|molecules)/([^/?#]+)')
+
+
+def is_product(u):
+    return bool(PRODUCT.match(u))
+
+
+def self_url_of(u, page_html):
+    """For a medicine/molecule page with no canonical: the page's own slug URL (same section, same id)."""
+    m = PRODUCT.match(u)
+    idm = re.search(r'(\d+)$', m.group(2)) if m else None
+    if not idm:
+        return ''
+    sec, pid = m.group(1), idm.group(1)
+    t = page_html.replace('\\/', '/')
+    found = re.search(r'pharmeasy\.in/%s/([a-z0-9][a-z0-9-]*-%s)(?=["\'?#/\\<\s])' % (sec, pid), t)
+    if not found:
+        found = re.search(r'"slug":"([a-z0-9][a-z0-9-]*-%s)"' % pid, t)
+    if not found:
+        return ''
+    out = 'https://pharmeasy.in/%s/%s' % (sec, found.group(1))
+    return '' if out == u else out
 
 
 def collect():
@@ -95,7 +129,7 @@ def canonical_of(page_html, base):
 
 
 def fetch(u):
-    """-> (status, final_url, canonical_or_note)."""
+    """-> (status, final_url, canonical_or_note[, '\tNOINDEX'][, '\tSELF ' + self_url])."""
     h = host(u)
     if re.match(r'https?://(www\.)?pharmeasy\.in/cancer(/|$)', u):
         # CyberPanel origin, asked directly with the public host name
@@ -119,8 +153,16 @@ def fetch(u):
                     txt = head.decode('utf8', 'replace')
                     canon = canonical_of(txt, r.geturl())
                     rb = re.search(r'<meta\s+name=["\']robots["\']\s+content=["\']([^"\']*)', txt, re.I)
-                    if rb and 'noindex' in rb.group(1).lower():
+                    noindex = bool(rb and 'noindex' in rb.group(1).lower())
+                    selfu = ''
+                    if not canon and is_product(u):
+                        # no canonical (PharmEasy NOINDEX pages): read the page data for its own slug URL
+                        body = head + r.read(4000000)
+                        selfu = self_url_of(u, body.decode('utf8', 'replace'))
+                    if noindex:
                         canon += '\tNOINDEX'
+                    if selfu:
+                        canon += '\tSELF ' + selfu
                 else:
                     r.read(2048)
                 return r.status, r.geturl(), canon
@@ -142,10 +184,11 @@ def fetch(u):
 
 def main():
     recheck_all = '--all' in sys.argv
+    daily = '--daily' in sys.argv
     urls = collect()
     old = json.load(open(OUT)) if os.path.exists(OUT) else {}
     cutoff = (dt.datetime.now() - dt.timedelta(days=MAX_AGE_DAYS)).isoformat()
-    todo = [u for u in urls if recheck_all or u not in old or old[u].get('checked', '') < cutoff]
+    todo = [u for u in urls if recheck_all or (daily and is_product(u)) or u not in old or old[u].get('checked', '') < cutoff]
     print('%d links on the pages, %d to check' % (len(urls), len(todo)))
     res = {u: v for u, v in old.items() if u in urls}
     old.setdefault('_canonical_targets', {})
@@ -154,16 +197,29 @@ def main():
     def one(u):
         st, final, extra = fetch(u)
         note = extra if extra.startswith('error:') else ''
-        canon, _, robots = ('' if note else extra).partition('\t')
+        parts = ('' if note else extra).split('\t')
+        canon = parts[0]
+        robots = 'NOINDEX' in parts[1:]
+        selfu = next((x[5:] for x in parts[1:] if x.startswith('SELF ')), '')
         verdict = 'dead' if st in DEAD else ('ok' if 200 <= st < 400 else 'unverified')
-        rec = {'status': st, 'verdict': verdict, 'checked': dt.datetime.now().replace(microsecond=0).isoformat(),
-               'found_on': sorted(urls[u])}
+        now = dt.datetime.now().replace(microsecond=0).isoformat()
+        prev = old.get(u)
+        if verdict == 'unverified' and isinstance(prev, dict) and prev.get('verdict') == 'ok':
+            # could not get through this time: keep the last good result (and its canonical)
+            rec = dict(prev)
+            rec['last_failed'] = {'status': st, 'at': now}
+            rec['found_on'] = sorted(urls[u])
+            done[0] += 1
+            return u, rec
+        rec = {'status': st, 'verdict': verdict, 'checked': now, 'found_on': sorted(urls[u])}
         if final != u:
             rec['final_url'] = final
         if note:
             rec['note'] = note
         if canon:
             rec['canonical'] = canon
+        if selfu:
+            rec['self_url'] = selfu
         if robots:
             rec['robots'] = 'noindex'
         done[0] += 1
@@ -181,8 +237,13 @@ def main():
             for u, rec in f.result():
                 res[u] = rec
     # second pass: a canonical we would switch a link to must itself work
-    targets = sorted({v['canonical'] for u, v in res.items() if not u.startswith('_') and v.get('canonical') and v['canonical'] != u}
-                     - set(res) - set(old.get('_canonical_targets', {})))
+    def target(u, v):
+        return v.get('canonical') or v.get('self_url') or ''
+    every = {target(u, v) for u, v in res.items() if not u.startswith('_') and target(u, v) and target(u, v) != u}
+    known = set(old.get('_canonical_targets', {}))
+    # --daily rechecks every medicine/molecule target so a canonical that stops working is dropped next day
+    fresh = {target(u, v) for u, v in res.items() if not u.startswith('_') and daily and is_product(u)} - {''}
+    targets = sorted((every - set(res) - known) | (fresh & every) - set(res))
     canon_status = dict(old.get('_canonical_targets', {})) if not recheck_all else {}
     if targets:
         print('checking %d canonical targets' % len(targets))
@@ -193,6 +254,9 @@ def main():
             for f in cf.as_completed([ex.submit(lambda ts: [(t, fetch(t)[0]) for t in ts], ts) for ts in by_h.values()]):
                 for t, st in f.result():
                     st = st if isinstance(st, int) else 0
+                    was = canon_status.get(t)
+                    if st not in DEAD and not 200 <= st < 400 and isinstance(was, int) and 200 <= was < 400:
+                        continue          # blocked this time: keep the last good status
                     canon_status[t] = st
     for u in res:
         res[u]['found_on'] = sorted(urls[u])

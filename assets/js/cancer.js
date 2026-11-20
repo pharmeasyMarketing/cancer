@@ -72,24 +72,27 @@
   if (/^#ref-/.test(location.hash)) open();
 })();
 
-/* Drug table: "+N more molecules" opens a popup listing the group's other molecules on
-   PharmEasy. The list is client-rendered from assets/data/drug-more.json (built from the
-   "Cancer Molecules list" sheet), so it is not part of the page HTML. */
+/* Drug tables: two popups share one card.
+   - "+N more molecules" (homepage drug table) lists the group's other molecules on PharmEasy, from
+     assets/data/drug-more.json (built from the "Cancer Molecules list" sheet).
+   - a molecule's "+N more" brand chip lists that molecule's other medicines on PharmEasy, from
+     assets/data/mol-brands.json (build/fetch_mol_medicines.py, PharmEasy's molecule medicines API).
+     The chip is a link to the molecule page, so without JS (or if the data fails) it still goes there.
+   Neither list is part of the page HTML. */
 (function () {
   'use strict';
-  var buttons = document.querySelectorAll('.mol-more[data-group]');
-  if (!buttons.length) return;
+  var groupBtns = document.querySelectorAll('.mol-more[data-group]');
+  var brandChips = document.querySelectorAll('a.mol-brands[data-mol]');
+  if (!groupBtns.length && !brandChips.length) return;
   var src = (document.querySelector('script[src*="assets/js/cancer.js"]') || {}).src || '';
-  var url = src ? src.replace(/js\/cancer\.js.*$/, 'data/drug-more.json') : 'assets/data/drug-more.json';
-  var data = null, loading = null, dlg, title, list, lastBtn;
+  function dataUrl(f) { return src ? src.replace(/js\/cancer\.js.*$/, 'data/' + f) : 'assets/data/' + f; }
+  var cache = {}, dlg, title, sub, list, lastBtn;
 
-  function load() {
-    if (data) return Promise.resolve(data);
-    if (!loading) loading = fetch(url, { credentials: 'same-origin' })
+  function load(f) {
+    if (!cache[f]) cache[f] = fetch(dataUrl(f), { credentials: 'same-origin' })
       .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
-      .then(function (j) { data = j.groups || {}; return data; })
-      .catch(function (e) { loading = null; throw e; });
-    return loading;
+      .catch(function (e) { delete cache[f]; throw e; });
+    return cache[f];
   }
 
   function build() {
@@ -99,10 +102,10 @@
     dlg.innerHTML = '<div class="mm-dialog" role="dialog" aria-modal="true" aria-labelledby="mm-title">' +
       '<div class="mm-head"><h3 id="mm-title"></h3><button type="button" class="mm-close" aria-label="Close">' +
       '<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg></button></div>' +
-      '<p class="mm-sub">More molecules in this group on PharmEasy. Your oncologist decides which medicine suits you.</p>' +
-      '<ul class="mm-list"></ul></div>';
+      '<p class="mm-sub"></p><ul class="mm-list"></ul></div>';
     document.body.appendChild(dlg);
     title = dlg.querySelector('#mm-title');
+    sub = dlg.querySelector('.mm-sub');
     list = dlg.querySelector('.mm-list');
     dlg.addEventListener('click', function (e) { if (e.target === dlg || e.target.closest('.mm-close')) close(); });
     document.addEventListener('keydown', function (e) {
@@ -115,16 +118,22 @@
     });
   }
 
-  function open(btn, group) {
+  function open(btn, heading, note, items, more) {
     if (!dlg) build();
     lastBtn = btn;
-    title.textContent = group.title;
+    title.textContent = heading;
+    sub.textContent = note;
     list.innerHTML = '';
-    group.molecules.forEach(function (m) {
+    items.forEach(function (m) {
       var li = document.createElement('li'), a = document.createElement('a');
       a.href = m.url; a.textContent = m.name;
       li.appendChild(a); list.appendChild(li);
     });
+    if (more) {
+      var li = document.createElement('li'), a = document.createElement('a');
+      li.className = 'mm-all'; a.href = more.url; a.textContent = more.name;
+      li.appendChild(a); list.appendChild(li);
+    }
     dlg.hidden = false;
     document.documentElement.classList.add('mm-open');
     btn.setAttribute('aria-expanded', 'true');
@@ -137,14 +146,35 @@
     if (lastBtn) { lastBtn.setAttribute('aria-expanded', 'false'); lastBtn.focus(); }
   }
 
-  [].forEach.call(buttons, function (b) {
+  [].forEach.call(groupBtns, function (b) {
     b.setAttribute('aria-expanded', 'false');
     b.addEventListener('click', function () {
       b.setAttribute('aria-busy', 'true');
-      load().then(function (groups) {
-        var g = groups[b.getAttribute('data-group')];
-        if (g && g.molecules.length) open(b, g);
+      load('drug-more.json').then(function (j) {
+        var g = (j.groups || {})[b.getAttribute('data-group')];
+        if (g && g.molecules.length) open(b, g.title,
+          'More molecules in this group on PharmEasy. Your oncologist decides which medicine suits you.', g.molecules);
       }).catch(function () {}).then(function () { b.removeAttribute('aria-busy'); });
+    });
+  });
+
+  [].forEach.call(brandChips, function (a) {
+    a.setAttribute('aria-expanded', 'false');
+    a.addEventListener('click', function (e) {
+      if (e.metaKey || e.ctrlKey || e.shiftKey || e.button) return;   // new tab: follow the link
+      e.preventDefault();
+      var row = a.closest('.mol-row');
+      var name = row ? row.querySelector('.mol-name').textContent.trim() : '';
+      var skip = (a.getAttribute('data-skip') || '').split(',').filter(Boolean).map(Number);
+      a.setAttribute('aria-busy', 'true');
+      load('mol-brands.json').then(function (j) {
+        var items = (j[a.getAttribute('data-mol')] || []).filter(function (m) { return skip.indexOf(m.p) === -1; })
+          .map(function (m) { return { name: m.n, url: m.u }; });
+        if (!items.length) { location.href = a.href; return; }
+        open(a, name ? 'More ' + name + ' medicines' : 'More medicines',
+          'Other medicines with ' + (name || 'this molecule') + ' on PharmEasy. Your oncologist decides which medicine suits you.',
+          items, { name: 'About ' + (name || 'this molecule') + ' on PharmEasy', url: a.href });
+      }).catch(function () { location.href = a.href; }).then(function () { a.removeAttribute('aria-busy'); });
     });
   });
 })();

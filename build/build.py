@@ -329,7 +329,7 @@ def slug(s):
 
 # Mobile only (CSS): the desktop column header is hidden there, so each group's list gets its own key.
 MOL_KEY = ('<div class="mol-key" aria-hidden="true"><span class="k-mol">Molecule</span>'
-           '<span class="k-brand">Brands on PharmEasy</span></div>')
+           '<span class="k-brand">Brands on PharmEasy</span><span class="k-all">Molecules and brands on PharmEasy</span></div>')
 
 
 def drug_table():
@@ -660,13 +660,15 @@ def existing_pages():
     return {''} | {p['path'] for p in cfg if os.path.exists(os.path.join(HERE, 'pages', p['doc']))}
 
 
-def explore_band():
+def explore_band(current=None):
+    """current = path of the page being built ('' for the homepage): a page never links to itself, so its
+    own Explore card is left out, its own sub-link dropped and its own A to Z row shown as plain text."""
     have = existing_pages()
     cards = []
     for title, desc, ic, path, subs in EXPLORE:
-        if path not in have:
+        if path not in have or path == current:
             continue
-        subs = [(t, p) for t, p in subs if p in have]
+        subs = [(t, p) for t, p in subs if p in have and p != current]
         sub = ('<div class="ex-subs">%s</div>' % ''.join('<a href="%s%s">%s</a>' % (CX, p, esc(t)) for t, p in subs)) if subs else ''
         cards.append('<div class="ex-card"><span class="ex-ic">%s</span><div class="ex-body"><a class="ex-title" href="%s%s">%s</a>'
                      '<span class="ex-desc">%s</span>%s</div></div>' % (svg(IC[ic], 18), CX, path, esc(title), esc(desc), sub))
@@ -674,7 +676,7 @@ def explore_band():
     # stays in the HTML and is visible without JS
     letters, n_types = {}, 0
     for name, path, subs in CANCER_TYPES:
-        live_subs = [(t, p) for t, p in subs if p in have]
+        live_subs = [(t, p) for t, p in subs if p in have and p != current]
         if path in have:
             letters.setdefault(name[0].upper(), []).append((name, path, live_subs))
             n_types += 1
@@ -688,6 +690,10 @@ def explore_band():
     for letter in sorted(letters):
         rows = []
         for name, path, subs in letters[letter]:
+            if path == current:     # the page you are on: listed, not linked
+                rows.append('<li class="ctz-item is-current"><div class="ctz-row"><span class="ctz-type" aria-current="page">%s</span></div>%s</li>'
+                            % (esc(name), ('<div class="ctz-subs open">%s</div>' % ''.join('<a href="%s%s">%s</a>' % (CX, p, esc(t)) for t, p in subs)) if subs else ''))
+                continue
             if subs:
                 sid = 'ctz-' + slug(name)
                 n_guides = '%d guide%s' % (len(subs), '' if len(subs) == 1 else 's')
@@ -700,7 +706,7 @@ def explore_band():
                 rows.append('<li class="ctz-item"><div class="ctz-row"><a class="ctz-type" href="%s%s">%s%s</a></div></li>'
                             % (CX, path, esc(name), '<span class="ctz-go" aria-hidden="true">%s</span>' % svg(IC['arrow'], 16)))
         groups.append('<div class="ctz-group"><div class="ctz-letter" aria-hidden="true">%s</div><ul class="ctz-list">%s</ul></div>' % (letter, ''.join(rows)))
-    head_lbl = ('<a href="%stypes/">Cancer types A to Z</a>' % CX) if 'types/' in have else '<span class="ctz-title">Cancer types A to Z</span>'
+    head_lbl = ('<a href="%stypes/">Cancer types A to Z</a>' % CX) if 'types/' in have and current != 'types/' else '<span class="ctz-title">Cancer types A to Z</span>'
     ctz = ('      <div class="ctz">\n        <div class="ctz-head">%s<span>%d cancer%s</span></div>\n'
            '        <div class="ctz-groups">%s</div>\n      </div>\n' % (head_lbl, n_types, '' if n_types == 1 else 's', ''.join(groups))) if groups else ''
     if not cards and not ctz:
@@ -899,7 +905,7 @@ def canonical_map():
     for u, v in st.items():
         if u.startswith('_') or not isinstance(v, dict) or v.get('verdict') != 'ok':
             continue
-        c = v.get('canonical')
+        c = v.get('canonical') or v.get('self_url')   # self_url: medicine/molecule page with no canonical (NOINDEX)
         if c and c in ok_targets and canonical_acceptable(u, c):
             out[u] = c
     return out
@@ -945,11 +951,15 @@ def remove_dead_links(page, name):
     BUILT_THIS_RUN.add(name)
     ALL_LINKS[name] = sorted({html.unescape(u).split('#')[0] for u in re.findall(r'<a\b[^>]*\bhref="(https?://[^"]+)"', page)})
     dead, canon = dead_urls(), canonical_map()
+    own = 'https://pharmeasy.in' + name if name.startswith('/cancer/') else ''
 
     def fix(m):
         tag, inner = m.group(1), m.group(2)
         raw = re.search(r'href="([^"]*)"', tag).group(1)
         href = html.unescape(raw).split('#')[0]
+        if own and href == own:     # a link to the page you are on: same-page anchor if it has one, else plain text
+            frag = raw[len(raw.split('#')[0]):]
+            return (tag.replace('href="%s"' % raw, 'href="%s"' % frag) + inner + '</a>') if frag else inner
         if href not in dead:
             if href in canon:   # link the page's own canonical URL
                 frag = raw[len(raw.split('#')[0]):]
@@ -1007,7 +1017,7 @@ def write_link_report():
     L += ['| %d | %s | %s |' % (i, short(u), short(c)) for i, (u, c) in enumerate(rej, 1)]
     noidx = sorted(u for u, v in rows.items() if v.get('robots') == 'noindex')
     L += ['', '## Linked pages that PharmEasy sets to NOINDEX (%d)' % len(noidx), '',
-          'Live pages (kept), but PharmEasy tells search engines not to index them; they have no canonical.', '']
+          'Live pages (kept), but PharmEasy tells search engines not to index them; they have no canonical. Medicine and molecule pages among them are linked by their own slug URL from the page data (in the swaps above).', '']
     L += ['- %s' % short(u) for u in noidx]
     open(os.path.join(HERE, 'link_check_report.md'), 'w', encoding='utf8').write('\n'.join(L) + '\n')
 
@@ -1054,6 +1064,34 @@ def nofollow_external(page):
     return EXTERNAL_A.sub(fix, page)
 
 
+MOL_BRANDS = os.path.join(HERE, '..', 'assets', 'data', 'mol-brands.json')   # fetch_mol_medicines.py
+MOL_ROW = re.compile(r'(<div class="mol-row"><div class="mol-name">)(.*?)(</div><div class="brands">)(.*?)(</div></div>)', re.S)
+
+
+def brand_popups(page):
+    """A "+N more" brand chip that links a molecule page opens a card listing that molecule's other
+    medicines on PharmEasy (cancer.js, from assets/data/mol-brands.json). The chip keeps its link to the
+    molecule page (works without JS) and its count becomes the number of medicines in the card: PharmEasy's
+    list minus the brand chips already shown in the row. No data for a molecule: the chip is left as written."""
+    data = json.load(open(MOL_BRANDS, encoding='utf8')) if os.path.exists(MOL_BRANDS) else {}
+    if not data:
+        return page
+
+    def row(m):
+        chips = m.group(4)
+        mm = re.search(r'<a class="brand more" href="(https://pharmeasy\.in/molecules/[^"]*?(\d+))">\+\d+ more</a>', chips)
+        if not mm or not data.get(mm.group(2)):
+            return m.group(0)
+        shown = {int(x) for x in re.findall(r'<a class="brand" href="https://pharmeasy\.in/online-medicine-order/[^"]*?(\d+)"', chips)}
+        n = sum(1 for it in data[mm.group(2)] if it['p'] not in shown)
+        if not n:
+            return m.group(0)
+        chip = ('<a class="brand more mol-brands" href="%s" data-mol="%s" data-skip="%s" aria-haspopup="dialog">+%d more</a>'
+                % (mm.group(1), mm.group(2), ','.join(str(x) for x in sorted(shown)), n))
+        return m.group(1) + m.group(2) + m.group(3) + chips.replace(mm.group(0), chip) + m.group(5)
+    return MOL_ROW.sub(row, page)
+
+
 URLS_FILE = os.path.join(HERE, 'cancer_urls.txt')
 
 
@@ -1088,7 +1126,7 @@ def main():
     page = (head(faqs, desc, title) + '\n<body data-built="%s">\n<a class="skip" href="#main">Skip to content</a>' % ' '.join(built_pages()) + '\n<div data-pe-header></div>\n<main id="main"><div id="dc-root">\n'
             '<div style="background:#F5F7F8;font-family:var(--glp-font,Inter,Mulish,sans-serif);color:#25282B;padding-bottom:48px;container-type:inline-size">\n'
             + hero() + '\n  <div class="sec" style="max-width:1120px;margin:0 auto;padding:24px 20px 0">\n    <div style="display:flex;flex-wrap:wrap;gap:24px;align-items:flex-start">\n\n' + rail(toc)
-            + '\n      <div class="art" style="order:2;flex:1 1 560px;min-width:0">\n' + body + explore_band() + faq + ref + '\n      </div>\n    </div>\n  </div>\n' + disclaimer() +
+            + '\n      <div class="art" style="order:2;flex:1 1 560px;min-width:0">\n' + body + explore_band('') + faq + ref + '\n      </div>\n    </div>\n  </div>\n' + disclaimer() +
             '\n</div>\n</div></main>\n<div data-pe-footer></div>\n'
             '<script src="assets/js/pe-shell.js" defer></script>\n<script src="assets/js/pe-toc.js" defer></script>\n<script src="assets/js/cancer.js" defer></script>\n</body>\n</html>\n')
     page = remove_dead_links(page, '/cancer/')
@@ -1096,7 +1134,7 @@ def main():
     check_cancer_links(page)
     # the house rule: no em or en dashes in any output
     assert '—' not in page and '–' not in page, [m.start() for m in re.finditer('[—–]', page)][:5]
-    open(OUT, 'w', encoding='utf8').write(bust(present(page)))
+    open(OUT, 'w', encoding='utf8').write(bust(present(brand_popups(page))))
     write_removed_report()
     write_link_report()
     print('wrote', os.path.abspath(OUT), len(page), 'bytes; sections', len(toc), 'faqs', len(faqs))
