@@ -835,3 +835,4 @@ ul:is(.mech-grid, .medex-grid, .pv, .hpvt) > li { margin: 0; }
 .mech-grid.groups ul.checks { margin: 8px 0 0; font-size: 14px; line-height: 22px; }
 @container art (max-width: 640px) { .mech-grid.mimic, .mech-grid.redflags { grid-template-columns: 1fr; } }
 .mech-grid.groups ul.checks { padding-left: 0; }
+.mech-grid.mimic .mech { border-left: 3px solid #9DCFCB; }

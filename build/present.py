@@ -1003,7 +1003,7 @@ IC.update({
     'male': '<circle cx="10" cy="14" r="5"/><path d="M14 10l6-6M15 4h5v5"/>',
     'child': '<circle cx="12" cy="6" r="3"/><path d="M8 21v-6l-2-3 3-2h6l3 2-2 3v6"/>',
     'pin': '<path d="M12 21s7-6 7-11a7 7 0 0 0-14 0c0 5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/>',
-    'approx': '<path d="M5 9c2-2 4-2 7 0s5 2 7 0M5 15c2-2 4-2 7 0s5 2 7 0"/>',
+    'approx': '<circle cx="9" cy="12" r="5.5"/><circle cx="15" cy="12" r="5.5" stroke-dasharray="2.4 2"/>',   # a lookalike
     'flag': '<path d="M5 21V4M5 4h11l-2 4 2 4H5"/>',
 })
 
@@ -1019,7 +1019,8 @@ def _sym_icon(n):
 
 
 def _plain_cards(items, icon, cls):
-    return '<div class="mech-grid %s">%s</div>' % (cls, ''.join('<div class="mech">%s<p>%s</p></div>' % (_ic(IC[icon]), it.strip()) for it in items))
+    ic = _ic(IC[icon]) if icon else ''
+    return '<div class="mech-grid %s">%s</div>' % (cls, ''.join('<div class="mech">%s<p>%s</p></div>' % (ic, it.strip()) for it in items))
 
 
 def symptoms_sections(page):
@@ -1028,7 +1029,7 @@ def symptoms_sections(page):
     def warrant(seg):
         return labelled_cards(seg, None, _sym_icon, 'mech-grid infx')
     def mimic(seg):
-        return _replace_ul(seg, 'Other such examples include', lambda it: _plain_cards(it, 'approx', 'mimic'))
+        return _replace_ul(seg, 'Other such examples include', lambda it: _plain_cards(it, None, 'mimic'))
     def redflag(seg):
         return _replace_ul(seg, 'Some common red-flag symptoms include', lambda it: _plain_cards(it, 'flag', 'redflags'))
     def sexsite(seg):
