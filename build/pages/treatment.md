@@ -32,7 +32,7 @@ Doctors explain cancer treatment based on its main goal:
 
 These goals may change as the person's condition and response to treatment change.[6](https://www.cdc.gov/cancer-survivors/patients/treatments.html) For example, treatment that initially aims to cure cancer may later focus on controlling the disease or relieving symptoms. In some cases, the treatment goal may change in the other direction if circumstances improve. 
 
-### The four jobs a cancer treatment can do 
+### The four goals a cancer treatment can do 
 
 Cancer treatments may be done for different purposes depending on the type of cancer, its stage and the person's treatment plan. 
 
