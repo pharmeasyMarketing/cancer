@@ -743,3 +743,23 @@ main .ex-subs a, main .ctz-subs a, main .srcs a { text-decoration-line: none !im
 .panel-urgent ul, .panel-soon ul { margin: 0; padding-left: 20px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px 24px; font-size: 14.5px; line-height: 22px; color: #30363C; }
 @container art (max-width: 640px) { .mech-grid.goals, .mech-grid.relief { grid-template-columns: 1fr; } .panel-urgent ul, .panel-soon ul { grid-template-columns: 1fr; } .cmp-row { grid-template-columns: 1fr auto; } .cmp-row .cmp-l { grid-column: 1 / -1; } }
 @container art (max-width: 520px) { .statp { gap: 12px; } .statp-n { min-width: 68px; font-size: 21px; line-height: 26px; padding: 8px 10px; } .statp p { font-size: 15px; line-height: 25px; } }
+
+/* nutrition page components */
+.mech-grid.tips3, .mech-grid.myths { grid-template-columns: 1fr; gap: 10px; }
+.mech-grid.tips3 > .mech, .mech-grid.myths > .mech { grid-column: auto !important; }
+.mech .pg-list { margin: 6px 0 0; padding-left: 18px; font-size: 14px; line-height: 22px; color: #5C636D; }
+.mech .pg-list li { margin: 0 0 2px; }
+.mech.myth .mech-ic { background: #FFF1EE; color: #C0462B; }
+.mech-grid.myths { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+ul.checks { list-style: none; padding-left: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px 22px; }
+ul.checks > li { position: relative; padding-left: 28px; margin: 0; }
+ul.checks > li::before { content: ""; position: absolute; left: 0; top: 2px; width: 18px; height: 18px; border-radius: 50%; background: #EAF5F4 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='%23008880' stroke-width='3' stroke-linecap='round' stroke-linejoin='round' d='m6 12 4 4 8-8'/%3E%3C/svg%3E") center / 12px no-repeat; }
+h3.panel-t { scroll-margin-top: 20px; }
+@container art (max-width: 640px) { ul.checks, .mech-grid.myths { grid-template-columns: 1fr; } }
+.mech-grid.myths { display: block; columns: 2; column-gap: 12px; }
+.mech-grid.myths > .mech { break-inside: avoid; margin: 0 0 12px; }
+@container art (max-width: 640px) { .mech-grid.myths { columns: 1; } }
+ul.checks > li { display: block !important; }
+ul.checks { display: block; columns: 2; column-gap: 24px; }
+ul.checks > li { break-inside: avoid; margin: 0 0 8px; }
+@container art (max-width: 640px) { ul.checks { columns: 1; } }

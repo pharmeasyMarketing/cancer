@@ -565,10 +565,151 @@ def treatment_sections(page):
     return page
 
 
+IC.update({
+    'protein': '<path d="M5 12a7 7 0 0 0 14 0z"/><path d="M3 12h18M9 8c0-2 1-3 3-3M13 7c0-1.5 1-2.5 2.5-2.5"/>',
+    'energy': '<path d="M13 2 4 14h7l-1 8 9-12h-7z"/>',
+    'scale': '<rect x="3" y="4" width="18" height="16" rx="3"/><path d="M8 10a4 4 0 0 1 8 0zM12 10l1.5-2"/>',
+    'flask': '<path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 1.8 3h10.4a2 2 0 0 0 1.8-3l-5-9V3"/><path d="M7.5 15h9"/>',
+    'glass': '<path d="M6 3h12l-1.5 17a1.5 1.5 0 0 1-1.5 1.4H9a1.5 1.5 0 0 1-1.5-1.4z"/><path d="M6.5 9h11"/>',
+    'nocarb': '<circle cx="12" cy="12" r="9"/><path d="m5.6 5.6 12.8 12.8M9 9c1-2 5-2 6 0s-1 5-3 6"/>',
+    'leaf': IC_LEAF,
+    'herb': '<path d="M12 21V9M12 13c-4 0-6-3-6-7 4 0 6 3 6 7zM12 11c3 0 5-2 5-5-3 0-5 2-5 5z"/>',
+})
+
+
+def top_items(ul_inner):
+    """Top-level <li> contents of a list, nested lists kept inside their item."""
+    items, depth, start = [], 0, None
+    for m in re.finditer(r'<(/?)(li|ul)\b[^>]*>', ul_inner):
+        close, tag = m.group(1), m.group(2)
+        if tag == 'ul':
+            depth += -1 if close else 1
+        elif depth == 0:
+            if not close:
+                start = m.end()
+            elif start is not None:
+                items.append(ul_inner[start:m.start()])
+                start = None
+    return items
+
+
+def first_ul(seg, after=None):
+    """(full match span, inner) of the first top-level <ul class="pg-list"> in seg (optionally after a phrase)."""
+    a = seg.find('<ul class="pg-list">', seg.find(after) if after else 0)
+    if a < 0:
+        return None
+    depth, i = 0, a
+    for m in re.finditer(r'<(/?)ul\b[^>]*>', seg[a:]):
+        depth += -1 if m.group(1) else 1
+        if depth == 0:
+            e = a + m.end()
+            return (a, e), seg[a + len('<ul class="pg-list">'):e - len('</ul>')]
+    return None
+
+
+def labelled_cards(seg, after, icon_for, cls='mech-grid', card='mech'):
+    """A list whose every item opens with a bold label -> icon cards (nested sub-lists stay in the card)."""
+    hit = first_ul(seg, after)
+    if not hit:
+        return seg
+    (a, e), inner = hit
+    items = top_items(inner)
+    cards = []
+    for it in items:
+        m = re.match(r'\s*((?:<strong>[^<]+</strong>\s*)+)(.*)$', it, re.S)
+        if not m:
+            return seg
+        name = re.sub(r'\s+', ' ', re.sub(r'<[^>]+>', '', m.group(1))).strip()
+        body = m.group(2).strip()
+        body_html = body if body.startswith('<') and not body.startswith('<a') and not body.startswith('<sup') else '<p>%s</p>' % body
+        body_html = re.sub(r'^<p>(.*?)(<ul class="pg-list">.*)</p>$', r'<p>\1</p>\2', body_html, flags=re.S)
+        cards.append('<div class="%s">%s<div><div class="mech-t">%s</div>%s</div></div>' % (card, _ic(IC[icon_for(name)]), name, body_html))
+    return seg[:a] + '<div class="%s">%s</div>' % (cls, ''.join(cards)) + seg[e:]
+
+
+def _checks(seg, after):
+    hit = first_ul(seg, after)
+    if not hit:
+        return seg
+    (a, e), inner = hit
+    return seg[:a] + '<ul class="pg-list checks">' + inner + '</ul>' + seg[e:]
+
+
+def _h3_panel(seg, h3_start, cls):
+    m = re.search(r'<h3 class="h3" id="([^"]+)"[^>]*>(%s[^<]*)</h3>\s*<ul class="pg-list">(.*?)</ul>' % re.escape(h3_start), seg, re.S)
+    if not m:
+        return seg
+    return seg.replace(m.group(0), '<div class="%s"><h3 class="panel-t" id="%s">%s</h3><ul>%s</ul></div>' % (cls, m.group(1), m.group(2), m.group(3)), 1)
+
+
+def _bars(seg, starts, a_label, b_label, cap):
+    m = re.search(r'(<p class="lead-p">%s.*?at (\d+(?:\.\d+)?) months compared against (\d+(?:\.\d+)?) months.*?</p>)' % re.escape(starts), seg, re.S)
+    if not m:
+        return seg
+    a, b = float(m.group(2)), float(m.group(3))
+    bars = ('<div class="cmp" aria-hidden="true"><div class="cmp-row"><span class="cmp-l">%s</span><span class="cmp-bar"><i style="width:100%%"></i></span><b>%s months</b></div>'
+            '<div class="cmp-row"><span class="cmp-l">%s</span><span class="cmp-bar alt"><i style="width:%d%%"></i></span><b>%s months</b></div><div class="cmp-cap">%s</div></div>'
+            % (a_label, m.group(2), b_label, round(100 * b / a), m.group(3), cap))
+    return seg.replace(m.group(1), m.group(1) + '\n    ' + bars, 1)
+
+
+def _n_needs(seg):
+    return labelled_cards(seg, None, lambda n: 'protein' if 'protein' in n.lower() else 'energy' if 'energy' in n.lower() else 'scale', 'mech-grid tips3')
+
+
+def _n_eating(seg):
+    seg = _checks(seg, 'Avoiding these in Indian cooking')
+    seg = _note(seg, 'A dental checkup before treatment')
+    seg = _note(seg, 'Call your doctor if mouth, lip or throat pain', 'note-warn')
+    seg = _note(seg, 'Nausea during cancer treatment is best managed', 'note-key')
+    seg = _checks(seg, 'Now comes the dietary adjustment part')
+    seg = _note(seg, 'If nausea begins even before you reach the hospital')
+    seg = _checks(seg, 'Appetite loss without nausea')
+    seg = re.sub(r'<p class="lead-p">(<strong>The medicines used:</strong>)', r'<p class="note-info">\1', seg, count=1)
+    return _note(seg, 'Treatment options may change as new evidence')
+
+
+def _n_safety(seg):
+    seg = _checks(seg, 'Some practical rules for an Indian kitchen')
+    return re.sub(r'<p class="lead-p">(<strong>Note:</strong>\s*A fever)', r'<p class="note-warn">\1', seg, count=1)
+
+
+def _n_cachexia(seg):
+    seg = _note(seg, 'Explaining this clearly is important', 'note-key')
+    return _note(seg, 'Blood tests have a useful but limited role')
+
+
+def _n_diets(seg):
+    def icon(n):
+        l = n.lower()
+        return ('flask' if 'alkaline' in l else 'glass' if 'juic' in l else 'nocarb' if 'keto' in l or 'carbo' in l
+                else 'leaf' if 'fruit' in l else 'herb' if 'herbal' in l else 'pill')
+    seg = labelled_cards(seg, None, icon, 'mech-grid myths', 'mech myth')
+    return re.sub(r'<p class="lead-p">(<strong>Important:</strong>)', r'<p class="note-warn">\1', seg, count=1)
+
+
+def _n_when(seg):
+    seg = _h3_panel(seg, 'Contact your team the same day', 'panel-urgent')
+    seg = _h3_panel(seg, 'Arrange an appointment within a week or two', 'panel-soon')
+    return _bars(seg, 'One study at a single institution', 'nutritional counselling was included in care', 'compared against', 'overall survival')
+
+
+def nutrition_sections(page):
+    if 'id="toc-what-the-body-actually-needs-during-treatment"' not in page:
+        return page
+    for sid, fn in (('toc-what-the-body-actually-needs-during-treatment', _n_needs), ('toc-eating-through-taste-change-mouth-sores-and-nausea', _n_eating),
+                    ('toc-food-safety-when-white-cell-counts-are-low', _n_safety), ('toc-cachexia-when-eating-more-is-not-enough', _n_cachexia),
+                    ('toc-anti-cancer-diets-alkaline-diets-and-what-they-cost', _n_diets), ('toc-when-to-see-a-doctor', _n_when)):
+        sp = section_span(page, sid)
+        if sp:
+            page = page[:sp[0]] + fn(page[sp[0]:sp[1]]) + page[sp[1]:]
+    return page
+
+
 PAGE = {}
 
 
 def present(page):
     m = re.search(r'<link rel="canonical" href="([^"]+)"', page)
     PAGE['url'] = m.group(1) if m else ''
-    return treatment_sections(chemo_sections(how_it_is_given(how_it_works(TABLE_RE.sub(one, page)))))
+    return nutrition_sections(treatment_sections(chemo_sections(how_it_is_given(how_it_works(TABLE_RE.sub(one, page))))))
