@@ -26,7 +26,7 @@ HPV: human papillomavirus; VIA: visual inspection with acetic acid
 
 ![][image1] 
 
-## **Types and subtypes**
+## **Subtypes**
 
 | Subtype  | Share of cases  | Who it affects  | How it behaves  | Key difference  |
 | :---- | :---- | :---- | :---- | :---- |
