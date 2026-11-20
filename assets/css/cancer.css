@@ -618,3 +618,8 @@ main .ex-subs a, main .ctz-subs a, main .srcs a { text-decoration-line: none !im
 .pv-lines { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 2px 18px; margin-top: 2px; }
 .pv-lines > span { position: relative; padding-left: 12px; }
 .pv-lines > span::before { content: ""; position: absolute; left: 0; top: 0.72em; width: 5px; height: 5px; border-radius: 50%; background: #9DCFCB; }
+
+/* medicines table (inner pages): desktop column header, aligned with group label | molecule | brands */
+.med-head { display: grid; grid-template-columns: 216px 164px 1fr; margin: -6px -20px 0; padding: 12px 20px; background: #F2F9F8; border-bottom: 1px solid #E6E9ED; border-radius: 12px 12px 0 0; font-size: 11px; line-height: 16px; font-weight: 800; letter-spacing: 0.05em; text-transform: uppercase; color: #00736C; }
+.med-table .mol-row { grid-template-columns: 150px 1fr; }
+@container art (max-width: 640px) { .med-head { display: none; } }

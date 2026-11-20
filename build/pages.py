@@ -217,7 +217,7 @@ def render_table(rows, page):
     hdr, body = rows[0], rows[1:]
     hdr_txt = [plain_heading(h) for h in hdr]
     if [h.lower() for h in hdr_txt[:2]] == ['molecule', 'brands on pharmeasy']:
-        return render_medicines(body)
+        return render_medicines(body, hdr_txt[:2])
     width = len(hdr)
     body = [(r + [''] * width)[:width] for r in body]
     # a column whose every cell is an unfilled CMS field ({{X}}) has nothing to show: drop it
@@ -235,7 +235,7 @@ def render_table(rows, page):
     return B.rtable(hdr_txt, cells, ['k'] + [''] * (width - 1), extra='two' if width == 2 else '')
 
 
-def render_medicines(body):
+def render_medicines(body, hdr=('Molecule', 'Brands on PharmEasy')):
     """The docs' "Medicines on PharmEasy" table: group label rows, then molecule rows with brand links.
     Rendered with the homepage drug-table styles (molecule name + brand chips, mobile key)."""
     groups, cur = [], None
@@ -264,7 +264,10 @@ def render_medicines(body):
     for label, rows in groups:
         out.append('<div class="med-group">%s<div class="mol-list">%s%s</div></div>'
                    % ('<div class="med-label">%s</div>' % esc(label) if label else '', B.MOL_KEY, ''.join(rows)))
-    return '    <div class="rt-wrap med-table">%s</div>\n' % ''.join(out)
+    # desktop column header (mobile has the per-group key instead): the docs' own two headers, plus the
+    # group column, which the docs give as label rows
+    head = '<div class="med-head" aria-hidden="true"><span>Drug group</span><span>%s</span><span>%s</span></div>' % (esc(hdr[0]), esc(hdr[1]))
+    return '    <div class="rt-wrap med-table">%s%s</div>\n' % (head, ''.join(out))
 
 
 def render_blocks(lines, page, images):
