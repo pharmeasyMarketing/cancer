@@ -419,7 +419,7 @@ def build_sections():
     b += '    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin:0 0 18px">%s</div>\n' % cards
     b += P(38)
     b += ill_dna()
-    add('toc-start', 'How does cancer start?', b)
+    add('toc-start', 'How does cancer develop?', b)
 
     # ---- Benign vs malignant tumour
     b = P(44) + ill_tumours()
@@ -471,7 +471,7 @@ def build_sections():
     b += bar_chart2('Males', MALES, 25)
     b += P(128)
     b += bar_chart2('Females', FEMALES, 35)
-    add('toc-india', 'The India picture', b)
+    add('toc-india', 'The state of cancer in India', b)
 
     # ---- Common symptoms
     b = P(134) + P(136) + note_box(T(138)) + '    <p class="lead-p">%s</p>\n' % T(140)
@@ -743,7 +743,7 @@ def faq_and_refs():
                      '        <div style="padding:0 24px 20px"><p style="font-size:15px;line-height:26px;color:#5C636D;margin:0">%s</p></div>\n      </details>'
                      % (' open' if i == 0 else '', esc(q), svg(IC['chev'], 18), ans))
     faq = ('\n  <div class="asec" style="padding:36px 0 0">\n'
-           '    <h2 id="toc-faq" style="font-size:24px;line-height:32px;font-weight:800;margin:0 0 16px;color:#1C1F22;scroll-margin-top:20px">Frequently Asked Questions</h2>\n'
+           '    <h2 id="toc-faq" style="font-size:24px;line-height:32px;font-weight:800;margin:0 0 16px;color:#1C1F22;scroll-margin-top:20px">Frequently asked questions</h2>\n'
            '    <div style="display:flex;flex-direction:column;gap:12px">\n%s\n    </div>\n  </div>\n' % '\n'.join(items))
 
     refs = references()
@@ -813,7 +813,7 @@ def hero():
 
 
 def rail(toc):
-    items = list(toc) + [('toc-faq', 'Frequently Asked Questions'), ('references', 'References')]
+    items = list(toc) + [('toc-faq', 'Frequently asked questions'), ('references', 'References')]
     links = ''.join('<a href="#%s" style="font-size:14px;line-height:20px;color:#5C636D">%s</a>' % (i, esc(t)) for i, t in items)
     rel = [('Cancer types', 'https://pharmeasy.in/cancer/types/'), ('Cancer symptoms and early signs', 'https://pharmeasy.in/cancer/symptoms/'), ('Cancer tests and tumour markers', 'https://pharmeasy.in/cancer/tests/'),
            ('Cancer screening', 'https://pharmeasy.in/cancer/screening/'), ('Cancer treatment', 'https://pharmeasy.in/cancer/treatment/'),

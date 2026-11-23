@@ -23,9 +23,7 @@ Cancer cells usually grow and multiply faster than most normal cells. Chemothera
 
 When a cell suffers damage that it cannot repair, it may activate a natural process that causes the cell to die. However, chemotherapy can also affect healthy cells that grow and divide quickly. These include cells in the bone marrow, the lining of the mouth and digestive tract, and hair follicles. Damage to these healthy cells explains why chemotherapy can cause side effects such as low blood cell counts, mouth sores, digestive problems and hair loss[1](https://www.cancer.gov/about-cancer/treatment/types/chemotherapy),[5](https://www.ncbi.nlm.nih.gov/sites/books/NBK564367/). 
 
-## How it is given 
-
- 
+## How is it given
 
 Chemotherapy is usually given by seven routes. 
 
@@ -39,9 +37,9 @@ Chemotherapy is usually given by seven routes.
 
 **What to expect during a chemotherapy session:**  Blood counts are usually checked a day before treatment. A cannula or port needle is used to administer the medicines. Anti-sickness medicines and, when needed, steroids or allergy-prevention medicines are given first, usually for the first few minutes. Chemotherapy may take a few minutes to several hours, depending on the medicine. After the line is flushed, most people can go home the same day[6](https://www.cancer.org/cancer/treatment-types/chemotherapy/getting-chemotherapy.html).
 
-## What a course looks like 
+## What does a course look like? 
 
-Chemotherapy is usually delivered in cycles, with treatment followed by a resting period. For example, a cycle may involve treatment for two weeks, followed by a one-week break. This pattern may is repeated every 21 days[1](https://www.cancer.gov/about-cancer/treatment/types/chemotherapy). 
+Chemotherapy is usually delivered in cycles, with treatment followed by a resting period. For example, a cycle may involve treatment for two weeks, followed by a one-week break. This pattern may be repeated every 21 days[1](https://www.cancer.gov/about-cancer/treatment/types/chemotherapy). 
 
 The break is an important part of the treatment, not just a gap. It helps in the growth and recovery of healthy tissues such as bone marrow, gut lining, and hair follicles[1](https://www.cancer.gov/about-cancer/treatment/types/chemotherapy). Cancer cells may recover less due to the damage caused by chemotherapy. Following the planned schedule helps balance cancer treatment with the recovery of healthy cells. 
 
@@ -67,23 +65,12 @@ Doctors may delay a cycle or lower the dose if blood cell counts remain low or s
 
 ## The medicines used 
 
-Doctors prescribe chemotherapy medicines by their generic names. Knowing which group a medicine belongs to can help patients understand the side effects it may cause. 
-
-> > > * [Cisplatin](https://pharmeasy.in/molecules/cisplatin-76): This is used to treat many cancers including [head and neck](https://pharmeasy.in/cancer/types/head-and-neck-cancer/oral-cancer/), [cervical](https://pharmeasy.in/cancer/types/cervical-cancer/), [lung](https://pharmeasy.in/cancer/types/lung-cancer/), bladder, [oesophageal](https://pharmeasy.in/cancer/types/oesophageal-cancer/) and [testicular cancers](https://pharmeasy.in/cancer/types/testicular-cancer/). It's usually given alongside radiation. It comes from the platinum class, along with carboplatin and oxaliplatin. It has a high risk of causing nausea and vomiting. Doctors usually give fluids through a vein to help protect the kidneys during treatment[16](https://www.ncbi.nlm.nih.gov/sites/books/NBK547695/).  
-  [Paclitaxel](https://pharmeasy.in/molecules/paclitaxel-7097): This belongs to the taxane group and is used for treating breast, ovarian, lung and head and neck cancers. It is given with a steroid and antihistamine as pre-medication to reduce the reactions during infusion. Any new tingling or numbness in the hands or feet should be reported promptly, as the doctors can adjust the doses[17](https://www.ncbi.nlm.nih.gov/sites/books/NBK536917/).  
-* [Cyclophosphamide](https://pharmeasy.in/molecules/cyclophosphamide-7050): This is an alkylating agent commonly used in treatment plans for breast cancer and lymphoma. When combined with certain other medicines, it can form a treatment combination with a high risk of nausea and vomiting[18](http://www.ncbi.nlm.nih.gov/books/NBK553087/).  
-* [Gemcitabine](https://pharmeasy.in/molecules/gemcitabine-944): This belongs to the antimetabolite group. Doctors use it to treat pancreatic, bladder, and lung cancers. Although it has a relatively low risk of nausea and vomiting, regular blood tests are important because it can affect blood cell counts[19](https://www.accessdata.fda.gov/drugsatfda_docs/label/2018/209604s003lbl.pdf).   
-* [Ondansetron](https://pharmeasy.in/molecules/ondansetron-6885): This is not chemotherapy, but an anti-sickness medication. It is a 5-HT3 antagonist, which is usually recommended by doctors to prevent vomiting. This makes chemotherapy easy for more patients to tolerate[20](http://www.ncbi.nlm.nih.gov/books/NBK499839/). Fluorouracil, doxorubicin, etoposide, ifosfamide, and bleomycin are other common agents.  
-
-**A note of caution:** Never take a cancer medicine unless it is prescribed for you. Also, never stop/ adjust a dose yourself. 
-
-**The medicines used:** The chemotherapy medicines a doctor selects depend on the type of cancer, its stage, the goal of treatment and the patient's ability to handle the side effects. The same medicine may be used for different cancers, but the dose and combination of medicines can vary. This information is for general understanding only. Never buy or start these medicines without a qualified doctor's valid prescription. 
-
+Doctors prescribe chemotherapy medicines by their generic names. Knowing which group a medicine belongs to can help patients understand the side effects it may cause.  
 
 | Medicine group  | Molecules used in India  | How it is given  | What it is used for  | Brands on PharmEasy  | Price  |
 | :---- | :---- | :---- | :---- | :---- | :---- |
-| Platinum compounds  | [cisplatin](https://pharmeasy.in/molecules/cisplatin-76), [carboplatin](https://pharmeasy.in/molecules/carboplatin-935), [oxaliplatin](https://pharmeasy.in/molecules/oxaliplatin-7396)  | Intravenous, in cycles[16](https://www.ncbi.nlm.nih.gov/sites/books/NBK547695/)  | Cross-links DNA; **Cisplatin:** Many cancers e.g head and neck, cervical, lung, bladder, oesophageal and testicular cancers and alongside radiation[16](https://www.ncbi.nlm.nih.gov/sites/books/NBK547695/).  **Carboplatin:** Used if kidneys or tolerance are a concern. It is also used to treat ovarian cancer.  **Oxaliplatin:** e.g. colorectal[21](http://www.ncbi.nlm.nih.gov/books/NBK548788/) and other gastrointestinal cancers  | Cisplatin: [Cisteen](https://pharmeasy.in/online-medicine-order/40872), [Aksiplat](https://pharmeasy.in/online-medicine-order/101218), [Celplat](https://pharmeasy.in/online-medicine-order/5896) Carboplatin: [Karplat](https://pharmeasy.in/online-medicine-order/77111), [Carbozar](https://pharmeasy.in/online-medicine-order/182149), [Carboplatin](https://pharmeasy.in/online-medicine-order/39069)  Oxaliplatin  Oxol  Oxiplat  Oxalip  | Brand-specific  |
-| Taxanes  | [paclitaxel](https://pharmeasy.in/molecules/paclitaxel-7097), [docetaxel](https://pharmeasy.in/molecules/docetaxel-281)  | Given intravenously.  Steroids and antihistamines may be given beforehand to lower the risk of infusion reactions[17](https://www.ncbi.nlm.nih.gov/sites/books/NBK536917/)  | Stop the tiny structures that help cells divide from working properly, preventing cancer cells from multiplying. Used in cancers e.g. breast, ovary, lung, head and neck, prostate, and melanoma. They may be prescribed to treat cancer, reduce the risk of recurrence after initial treatment, or manage advanced disease based on the type.[17](https://www.ncbi.nlm.nih.gov/sites/books/NBK536917/)  | Paclitaxel: [Altaxel](https://pharmeasy.in/online-medicine-order/33979), [Adpaxil](https://pharmeasy.in/online-medicine-order/98039), [Celtax](https://pharmeasy.in/online-medicine-order/74801)   Docetaxel: [Daxotel](https://pharmeasy.in/online-medicine-order/42888), [Docshil](https://pharmeasy.in/online-medicine-order/231639), [Tubitere](https://pharmeasy.in/online-medicine-order/99748)  | Brand-specific  |
+| Platinum compounds  | [cisplatin](https://pharmeasy.in/molecules/cisplatin-76), [carboplatin](https://pharmeasy.in/molecules/carboplatin-935), [oxaliplatin](https://pharmeasy.in/molecules/oxaliplatin-7396)  | Intravenous, in cycles[16](https://www.ncbi.nlm.nih.gov/sites/books/NBK547695/)  | Cross-links DNA; **Cisplatin:** Many cancers e.g head and neck, cervical, lung, bladder, oesophageal and testicular cancers and alongside radiation[16](https://www.ncbi.nlm.nih.gov/sites/books/NBK547695/).  **Carboplatin:** Used if kidneys or tolerance are a concern. It is also used to treat ovarian cancer.  **Oxaliplatin:** e.g. colorectal[21](http://www.ncbi.nlm.nih.gov/books/NBK548788/) and other gastrointestinal cancers  | Cisplatin: [Cisteen](https://pharmeasy.in/online-medicine-order/40872), [Aksiplat](https://pharmeasy.in/online-medicine-order/101218), [Celplat](https://pharmeasy.in/online-medicine-order/5896) Carboplatin: [Karplat](https://pharmeasy.in/online-medicine-order/77111), [Carbozar](https://pharmeasy.in/online-medicine-order/182149), [Carboplatin](https://pharmeasy.in/online-medicine-order/39069)  Oxaliplatin | Brand-specific  |
+| Taxanes  | [paclitaxel](https://pharmeasy.in/molecules/paclitaxel-7097), [docetaxel](https://pharmeasy.in/molecules/docetaxel-281)  | Given intravenously.  Steroids and antihistamines may be given beforehand to lower the risk of infusion reactions[17](https://www.ncbi.nlm.nih.gov/sites/books/NBK536917/)  | Stop the tiny structures that help cells divide from working properly, preventing cancer cells from multiplying. Used in cancers e.g. breast, ovary, lung, head and neck, prostate, and melanoma. They may be prescribed to treat cancer, reduce the risk of recurrence after initial treatment, or manage advanced disease based on the type[17](https://www.ncbi.nlm.nih.gov/sites/books/NBK536917/)  | Paclitaxel: [Altaxel](https://pharmeasy.in/online-medicine-order/33979), [Adpaxil](https://pharmeasy.in/online-medicine-order/98039), [Celtax](https://pharmeasy.in/online-medicine-order/74801)   Docetaxel: [Daxotel](https://pharmeasy.in/online-medicine-order/42888), [Docshil](https://pharmeasy.in/online-medicine-order/231639), [Tubitere](https://pharmeasy.in/online-medicine-order/99748)  | Brand-specific  |
 | Vinca alkaloids  | [vincristine](https://pharmeasy.in/molecules/vincristine-774), [vinblastine](https://pharmeasy.in/molecules/vinblastine-4518), [vinorelbine](https://pharmeasy.in/molecules/vinorelbine-1272)  | Give intravenously, in cycles.  | These medicines disrupt the internal structures cells need to divide.  **Vincristine:** e.g. treatment of lymphoma and childhood leukaemia. **Vinblastine:** e.g. Hodgkin’s cancer, melanoma, brain and testicular cancer.  **Vinorelbine:** e.g. lung and breast cancers.  | **Vincristine:**  Unicristine  Biocristin  Oncocristin    **Vinblastine:** Uniblastin  Cytoblastin    **Vinorelbine:**  Vinbix  Vinelbine  Vinotec        | Brand-specific  |
 | Anthracyclines and other antitumour antibiotics  | [doxorubicin](https://pharmeasy.in/molecules/doxorubicin-7116), [epirubicin](https://pharmeasy.in/molecules/epirubicin-7209), [bleomycin](https://pharmeasy.in/molecules/bleomycin-734), [mitomycin](https://pharmeasy.in/molecules/mitomycin-974)  duaorubicin    | Usually given intravenously in cycles. Some may also be placed directly into the bladder[23](https://www.ncbi.nlm.nih.gov/sites/books/NBK459232/),[24](https://pubmed.ncbi.nlm.nih.gov/39858295/).   | These medicines damage cancer cells' DNA.  **Anthracyclines:** e.g. breast cancer, lymphoma, and leukaemia regimens[23](https://www.ncbi.nlm.nih.gov/sites/books/NBK459232/).  **Bleomycin:** e.g.Hodgkin’s lymphoma and germ cell tumours. **Mitomycin:** e.g.bladder and some anal types[24](https://pubmed.ncbi.nlm.nih.gov/39858295/). **Doxorubicin:** e.g.head and neck cancers and testicular cancers.[5](https://www.ncbi.nlm.nih.gov/sites/books/NBK564367/)  | **Doxorubicin:** [Duxocin](https://pharmeasy.in/online-medicine-order/68118), [Oncodria](https://pharmeasy.in/online-medicine-order/56519)  Dobixin    **Epirubicin:**  Adricin  Epricin  Episar    **Bleomycin:**  Bleosol  Bledmax  Bleocel    **Mitomycin:**  Lyomit  Mitodus  Mitonco    **Duanorubicin:**  Duanomycin  Daunocin   Daunotec            | Brand-specific  |
 | Alkylating agents  | [cyclophosphamide](https://pharmeasy.in/molecules/cyclophosphamide-7050), [ifosfamide](https://pharmeasy.in/molecules/ifosfamide-1813), [dacarbazine](https://pharmeasy.in/molecules/dacarbazine-491983)  | Given by mouth[18](http://www.ncbi.nlm.nih.gov/books/NBK553087/) or intravenously, depending on the medicine and treatment plan.  | These medicines alter DNA so that cancer cells cannot copy it properly.  **Cyclophosphamide:** e.g.breast cancer and lymphoma[18](http://www.ncbi.nlm.nih.gov/books/NBK553087/).  **Ifosfamide**[5](https://www.ncbi.nlm.nih.gov/sites/books/NBK564367/)**:** e.g.sarcoma and germ cell tumours.  **Dacarbazine**[5](https://www.ncbi.nlm.nih.gov/sites/books/NBK564367/)**:** e.g.Hodgkin lymphoma and melanoma.  | **Cyclophosphamide:**  [Endoxan](https://pharmeasy.in/online-medicine-order/45494), [Cysmide](https://pharmeasy.in/online-medicine-order/92253), [Oncophos](https://pharmeasy.in/online-medicine-order/76403)    **Ifosfamide:**  Holosane  Ifowem  Celofos    **Dacarbazine:**  Darzine  Dozine  Oncodac        | Brand-specific  |
@@ -96,6 +83,10 @@ Doctors prescribe chemotherapy medicines by their generic names. Knowing which g
  
 
 PharmEasy has a separate page explaining each of these medicines, while [medicines grouped by class](https://pharmeasy.in/molecules-by-class/)es list the rest. 
+
+**A note of caution:** Never take a cancer medicine unless it is prescribed for you. Also, never stop/ adjust a dose yourself. 
+
+**The medicines used:** The chemotherapy medicines a doctor selects depend on the type of cancer, its stage, the goal of treatment and the patient's ability to handle the side effects. The same medicine may be used for different cancers, but the dose and combination of medicines can vary. This information is for general understanding only. Never buy or start these medicines without a qualified doctor's valid prescription.
 
 ## Side effects and how they are managed 
 
@@ -113,7 +104,7 @@ PharmEasy has a separate page explaining each of these medicines, while [medicin
 
  
 
-### **Additional Information on Chemotherapy Side Effects** 
+### **Additional information on chemotherapy side effects** 
 
 * **Preventing nausea and vomiting:** The medicines used to prevent [nausea](https://pharmeasy.in/blog/home-remedies-for-nausea-by-dr-rajeev-singh/), depend on how likely a chemotherapy regimen is to cause vomiting. For treatments with a high risk, doctors may prescribe a combination of medicines. Ask your doctor which combination is suitable for your treatment[20](http://www.ncbi.nlm.nih.gov/books/NBK499839/).   
 * **Managing fever during chemotherapy:** Fever can indicate a serious infection when white blood cell levels are low[5](https://www.ncbi.nlm.nih.gov/sites/books/NBK564367/). In case of fever, head to the nearest hospital or check with your doctor immediately. Hospital teams assess the patient using blood tests, which may include blood cultures, to guide treatment. They may also check C-reactive protein (CRP), a marker of inflammation, to monitor the situation. However, CRP alone cannot confirm or rule out an infection[37](https://pubmed.ncbi.nlm.nih.gov/33324413/).  
@@ -123,13 +114,11 @@ PharmEasy has a separate page explaining each of these medicines, while [medicin
 
 If you need advice about a prescription or a symptom between hospital visits, you can arrange an [online doctor consultation](https://pharmeasy.in/online-doctor-consultation/). However, suspected serious infections and other emergency symptoms require immediate in-person medical assessment. 
 
-## What has changed recently 
+## What has changed recently?
 
 Medicines such as olanzapine are now commonly used alongside other anti-sickness medicines for chemotherapy treatments that have a high risk of causing vomiting. This combination helps control nausea and vomiting that may occur days after treatment[39](https://pubmed.ncbi.nlm.nih.gov/38127246/). Doctors may also prescribe growth factor injections to help the body produce more white blood cells, lowering the risk of infection[28](http://www.ncbi.nlm.nih.gov/books/NBK559282/). In some people with early-stage, hormone receptor-positive breast cancer, tests that study the activity of genes in the tumour can help doctors decide whether chemotherapy is necessary[40](https://www.cancer.gov/types/breast/hp/breast-treatment-pdq). 
 
 ## Questions to ask your oncologist 
-
- 
 
 * Is the aim to cure the cancer, reduce the risk of it returning or keep it under control?   
 * Which medicines will I receive, how many cycles will I need, and how long will the whole course take?   
@@ -203,11 +192,11 @@ All oncology medicines are stocked by PharmEasy in these classes. Your oncologis
 
  
 
- All of these are prescription-only medicines. Ou can find price and availability on the product page of each. Full catalogue: [medicines by drug class](https://pharmeasy.in/molecules-by-class/). 
+ All of these are prescription-only medicines. You can find price and availability on the product page of each. Full catalogue: [medicines by drug class](https://pharmeasy.in/molecules-by-class/). 
 
-### **What drives the cost** 
+### **What drives the cost**?
 
-This section does not give prices in rupees. Costs depend on the city, hospital, cancer stage, treatment plan and whether care is provided by a public hospital, a charitable trust or a private hospital[41](https://pubmed.ncbi.nlm.nih.gov/31956610/),[42](https://pubmed.ncbi.nlm.nih.gov/38756158/). Understanding how each part of treatment is charged can help you obtain an estimate. 
+This section does not give prices in rupees. Costs depend on the city, hospital, cancer stage, treatment plan, and whether care is provided by a public hospital, a charitable trust, or a private hospital[41](https://pubmed.ncbi.nlm.nih.gov/31956610/),[42](https://pubmed.ncbi.nlm.nih.gov/38756158/). Understanding how each part of treatment is charged can help you obtain an estimate. 
 
 | Component  | How charges are calculated  | Factors that can effect the total cost  | Indicative figure  |
 | :---- | :---- | :---- | :---- |
@@ -220,7 +209,7 @@ This section does not give prices in rupees. Costs depend on the city, hospital,
 
  
 
-The total cost depends on how treatment is charged: This may include the type of cancer, dose of mean, number of cycles, where it is given, and where you live[1](https://www.cancer.gov/about-cancer/treatment/types/chemotherapy). Treatment expenses may continue for months or longer, depending on the medicine used and how well it works; some treatments do not have a fixed end date[46](https://www.cancer.gov/about-cancer/treatment/types/targeted-therapies).
+The total cost depends on how treatment is charged: This may include the type of cancer, dose of the medication, number of cycles, where it is given, and where you live[1](https://www.cancer.gov/about-cancer/treatment/types/chemotherapy). Treatment expenses may continue for months or longer, depending on the medicine used and how well it works; some treatments do not have a fixed end date[46](https://www.cancer.gov/about-cancer/treatment/types/targeted-therapies).
 
 A study conducted at seven cancer centres in India found that 80.4% of patients receiving outpatient care faced healthcare costs that were difficult to manage financially. This highlights the importance of planning for treatment expenses, travel, medicines and other related costs[47](https://www.frontiersin.org/journals/public-health/articles/10.3389/fpubh.2023.1065737/full).
 

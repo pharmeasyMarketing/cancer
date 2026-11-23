@@ -6,11 +6,11 @@ Published {{PUBLISHED\_DATE}} · Updated {{LAST\_UPDATED}}
 
 Your path [Symptoms](https://pharmeasy.in/cancer/symptoms/)› [Tests and diagnosis](https://pharmeasy.in/cancer/tests/)› [Stages and types](https://pharmeasy.in/cancer/types/)› Treatment › [Medicines](https://pharmeasy.in/molecules-by-class/)› [Living with it](https://pharmeasy.in/cancer/living-with/) 
 
-Many cancers can be cured, especially when doctors diagnose them early and provide the right treatment. However, the chances of a cure vary from person to person. It depends on the ​     ​​[type of cancer](https://pharmeasy.in/cancer/types/)​, how much it has spread, what the disease biology is  and the person’s overall health.[1](https://www.who.int/news-room/fact-sheets/detail/cancer)
+Many cancers can be cured, especially when doctors diagnose them early and provide the right treatment. However, the chances of a cure vary from person to person. It depends on the ​     ​​type of cancer​, how much it has spread, what the disease biology is, and the person’s overall health.[1](https://www.who.int/news-room/fact-sheets/detail/cancer)
 
 According to the ICMR-NCDIR National Cancer Registry Programme, India recorded an estimated 14,61,427 cancer cases in India in 2022\. The cases were projected to be 12.8% higher in 2025 compared to 2020\.[2](https://pubmed.ncbi.nlm.nih.gov/36510887/) However, a cancer diagnosis does not always mean that the disease cannot be cured. In some cases, treatment may not completely remove the cancer but can slow its growth and keep it under control for a long time.[3](https://www.cancer.org/cancer/making-treatment-decisions/if-cancer-treatments-stop-working.html) 
 
-This article explains the difference between curing cancer, controlling its growth and relieving symptoms. It also covers how doctors decide on a treatment plan and the role of different cancer treatments.  Explore our [Cancer Library](https://pharmeasy.in/cancer/) to learn more about cancer and its treatment. 
+This article explains the difference between curing cancer, controlling its growth and relieving symptoms. It also covers how doctors decide on a treatment plan and the role of different cancer treatments. Explore our [Cancer Library](https://pharmeasy.in/cancer/) to learn more about cancer and its treatment. 
 
 ## What "cure" actually means in cancer care 
 
@@ -32,7 +32,7 @@ Doctors explain cancer treatment based on its main goal:
 
 These goals may change as the person's condition and response to treatment change.[6](https://www.cdc.gov/cancer-survivors/patients/treatments.html) For example, treatment that initially aims to cure cancer may later focus on controlling the disease or relieving symptoms. In some cases, the treatment goal may change in the other direction if circumstances improve. 
 
-### The four goals a cancer treatment can do 
+### **How does cancer treatment work?**
 
 Cancer treatments may be done for different purposes depending on the type of cancer, its stage and the person's treatment plan. 
 
@@ -47,7 +47,7 @@ Cancer treatments may be done for different purposes depending on the type of ca
 
 ## How your treatment plan is decided 
 
-### What doctors consider when planning treatment? 
+### What doctors consider when planning treatment 
 
 Doctors consider several factors before deciding on a cancer treatment plan. These include the type of cancer confirmed by a biopsy, its stage (how far it has spread), biological markers produced by cancer cells, and your overall health.[11](https://www.cancer.org/cancer/diagnosis-staging/staging.html) 
 
@@ -63,7 +63,7 @@ Together, these specialists review the patient's test results and discuss treatm
 
 If you are receiving treatment at a smaller cancer centre, you can ask whether a team of specialists has reviewed your case together in a tumour board meeting. You can also check whether the centre is part of the National Cancer Grid (NCG), a network of cancer centres across India that works to improve the quality and consistency of cancer care.[13](https://www.ncgindia.org/about) 
 
-### **How cancer tests guide treatment?** 
+### **How cancer tests guide treatment** 
 
 Certain tests look for specific features, such as genes, proteins or substances, that give information about cancer cells. These are called biomarker tests, and their results can help doctors choose treatments that are more likely to work for a type of cancer. For example, hormone receptor and HER2 tests can guide treatment for breast cancer.[14](https://www.cancer.org/cancer/diagnosis-staging/tests/biomarker-tests.html) EGFR and ALK tests can help guide treatment for some lung cancers. Mismatch repair tests can help guide treatment for certain colorectal and endometrial cancers, while BCR-ABL testing helps guide treatment for chronic myeloid leukaemia, a type of blood cancer.[15](https://www.cancer.gov/about-cancer/diagnosis-staging/diagnosis/tumor-markers-list) 
 
@@ -98,10 +98,6 @@ All medicines are not suitable for all patients; your oncologist will make a cal
 
 The medicines a doctor prescribes depend on the type of cancer, how far it has spread and the patient's overall health. The examples below are for information only and should not be taken as treatment advice. Cancer medicines should be used only under a doctor's guidance. 
 
-### Medicine prices 
-
-Medicine prices may change over time. Check the linked medicine pages for the latest listed prices. These medicines require a prescription. 
-
 | Drug group  | Molecules used in India  | How it is given  | What it is used for  |
 | :---- | :---- | :---- | :---- |
 | Platinum chemotherapy  | [cisplatin](https://pharmeasy.in/molecules/cisplatin-76), [carboplatin](https://pharmeasy.in/molecules/carboplatin-935), [oxaliplatin](https://pharmeasy.in/molecules/oxaliplatin-7396)[24](http://www.ncbi.nlm.nih.gov/books/NBK617056/)  | Through a vein (intravenously), in treatment cycles[23](http://www.ncbi.nlm.nih.gov/books/NBK547695/) every week, or three-weekly or every 28 days: alone or in combination with other medicines  | Works by destroying the DNA of cancer cells.[25](https://www.cancer.org/cancer/treatment-types/chemotherapy/types-of-chemo-drugs.html) Used for: Head and neck cancers  Cervical cancer  Lung cancer  Stomach cancer  Colorectal cancer  Bladder cancer  Ovarian and testicular cancer[24](http://www.ncbi.nlm.nih.gov/books/NBK617056/)  |
@@ -122,7 +118,7 @@ PharmEasy provides individual pages for these generic medicines. You can also fi
 
 Palliative care is sometimes mistaken for the end of cancer treatment.[34](https://bmjopen.bmj.com/content/9/3/e024248) Side effects are also mistaken for proof that treatment is working.[18](https://www.cancer.gov/about-cancer/treatment/types/chemotherapy) Neither assumption is correct, and both beliefs can influence the care people accept. 
 
-### What palliative care actually is? 
+### What palliative care actually is 
 
 Palliative care provides specialist help with symptoms such as pain, breathlessness, nausea, appetite loss, and anxiety. It can be given alongside cancer treatment, rather than replacing it.[10](https://www.cancer.gov/about-cancer/advanced-cancer/care-choices/palliative-care-fact-sheet) 
 
@@ -162,7 +158,7 @@ The following measures may help reduce these costs:
 Contact your treating team's medical social worker to check these three options before you  borrow money from others.   
  
 
-## When to see a doctor 
+## When to see a doctor? 
 
 Seek immediate medical care for the following: 
 
@@ -181,9 +177,9 @@ Consult your oncology team within days if you have:
 * New swelling or pain at the IV site   
 * Yellowing of the eyes (jaundice)[49](https://medlineplus.gov/ency/patientinstructions/000012.htm) 
 
-If you need help in understanding a report, clarifying a prescription or obtaining an informed second opinion before committing to a plan, an [online doctor appointment](https://pharmeasy.in/online-doctor-consultation/) can provide access to qualified medical advice in between hospital visits. However, it does not mean that you should replace your oncologist. 
+If you need help in understanding a report, clarifying a prescription or obtaining an informed second opinion before committing to a plan, an online doctor appointment can provide access to qualified medical advice in between hospital visits. However, it does not mean that you should replace your oncologist. 
 
-## Which applies to you? 
+## What applies to you? 
 
 The first column will define your own situation. The second column explains what will happen next, and the third one mentions the section to read more about it. 
 
@@ -200,7 +196,7 @@ The first column will define your own situation. The second column explains what
 
  
 
-### Cancer treatment medicines on PharmEasy, by drug group 
+### Medicines on PharmEasy
 
 PharmEasy carries all oncology medications in these categories. Your oncologist will decide which, if any, applies to you. 
 
@@ -279,7 +275,7 @@ PharmEasy carries all oncology medications in these categories. Your oncologist 
 
 All are prescription-only. Each product page gives the price and availability of the medicine. Find full catalogue here: [medicines by drug class](https://pharmeasy.in/molecules-by-class/). 
 
-### What drives the cost 
+### What drives the cost? 
 
 There are no rupee figures here. Cost varies depending on the city, hospital, stage, regimen and whether the treatment is done in a public, trust-run or private set-up. So, a relatively reliable way to make an estimate would be by understanding the way each component of the treatment is billed. 
 
@@ -298,7 +294,7 @@ The unit is more important than the headline figure as per-cycle cost multiplies
 
 Full cost guidance and the schemes available in India are available on [cost and financial support](https://pharmeasy.in/cancer/cost-and-support/). 
 
-### Insurance in India- what to check 
+### Insurance in India: what to check 
 
 There are several factors to consider here; your policy, your insurer, the hospital and the policy terms. All these determine whether any insurance applies to you. The list provided below can be used as a list of questions to be asked to the insurer before treatment. However, note that nothing mentioned below is a statement that your treatment is covered.  
 

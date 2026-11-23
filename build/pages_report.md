@@ -26,7 +26,6 @@ Mechanical changes the build made, and things for the editors to fix in the docs
 - link removed (page not in the URL plan): "side effects and management" -> /cancer/treatment/side-effects/
 - 7 em/en dash(es) replaced (colon between phrases, otherwise comma or hyphen)
 - typo fixed: "duaorubicin" -> "daunorubicin"
-- typo fixed: "Ou can find" -> "You can find"
 - typo fixed: "can effect the total" -> "can affect the total"
 - editor note removed from the page: "This section does not give prices in rupees."
 - dropped table column "Price": every cell is an unfilled CMS field (Brand-specific)
@@ -38,7 +37,6 @@ Mechanical changes the build made, and things for the editors to fix in the docs
 - link removed (page not in the URL plan): "side effects" -> /cancer/treatment/side-effects/
 - link removed (page not in the URL plan): "Pancreatic cancer" -> /cancer/types/pancreatic-cancer/
 - 2 em/en dash(es) replaced (colon between phrases, otherwise comma or hyphen)
-- editor note removed from the page: "**Prices are read live from the product catalogue.**"
 - 9 "Section N" pointer(s) linked to the heading they name (number offset 0)
 
 ## /cancer/prevention/
@@ -61,7 +59,7 @@ Mechanical changes the build made, and things for the editors to fix in the docs
 
 ## /cancer/tests/
 
-- 2 em/en dash(es) replaced (colon between phrases, otherwise comma or hyphen)
+- 1 em/en dash(es) replaced (colon between phrases, otherwise comma or hyphen)
 - typo fixed: "lymphnodes" -> "lymph nodes"
 - 6 "Section N" pointer(s) linked to the heading they name (number offset 1)
 
@@ -74,7 +72,6 @@ Mechanical changes the build made, and things for the editors to fix in the docs
 - link removed (page not in the URL plan): "treatment" -> /cancer/types/cervical-cancer/treatment/
 - link removed (page not in the URL plan): "treatment page" -> /cancer/types/cervical-cancer/treatment/
 - 5 em/en dash(es) replaced (colon between phrases, otherwise comma or hyphen)
-- typo fixed: "precanceruous" -> "precancerous"
 - typo fixed: "Pharmeasy website" -> "PharmEasy website"
 - left out the "Latest on ..." placeholder module (sample rows only)
 - 8 "Section N" pointer(s) linked to the heading they name (number offset 0)

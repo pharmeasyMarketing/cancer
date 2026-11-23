@@ -1551,7 +1551,6 @@
   "found_on": [
    "/cancer/",
    "/cancer/tests/",
-   "/cancer/treatment/",
    "/cancer/types/cervical-cancer/"
   ]
  },
@@ -1659,8 +1658,7 @@
   "verdict": "dead",
   "checked": "2026-11-18T09:31:03",
   "found_on": [
-   "/cancer/treatment/",
-   "/cancer/treatment/chemotherapy/"
+   "/cancer/treatment/"
   ]
  },
  "https://pharmeasy.in/cancer/types/kidney-cancer/": {
@@ -1747,8 +1745,7 @@
   "checked": "2026-11-18T09:30:53",
   "found_on": [
    "/cancer/tests/",
-   "/cancer/treatment/",
-   "/cancer/treatment/chemotherapy/"
+   "/cancer/treatment/"
   ]
  },
  "https://pharmeasy.in/cancer/types/thyroid-cancer/": {

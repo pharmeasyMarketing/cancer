@@ -401,7 +401,7 @@ def route_icon(label):
             'stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">%s</g></svg></span>' % body)
 
 
-GIVEN_RE = re.compile(r'(<h2 id="toc-how-it-is-given"[^>]*>.*?</h2>.*?)<ul class="pg-list">(.*?)</ul>\s*<p class="lead-p"><strong>([^<]+:)</strong>\s*(.*?)</p>', re.S)
+GIVEN_RE = re.compile(r'(<h2 id="toc-how-(?:it-is|is-it)-given"[^>]*>.*?</h2>.*?)<ul class="pg-list">(.*?)</ul>\s*<p class="lead-p"><strong>([^<]+:)</strong>\s*(.*?)</p>', re.S)
 
 
 def sentences(h):
@@ -441,7 +441,19 @@ IC_DNA = MECH_ICON['alkylat']
 IC_PILL = ROUTE_ICON['oral']
 
 
+# doc heading renames (23 Nov 2026 docs): the old id first, then the new one
+SECTION_ALIASES = {
+    'toc-what-a-course-looks-like': 'toc-what-does-a-course-look-like',
+    'toc-sorting-real-risks-from-rumours': 'toc-sorting-real-risks-from-myths',
+    'toc-what-the-evidence-shows': 'toc-what-does-the-evidence-show',
+    'toc-the-symptoms-that-genuinely-warrant-assessment': 'toc-symptoms-that-require-medical-evaluation',
+    'toc-which-applies-to-you': 'toc-what-applies-to-you',
+}
+
+
 def section_span(page, sid):
+    if 'id="%s"' % sid not in page and sid in SECTION_ALIASES:
+        sid = SECTION_ALIASES[sid]
     a = page.find('id="%s"' % sid)
     if a < 0:
         return None
@@ -752,6 +764,7 @@ def _n_diets(seg):
 
 def _n_when(seg):
     seg = _h3_panel(seg, 'Contact your team the same day', 'panel-urgent')
+    seg = _h3_panel(seg, 'Contact your doctor the same day', 'panel-urgent')
     seg = _h3_panel(seg, 'Arrange an appointment within a week or two', 'panel-soon')
     return _bars(seg, 'One study at a single institution', 'nutritional counselling was included in care', 'compared against', 'overall survival')
 
@@ -802,7 +815,7 @@ def _p_infections(seg):
         return seg
     (a, e), inner = hit
     items = top_items(inner)
-    if len(items) < 3 or not all(it.lstrip().startswith(('<strong>', '<a href')) for it in items):
+    if len(items) < 3:
         return seg
     # HPV: the vaccination programme starts its own paragraph (Sarthak, 20 Nov)
     body = lambda it: re.sub(r'(\.(?:<sup class="cite">.*?</sup>)?\.?)\s+(India launched a nationwide)', r'\1</p><p>\2', it.strip(), count=1)
@@ -1205,8 +1218,9 @@ def cervical_sections(page):
         return _replace_ul(seg, 'treatment at each stage includes the following',
                            lambda items: '<ol class="tl prio">%s</ol>' % ''.join('<li><span class="tl-n" aria-hidden="true">%d</span><p>%s</p></li>' % (k, it.strip()) for k, it in enumerate(items, 1)))
     def prevention(seg):
-        seg = _wrap_p(seg, '<strong>Vaccination.</strong>', 'prev-card', 'syringe')
-        seg = _wrap_p(seg, '<strong>Screening.</strong>', 'prev-card', 'scope')
+        for v in ('.', ':'):
+            seg = _wrap_p(seg, '<strong>Vaccination%s</strong>' % v, 'prev-card', 'syringe')
+            seg = _wrap_p(seg, '<strong>Screening%s</strong>' % v, 'prev-card', 'scope')
         seg = re.sub(r'(<div class="mech prev-card">.*?</div>)\s*(<div class="mech prev-card">.*?</div>)', r'<div class="mech-grid prev2">\1\2</div>', seg, count=1, flags=re.S)
         return _note(seg, "General women's health panels are also available")
     def applies(seg):

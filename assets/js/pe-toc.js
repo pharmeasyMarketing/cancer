@@ -25,10 +25,12 @@
     // cancer hub
     'What is cancer?': 'What is cancer',
     'How does cancer start?': 'How it starts',
+    'How does cancer develop?': 'How it develops',
     'Benign vs malignant tumour': 'Benign vs malignant',
     'How are cancers classified?': 'Classification',
     'How does cancer spread?': 'How it spreads',
     'The India picture': 'India picture',
+    'The state of cancer in India': 'Cancer in India',
     'Common symptoms of cancer': 'Symptoms',
     'How is cancer diagnosed?': 'Diagnosis',
     'Staging, grading and why they differ': 'Staging and grading',

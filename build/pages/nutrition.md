@@ -13,9 +13,7 @@ This page focuses on the nutritional principles that apply across different type
 
 ## **What the body actually needs during treatment** 
 
- 
-
-A few things change during ​​[cancer treatment](https://pharmeasy.in/cancer/treatment/)​; the metabolic impact of cancer and its treatment can increase energy demands of the body. Moreover, side effects like tissue damage/repair and muscle breakdown make adequate protein intake especially important[8](https://pubmed.ncbi.nlm.nih.gov/35126587/),[9](https://pubmed.ncbi.nlm.nih.gov/34891022/). So the body may need more energy and protein but at the same time, nausea, changes in taste, mouth pain, feeling full quickly, fatigue, and low mood can make it harder to eat enough[10](https://www.cancer.gov/about-cancer/treatment/side-effects). And when the body needs more nourishment but receives less maintaining weight and muscle mass becomes challenging. One practical approach is to eat smaller and more frequent meals while choosing energy- and protein-rich foods rather than relying on three large meals a day. 
+Why intake falls just as demand rises: A few things change during ​​[cancer treatment](https://pharmeasy.in/cancer/treatment/)​; the metabolic impact of cancer and its treatment can increase energy demands of the body. Moreover, side effects like tissue damage/repair and muscle breakdown make adequate protein intake especially important[8](https://pubmed.ncbi.nlm.nih.gov/35126587/),[9](https://pubmed.ncbi.nlm.nih.gov/34891022/). So the body may need more energy and protein but at the same time, nausea, changes in taste, mouth pain, feeling full quickly, fatigue, and low mood can make it harder to eat enough[10](https://www.cancer.gov/about-cancer/treatment/side-effects). And when the body needs more nourishment but receives less maintaining weight and muscle mass becomes challenging. One practical approach is to eat smaller and more frequent meals while choosing energy- and protein-rich foods rather than relying on three large meals a day. 
 
 * **Protein sources that work in Indian kitchens:** Good sources of protein in Indian diets include dals, [rajma](https://pharmeasy.in/blog/ayurveda-uses-benefits-side-effects-of-rajma-kidney-beans/), [chana](https://pharmeasy.in/blog/ayurved-uses-benefits-side-effects-of-black-chana/), [paneer](https://pharmeasy.in/blog/ayurveda-uses-benefits-side-effects-of-paneer/), curd, [milk](https://pharmeasy.in/blog/ayurveda-uses-benefits-side-effects-of-buffalo-milk/), [eggs](https://pharmeasy.in/blog/ayurveda-uses-benefits-side-effects-of-eggs/), chicken, fish, [soya chunks](https://pharmeasy.in/blog/ayurveda-uses-benefits-side-effects-of-soya-chunks/), [tofu](https://pharmeasy.in/blog/ayurveda-uses-benefits-side-effects-of-tofu/), groundnuts, seeds, and [besan](https://pharmeasy.in/blog/ayurveda-uses-benefits-side-effects-of-besan/)[11](https://ccrhindia.ayush.gov.in/sites/default/files/site/default/files/news/11Compendium0c3fc504-fd77-45ab-9148-2407a787276c.pdf). In many vegetarian households the issue is not a lack of protein rich foods but the amount consumed (because rice or roti makes up most of the meal). So a simple change is to increase the proportion of dal relative to rice or roti which can help add more protein without making drastic changes to familiar eating habits.   
 * **Adding energy without adding volume:** Simple additions can make everyday meals more nourishing without increasing portion sizes too much.    
@@ -26,7 +24,7 @@ A few things change during ​​[cancer treatment](https://pharmeasy.in/cancer/
 
 ## **Eating through taste change, mouth sores and nausea** 
 
-**These three problems are among the common reasons patients struggle to eat during cancer treatment.** What a patient should know is that each has different causes and management strategies. 
+These three problems are among the common reasons patients struggle to eat during cancer treatment. What a patient should know is that each has different causes and management strategies. 
 
 ### **1\. Managing taste change** 
 
@@ -81,8 +79,6 @@ Appetite loss without nausea is also common, but you should still try eating at 
 
 **The medicines used:** The oncology team will decide whether medication is needed based on what is affecting the patient's appetite, the treatment being given, and kidney and liver function. Remember that these medicines are intended to help manage symptoms and not treat the cancer itself. They should not be taken without a prescription and guidance from a doctor. 
 
-**Prices are read live from the product catalogue.** Treatment options may change as new evidence and recommendations emerge, so refer to the linked medicine page for the latest information. All medicines discussed here are prescription-only and should be used only under medical supervision. 
-
 | Drug group  | Molecules used in India  | How it is given  | What it is used for  |
 | :---- | :---- | :---- | :---- |
 | Nausea medicines  | [ondansetron](https://pharmeasy.in/molecules/ondansetron-6885), [metoclopramide](https://pharmeasy.in/molecules/metoclopramide-451)  | Oral or intravenous  | Controlling treatment-related nausea and vomiting[20](https://pubmed.ncbi.nlm.nih.gov/24818542/).  |
@@ -135,18 +131,18 @@ Blood tests have a useful but limited role. An inflammatory marker such as [C-re
 
 People often spend money and place their hopes in special diets soon after diagnosis when they are looking for something they can do. Therefore, these concerns deserve a clear and thoughtful answer. 
 
-* **The alkaline diet.** Some people believe that cancer cannot survive in an alkaline environment and that changing the diet can make the body more alkaline[36](https://pmc.ncbi.nlm.nih.gov/articles/PMC9364696/). However, the human body keeps blood pH within a very narrow range and food does not change blood pH[37](https://pubmed.ncbi.nlm.nih.gov/36132879/),[38](https://pmc.ncbi.nlm.nih.gov/articles/PMC11006742/). Eating more vegetables and fewer processed foods is a reasonable recommendation, but  the claim that this treats cancer is unsupported. Actually, no dietary pattern has been shown to treat cancer[39](https://www.cancer.gov/about-cancer/treatment/cam/diets-supplements) and the money often charged for that promise is not justified.   
-* **Juicing and detox regimens.** These replace solid food with juice[16](https://www.cancer.gov/about-cancer/treatment/side-effects/nutrition). But they have low fiber content and are high in sugars[40](https://pmc.ncbi.nlm.nih.gov/articles/PMC11820471/). There is no established process by which a juice or detox regimen removes cancer from the body. Hence, falling for such claims is irrational.   
-* **Ketogenic and extreme low-carbohydrate diets.** Eating sugar has not been shown to make cancer worse. On the other hand, restricting carbohydrates is not a standard approach to cancer management and may make it harder for patients to meet their energy needs during treatment[41](https://www.cancer.gov/about-cancer/causes-prevention/risk/myths),[42](https://pubmed.ncbi.nlm.nih.gov/33946039/). Also, restrictive diets during cancer management may lead to nutrient deficiency and weight loss.   
-* **Diet with fruits.** Some plant extracts may destroy cancer cells in specific laboratory environments[43](https://pmc.ncbi.nlm.nih.gov/articles/PMC4650206/). Such laboratory findings are an early step in developing medicines, rather than a proof that eating the fruit treats cancer..   
-* **Herbal and alternative remedies.** No herbal product has been shown to treat cancer effectively. Instead some products can interfere with how chemotherapy medicines work or affect liver function, potentially making treatment less effective or increasing its harmful effects[41](https://www.cancer.gov/about-cancer/causes-prevention/risk/myths),[44](https://www.cancer.gov/about-cancer/treatment/cam/patient/dietary-interactions-pdq). Tell your oncologist about everything you take, including Ayurvedic and homeopathic preparations. This is to check for possible interactions, rather than judge your choices.   
-* **Supplements.**There is no evidence that supplements like L-carnitine reduce cancer-related fatigue[45](https://www.mdpi.com/2072-6643/9/11/1224). High-dose antioxidant supplements are also generally discouraged during radiotherapy or chemotherapy[44](https://www.cancer.gov/about-cancer/treatment/cam/patient/dietary-interactions-pdq). If blood tests suggest certain deficiencies (like iron, vitamin B12 and vitamin D deficiencies) it should be corrected on medical advice rather than taking supplements without an identified need. 
+* **The alkaline diet:** Some people believe that cancer cannot survive in an alkaline environment and that changing the diet can make the body more alkaline[36](https://pmc.ncbi.nlm.nih.gov/articles/PMC9364696/). However, the human body keeps blood pH within a very narrow range and food does not change blood pH[37](https://pubmed.ncbi.nlm.nih.gov/36132879/),[38](https://pmc.ncbi.nlm.nih.gov/articles/PMC11006742/). Eating more vegetables and fewer processed foods is a reasonable recommendation, but  the claim that this treats cancer is unsupported. Actually, no dietary pattern has been shown to treat cancer[39](https://www.cancer.gov/about-cancer/treatment/cam/diets-supplements) and the money often charged for that promise is not justified.   
+* **Juicing and detox regimens:** These replace solid food with juice[16](https://www.cancer.gov/about-cancer/treatment/side-effects/nutrition). But they have low fiber content and are high in sugars[40](https://pmc.ncbi.nlm.nih.gov/articles/PMC11820471/). There is no established process by which a juice or detox regimen removes cancer from the body. Hence, falling for such claims is irrational.   
+* **Ketogenic and extreme low-carbohydrate diets:** Eating sugar has not been shown to make cancer worse. On the other hand, restricting carbohydrates is not a standard approach to cancer management and may make it harder for patients to meet their energy needs during treatment[41](https://www.cancer.gov/about-cancer/causes-prevention/risk/myths),[42](https://pubmed.ncbi.nlm.nih.gov/33946039/). Also, restrictive diets during cancer management may lead to nutrient deficiency and weight loss.   
+* **Diet with fruits:** Some plant extracts may destroy cancer cells in specific laboratory environments[43](https://pmc.ncbi.nlm.nih.gov/articles/PMC4650206/). Such laboratory findings are an early step in developing medicines, rather than a proof that eating the fruit treats cancer..   
+* **Herbal and alternative remedies:** No herbal product has been shown to treat cancer effectively. Instead some products can interfere with how chemotherapy medicines work or affect liver function, potentially making treatment less effective or increasing its harmful effects[41](https://www.cancer.gov/about-cancer/causes-prevention/risk/myths),[44](https://www.cancer.gov/about-cancer/treatment/cam/patient/dietary-interactions-pdq). Tell your oncologist about everything you take, including Ayurvedic and homeopathic preparations. This is to check for possible interactions, rather than judge your choices.   
+* **Supplements: s**There is no evidence that supplements like L-carnitine reduce cancer-related fatigue[45](https://www.mdpi.com/2072-6643/9/11/1224). High-dose antioxidant supplements are also generally discouraged during radiotherapy or chemotherapy[44](https://www.cancer.gov/about-cancer/treatment/cam/patient/dietary-interactions-pdq). If blood tests suggest certain deficiencies (like iron, vitamin B12 and vitamin D deficiencies) it should be corrected on medical advice rather than taking supplements without an identified need. 
 
 **Important:** Nutrition supports cancer treatment, but it does not replace it. No dietary pattern has been shown to treat cancer. 
 
-## **When to see a doctor** 
+## **When to see a doctor?** 
 
-### **Contact your team the same day if:**  
+### **Contact your doctor the same day if:**  
 
 * You have a fever of 100.5°F/38°C or higher[24](https://www.cancer.gov/about-cancer/treatment/side-effects/infection).   
 * You cannot keep fluids down for more than 12 hours.   
@@ -169,7 +165,7 @@ One study at a single institution reported longer overall survival when nutritio
 
 If travelling to your cancer center between treatment cycles is difficult, an online doctor consultation can help you obtain medical advice about symptoms, medicines for nausea or digestion, and whether you need to be examined in person. 
 
-## **Which applies to you?** 
+## **What applies to you?** 
 
 Find your own situation in the first column. The second column explains what you may experience, while the third points you to the section or page with more detailed guidance. Everyone responds differently so these are general patterns not predictions of what will happen in your case. 
 

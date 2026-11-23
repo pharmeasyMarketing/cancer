@@ -14,17 +14,13 @@ In India, guidelines recommend confirming the cancer before initiating treatment
 
 All three should be performed rather than relying on any one[4](https://www.ncgindia.org/assets/ncg-guidelines-2019/ncg-guidelines-for-breast-cancer-2019.pdf). 
 
-## **What can trigger investigation?** 
-
- 
+## **What can trigger an investigation?** 
 
 Cancer testing can be done for several reasons. One might have some symptoms that persist, recur, or worsen[5](https://pmc.ncbi.nlm.nih.gov/articles/PMC13044193/); a screening result that shows an abnormal finding[6](https://www.cancer.gov/about-cancer/screening/patient-screening-overview-pdq); or a scan done for another health condition shows an unexpected abnormal result. Incidental findings of health issues are becoming more common as imaging tests become more affordable. However, many may turn out to be harmless, while some might require further testing[7](https://link.springer.com/article/10.1007/s00330-025-11580-7). 
 
 When a person has persistent or worsening symptoms, the doctor will usually ask about their medical history and perform a physical examination. This helps the doctor decide which tests are needed, such as imaging tests, blood tests, or biopsy[2](https://www.cancer.gov/about-cancer/diagnosis-staging/diagnosis). If you are unsure which symptoms may be linked to different cancers, you can go through our overview of the main [types of cancer](https://pharmeasy.in/cancer/types/) and the early signs, before discussing any screening tests with your doctor. 
 
 ## **Biopsy: what it is and how it is done?** 
-
- 
 
 A biopsy refers to the collection of cells or tissue from the suspected area, which is then sent to a pathologist. The pathologist looks at the sample under a microscope to check for cancer cells. The type of biopsy depends on where the abnormal area is located and the procedure needed to collect the sample. 
 
@@ -39,7 +35,7 @@ There are several types of biopsies. Some biopsies require only a small sample o
 | Excisional biopsy  | The entire lump or organ is removed surgically[8](https://training.seer.cancer.gov/treatment/surgery/all_about_biopsy_accessible.pdf).  | Useful when the whole area needs to be examined for an accurate diagnosis (for example, enlarged lymph nodes) or for an organ like the spleen that is dangerous to cut into[8](https://training.seer.cancer.gov/treatment/surgery/all_about_biopsy_accessible.pdf).  | Requires a minor operation and may leave a scar[9](https://www.ncbi.nlm.nih.gov/sites/books/NBK594246/).  |
 | Incisional biopsy  | A small piece of an abnormal area is removed surgically[8](https://training.seer.cancer.gov/treatment/surgery/all_about_biopsy_accessible.pdf).  | Commonly used to understand whether the tumours that occur in soft tissues, including fat, muscles or connective tissue, are cancerous[8](https://training.seer.cancer.gov/treatment/surgery/all_about_biopsy_accessible.pdf).  | Does not provide the whole lesion for examination and may rarely increase the risk of cancer spreading to other parts of the body[11](https://pmc.ncbi.nlm.nih.gov/articles/PMC8318849/).  |
 | Endoscopic biopsy  | A small tissue sample is collected using instruments passed through a thin tube with a camera[8](https://training.seer.cancer.gov/treatment/surgery/all_about_biopsy_accessible.pdf).  | Used to examine areas such as the stomach, bowel, airways, or bladder[8](https://training.seer.cancer.gov/treatment/surgery/all_about_biopsy_accessible.pdf).  | The procedure may cause discomfort and has a high chance of getting false-negative results[12](https://pubmed.ncbi.nlm.nih.gov/36082089/). No higher chance of false positive results  |
-| Image-guided biopsy  | Imaging, such as ultrasound, CT or MRI, guides the needle to the target area[13](https://pubmed.ncbi.nlm.nih.gov/39553029/).  | Useful for abnormalities that are deep inside the body or difficult to feel or see[13](https://pubmed.ncbi.nlm.nih.gov/39553029/).  | This method may not be suitable for lymph nodes located deep inside the body.Image guided biopsy is generally used for lymphnodes lying deep within the body esp retroperitoneal and is accurate It is also dependent on the operator’s skill and may sometimes lead to an insufficient sample, requiring surgery for obtaining the biopsy[13](https://pubmed.ncbi.nlm.nih.gov/39553029/).  |
+| Image-guided biopsy  | Imaging, such as ultrasound, CT or MRI, guides the needle to the target area[13](https://pubmed.ncbi.nlm.nih.gov/39553029/).  | Useful for abnormalities that are deep inside the body or difficult to feel or see[13](https://pubmed.ncbi.nlm.nih.gov/39553029/).  | This method may not be suitable for lymph nodes located deep inside the body. Image guided biopsy is generally used for lymphnodes lying deep within the body esp retroperitoneal and is accurate It is also dependent on the operator’s skill and may sometimes lead to an insufficient sample, requiring surgery for obtaining the biopsy[13](https://pubmed.ncbi.nlm.nih.gov/39553029/).  |
 | Bone marrow aspiration and biopsy  | A special, large rigid needle is inserted into the bone to collect a sample of the bone marrow[8](https://training.seer.cancer.gov/treatment/surgery/all_about_biopsy_accessible.pdf).  | Helps diagnose and monitor conditions such as [leukaemia](https://pharmeasy.in/cancer/types/blood-cancer/leukaemia/) or lymphoma[14](https://pubmed.ncbi.nlm.nih.gov/25031954/).  | The process can be uncomfortable or painful[8](https://training.seer.cancer.gov/treatment/surgery/all_about_biopsy_accessible.pdf).  |
 
  
@@ -50,7 +46,7 @@ There are several types of biopsies. Some biopsies require only a small sample o
 
 The risk that cancer cells will spread along the path of a biopsy needle is extremely low. The American Cancer Society explains that the benefits of obtaining an accurate diagnosis generally outweigh this small risk[15](https://www.cancer.org/cancer/latest-news/can-getting-a-biopsy-make-cancer-spread.html). Patients considering a biopsy should discuss this procedure with their doctor in order to make the decision on an individual basis.  A biopsy is generally done by a surgeon or a radiologist trained in oncology so that spread due to biopsy is practically reduced to nil. 
 
-## **Imaging tests – what each test is used for** 
+## **Imaging tests: what each test is used for** 
 
 Imaging tests help doctors locate an abnormal area, assess its size and appearance, and determine whether cancer may have spread to other parts of the body. The type of scan recommended depends on the [symptoms](https://pharmeasy.in/cancer/symptoms/) and the area being examined.
 
@@ -78,7 +74,7 @@ Blood tests can provide useful clues about a person’s health, but no single bl
 * [**C-Reactive Protein Test (CRP)**](https://pharmeasy.in/diagnostics/tests/crp-quantitative-60)**:** This test measures CRP levels. CRP levels increase in response to inflammation in the body that may be caused by infection, arthritis, injury, or a recent surgery[26](https://medlineplus.gov/lab-tests/c-reactive-protein-crp-test/). The test cannot screen for, diagnose or exclude cancer. Our guide on [what a CRP result does and does not mean for cancer](https://pharmeasy.in/blog/crp-blood-test-cancer-understanding-its-significance-in-diagnosis-and-treatment/) explains why a high CRP level does not necessarily mean a person has cancer.   
 * [**Antinuclear Antibody Test (ANA)**](https://pharmeasy.in/diagnostics/tests/ana-elisa-671)**:** This is not a tumour marker. The test is usually not present in the cancer panel list. It's mainly used for the assessment of autoimmune disease rather than to diagnose cancer. However, sometimes certain types of cancer can still produce ANAs. However, this test alone cannot confirm the condition[27](https://medlineplus.gov/lab-tests/ana-antinuclear-antibody-test/). Use tumour marker tests alongside imaging scans, biopsies and other investigations to help assess cancer. 
 
-### **Tumour markers, one by one** 
+### **Tumour marker tests**
 
 Doctors use tumour marker tests alongside imaging scans, biopsies and other tests to help identify cancer. A tumour marker is a substance, usually a protein, that some cancer cells release. However, healthy cells and tissues affected by inflammation can also produce these substances[28](https://www.cancer.gov/types/prostate/psa-fact-sheet). Doctors usually get more useful information by comparing marker levels over time. For example, a decrease after treatment may indicate that the treatment is working, while a steady increase may suggest that the cancer has returned. However, tumour marker results alone cannot confirm whether cancer is present or has come back[29](https://medlineplus.gov/lab-tests/cea-test/). Normal ranges and measurement units can vary between laboratories and testing methods. Therefore, always use the reference range/values given in your own results. 
 
@@ -99,8 +95,7 @@ Each type is given in the table below.
 
 The following section explains how doctors use different tumour markers and what their results may mean, in detail. 
 
-* **Alpha-Fetoprotein (AFP):** This is useful in certain liver cancers and germ cell tumours. However, high AFP levels can also occur in non-cancerous liver conditions, such as hepatitis[31](https://medlineplus.gov/lab-tests/alpha-fetoprotein-afp-tumor-marker-test/). They may also rise when certain cancers (such as colorectal cancer) spread to the liver[30](https://www.ncbi.nlm.nih.gov/sites/books/NBK430750/). Therefore, doctors interpret the results alongside other findings[31](https://medlineplus.gov/lab-tests/alpha-fetoprotein-afp-tumor-marker-test/), as normal AFP does not rule out hepatocellular cancer, particularly in an early tumour.   
-* In [testicular cancer](https://pharmeasy.in/cancer/types/testicular-cancer/), AFP has an important role in interpreting the tumour type. Pure seminoma (the type of testicular cancer that has only seminoma cells, with no germ cells) does not produce AFP. Therefore, if AFP is high when a tumour has been reported as pure seminoma, doctors consider whether a non-seminomatous component may also be present[30](https://www.ncbi.nlm.nih.gov/sites/books/NBK430750/).   
+* **Alpha-Fetoprotein (AFP):** This is useful in certain liver cancers and germ cell tumours. However, high AFP levels can also occur in non-cancerous liver conditions, such as hepatitis[31](https://medlineplus.gov/lab-tests/alpha-fetoprotein-afp-tumor-marker-test/). They may also rise when certain cancers (such as colorectal cancer) spread to the liver[30](https://www.ncbi.nlm.nih.gov/sites/books/NBK430750/). Therefore, doctors interpret the results alongside other findings[31](https://medlineplus.gov/lab-tests/alpha-fetoprotein-afp-tumor-marker-test/), as normal AFP does not rule out hepatocellular cancer, particularly in an early tumour. In [testicular cancer](https://pharmeasy.in/cancer/types/testicular-cancer/), AFP has an important role in interpreting the tumour type. Pure seminoma (the type of testicular cancer that has only seminoma cells, with no germ cells) does not produce AFP. Therefore, if AFP is high when a tumour has been reported as pure seminoma, doctors consider whether a non-seminomatous component may also be present[30](https://www.ncbi.nlm.nih.gov/sites/books/NBK430750/).   
 * **Beta Human Chorionic Gonadotropin (Beta-hCG):** This is best known as a pregnancy hormone, but some germ cell tumours and gestational trophoblastic diseases can also produce it. Its level is, therefore, interpreted in the context of the patient's age, sex, pregnancy status, and suspected condition[42](https://pubmed.ncbi.nlm.nih.gov/21037873/). Its levels are high in about 14% of stage I pure seminomas, around 50% of seminomas that have spread, and 40-60% of non-seminomas[43](https://www.cancer.gov/types/testicular/hp/testicular-treatment-pdq?cid=eb_govdel&utm). In germ cell tumours, beta-hCG is used alongside AFP and lactate dehydrogenase levels to help assess the cancer and classify patients into risk groups. Together, this classification helps doctors estimate the likely outcome and plan treatment[42](https://pubmed.ncbi.nlm.nih.gov/21037873/). Increased beta-hCG level is, therefore, not an indicator of cancer by itelf, since pregnancy and other factors might influence it[33](https://www.ncbi.nlm.nih.gov/sites/books/NBK532950/).   
 * **Cancer Antigen-125 (CA-125):** This laboratory test is primarily used to monitor epithelial ovarian cancer. Interpreting the test results is complicated because several non-cancerous conditions can cause high CA-125 levels, while its levels may be normal in many women with early-stage ovarian cancer. Therefore, doctors do not rely only on the outcome of this analysis to determine whether a patient has ovarian cancer[34](https://medlineplus.gov/lab-tests/ca-125-blood-test-ovarian-cancer/).   
 * **Cancer Antigen- 15-3 (CA 15-3):** This test helps monitor treatment response in metastatic [breast cancer](https://pharmeasy.in/cancer/types/breast-cancer/) where levels of this tumour marker were initially high. It is not useful for diagnosing, screening, or treatment planning for breast cancer on its own. Its levels can also increase in non-cancerous breast disease[36](https://pubmed.ncbi.nlm.nih.gov/20816948/).   
@@ -110,9 +105,7 @@ The following section explains how doctors use different tumour markers and what
 * **Prostate-Specific Antigen** **(PSA):** This marker helps evaluate the risk of prostate cancer. It is produced by both normal prostate tissue and cancer tissue. A PSA value of 4.0 ng/mL is traditionally considered high enough to warrant further tests for prostate cancer. However, no single PSA level can confirm or rule out prostate cancer. Among men with high PSA levels who undergo a biopsy, only about 25% of men are found to have prostate cancer. Several non-cancerous conditions, such as an enlarged prostate, prostatitis, and urinary infection, can also increase PSA. A recent biopsy, strenuous activities, and recent ejaculation can also affect PSA value. Therefore, doctors consider PSA levels along with symptoms, medical history and other test results to decide whether further tests are needed. In some cases, doctors also give medicines to shrink the prostate and lower the PSA values[28](https://www.cancer.gov/types/prostate/psa-fact-sheet).   
 * **Thyroglobulin:** This blood test monitors certain types of [thyroid cancers](https://pharmeasy.in/cancer/types/thyroid-cancer/) after treatment. Thyroglobulin is normally produced by an organ called the thyroid in small amounts. If thyroglobulin levels rise during follow-up, it may indicate the return of cancer or that some thyroid tissue remains even after treatment. However, the result alone cannot confirm cancer recurrence. Doctors also consider anti-thyroglobulin antibodies, as these can affect the accuracy of the test[45](https://medlineplus.gov/lab-tests/thyroglobulin/). A thyroid lump cannot be confirmed as cancer through a [thyroglobulin (Tg)](https://pharmeasy.in/diagnostics/tests/thyroglobulin-tg-631) blood test alone. Further assessment, including a needle biopsy when needed, may be necessary. People always get confused between a [thyroid profile (T3, T4, TSH)](https://pharmeasy.in/diagnostics/profile/thyroid-profile-t3-t4-tsh-1804) and a Tg test. A thyroid profile is not a cancer test by itself, it shows how well the thyroid gland is working. However, it helps monitor hormone levels after thyroid surgery or neck radiation for thyroid cancer, as patients may need hormone replacement. 
 
-## **What a pathology report actually says** 
-
- 
+## **What a pathology report actually says**
 
 A histopathology report presents the findings from a thorough examination of the tissue sample under a microscope. It helps identify the type of cancer and provides details that guide treatment[46](https://www.cancer.gov/about-cancer/diagnosis-staging/diagnosis/pathology-reports-fact-sheet).  
 
@@ -129,9 +122,7 @@ The main details in a report may include:
 * **Molecular Results**: Specific changes in the cancer cells that may help doctors determine specific treatments that are more likely to work.   
 * **Pathological TNM Stage (pTNM):** The stage of the cancer based on surgical findings and tissue examination, including the tumour size, nearby lymph nodes, and distant spread[47](https://www.cancer.org/cancer/diagnosis-staging/staging.html). 
 
-## **How staging is decided and how long it takes** 
-
- 
+## **How is staging decided and how long does it take?**
 
 Cancer staging uses information from the physical examination, scans, and laboratory findings to assess how far the disease has progressed. Clinical stage (cTNM) is determined before treatment using examination findings and imaging tests. Pathological stage (pTNM) is established after surgery by examining the removed tissue. These two stages can sometimes be different. 
 
@@ -139,7 +130,7 @@ Gynaecological cancers may be staged using the International Federation of Gynae
 
 The process from the first consultation to a treatment plan may take one to three weeks, depending on how quickly scans and biopsies are completed. If additional molecular tests are needed, the results may take another week or two. These findings can help doctors select the most appropriate treatment for the patient. 
 
-## **When to see a doctor** 
+## **When to see a doctor?** 
 
 Consult a doctor if you notice any of the following or have a test result you do not understand. 
 
@@ -147,7 +138,7 @@ Consult a doctor if you notice any of the following or have a test result you do
 * **Same Day of the Treatment is needed for the following:** Heavy bleeding; fever above 38°C; nausea or vomiting; difficulty breathing during or after [chemotherapy](https://pharmeasy.in/cancer/treatment/chemotherapy/)[49](https://www.cancer.org/cancer/treatment-types/chemotherapy/chemotherapy-side-effects.html); severe abdominal pain after a biopsy (for CT-guided pelvic biopsy)[50](https://www.gloshospitals.nhs.uk/your-visit/patient-information-leaflets/ct-computed-tomography-guided-abdominalpelvic-biopsy/); or a wound that feels hot, gets redder or more swollen, or leaks fluid or blood[50](https://www.gloshospitals.nhs.uk/your-visit/patient-information-leaflets/ct-computed-tomography-guided-abdominalpelvic-biopsy/).   
 * **Do Not Rely Completely on a Tumour Marker Result:** If your tumour marker levels increase again, and you do not have any symptoms, the right decision is to consult your doctor rather than going for a scan by yourself. An online doctor consultation can help you understand your result and whether further testing is necessary. Learn more about which tests may be appropriate for people without symptoms in our guide to [cancer screening](https://pharmeasy.in/cancer/screening/), and explore the general information in [cancer](https://pharmeasy.in/cancer/). 
 
-## **Which applies to you?** 
+## **What applies to you?** 
 
  
 
@@ -166,8 +157,6 @@ Find the situation that best matches yours in the first column. The second colum
  
 
 ## **Frequently asked questions** 
-
-###  
 
 ### ▾**What is a biopsy test?** 
 

@@ -367,12 +367,6 @@
  ],
  "/cancer/treatment/": [
   [
-   "https://pharmeasy.in/cancer/types/",
-   404,
-   "type of cancer",
-   "unlinked"
-  ],
-  [
    "https://pharmeasy.in/cancer/types/breast-cancer/",
    404,
    "breast cancer",
@@ -504,18 +498,6 @@
    "https://pharmeasy.in/cancer/types/skin-cancer/",
    404,
    "skin cancers",
-   "unlinked"
-  ],
-  [
-   "https://pharmeasy.in/cancer/types/head-and-neck-cancer/oral-cancer/",
-   404,
-   "head and neck",
-   "unlinked"
-  ],
-  [
-   "https://pharmeasy.in/cancer/types/testicular-cancer/",
-   404,
-   "testicular cancers",
    "unlinked"
   ],
   [

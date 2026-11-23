@@ -12,7 +12,7 @@ What matters is whether a symptom gets worse over time or is associated with oth
 
 This page explains which symptoms need medical attention, what else might be causing them, and when it is time to see a doctor. 
 
-## The symptoms that genuinely warrant assessment 
+## Symptoms that require medical evaluation  
 
 * **A lump anywhere in the body that is new and persistent:** First you should know that not every lump or temporary swelling means that it is cancer. Sometimes something as common as a cold may cause your lymph nodes to swell when your body is fighting the infection. The swelling usually gets better as you start to recover from the infection.[1](https://www.hopkinsmedicine.org/health/wellness-and-prevention/5-symptoms-of-cancer-you-might-be-ignoring-but-shouldnt) However if you notice a lump or swelling that has been there for weeks and is continuing to grow, it might point to something serious. So, if you notice a lump or even a swelling in your neck, armpit, private areas, breast, or your abdomen that has persisted for weeks, you should get it checked by a doctor.[2](https://www.cancerresearchuk.org/about-cancer/spot-cancer-early/cancer-symptoms)   
 * **A mouth ulcer or a white patch/red patch that has not healed:** Mouth ulcers are usually common and normally heal on their own within a week or two. However, if an ulcer does not heal for a few weeks or if you notice a persistent white or red patch anywhere in the mouth, you should get it checked by a doctor or dentist.[2](https://www.cancerresearchuk.org/about-cancer/spot-cancer-early/cancer-symptoms) These changes may have several other causes but they can also be one of the early signs of oral cancer so it is important that you do not ignore them. This is particularly important for men in India where oral cancer is a major concern. In 2024, cancers of the lip and oral cavity accounted for 20.4% of all new cancer cases among men, making them the leading cancer type in men.[3](https://gco.iarc.who.int/today/)   
@@ -92,7 +92,7 @@ Cancer symptoms vary depending on the type of cancer and the organ affected. Som
 > > > * Tumours in the marrow may lead to anaemia, infection, and bleeding.[39](https://pmc.ncbi.nlm.nih.gov/articles/PMC7912724/)   
   To know more, see [types of cancer, symptoms and early signs](https://pharmeasy.in/blog/diagnostic-types-of-cancer-symptoms-early-signs-diagnosis-more/). 
 
-## When to see a doctor 
+## When to see a doctor? 
 
 Cancer warning signs can resemble symptoms of other conditions, so medical assessment is needed to identify the cause. Contact your doctor if you notice: 
 
@@ -107,9 +107,9 @@ Cancer warning signs can resemble symptoms of other conditions, so medical asses
 
 **Note:** See your doctor immediately if you cough up or vomit blood, have a seizure for the first time, develop a sudden severe headache with vomiting, experience new one-sided weakness or numbness, become breathless at rest, or develop rapid swelling in any body part, fever with a stiff neck, or severe pain anywhere in the body.[40](https://medlineplus.gov/ency/patientinstructions/000593.htm) 
 
-If you are unsure when to see a doctor, an [online doctor consultation](https://pharmeasy.in/online-doctor-consultation/) can help you understand what to do next and whether you need an in-person examination. 
+If you are unsure when to see a doctor, an online doctor consultation can help you understand what to do next and whether you need an in-person examination. 
 
-## Which situation applies to you? 
+## What applies to you? 
 
 Find the situation that best matches yours (first column), take a look at what it might mean (second column), and get more information (third column) about it. 
 

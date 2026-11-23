@@ -25,7 +25,7 @@ Crawled 2026-11-23 by build/check_links.py: 988 unique links, 918 OK, 44 dead, 2
 | 11 | 404 | /cancer/treatment/radiation-therapy/ | /cancer/, /cancer/nutrition/, /cancer/tests/, /cancer/treatment/, /cancer/treatment/chemotherapy/, /cancer/types/cervical-cancer/ |
 | 12 | 404 | /cancer/treatment/surgery/ | /cancer/, /cancer/treatment/, /cancer/treatment/chemotherapy/, /cancer/types/cervical-cancer/ |
 | 13 | 404 | /cancer/treatment/targeted-therapy/ | /cancer/, /cancer/treatment/ |
-| 14 | 404 | /cancer/types/ | /cancer/, /cancer/tests/, /cancer/treatment/, /cancer/types/cervical-cancer/ |
+| 14 | 404 | /cancer/types/ | /cancer/, /cancer/tests/, /cancer/types/cervical-cancer/ |
 | 15 | 404 | /cancer/types/anal-cancer/ | /cancer/types/cervical-cancer/ |
 | 16 | 404 | /cancer/types/bladder-cancer/ | /cancer/treatment/ |
 | 17 | 404 | /cancer/types/blood-cancer/ | /cancer/tests/, /cancer/treatment/chemotherapy/ |
@@ -35,7 +35,7 @@ Crawled 2026-11-23 by build/check_links.py: 988 unique links, 918 OK, 44 dead, 2
 | 21 | 404 | /cancer/types/cervical-cancer/diagnosis/ | /cancer/types/cervical-cancer/ |
 | 22 | 404 | /cancer/types/colorectal-cancer/ | /cancer/nutrition/, /cancer/symptoms/, /cancer/tests/, /cancer/treatment/chemotherapy/ |
 | 23 | 404 | /cancer/types/head-and-neck-cancer/ | /cancer/nutrition/, /cancer/treatment/chemotherapy/ |
-| 24 | 404 | /cancer/types/head-and-neck-cancer/oral-cancer/ | /cancer/treatment/, /cancer/treatment/chemotherapy/ |
+| 24 | 404 | /cancer/types/head-and-neck-cancer/oral-cancer/ | /cancer/treatment/ |
 | 25 | 404 | /cancer/types/kidney-cancer/ | /cancer/prevention/ |
 | 26 | 404 | /cancer/types/liver-cancer/ | /cancer/prevention/, /cancer/tests/ |
 | 27 | 404 | /cancer/types/lung-cancer/ | /cancer/symptoms/, /cancer/treatment/, /cancer/treatment/chemotherapy/ |
@@ -45,7 +45,7 @@ Crawled 2026-11-23 by build/check_links.py: 988 unique links, 918 OK, 44 dead, 2
 | 31 | 404 | /cancer/types/skin-cancer/ | /cancer/treatment/chemotherapy/ |
 | 32 | 404 | /cancer/types/skin-cancer/melanoma/ | /cancer/ |
 | 33 | 404 | /cancer/types/stomach-cancer/ | /cancer/nutrition/, /cancer/treatment/chemotherapy/ |
-| 34 | 404 | /cancer/types/testicular-cancer/ | /cancer/tests/, /cancer/treatment/, /cancer/treatment/chemotherapy/ |
+| 34 | 404 | /cancer/types/testicular-cancer/ | /cancer/tests/, /cancer/treatment/ |
 | 35 | 404 | /cancer/types/thyroid-cancer/ | /cancer/prevention/, /cancer/tests/ |
 | 36 | 404 | /cancer/types/uterine-cancer/ | /cancer/types/cervical-cancer/ |
 | 37 | 404 | /cancer/types/vaginal-and-vulvar-cancer/ | /cancer/prevention/, /cancer/types/cervical-cancer/ |

@@ -25,7 +25,7 @@ These processes of cell division, repair and renewal are regulated by instructio
 
 It is important to note that this process usually takes years and sometimes even decades, as cancer develops through the gradual accumulation of genetic changes. So, a single mutation is rarely enough to cause cancer[6](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.0030225). This gradual development also creates opportunities for prevention and early detection, allowing many cancers to be prevented or identified before they progress to advanced disease. 
 
-## How does cancer start? 
+## How does cancer develop? 
 
 Cancer develops when changes in the cell’s DNA (genetic changes or mutations) affect the normal processes that regulate cell growth, division, repair and death. These changes may be caused by DNA damage from factors such as tobacco smoke, ultraviolet radiation, chronic infections (like human Papillomavirus \[HPV\] and hepatitis), alcohol, or exposure to chemicals. Family history of cancer accounts for a small percentage of cases. Whether [genetic testing](https://pharmeasy.in/blog/diagnostic-is-cancer-a-genetic-disease-hereditary-risk-genetic-testing-guide/) is worth considering depends on the primary site of cancer and family history[1](https://www.who.int/news-room/fact-sheets/detail/cancer),[2](https://www.cancer.gov/about-cancer/understanding/what-is-cancer%20)
 
@@ -79,7 +79,7 @@ Classification is also done based on the type of tissue or cells in which it ori
 
  
 
-### **Classification by Molecular Profile** 
+### **Classification by molecular profile** 
 
 Cancer can also be classified based on its molecular profile, including specific genetic mutations and proteins present in cancer cells. These features can help doctors identify the cancer subtype, estimate how it may progress or respond to treatment, and also select targeted treatments. Some examples of cancer classification based on molecular markers include[12](https://www.cancer.gov/about-cancer/diagnosis-staging/diagnosis/tumor-markers-list%20): 
 
@@ -101,7 +101,7 @@ Cancer spreads when some cells from the primary cancer location invade adjacent 
 
 ![][image3] 
 
-## The India picture 
+## The state of cancer in India
 
 [India's cancer](https://pharmeasy.in/cancer/india/) prevalence is different from other countries. According to 2024 estimates, India recorded approximately 1.56 million new cancer cases and 902,000 cancer deaths, with over 3.32 million people living with a cancer diagnosis made in the previous five years. The table below shows the estimated cancer burden in India in 2024, including new cases, deaths, five-year prevalence, lifetime risk, and the most common cancers among males and females[4](https://gco.iarc.who.int/today/en/fact-sheets-populations/356/india%20). 
 
@@ -182,7 +182,7 @@ The treatment or combination of treatments chosen to fight cancer depends on the
 
 See [cancer treatment](https://pharmeasy.in/cancer/treatment/) for each modality for details, and [nutrition during cancer treatment](https://pharmeasy.in/cancer/nutrition/) if you want guidance on what to eat during /after cancer treatment. 
 
-The choice depends on the type, subtype, and stage of cancer, as well as how well the person is expected to tolerate treatment. The medicines mentioned below are prescription only and should only be used under an oncologist’s supervision. Also, prices may sometimes vary, so actual prices should be checked on the specific product page. 
+The choice depends on the type, subtype, and stage of cancer, as well as how well the person is expected to tolerate treatment. The medicines mentioned below are prescription-only and should only be used under an oncologist’s supervision. Also, prices may sometimes vary, so actual prices should be checked on the specific product page. 
 
 | Drug group  | Molecules used in India  | How it is given  | What it is used for  | Brands on PharmEasy  |
 | :---- | :---- | :---- | :---- | :---- |
@@ -205,7 +205,7 @@ You may check the generic molecule page on PharmEasy for each medicine or medici
 
 The cost of medicine varies by city, hospital, stage, regimen, and whether care is public, trust-run, or a private institution. It also depends on how it is charged. For example, per-cycle cost adds up with each treatment cycle, while an ongoing monthly cost continues for as long as the treatment remains effective. In India, more than 75% of cancer-affected households experience catastrophic health expenditure[37](https://pubmed.ncbi.nlm.nih.gov/40368978/). For further details, check [cost and financial support](https://pharmeasy.in/cancer/cost-and-support/). 
 
-## **What to check for insurance in India** 
+## What to check for insurance in India 
 
 Coverage depends on your specific policy, insurer, hospital, and policy terms. You can use the following points as questions to discuss with your insurer before treatment begins. 
 
@@ -261,7 +261,7 @@ If you are unsure whether a symptom needs medical attention, an online doctor co
 
 The dates and prices on this page are CMS fields, not text. A field shown like {{EXAMPLE}} is populated by the platform; this prototype is not connected to a live feed. 
 
-## Frequently Asked Questions 
+## Frequently asked questions 
 
 ### ▾ What is cancer in simple words? 
 

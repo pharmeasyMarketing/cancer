@@ -11,7 +11,7 @@ The programme would significantly reduce the burden of cervical cancer in India.
 
 Nearly all cases of cervical cancer are caused by persistent infection with high-risk human papillomavirus (HPV). This makes cervical cancer one of the few common cancers that can be largely prevented through vaccination[5](https://www.who.int/news-room/fact-sheets/detail/cervical-cancer%20). It is also important to note that HPV is not just a concern for women or cervical cancer. It can also cause cancers of the oropharynx, anus, vulva, vagina, penis and even head and neck cancers[6](https://pubmed.ncbi.nlm.nih.gov/40301924/). So, vaccination remains a pivotal step in avoiding cervical cancer and other related risks. 
 
-## What the evidence shows 
+## What does the evidence show? 
 
 HPV is a group of more than 200 related viruses that infect the skin and mucosal surfaces (the inner linings of your body's cavities and organs)[7](https://www.who.int/news-room/fact-sheets/detail/human-papilloma-virus-and-cancer). Among these around 30 to 40 types can infect the genital tract[8](https://pubmed.ncbi.nlm.nih.gov/18701931/).
 
@@ -42,11 +42,11 @@ Most sexually active people acquire HPV at some point in their lives. In most ca
 
 * Low-risk HPV types can cause genital warts. They appear as soft, flesh-coloured growths that may occur singly or in clusters. Genital warts are not cancer and are usually caused by different HPV types from those responsible for cancer[20](https://pubmed.ncbi.nlm.nih.gov/22768354/).   
 * High-risk HPV types can cause cancer, but they usually cause no symptoms. This is one of the most important things to understand about HPV. A woman may have a persistent high-risk HPV infection and develop precancerous changes in the cervix while staying asymptomatic (sometimes for up to 15 to 20 years)[5](https://www.who.int/news-room/fact-sheets/detail/cervical-cancer%20).  
-* Symptoms such as bleeding between periods, after sex or after menopause may be present in early stages,  foul smelling vaginal discharge, and pelvic pain may appear in advanced cases[5](https://www.who.int/news-room/fact-sheets/detail/cervical-cancer%20). These are signs of cervical disease and not HPV infection itself. Learn more about these symptoms on our [cervical cancer symptoms](https://pharmeasy.in/cancer/types/cervical-cancer/symptoms/) page. 
+* Symptoms such as bleeding between periods, after sex or after menopause may be present in early stages; foul-smelling vaginal discharge, and pelvic pain may appear in advanced cases[5](https://www.who.int/news-room/fact-sheets/detail/cervical-cancer%20). These are signs of cervical disease and not HPV infection itself. Learn more about these symptoms on our [cervical cancer symptoms](https://pharmeasy.in/cancer/types/cervical-cancer/symptoms/) page. 
 
-**Vaccination changes risk by preventing the infection, which is why timing matters.**  
+### How Vaccination Changes HPV Risk
 
-According to the World Health Organization (WHO), vaccine recommendations include the following[21](https://www.who.int/news/item/11-04-2022-one-dose-human-papillomavirus-\(hpv\)-vaccine-offers-solid-protection-against-cervical-cancer):
+Vaccination changes risk by preventing the infection, which is why timing matters. According to the World Health Organization (WHO), vaccine recommendations include the following[21](https://www.who.int/news/item/11-04-2022-one-dose-human-papillomavirus-\(hpv\)-vaccine-offers-solid-protection-against-cervical-cancer):
 
 * Girls aged 9 to 14 years (one or two doses) before their sexual debut    
 * Girls and women aged 15 to 20 years (one or two doses)   
@@ -83,7 +83,7 @@ Here’s what you can do to protect yourself and your family against cervical ca
 > > > * Abdominal pain or back pain   
 * **Arrange an appointment if**[33](https://www.cancer.gov/types/cervical/symptoms%20)**:**    
 > > > * Your daughter or son is in or near the eligible age group, and you want to discuss vaccination.   
-> > > * You are over 30 and request  cervical screening.   
+> > > * You are over 30 and request cervical screening.   
 > > > * You have received an abnormal screening result and are unsure about the next steps.   
 > > > * You have a weakened immune system and need advice about how many vaccine doses you need. 
 
@@ -99,7 +99,7 @@ Several myths about HPV and its vaccine can cause unnecessary worry and confusio
 * **HPV vaccination causes infertility:** Monitoring of vaccine side effects has not revealed a link between HPV vaccination and infertility. Additionally, across many countries, safety monitoring has not identified serious safety concerns with HPV vaccines[24](https://www.cdc.gov/vaccine-safety/vaccines/hpv.html).  
 * **Two or three doses are necessarily required:** The latest recommendations by WHO suggest that one dose provides reliable protection. However, people with a weak immune system need at least two doses and, if possible, three doses of the HPV vaccine for better protection[35](https://www.who.int/news/item/20-12-2022-WHO-updates-recommendations-on-HPV-vaccination-schedule).  
 * **India has no national programme that the campaign uses Cervavac:** India now has a nationwide HPV vaccination programme for 14-year-old girls that offers free Gardasil-4 vaccination (not Cervavac) at government health facilities[2](https://www.pib.gov.in/PressReleasePage.aspx?PRID=2233632&reg=48&lang=2%20),[26](https://www.pib.gov.in/www.pib.gov.in/Pressreleaseshare.aspx?PRID=2148754).  
-* **There is no treatment for HPV itself:** There is no role of antiviral treatment for for Hpv infection. Instead, treatment addresses the health problems caused by HPV.[5](https://www.who.int/news-room/fact-sheets/detail/cervical-cancer%20),[7](https://www.who.int/news-room/fact-sheets/detail/human-papilloma-virus-and-cancer) 
+* **There is no treatment for HPV itself:** Treatment focuses on managing conditions caused by the infection rather than eliminating the virus directly.[5](https://www.who.int/news-room/fact-sheets/detail/cervical-cancer%20),[7](https://www.who.int/news-room/fact-sheets/detail/human-papilloma-virus-and-cancer) 
 
 ​​ 	​Latest on prevention hpv — updated {{CURRENT\_MONTH\_YEAR}} 
 
@@ -109,7 +109,7 @@ Related pages
 * [HPV in men: what it is, causes, symptoms, treatment](https://pharmeasy.in/blog/vaccine-hpv-in-men-what-it-is-causes-symptoms-treatment/) — why vaccination is gender-neutral   
 * [Tests & tumour markers](https://pharmeasy.in/cancer/tests/) — what each cancer test can and cannot tell you 
 
-## Frequently Asked Questions 
+## Frequently asked questions 
 
 ### ▾ What is the full form of HPV? 
 
@@ -121,7 +121,7 @@ India’s national programme offers HPV vaccination to girls aged 14 years[2](ht
 
 ### ▾ How many doses does the HPV vaccine need? 
 
-India's vaccination programme administers  a single dose. In April 2022, WHO recommended single-dose schedules for girls aged 9 to 14[21](https://www.who.int/news/item/11-04-2022-one-dose-human-papillomavirus-\(hpv\)-vaccine-offers-solid-protection-against-cervical-cancer). This is based partly on an IARC cohort study of around 17,729 adults in India followed for 10 years[22](https://pubmed.ncbi.nlm.nih.gov/34634254/). People with weakened immune systems may need two to three doses[21](https://www.who.int/news/item/11-04-2022-one-dose-human-papillomavirus-\(hpv\)-vaccine-offers-solid-protection-against-cervical-cancer).
+India's vaccination programme administers a single dose. In April 2022, WHO recommended single-dose schedules for girls aged 9 to 14[21](https://www.who.int/news/item/11-04-2022-one-dose-human-papillomavirus-\(hpv\)-vaccine-offers-solid-protection-against-cervical-cancer). This is based partly on an IARC cohort study of around 17,729 adults in India followed for 10 years[22](https://pubmed.ncbi.nlm.nih.gov/34634254/). People with weakened immune systems may need two to three doses[21](https://www.who.int/news/item/11-04-2022-one-dose-human-papillomavirus-\(hpv\)-vaccine-offers-solid-protection-against-cervical-cancer).
 
 ### ▾ Is there an HPV test, and should I have one? 
 
@@ -133,7 +133,7 @@ No antiviral treatment clears HPV infection. Treatment instead addresses the pro
 
 ### ▾ Can men get the HPV vaccine in India? 
 
-Yes, boys and men can receive HPV vaccine, however, India’s national programme covers only girls aged 14[2](https://www.pib.gov.in/PressReleasePage.aspx?PRID=2233632&reg=48&lang=2%20). Several other countries include boys in their routine vaccination programmes[36](https://pmc.ncbi.nlm.nih.gov/articles/PMC8728487/). Boys and men in India can receive vaccination in private sectors. 
+Yes, boys and men can receive the HPV vaccine; however, India’s national programme covers only girls aged 14[2](https://www.pib.gov.in/PressReleasePage.aspx?PRID=2233632&reg=48&lang=2%20). Several other countries include boys in their routine vaccination programmes[36](https://pmc.ncbi.nlm.nih.gov/articles/PMC8728487/). Boys and men in India can receive vaccination in private sectors. 
 
 ### ▾ If I am vaccinated, do I still need cervical screening? 
 

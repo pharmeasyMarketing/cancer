@@ -82,7 +82,6 @@ From build/link_status.json (python3 build/check_links.py). Dead = the server an
 
 ## /cancer/treatment/
 
-- https://pharmeasy.in/cancer/types/ (404, unlinked): "type of cancer"
 - https://pharmeasy.in/cancer/types/breast-cancer/ (404, unlinked): "breast cancer"
 - https://pharmeasy.in/cancer/treatment/surgery/ (404, unlinked): "Surgery"
 - https://pharmeasy.in/cancer/treatment/radiation-therapy/ (404, unlinked): "Radiation therapy"
@@ -108,8 +107,6 @@ From build/link_status.json (python3 build/check_links.py). Dead = the server an
 - https://pharmeasy.in/cancer/types/head-and-neck-cancer/ (404, unlinked): "head and neck"
 - https://pharmeasy.in/cancer/types/oesophageal-cancer/ (404, unlinked): "oesophageal"
 - https://pharmeasy.in/cancer/types/skin-cancer/ (404, unlinked): "skin cancers"
-- https://pharmeasy.in/cancer/types/head-and-neck-cancer/oral-cancer/ (404, unlinked): "head and neck"
-- https://pharmeasy.in/cancer/types/testicular-cancer/ (404, unlinked): "testicular cancers"
 - https://pharmeasy.in/cancer/treatment/surgery/ (404, unlinked): "Surgery"
 - https://pharmeasy.in/cancer/treatment/radiation-therapy/ (404, unlinked): "Radiotherapy"
 
