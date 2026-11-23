@@ -38,6 +38,17 @@ PRODUCTION = '--production' in sys.argv
 KEEP_NOINDEX = '--noindex' in sys.argv
 INDEXABLE = PRODUCTION and not KEEP_NOINDEX
 ROBOTS = '' if INDEXABLE else '<meta name="robots" content="noindex, nofollow">\n'
+# Google Tag Manager: the pharmeasy.in site container (GA4, Google Ads, CleverTap), same as /medicines/.
+# Only the pharmeasy.in deploy (--production) carries it, so the GitHub Pages preview copy never
+# sends pageviews into the live container.
+GTM_ID = 'GTM-W5PR55Z'
+GTM_HEAD = ("<!-- Google Tag Manager -->\n<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\n"
+            "new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\n"
+            "j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n"
+            "'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n"
+            "})(window,document,'script','dataLayer','%s');</script>\n<!-- End Google Tag Manager -->\n" % GTM_ID) if PRODUCTION else ''
+GTM_BODY = ('\n<!-- Google Tag Manager (noscript) -->\n<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=%s" '
+            'height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>\n<!-- End Google Tag Manager (noscript) -->' % GTM_ID) if PRODUCTION else ''
 
 REVIEWER = 'Dr. Ayush Shashikant Dubey'
 REVIEWER_URL = 'https://pharmeasy.in/legal/editorial-policy/-dr-ayush-shashikant-dubey-190'
@@ -870,7 +881,7 @@ def head(faqs, desc, title):
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="icon" href="https://pharmeasy.in/favicon.ico" sizes="any">
+{GTM_HEAD}<link rel="icon" href="https://pharmeasy.in/favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="https://pharmeasy.in/favicon.ico">
 <title>{esc(title)}</title>
 <meta name="description" content="{esc(desc)}">
@@ -1145,7 +1156,7 @@ def main():
             'Medically reviewed by Dr. Ayush Shashikant Dubey.')
     body = ''.join(sections)
     # the explore band sits before the FAQ, like the GLP-1 tools band
-    page = (head(faqs, desc, title) + '\n<body data-built="%s">\n<a class="skip" href="#main">Skip to content</a>' % ' '.join(built_pages()) + '\n<div data-pe-header></div>\n<main id="main"><div id="dc-root">\n'
+    page = (head(faqs, desc, title) + '\n<body data-built="%s">%s\n<a class="skip" href="#main">Skip to content</a>' % (' '.join(built_pages()), GTM_BODY) + '\n<div data-pe-header></div>\n<main id="main"><div id="dc-root">\n'
             '<div style="background:#F5F7F8;font-family:var(--glp-font,Inter,Mulish,sans-serif);color:#25282B;padding-bottom:48px;container-type:inline-size">\n'
             + hero() + '\n  <div class="sec" style="max-width:1120px;margin:0 auto;padding:24px 20px 0">\n    <div style="display:flex;flex-wrap:wrap;gap:24px;align-items:flex-start">\n\n' + rail(toc)
             + '\n      <div class="art" style="order:2;flex:1 1 560px;min-width:0">\n' + body + explore_band('') + faq + ref + '\n      </div>\n    </div>\n  </div>\n' + disclaimer() +

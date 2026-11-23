@@ -658,7 +658,7 @@ def head(doc, path, faqs, desc, title, prefix):
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="icon" href="https://pharmeasy.in/favicon.ico" sizes="any">
+{B.GTM_HEAD}<link rel="icon" href="https://pharmeasy.in/favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="https://pharmeasy.in/favicon.ico">
 <title>{esc(title)}</title>
 <meta name="description" content="{esc(desc)}">
@@ -784,7 +784,7 @@ def build_page(fname, path, built):
     desc = meta_desc(doc)
     title = '%s | PharmEasy' % doc['h1']
     page = (head(doc, path, faqs, desc, title, prefix)
-            + '\n<body data-built="%s">\n<a class="skip" href="#main">Skip to content</a>\n<div data-pe-header></div>\n<main id="main"><div id="dc-root">\n' % ' '.join(built)
+            + '\n<body data-built="%s">%s\n<a class="skip" href="#main">Skip to content</a>\n<div data-pe-header></div>\n<main id="main"><div id="dc-root">\n' % (' '.join(built), B.GTM_BODY)
             + '<div style="background:#F5F7F8;font-family:var(--glp-font,Inter,Mulish,sans-serif);color:#25282B;padding-bottom:48px;container-type:inline-size">\n'
             + hero(doc, path) + '\n  <div class="sec" style="max-width:1120px;margin:0 auto;padding:24px 20px 0">\n    <div style="display:flex;flex-wrap:wrap;gap:24px;align-items:flex-start">\n\n'
             + rail(toc, related_links(path), bool(faqs), bool(refs))
