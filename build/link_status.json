@@ -2143,7 +2143,7 @@
  "https://pharmeasy.in/molecules/4128388": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:40:26",
+  "checked": "2026-11-23T08:23:41",
   "found_on": [
    "assets/data/drug-more.json"
   ],
@@ -2153,7 +2153,7 @@
  "https://pharmeasy.in/molecules/4175362": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:40:27",
+  "checked": "2026-11-23T08:23:42",
   "found_on": [
    "assets/data/drug-more.json"
   ],
@@ -2163,7 +2163,7 @@
  "https://pharmeasy.in/molecules/abemaciclib-3995141": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:31:34",
+  "checked": "2026-11-23T08:14:51",
   "found_on": [
    "/cancer/"
   ],
@@ -2172,7 +2172,7 @@
  "https://pharmeasy.in/molecules/abiraterone-7120": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:31:37",
+  "checked": "2026-11-23T08:14:53",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/"
@@ -2182,7 +2182,7 @@
  "https://pharmeasy.in/molecules/abiraterone-acetate-491688": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:40:29",
+  "checked": "2026-11-23T08:23:43",
   "found_on": [
    "assets/data/drug-more.json"
   ],
@@ -2191,7 +2191,7 @@
  "https://pharmeasy.in/molecules/acalabrutinib-4005376": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:40:30",
+  "checked": "2026-11-23T08:23:44",
   "found_on": [
    "assets/data/drug-more.json"
   ],
@@ -2200,7 +2200,7 @@
  "https://pharmeasy.in/molecules/ado-trastuzumab-emtansine-489426": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:40:32",
+  "checked": "2026-11-23T08:23:46",
   "found_on": [
    "assets/data/drug-more.json"
   ],
@@ -2209,7 +2209,7 @@
  "https://pharmeasy.in/molecules/afatinib-4277": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:31:38",
+  "checked": "2026-11-23T08:14:55",
   "found_on": [
    "/cancer/"
   ],
@@ -2218,7 +2218,7 @@
  "https://pharmeasy.in/molecules/alectinib-4005363": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:40:33",
+  "checked": "2026-11-23T08:23:48",
   "found_on": [
    "assets/data/drug-more.json"
   ],
@@ -2227,7 +2227,7 @@
  "https://pharmeasy.in/molecules/alemtuzumab-3441469": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:40:35",
+  "checked": "2026-11-23T08:23:50",
   "found_on": [
    "assets/data/drug-more.json"
   ],
@@ -2236,7 +2236,7 @@
  "https://pharmeasy.in/molecules/allopurinol-53": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:38:37",
+  "checked": "2026-11-23T08:21:51",
   "found_on": [
    "/cancer/treatment/",
    "/cancer/treatment/chemotherapy/"
@@ -2246,7 +2246,7 @@
  "https://pharmeasy.in/molecules/alpelisib-4005296": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:40:36",
+  "checked": "2026-11-23T08:23:51",
   "found_on": [
    "assets/data/drug-more.json"
   ],
@@ -2255,7 +2255,7 @@
  "https://pharmeasy.in/molecules/altretamine-897": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:40:38",
+  "checked": "2026-11-23T08:23:51",
   "found_on": [
    "assets/data/drug-more.json"
   ],
@@ -2264,7 +2264,7 @@
  "https://pharmeasy.in/molecules/amifostine-1848": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:40:39",
+  "checked": "2026-11-23T08:23:53",
   "found_on": [
    "assets/data/drug-more.json"
   ],
@@ -2273,7 +2273,7 @@
  "https://pharmeasy.in/molecules/anastrozole-16": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:31:39",
+  "checked": "2026-11-23T08:14:56",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/"
@@ -2283,7 +2283,7 @@
  "https://pharmeasy.in/molecules/apalutamide-4023149": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:40:41",
+  "checked": "2026-11-23T08:23:55",
   "found_on": [
    "assets/data/drug-more.json"
   ],
@@ -2292,7 +2292,7 @@
  "https://pharmeasy.in/molecules/aprepitant-8470": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:31:41",
+  "checked": "2026-11-23T08:14:58",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/chemotherapy/"
@@ -2302,7 +2302,7 @@
  "https://pharmeasy.in/molecules/atezolizumab-3994795": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:31:42",
+  "checked": "2026-11-23T08:14:59",
   "found_on": [
    "/cancer/"
   ],
@@ -2311,7 +2311,7 @@
  "https://pharmeasy.in/molecules/avelumab-3994839": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:40:42",
+  "checked": "2026-11-23T08:23:57",
   "found_on": [
    "assets/data/drug-more.json"
   ],
@@ -2320,7 +2320,7 @@
  "https://pharmeasy.in/molecules/axitinib-1537": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:40:44",
+  "checked": "2026-11-23T08:23:58",
   "found_on": [
    "assets/data/drug-more.json"
   ],
@@ -2329,7 +2329,7 @@
  "https://pharmeasy.in/molecules/azacitidine-1354": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:31:44",
+  "checked": "2026-11-23T08:15:01",
   "found_on": [
    "/cancer/"
   ],
@@ -2338,7 +2338,7 @@
  "https://pharmeasy.in/molecules/bendamustine-7070": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:31:46",
+  "checked": "2026-11-23T08:15:02",
   "found_on": [
    "/cancer/"
   ],
@@ -2347,7 +2347,7 @@
  "https://pharmeasy.in/molecules/bevacizumab-7876": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:31:46",
+  "checked": "2026-11-23T08:15:04",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/",
@@ -2358,7 +2358,7 @@
  "https://pharmeasy.in/molecules/bicalutamide-804": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:31:48",
+  "checked": "2026-11-23T08:15:05",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/"
@@ -2368,7 +2368,7 @@
  "https://pharmeasy.in/molecules/bleomycin-734": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:39:39",
+  "checked": "2026-11-23T08:22:53",
   "found_on": [
    "/cancer/treatment/chemotherapy/"
   ],
@@ -2377,7 +2377,7 @@
  "https://pharmeasy.in/molecules/bortezomib-694": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:31:50",
+  "checked": "2026-11-23T08:15:07",
   "found_on": [
    "/cancer/"
   ],
@@ -2386,7 +2386,7 @@
  "https://pharmeasy.in/molecules/bosutinib-3523241": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:40:45",
+  "checked": "2026-11-23T08:24:00",
   "found_on": [
    "assets/data/drug-more.json"
   ],
@@ -2395,7 +2395,7 @@
  "https://pharmeasy.in/molecules/brentuximab-vedotin-4828141": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:40:47",
+  "checked": "2026-11-23T08:24:01",
   "found_on": [
    "assets/data/drug-more.json"
   ],
@@ -2404,7 +2404,7 @@
  "https://pharmeasy.in/molecules/brigatinib-4798213": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:40:48",
+  "checked": "2026-11-23T08:24:02",
   "found_on": [
    "assets/data/drug-more.json"
   ],
@@ -2413,7 +2413,7 @@
  "https://pharmeasy.in/molecules/buserelin-743": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:40:50",
+  "checked": "2026-11-23T08:24:04",
   "found_on": [
    "assets/data/drug-more.json"
   ],
@@ -2422,7 +2422,7 @@
  "https://pharmeasy.in/molecules/busulfan-4562": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:31:52",
+  "checked": "2026-11-23T08:15:08",
   "found_on": [
    "/cancer/"
   ],
@@ -2431,7 +2431,7 @@
  "https://pharmeasy.in/molecules/cabazitaxel-641": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:31:53",
+  "checked": "2026-11-23T08:15:10",
   "found_on": [
    "/cancer/"
   ],
@@ -2440,7 +2440,7 @@
  "https://pharmeasy.in/molecules/cabozantinib-3623827": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:31:54",
+  "checked": "2026-11-23T08:15:11",
   "found_on": [
    "/cancer/"
   ],
@@ -2449,7 +2449,7 @@
  "https://pharmeasy.in/molecules/calcium-carbonate-10489": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:38:25",
+  "checked": "2026-11-23T08:21:38",
   "found_on": [
    "/cancer/nutrition/"
   ],
@@ -2458,7 +2458,7 @@
  "https://pharmeasy.in/molecules/calcium-folinate-86": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:38:39",
+  "checked": "2026-11-23T08:21:53",
   "found_on": [
    "/cancer/treatment/",
    "assets/data/drug-more.json"
@@ -2468,7 +2468,7 @@
  "https://pharmeasy.in/molecules/capecitabine-496": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:31:55",
+  "checked": "2026-11-23T08:15:13",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/",
@@ -2479,7 +2479,7 @@
  "https://pharmeasy.in/molecules/capecitabine-cyclophosphamide-4836221": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:39:41",
+  "checked": "2026-11-23T08:22:55",
   "found_on": [
    "/cancer/treatment/chemotherapy/"
   ],
@@ -2488,7 +2488,7 @@
  "https://pharmeasy.in/molecules/capmatinib-4836240": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:40:51",
+  "checked": "2026-11-23T08:24:06",
   "found_on": [
    "assets/data/drug-more.json"
   ],
@@ -2497,7 +2497,7 @@
  "https://pharmeasy.in/molecules/carboplatin-935": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:31:57",
+  "checked": "2026-11-23T08:15:14",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/",
@@ -2509,7 +2509,7 @@
  "https://pharmeasy.in/molecules/carfilzomib-5875": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:31:59",
+  "checked": "2026-11-23T08:15:16",
   "found_on": [
    "/cancer/"
   ],
@@ -2518,7 +2518,7 @@
  "https://pharmeasy.in/molecules/carmustine-4818115": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:40:53",
+  "checked": "2026-11-23T08:24:07",
   "found_on": [
    "assets/data/drug-more.json"
   ],
@@ -2527,7 +2527,7 @@
  "https://pharmeasy.in/molecules/ceritinib-11961": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:40:54",
+  "checked": "2026-11-23T08:24:08",
   "found_on": [
    "assets/data/drug-more.json"
   ],
@@ -2536,7 +2536,7 @@
  "https://pharmeasy.in/molecules/cetuximab-7360": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:32:00",
+  "checked": "2026-11-23T08:15:17",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/"
@@ -2546,7 +2546,7 @@
  "https://pharmeasy.in/molecules/chlorambucil-1034": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:32:02",
+  "checked": "2026-11-23T08:15:19",
   "found_on": [
    "/cancer/"
   ],
@@ -2555,7 +2555,7 @@
  "https://pharmeasy.in/molecules/cisplatin-76": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:32:03",
+  "checked": "2026-11-23T08:15:20",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/",
@@ -2567,7 +2567,7 @@
  "https://pharmeasy.in/molecules/cladribine-256": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:40:56",
+  "checked": "2026-11-23T08:24:10",
   "found_on": [
    "assets/data/drug-more.json"
   ],
@@ -2576,7 +2576,7 @@
  "https://pharmeasy.in/molecules/crizotinib-6357": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:40:57",
+  "checked": "2026-11-23T08:24:12",
   "found_on": [
    "assets/data/drug-more.json"
   ],
@@ -2585,7 +2585,7 @@
  "https://pharmeasy.in/molecules/cyclophosphamide-7050": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:32:04",
+  "checked": "2026-11-23T08:15:23",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/",
@@ -2596,7 +2596,7 @@
  "https://pharmeasy.in/molecules/cyproheptadine-7032": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:38:26",
+  "checked": "2026-11-23T08:21:40",
   "found_on": [
    "/cancer/nutrition/"
   ],
@@ -2605,7 +2605,7 @@
  "https://pharmeasy.in/molecules/cyproterone-475663": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:40:59",
+  "checked": "2026-11-23T08:24:13",
   "found_on": [
    "assets/data/drug-more.json"
   ],
@@ -2614,7 +2614,7 @@
  "https://pharmeasy.in/molecules/cytarabine-1317": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:32:07",
+  "checked": "2026-11-23T08:15:24",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/",
@@ -2625,7 +2625,7 @@
  "https://pharmeasy.in/molecules/dabrafenib-4836243": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:41:00",
+  "checked": "2026-11-23T08:24:15",
   "found_on": [
    "assets/data/drug-more.json"
   ],
@@ -2634,7 +2634,7 @@
  "https://pharmeasy.in/molecules/dacarbazine-491983": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:32:08",
+  "checked": "2026-11-23T08:15:25",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/chemotherapy/"
@@ -2644,7 +2644,7 @@
  "https://pharmeasy.in/molecules/dacomitinib-3995162": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:41:02",
+  "checked": "2026-11-23T08:24:16",
   "found_on": [
    "assets/data/drug-more.json"
   ],
@@ -2653,7 +2653,7 @@
  "https://pharmeasy.in/molecules/daratumumab-528226": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:32:09",
+  "checked": "2026-11-23T08:15:27",
   "found_on": [
    "/cancer/"
   ],
@@ -2662,7 +2662,7 @@
  "https://pharmeasy.in/molecules/darbepoetin-alfa-7959": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:32:11",
+  "checked": "2026-11-23T08:15:28",
   "found_on": [
    "/cancer/"
   ],
@@ -2671,7 +2671,7 @@
  "https://pharmeasy.in/molecules/dasatinib-3440925": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:32:12",
+  "checked": "2026-11-23T08:15:30",
   "found_on": [
    "/cancer/"
   ],
@@ -2680,7 +2680,7 @@
  "https://pharmeasy.in/molecules/daunorubicin-187": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:32:14",
+  "checked": "2026-11-23T08:15:31",
   "found_on": [
    "/cancer/"
   ],
@@ -2689,7 +2689,7 @@
  "https://pharmeasy.in/molecules/decitabine-492857": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:32:15",
+  "checked": "2026-11-23T08:15:33",
   "found_on": [
    "/cancer/"
   ],
@@ -2698,7 +2698,7 @@
  "https://pharmeasy.in/molecules/degarelix-12068": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:41:03",
+  "checked": "2026-11-23T08:24:18",
   "found_on": [
    "assets/data/drug-more.json"
   ],
@@ -2707,7 +2707,7 @@
  "https://pharmeasy.in/molecules/denosumab-9": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:32:17",
+  "checked": "2026-11-23T08:15:34",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/"
@@ -2717,7 +2717,7 @@
  "https://pharmeasy.in/molecules/dexamethasone-7137": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:38:41",
+  "checked": "2026-11-23T08:21:55",
   "found_on": [
    "/cancer/treatment/",
    "/cancer/treatment/chemotherapy/"
@@ -2727,7 +2727,7 @@
  "https://pharmeasy.in/molecules/docetaxel-281": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:32:18",
+  "checked": "2026-11-23T08:15:36",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/",
@@ -2738,7 +2738,7 @@
  "https://pharmeasy.in/molecules/doxorubicin-7116": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:32:19",
+  "checked": "2026-11-23T08:15:37",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/",
@@ -2749,7 +2749,7 @@
  "https://pharmeasy.in/molecules/durvalumab-4345242": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:32:21",
+  "checked": "2026-11-23T08:15:39",
   "found_on": [
    "/cancer/"
   ],
@@ -2758,7 +2758,7 @@
  "https://pharmeasy.in/molecules/enzalutamide-2068": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:32:22",
+  "checked": "2026-11-23T08:15:40",
   "found_on": [
    "/cancer/"
   ],
@@ -2767,7 +2767,7 @@
  "https://pharmeasy.in/molecules/epirubicin-7209": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:32:24",
+  "checked": "2026-11-23T08:15:42",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/",
@@ -2778,7 +2778,7 @@
  "https://pharmeasy.in/molecules/epirubicin-methylparaben-13267": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:41:05",
+  "checked": "2026-11-23T08:24:20",
   "found_on": [
    "assets/data/drug-more.json"
   ],
@@ -2787,7 +2787,7 @@
  "https://pharmeasy.in/molecules/erlotinib-596": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:32:26",
+  "checked": "2026-11-23T08:15:43",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/"
@@ -2797,7 +2797,7 @@
  "https://pharmeasy.in/molecules/erythropoietin-544": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:41:07",
+  "checked": "2026-11-23T08:24:21",
   "found_on": [
    "assets/data/drug-more.json"
   ],
@@ -2806,7 +2806,7 @@
  "https://pharmeasy.in/molecules/estramustine-7217": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:41:08",
+  "checked": "2026-11-23T08:24:22",
   "found_on": [
    "assets/data/drug-more.json"
   ],
@@ -2815,7 +2815,7 @@
  "https://pharmeasy.in/molecules/etoposide-1560": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:32:27",
+  "checked": "2026-11-23T08:15:44",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/",
@@ -2826,7 +2826,7 @@
  "https://pharmeasy.in/molecules/everolimus-7016": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:32:29",
+  "checked": "2026-11-23T08:15:47",
   "found_on": [
    "/cancer/"
   ],
@@ -2835,7 +2835,7 @@
  "https://pharmeasy.in/molecules/exemestane-2673": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:32:30",
+  "checked": "2026-11-23T08:15:47",
   "found_on": [
    "/cancer/"
   ],
@@ -2844,7 +2844,7 @@
  "https://pharmeasy.in/molecules/ferrous-ascorbate-675": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:38:27",
+  "checked": "2026-11-23T08:21:41",
   "found_on": [
    "/cancer/nutrition/"
   ],
@@ -2853,7 +2853,7 @@
  "https://pharmeasy.in/molecules/filgrastim-6897": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:32:32",
+  "checked": "2026-11-23T08:15:49",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/",
@@ -2864,7 +2864,7 @@
  "https://pharmeasy.in/molecules/fludarabine-1597": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:32:33",
+  "checked": "2026-11-23T08:15:51",
   "found_on": [
    "/cancer/"
   ],
@@ -2873,7 +2873,7 @@
  "https://pharmeasy.in/molecules/fluorouracil-1742": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:32:35",
+  "checked": "2026-11-23T08:15:52",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/",
@@ -2884,7 +2884,7 @@
  "https://pharmeasy.in/molecules/flutamide-3130": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:41:09",
+  "checked": "2026-11-23T08:24:23",
   "found_on": [
    "assets/data/drug-more.json"
   ],
@@ -2893,7 +2893,7 @@
  "https://pharmeasy.in/molecules/folic-acid-10494": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:38:28",
+  "checked": "2026-11-23T08:21:43",
   "found_on": [
    "/cancer/nutrition/"
   ],
@@ -2902,7 +2902,7 @@
  "https://pharmeasy.in/molecules/fosaprepitant-1700": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:41:11",
+  "checked": "2026-11-23T08:24:25",
   "found_on": [
    "assets/data/drug-more.json"
   ],
@@ -2911,7 +2911,7 @@
  "https://pharmeasy.in/molecules/fosfestrol-6953": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:41:13",
+  "checked": "2026-11-23T08:24:26",
   "found_on": [
    "assets/data/drug-more.json"
   ],
@@ -2920,7 +2920,7 @@
  "https://pharmeasy.in/molecules/fulvestrant-2203": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:32:36",
+  "checked": "2026-11-23T08:15:53",
   "found_on": [
    "/cancer/"
   ],
@@ -2929,7 +2929,7 @@
  "https://pharmeasy.in/molecules/gefitinib-224": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:32:38",
+  "checked": "2026-11-23T08:15:55",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/"
@@ -2939,7 +2939,7 @@
  "https://pharmeasy.in/molecules/gemcitabine-944": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:32:39",
+  "checked": "2026-11-23T08:15:57",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/",
@@ -2951,7 +2951,7 @@
  "https://pharmeasy.in/molecules/goserelin-492474": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:41:14",
+  "checked": "2026-11-23T08:24:28",
   "found_on": [
    "assets/data/drug-more.json"
   ],
@@ -2960,7 +2960,7 @@
  "https://pharmeasy.in/molecules/goserelin-acetate-10625": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:38:42",
+  "checked": "2026-11-23T08:21:57",
   "found_on": [
    "/cancer/treatment/",
    "assets/data/drug-more.json"
@@ -2970,7 +2970,7 @@
  "https://pharmeasy.in/molecules/granisetron-1113": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:32:41",
+  "checked": "2026-11-23T08:15:58",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/chemotherapy/"
@@ -2980,7 +2980,7 @@
  "https://pharmeasy.in/molecules/human-papilloma-virus-vaccine-quadrivalent-2857": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:38:36",
+  "checked": "2026-11-23T08:21:51",
   "found_on": [
    "/cancer/prevention/hpv/"
   ],
@@ -2989,7 +2989,7 @@
  "https://pharmeasy.in/molecules/hydroxyurea-hydroxycarbamide-3451433": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:32:42",
+  "checked": "2026-11-23T08:15:59",
   "found_on": [
    "/cancer/"
   ],
@@ -2998,7 +2998,7 @@
  "https://pharmeasy.in/molecules/ibandronic-acid-805": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:32:44",
+  "checked": "2026-11-23T08:16:01",
   "found_on": [
    "/cancer/"
   ],
@@ -3007,7 +3007,7 @@
  "https://pharmeasy.in/molecules/ibrutinib-3462615": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:32:45",
+  "checked": "2026-11-23T08:16:03",
   "found_on": [
    "/cancer/"
   ],
@@ -3016,7 +3016,7 @@
  "https://pharmeasy.in/molecules/idarubicin-2015": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:32:47",
+  "checked": "2026-11-23T08:16:04",
   "found_on": [
    "/cancer/"
   ],
@@ -3025,7 +3025,7 @@
  "https://pharmeasy.in/molecules/ifosfamide-1813": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:32:48",
+  "checked": "2026-11-23T08:16:05",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/",
@@ -3037,7 +3037,7 @@
  "https://pharmeasy.in/molecules/imatinib-7881": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:32:50",
+  "checked": "2026-11-23T08:16:07",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/"
@@ -3047,7 +3047,7 @@
  "https://pharmeasy.in/molecules/imatinib-mesylate-492671": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:41:15",
+  "checked": "2026-11-23T08:24:29",
   "found_on": [
    "assets/data/drug-more.json"
   ],
@@ -3056,7 +3056,7 @@
  "https://pharmeasy.in/molecules/inotuzumab-3994923": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:41:17",
+  "checked": "2026-11-23T08:24:31",
   "found_on": [
    "assets/data/drug-more.json"
   ],
@@ -3065,7 +3065,7 @@
  "https://pharmeasy.in/molecules/interferon-alfa-2b-1092": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:41:18",
+  "checked": "2026-11-23T08:24:33",
   "found_on": [
    "assets/data/drug-more.json"
   ],
@@ -3074,7 +3074,7 @@
  "https://pharmeasy.in/molecules/irinotecan-890": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:32:51",
+  "checked": "2026-11-23T08:16:08",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/",
@@ -3085,7 +3085,7 @@
  "https://pharmeasy.in/molecules/lactulose-480": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:38:30",
+  "checked": "2026-11-23T08:21:44",
   "found_on": [
    "/cancer/nutrition/"
   ],
@@ -3094,7 +3094,7 @@
  "https://pharmeasy.in/molecules/lapatinib-5471": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:41:20",
+  "checked": "2026-11-23T08:24:34",
   "found_on": [
    "assets/data/drug-more.json"
   ],
@@ -3103,7 +3103,7 @@
  "https://pharmeasy.in/molecules/lenalidomide-412": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:32:53",
+  "checked": "2026-11-23T08:16:10",
   "found_on": [
    "/cancer/"
   ],
@@ -3112,7 +3112,7 @@
  "https://pharmeasy.in/molecules/lenvatinib-9114": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:32:54",
+  "checked": "2026-11-23T08:16:12",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/"
@@ -3122,7 +3122,7 @@
  "https://pharmeasy.in/molecules/letrozole-404": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:32:55",
+  "checked": "2026-11-23T08:16:13",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/"
@@ -3132,7 +3132,7 @@
  "https://pharmeasy.in/molecules/leuprolide-leuprorelin-6521": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:32:58",
+  "checked": "2026-11-23T08:16:14",
   "found_on": [
    "/cancer/"
   ],
@@ -3141,7 +3141,7 @@
  "https://pharmeasy.in/molecules/liposomal-doxorubicin-4820772": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:39:42",
+  "checked": "2026-11-23T08:22:56",
   "found_on": [
    "/cancer/treatment/chemotherapy/",
    "assets/data/drug-more.json"
@@ -3151,7 +3151,7 @@
  "https://pharmeasy.in/molecules/lomustine-4836228": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:41:21",
+  "checked": "2026-11-23T08:24:35",
   "found_on": [
    "assets/data/drug-more.json"
   ],
@@ -3160,7 +3160,7 @@
  "https://pharmeasy.in/molecules/loperamide-243": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:38:32",
+  "checked": "2026-11-23T08:21:45",
   "found_on": [
    "/cancer/nutrition/"
   ],
@@ -3169,7 +3169,7 @@
  "https://pharmeasy.in/molecules/lorlatinib-3994806": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:41:23",
+  "checked": "2026-11-23T08:24:37",
   "found_on": [
    "assets/data/drug-more.json"
   ],
@@ -3178,7 +3178,7 @@
  "https://pharmeasy.in/molecules/megestrol-2180": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:32:58",
+  "checked": "2026-11-23T08:16:16",
   "found_on": [
    "/cancer/",
    "/cancer/nutrition/"
@@ -3188,7 +3188,7 @@
  "https://pharmeasy.in/molecules/megestrol-acetate-491352": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:41:24",
+  "checked": "2026-11-23T08:24:39",
   "found_on": [
    "assets/data/drug-more.json"
   ],
@@ -3197,7 +3197,7 @@
  "https://pharmeasy.in/molecules/melphalan-1335": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:33:00",
+  "checked": "2026-11-23T08:16:17",
   "found_on": [
    "/cancer/"
   ],
@@ -3206,7 +3206,7 @@
  "https://pharmeasy.in/molecules/mercaptopurine-4410": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:33:02",
+  "checked": "2026-11-23T08:16:19",
   "found_on": [
    "/cancer/"
   ],
@@ -3215,7 +3215,7 @@
  "https://pharmeasy.in/molecules/mesna-1088": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:38:43",
+  "checked": "2026-11-23T08:21:58",
   "found_on": [
    "/cancer/treatment/",
    "/cancer/treatment/chemotherapy/",
@@ -3226,7 +3226,7 @@
  "https://pharmeasy.in/molecules/mesna-ifosfamide-1541": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:39:44",
+  "checked": "2026-11-23T08:22:59",
   "found_on": [
    "/cancer/treatment/chemotherapy/",
    "assets/data/drug-more.json"
@@ -3236,7 +3236,7 @@
  "https://pharmeasy.in/molecules/methotrexate-13": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:33:03",
+  "checked": "2026-11-23T08:16:20",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/",
@@ -3247,7 +3247,7 @@
  "https://pharmeasy.in/molecules/metoclopramide-451": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:38:33",
+  "checked": "2026-11-23T08:21:47",
   "found_on": [
    "/cancer/nutrition/"
   ],
@@ -3256,7 +3256,7 @@
  "https://pharmeasy.in/molecules/midostaurin-3917597": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:41:26",
+  "checked": "2026-11-23T08:24:40",
   "found_on": [
    "assets/data/drug-more.json"
   ],
@@ -3265,7 +3265,7 @@
  "https://pharmeasy.in/molecules/mitomycin-974": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:39:45",
+  "checked": "2026-11-23T08:22:59",
   "found_on": [
    "/cancer/treatment/chemotherapy/"
   ],
@@ -3274,7 +3274,7 @@
  "https://pharmeasy.in/molecules/mitoxantrone-6756": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:41:27",
+  "checked": "2026-11-23T08:24:41",
   "found_on": [
    "assets/data/drug-more.json"
   ],
@@ -3283,7 +3283,7 @@
  "https://pharmeasy.in/molecules/morphine-2406": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:38:45",
+  "checked": "2026-11-23T08:22:00",
   "found_on": [
    "/cancer/treatment/"
   ],
@@ -3292,7 +3292,7 @@
  "https://pharmeasy.in/molecules/nelarabine-4798217": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:41:29",
+  "checked": "2026-11-23T08:24:43",
   "found_on": [
    "assets/data/drug-more.json"
   ],
@@ -3301,7 +3301,7 @@
  "https://pharmeasy.in/molecules/netupitant-palonosetron-3623580": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:41:30",
+  "checked": "2026-11-23T08:24:45",
   "found_on": [
    "assets/data/drug-more.json"
   ],
@@ -3310,7 +3310,7 @@
  "https://pharmeasy.in/molecules/nilotinib-5186": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:33:05",
+  "checked": "2026-11-23T08:16:22",
   "found_on": [
    "/cancer/"
   ],
@@ -3319,7 +3319,7 @@
  "https://pharmeasy.in/molecules/nilutamide-4820743": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:41:32",
+  "checked": "2026-11-23T08:24:46",
   "found_on": [
    "assets/data/drug-more.json"
   ],
@@ -3328,7 +3328,7 @@
  "https://pharmeasy.in/molecules/nimotuzumab-5973": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:33:06",
+  "checked": "2026-11-23T08:16:23",
   "found_on": [
    "/cancer/"
   ],
@@ -3337,7 +3337,7 @@
  "https://pharmeasy.in/molecules/niraparib-4743563": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:41:33",
+  "checked": "2026-11-23T08:24:47",
   "found_on": [
    "assets/data/drug-more.json"
   ],
@@ -3346,7 +3346,7 @@
  "https://pharmeasy.in/molecules/nivolumab-13797": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:33:08",
+  "checked": "2026-11-23T08:16:25",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/"
@@ -3356,7 +3356,7 @@
  "https://pharmeasy.in/molecules/obinutuzumab-2977633": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:41:35",
+  "checked": "2026-11-23T08:24:49",
   "found_on": [
    "assets/data/drug-more.json"
   ],
@@ -3365,7 +3365,7 @@
  "https://pharmeasy.in/molecules/octreotide-7330": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:41:36",
+  "checked": "2026-11-23T08:24:51",
   "found_on": [
    "assets/data/drug-more.json"
   ],
@@ -3374,7 +3374,7 @@
  "https://pharmeasy.in/molecules/olaparib-4005287": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:33:09",
+  "checked": "2026-11-23T08:16:26",
   "found_on": [
    "/cancer/"
   ],
@@ -3383,7 +3383,7 @@
  "https://pharmeasy.in/molecules/ondansetron-6885": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:33:11",
+  "checked": "2026-11-23T08:16:28",
   "found_on": [
    "/cancer/",
    "/cancer/nutrition/",
@@ -3396,7 +3396,7 @@
  "https://pharmeasy.in/molecules/osimertinib-2485": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:33:12",
+  "checked": "2026-11-23T08:16:29",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/"
@@ -3406,7 +3406,7 @@
  "https://pharmeasy.in/molecules/oxaliplatin-7396": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:33:14",
+  "checked": "2026-11-23T08:16:31",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/",
@@ -3417,7 +3417,7 @@
  "https://pharmeasy.in/molecules/paclitaxel-7097": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:33:16",
+  "checked": "2026-11-23T08:16:32",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/",
@@ -3429,7 +3429,7 @@
  "https://pharmeasy.in/molecules/paclitaxel-human-albumin-3677870": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:39:47",
+  "checked": "2026-11-23T08:23:01",
   "found_on": [
    "/cancer/treatment/chemotherapy/",
    "assets/data/drug-more.json"
@@ -3439,7 +3439,7 @@
  "https://pharmeasy.in/molecules/paclitaxel-nanoparticle-4345247": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:39:48",
+  "checked": "2026-11-23T08:23:02",
   "found_on": [
    "/cancer/treatment/chemotherapy/",
    "assets/data/drug-more.json"
@@ -3449,7 +3449,7 @@
  "https://pharmeasy.in/molecules/palbociclib-6707": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:33:16",
+  "checked": "2026-11-23T08:16:34",
   "found_on": [
    "/cancer/"
   ],
@@ -3458,7 +3458,7 @@
  "https://pharmeasy.in/molecules/palonosetron-2218": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:33:18",
+  "checked": "2026-11-23T08:16:35",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/chemotherapy/"
@@ -3468,7 +3468,7 @@
  "https://pharmeasy.in/molecules/palonosetron-fosnetupitant-4812528": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:41:38",
+  "checked": "2026-11-23T08:24:52",
   "found_on": [
    "assets/data/drug-more.json"
   ],
@@ -3477,7 +3477,7 @@
  "https://pharmeasy.in/molecules/panitumumab-3994963": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:41:39",
+  "checked": "2026-11-23T08:24:53",
   "found_on": [
    "assets/data/drug-more.json"
   ],
@@ -3486,7 +3486,7 @@
  "https://pharmeasy.in/molecules/pazopanib-284": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:33:20",
+  "checked": "2026-11-23T08:16:37",
   "found_on": [
    "/cancer/"
   ],
@@ -3495,7 +3495,7 @@
  "https://pharmeasy.in/molecules/pegfilgrastim-7713": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:33:21",
+  "checked": "2026-11-23T08:16:39",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/",
@@ -3506,7 +3506,7 @@
  "https://pharmeasy.in/molecules/pembrolizumab-491468": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:33:23",
+  "checked": "2026-11-23T08:16:40",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/",
@@ -3517,7 +3517,7 @@
  "https://pharmeasy.in/molecules/pemetrexed-12374": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:33:24",
+  "checked": "2026-11-23T08:16:41",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/",
@@ -3528,7 +3528,7 @@
  "https://pharmeasy.in/molecules/pertuzumab-4341346": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:33:26",
+  "checked": "2026-11-23T08:16:43",
   "found_on": [
    "/cancer/"
   ],
@@ -3537,7 +3537,7 @@
  "https://pharmeasy.in/molecules/pertuzumab-trastuzumab-3994853": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:41:41",
+  "checked": "2026-11-23T08:24:55",
   "found_on": [
    "assets/data/drug-more.json"
   ],
@@ -3546,7 +3546,7 @@
  "https://pharmeasy.in/molecules/plerixafor-5000": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:41:42",
+  "checked": "2026-11-23T08:24:57",
   "found_on": [
    "assets/data/drug-more.json"
   ],
@@ -3555,7 +3555,7 @@
  "https://pharmeasy.in/molecules/pomalidomide-1800": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:33:28",
+  "checked": "2026-11-23T08:16:45",
   "found_on": [
    "/cancer/"
   ],
@@ -3564,7 +3564,7 @@
  "https://pharmeasy.in/molecules/procarbazine-149": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:41:44",
+  "checked": "2026-11-23T08:24:58",
   "found_on": [
    "assets/data/drug-more.json"
   ],
@@ -3573,7 +3573,7 @@
  "https://pharmeasy.in/molecules/ramucirumab-3994868": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:41:45",
+  "checked": "2026-11-23T08:24:59",
   "found_on": [
    "assets/data/drug-more.json"
   ],
@@ -3582,7 +3582,7 @@
  "https://pharmeasy.in/molecules/rasburicase-1221": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:41:47",
+  "checked": "2026-11-23T08:25:01",
   "found_on": [
    "assets/data/drug-more.json"
   ],
@@ -3591,7 +3591,7 @@
  "https://pharmeasy.in/molecules/regorafenib-2472": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:33:29",
+  "checked": "2026-11-23T08:16:46",
   "found_on": [
    "/cancer/"
   ],
@@ -3600,7 +3600,7 @@
  "https://pharmeasy.in/molecules/relugolix-4149430": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:41:49",
+  "checked": "2026-11-23T08:25:03",
   "found_on": [
    "assets/data/drug-more.json"
   ],
@@ -3609,7 +3609,7 @@
  "https://pharmeasy.in/molecules/ribociclib-11871": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:33:31",
+  "checked": "2026-11-23T08:16:47",
   "found_on": [
    "/cancer/"
   ],
@@ -3618,7 +3618,7 @@
  "https://pharmeasy.in/molecules/rituximab-79": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:33:32",
+  "checked": "2026-11-23T08:16:49",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/"
@@ -3628,7 +3628,7 @@
  "https://pharmeasy.in/molecules/rucaparib-3647485": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:41:50",
+  "checked": "2026-11-23T08:25:04",
   "found_on": [
    "assets/data/drug-more.json"
   ],
@@ -3637,7 +3637,7 @@
  "https://pharmeasy.in/molecules/ruxolitinib-5145": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:41:51",
+  "checked": "2026-11-23T08:25:06",
   "found_on": [
    "assets/data/drug-more.json"
   ],
@@ -3646,7 +3646,7 @@
  "https://pharmeasy.in/molecules/serplulimab-4798210": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:41:53",
+  "checked": "2026-11-23T08:25:07",
   "found_on": [
    "assets/data/drug-more.json"
   ],
@@ -3655,7 +3655,7 @@
  "https://pharmeasy.in/molecules/sorafenib-3392": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:33:33",
+  "checked": "2026-11-23T08:16:51",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/"
@@ -3665,7 +3665,7 @@
  "https://pharmeasy.in/molecules/sunitinib-3765": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:33:35",
+  "checked": "2026-11-23T08:16:52",
   "found_on": [
    "/cancer/"
   ],
@@ -3674,7 +3674,7 @@
  "https://pharmeasy.in/molecules/tamoxifen-860": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:33:36",
+  "checked": "2026-11-23T08:16:53",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/"
@@ -3684,7 +3684,7 @@
  "https://pharmeasy.in/molecules/tegafur-uracil-3661": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:39:50",
+  "checked": "2026-11-23T08:23:04",
   "found_on": [
    "/cancer/treatment/chemotherapy/",
    "assets/data/drug-more.json"
@@ -3694,7 +3694,7 @@
  "https://pharmeasy.in/molecules/temozolomide-7127": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:33:38",
+  "checked": "2026-11-23T08:16:55",
   "found_on": [
    "/cancer/"
   ],
@@ -3703,7 +3703,7 @@
  "https://pharmeasy.in/molecules/thalidomide-2195": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:33:40",
+  "checked": "2026-11-23T08:16:56",
   "found_on": [
    "/cancer/"
   ],
@@ -3712,7 +3712,7 @@
  "https://pharmeasy.in/molecules/thiotepa-491644": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:41:54",
+  "checked": "2026-11-23T08:25:08",
   "found_on": [
    "assets/data/drug-more.json"
   ],
@@ -3721,7 +3721,7 @@
  "https://pharmeasy.in/molecules/tioguanine-1437": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:41:56",
+  "checked": "2026-11-23T08:25:10",
   "found_on": [
    "assets/data/drug-more.json"
   ],
@@ -3730,7 +3730,7 @@
  "https://pharmeasy.in/molecules/tipiracil-trifluridine-4820751": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:41:57",
+  "checked": "2026-11-23T08:25:12",
   "found_on": [
    "assets/data/drug-more.json"
   ],
@@ -3739,7 +3739,7 @@
  "https://pharmeasy.in/molecules/topotecan-3292": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:33:41",
+  "checked": "2026-11-23T08:16:58",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/",
@@ -3751,7 +3751,7 @@
  "https://pharmeasy.in/molecules/tramadol-7259": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:38:47",
+  "checked": "2026-11-23T08:22:01",
   "found_on": [
    "/cancer/treatment/"
   ],
@@ -3760,7 +3760,7 @@
  "https://pharmeasy.in/molecules/trastuzumab-272": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:33:42",
+  "checked": "2026-11-23T08:16:59",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/"
@@ -3770,7 +3770,7 @@
  "https://pharmeasy.in/molecules/trastuzumab-emtansine-4339494": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:41:59",
+  "checked": "2026-11-23T08:25:13",
   "found_on": [
    "assets/data/drug-more.json"
   ],
@@ -3779,7 +3779,7 @@
  "https://pharmeasy.in/molecules/treosulfan-4836351": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:42:00",
+  "checked": "2026-11-23T08:25:14",
   "found_on": [
    "assets/data/drug-more.json"
   ],
@@ -3788,7 +3788,7 @@
  "https://pharmeasy.in/molecules/triptorelin-4248": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:42:02",
+  "checked": "2026-11-23T08:25:17",
   "found_on": [
    "assets/data/drug-more.json"
   ],
@@ -3797,7 +3797,7 @@
  "https://pharmeasy.in/molecules/tucatinib-4798207": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:42:04",
+  "checked": "2026-11-23T08:25:18",
   "found_on": [
    "assets/data/drug-more.json"
   ],
@@ -3806,7 +3806,7 @@
  "https://pharmeasy.in/molecules/venetoclax-3532027": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:42:05",
+  "checked": "2026-11-23T08:25:19",
   "found_on": [
    "assets/data/drug-more.json"
   ],
@@ -3815,7 +3815,7 @@
  "https://pharmeasy.in/molecules/vinblastine-4518": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:33:44",
+  "checked": "2026-11-23T08:17:01",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/",
@@ -3826,7 +3826,7 @@
  "https://pharmeasy.in/molecules/vincristine-774": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:33:46",
+  "checked": "2026-11-23T08:17:02",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/",
@@ -3837,7 +3837,7 @@
  "https://pharmeasy.in/molecules/vinorelbine-1272": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:33:46",
+  "checked": "2026-11-23T08:17:04",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/",
@@ -3848,7 +3848,7 @@
  "https://pharmeasy.in/molecules/zanubrutinib-4743593": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:42:06",
+  "checked": "2026-11-23T08:25:21",
   "found_on": [
    "assets/data/drug-more.json"
   ],
@@ -3857,7 +3857,7 @@
  "https://pharmeasy.in/molecules/zoledronic-acid-215": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:42:08",
+  "checked": "2026-11-23T08:25:22",
   "found_on": [
    "assets/data/drug-more.json"
   ],
@@ -3866,7 +3866,7 @@
  "https://pharmeasy.in/molecules/zoledronic-acid-zoledronate-3462342": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:33:48",
+  "checked": "2026-11-23T08:17:06",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/"
@@ -3921,7 +3921,7 @@
  "https://pharmeasy.in/online-medicine-order/101137": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:33:50",
+  "checked": "2026-11-23T08:17:08",
   "found_on": [
    "/cancer/"
   ],
@@ -3930,7 +3930,7 @@
  "https://pharmeasy.in/online-medicine-order/101218": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:33:51",
+  "checked": "2026-11-23T08:17:09",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/",
@@ -3942,7 +3942,7 @@
  "https://pharmeasy.in/online-medicine-order/104741": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:33:53",
+  "checked": "2026-11-23T08:17:11",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/",
@@ -3953,7 +3953,7 @@
  "https://pharmeasy.in/online-medicine-order/11353": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:33:55",
+  "checked": "2026-11-23T08:17:12",
   "found_on": [
    "/cancer/"
   ],
@@ -3963,7 +3963,7 @@
  "https://pharmeasy.in/online-medicine-order/114594": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:33:56",
+  "checked": "2026-11-23T08:17:13",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/"
@@ -3973,7 +3973,7 @@
  "https://pharmeasy.in/online-medicine-order/114600": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:33:58",
+  "checked": "2026-11-23T08:17:16",
   "found_on": [
    "/cancer/"
   ],
@@ -3983,7 +3983,7 @@
  "https://pharmeasy.in/online-medicine-order/11717": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:33:58",
+  "checked": "2026-11-23T08:17:17",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/chemotherapy/"
@@ -3993,7 +3993,7 @@
  "https://pharmeasy.in/online-medicine-order/118623": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:34:00",
+  "checked": "2026-11-23T08:17:18",
   "found_on": [
    "/cancer/"
   ],
@@ -4002,7 +4002,7 @@
  "https://pharmeasy.in/online-medicine-order/128322": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:34:02",
+  "checked": "2026-11-23T08:17:21",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/",
@@ -4013,7 +4013,7 @@
  "https://pharmeasy.in/online-medicine-order/128335": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:34:04",
+  "checked": "2026-11-23T08:17:22",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/",
@@ -4026,7 +4026,7 @@
  "https://pharmeasy.in/online-medicine-order/134013": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:38:48",
+  "checked": "2026-11-23T08:22:03",
   "found_on": [
    "/cancer/treatment/"
   ],
@@ -4035,7 +4035,7 @@
  "https://pharmeasy.in/online-medicine-order/134639": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:39:51",
+  "checked": "2026-11-23T08:23:05",
   "found_on": [
    "/cancer/treatment/chemotherapy/",
    "/cancer/types/cervical-cancer/"
@@ -4046,7 +4046,7 @@
  "https://pharmeasy.in/online-medicine-order/136220": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:34:06",
+  "checked": "2026-11-23T08:17:23",
   "found_on": [
    "/cancer/"
   ],
@@ -4055,7 +4055,7 @@
  "https://pharmeasy.in/online-medicine-order/136232": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:34:07",
+  "checked": "2026-11-23T08:17:24",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/",
@@ -4066,7 +4066,7 @@
  "https://pharmeasy.in/online-medicine-order/13902": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:34:08",
+  "checked": "2026-11-23T08:17:25",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/",
@@ -4077,7 +4077,7 @@
  "https://pharmeasy.in/online-medicine-order/140975": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:38:49",
+  "checked": "2026-11-23T08:22:04",
   "found_on": [
    "/cancer/treatment/",
    "/cancer/treatment/chemotherapy/"
@@ -4087,7 +4087,7 @@
  "https://pharmeasy.in/online-medicine-order/14944": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:34:09",
+  "checked": "2026-11-23T08:17:27",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/",
@@ -4098,7 +4098,7 @@
  "https://pharmeasy.in/online-medicine-order/154532": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:34:11",
+  "checked": "2026-11-23T08:17:29",
   "found_on": [
    "/cancer/"
   ],
@@ -4108,7 +4108,7 @@
  "https://pharmeasy.in/online-medicine-order/155559": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:38:51",
+  "checked": "2026-11-23T08:22:06",
   "found_on": [
    "/cancer/treatment/"
   ],
@@ -4117,7 +4117,7 @@
  "https://pharmeasy.in/online-medicine-order/155571": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:34:12",
+  "checked": "2026-11-23T08:17:30",
   "found_on": [
    "/cancer/"
   ],
@@ -4126,7 +4126,7 @@
  "https://pharmeasy.in/online-medicine-order/15709": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:34:14",
+  "checked": "2026-11-23T08:17:31",
   "found_on": [
    "/cancer/"
   ],
@@ -4135,7 +4135,7 @@
  "https://pharmeasy.in/online-medicine-order/165552": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:38:52",
+  "checked": "2026-11-23T08:22:07",
   "found_on": [
    "/cancer/treatment/",
    "/cancer/treatment/chemotherapy/"
@@ -4145,7 +4145,7 @@
  "https://pharmeasy.in/online-medicine-order/165562": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:38:55",
+  "checked": "2026-11-23T08:22:08",
   "found_on": [
    "/cancer/treatment/",
    "/cancer/treatment/chemotherapy/",
@@ -4156,7 +4156,7 @@
  "https://pharmeasy.in/online-medicine-order/165567": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:34:16",
+  "checked": "2026-11-23T08:17:33",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/",
@@ -4167,7 +4167,7 @@
  "https://pharmeasy.in/online-medicine-order/165861": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:34:18",
+  "checked": "2026-11-23T08:17:35",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/",
@@ -4180,7 +4180,7 @@
  "https://pharmeasy.in/online-medicine-order/166634": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:34:19",
+  "checked": "2026-11-23T08:17:37",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/",
@@ -4191,7 +4191,7 @@
  "https://pharmeasy.in/online-medicine-order/1691": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:34:20",
+  "checked": "2026-11-23T08:17:38",
   "found_on": [
    "/cancer/"
   ],
@@ -4200,7 +4200,7 @@
  "https://pharmeasy.in/online-medicine-order/17099": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:39:53",
+  "checked": "2026-11-23T08:23:06",
   "found_on": [
    "/cancer/treatment/chemotherapy/"
   ],
@@ -4210,7 +4210,7 @@
  "https://pharmeasy.in/online-medicine-order/177640": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:39:54",
+  "checked": "2026-11-23T08:23:08",
   "found_on": [
    "/cancer/treatment/chemotherapy/"
   ],
@@ -4220,7 +4220,7 @@
  "https://pharmeasy.in/online-medicine-order/178576": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:34:21",
+  "checked": "2026-11-23T08:17:39",
   "found_on": [
    "/cancer/"
   ],
@@ -4230,7 +4230,7 @@
  "https://pharmeasy.in/online-medicine-order/182149": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:34:23",
+  "checked": "2026-11-23T08:17:41",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/",
@@ -4242,7 +4242,7 @@
  "https://pharmeasy.in/online-medicine-order/182559": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:34:26",
+  "checked": "2026-11-23T08:17:42",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/chemotherapy/"
@@ -4253,7 +4253,7 @@
  "https://pharmeasy.in/online-medicine-order/182746": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:34:26",
+  "checked": "2026-11-23T08:17:44",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/chemotherapy/"
@@ -4263,7 +4263,7 @@
  "https://pharmeasy.in/online-medicine-order/184406": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:34:28",
+  "checked": "2026-11-23T08:17:45",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/"
@@ -4273,7 +4273,7 @@
  "https://pharmeasy.in/online-medicine-order/184408": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:38:56",
+  "checked": "2026-11-23T08:22:10",
   "found_on": [
    "/cancer/treatment/",
    "/cancer/treatment/chemotherapy/"
@@ -4283,7 +4283,7 @@
  "https://pharmeasy.in/online-medicine-order/187205": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:34:30",
+  "checked": "2026-11-23T08:17:47",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/"
@@ -4293,7 +4293,7 @@
  "https://pharmeasy.in/online-medicine-order/187229": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:34:32",
+  "checked": "2026-11-23T08:17:48",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/"
@@ -4303,7 +4303,7 @@
  "https://pharmeasy.in/online-medicine-order/192044": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:38:57",
+  "checked": "2026-11-23T08:22:11",
   "found_on": [
    "/cancer/treatment/"
   ],
@@ -4312,7 +4312,7 @@
  "https://pharmeasy.in/online-medicine-order/193552": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:34:33",
+  "checked": "2026-11-23T08:17:49",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/"
@@ -4322,7 +4322,7 @@
  "https://pharmeasy.in/online-medicine-order/195122": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:34:35",
+  "checked": "2026-11-23T08:17:52",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/chemotherapy/"
@@ -4333,7 +4333,7 @@
  "https://pharmeasy.in/online-medicine-order/195586": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:34:36",
+  "checked": "2026-11-23T08:17:53",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/"
@@ -4343,7 +4343,7 @@
  "https://pharmeasy.in/online-medicine-order/196587": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:34:38",
+  "checked": "2026-11-23T08:17:54",
   "found_on": [
    "/cancer/"
   ],
@@ -4353,7 +4353,7 @@
  "https://pharmeasy.in/online-medicine-order/196747": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:39:56",
+  "checked": "2026-11-23T08:23:09",
   "found_on": [
    "/cancer/treatment/chemotherapy/"
   ],
@@ -4363,7 +4363,7 @@
  "https://pharmeasy.in/online-medicine-order/197935": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:34:39",
+  "checked": "2026-11-23T08:17:55",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/"
@@ -4373,7 +4373,7 @@
  "https://pharmeasy.in/online-medicine-order/198354": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:39:57",
+  "checked": "2026-11-23T08:23:11",
   "found_on": [
    "/cancer/treatment/chemotherapy/"
   ],
@@ -4382,7 +4382,7 @@
  "https://pharmeasy.in/online-medicine-order/199433": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:34:40",
+  "checked": "2026-11-23T08:17:57",
   "found_on": [
    "/cancer/"
   ],
@@ -4392,7 +4392,7 @@
  "https://pharmeasy.in/online-medicine-order/199544": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:34:43",
+  "checked": "2026-11-23T08:17:59",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/"
@@ -4402,7 +4402,7 @@
  "https://pharmeasy.in/online-medicine-order/200416": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:34:44",
+  "checked": "2026-11-23T08:18:00",
   "found_on": [
    "/cancer/"
   ],
@@ -4411,7 +4411,7 @@
  "https://pharmeasy.in/online-medicine-order/201633": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:34:45",
+  "checked": "2026-11-23T08:18:02",
   "found_on": [
    "/cancer/"
   ],
@@ -4420,7 +4420,7 @@
  "https://pharmeasy.in/online-medicine-order/201917": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:34:47",
+  "checked": "2026-11-23T08:18:03",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/"
@@ -4431,7 +4431,7 @@
  "https://pharmeasy.in/online-medicine-order/205126": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:34:48",
+  "checked": "2026-11-23T08:18:04",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/"
@@ -4441,7 +4441,7 @@
  "https://pharmeasy.in/online-medicine-order/205274": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:34:49",
+  "checked": "2026-11-23T08:18:06",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/",
@@ -4452,7 +4452,7 @@
  "https://pharmeasy.in/online-medicine-order/205301": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:34:52",
+  "checked": "2026-11-23T08:18:08",
   "found_on": [
    "/cancer/"
   ],
@@ -4462,7 +4462,7 @@
  "https://pharmeasy.in/online-medicine-order/205304": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:34:54",
+  "checked": "2026-11-23T08:18:09",
   "found_on": [
    "/cancer/"
   ],
@@ -4472,7 +4472,7 @@
  "https://pharmeasy.in/online-medicine-order/205895": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:38:59",
+  "checked": "2026-11-23T08:22:13",
   "found_on": [
    "/cancer/treatment/"
   ],
@@ -4481,7 +4481,7 @@
  "https://pharmeasy.in/online-medicine-order/207969": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:34:55",
+  "checked": "2026-11-23T08:18:11",
   "found_on": [
    "/cancer/"
   ],
@@ -4490,7 +4490,7 @@
  "https://pharmeasy.in/online-medicine-order/21440": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:34:57",
+  "checked": "2026-11-23T08:18:12",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/",
@@ -4501,7 +4501,7 @@
  "https://pharmeasy.in/online-medicine-order/215324": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:34:58",
+  "checked": "2026-11-23T08:18:14",
   "found_on": [
    "/cancer/"
   ],
@@ -4510,7 +4510,7 @@
  "https://pharmeasy.in/online-medicine-order/216401": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:39:00",
+  "checked": "2026-11-23T08:22:14",
   "found_on": [
    "/cancer/treatment/"
   ],
@@ -4519,7 +4519,7 @@
  "https://pharmeasy.in/online-medicine-order/217713": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:34:59",
+  "checked": "2026-11-23T08:18:15",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/",
@@ -4530,7 +4530,7 @@
  "https://pharmeasy.in/online-medicine-order/226015": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:35:00",
+  "checked": "2026-11-23T08:18:17",
   "found_on": [
    "/cancer/"
   ],
@@ -4540,7 +4540,7 @@
  "https://pharmeasy.in/online-medicine-order/229842": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:35:02",
+  "checked": "2026-11-23T08:18:18",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/",
@@ -4551,7 +4551,7 @@
  "https://pharmeasy.in/online-medicine-order/230656": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:35:03",
+  "checked": "2026-11-23T08:18:20",
   "found_on": [
    "/cancer/"
   ],
@@ -4560,7 +4560,7 @@
  "https://pharmeasy.in/online-medicine-order/231636": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:35:05",
+  "checked": "2026-11-23T08:18:21",
   "found_on": [
    "/cancer/"
   ],
@@ -4569,7 +4569,7 @@
  "https://pharmeasy.in/online-medicine-order/231639": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:35:06",
+  "checked": "2026-11-23T08:18:23",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/",
@@ -4580,7 +4580,7 @@
  "https://pharmeasy.in/online-medicine-order/232630": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:35:08",
+  "checked": "2026-11-23T08:18:24",
   "found_on": [
    "/cancer/"
   ],
@@ -4589,7 +4589,7 @@
  "https://pharmeasy.in/online-medicine-order/235267": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:39:01",
+  "checked": "2026-11-23T08:22:16",
   "found_on": [
    "/cancer/treatment/"
   ],
@@ -4598,7 +4598,7 @@
  "https://pharmeasy.in/online-medicine-order/237262": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:35:10",
+  "checked": "2026-11-23T08:18:25",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/"
@@ -4608,7 +4608,7 @@
  "https://pharmeasy.in/online-medicine-order/23848": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:35:12",
+  "checked": "2026-11-23T08:18:27",
   "found_on": [
    "/cancer/"
   ],
@@ -4618,7 +4618,7 @@
  "https://pharmeasy.in/online-medicine-order/23860": {
   "status": 404,
   "verdict": "dead",
-  "checked": "2026-11-22T07:35:12",
+  "checked": "2026-11-23T08:18:28",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/"
@@ -4627,7 +4627,7 @@
  "https://pharmeasy.in/online-medicine-order/25037": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:35:14",
+  "checked": "2026-11-23T08:18:30",
   "found_on": [
    "/cancer/"
   ],
@@ -4636,7 +4636,7 @@
  "https://pharmeasy.in/online-medicine-order/25319": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:35:15",
+  "checked": "2026-11-23T08:18:32",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/"
@@ -4646,7 +4646,7 @@
  "https://pharmeasy.in/online-medicine-order/25453": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:35:18",
+  "checked": "2026-11-23T08:18:34",
   "found_on": [
    "/cancer/"
   ],
@@ -4655,7 +4655,7 @@
  "https://pharmeasy.in/online-medicine-order/25454": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:35:19",
+  "checked": "2026-11-23T08:18:35",
   "found_on": [
    "/cancer/"
   ],
@@ -4664,7 +4664,7 @@
  "https://pharmeasy.in/online-medicine-order/25610": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:35:20",
+  "checked": "2026-11-23T08:18:37",
   "found_on": [
    "/cancer/"
   ],
@@ -4673,7 +4673,7 @@
  "https://pharmeasy.in/online-medicine-order/25715": {
   "status": 404,
   "verdict": "dead",
-  "checked": "2026-11-22T07:35:21",
+  "checked": "2026-11-23T08:18:38",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/"
@@ -4682,7 +4682,7 @@
  "https://pharmeasy.in/online-medicine-order/28254": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:35:23",
+  "checked": "2026-11-23T08:18:40",
   "found_on": [
    "/cancer/"
   ],
@@ -4691,7 +4691,7 @@
  "https://pharmeasy.in/online-medicine-order/28667": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:39:03",
+  "checked": "2026-11-23T08:22:17",
   "found_on": [
    "/cancer/treatment/"
   ],
@@ -4700,7 +4700,7 @@
  "https://pharmeasy.in/online-medicine-order/30363": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:39:05",
+  "checked": "2026-11-23T08:22:19",
   "found_on": [
    "/cancer/treatment/",
    "/cancer/treatment/chemotherapy/"
@@ -4710,7 +4710,7 @@
  "https://pharmeasy.in/online-medicine-order/3045128": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:35:25",
+  "checked": "2026-11-23T08:18:41",
   "found_on": [
    "/cancer/"
   ],
@@ -4719,7 +4719,7 @@
  "https://pharmeasy.in/online-medicine-order/30892": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:35:27",
+  "checked": "2026-11-23T08:18:42",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/",
@@ -4731,7 +4731,7 @@
  "https://pharmeasy.in/online-medicine-order/31016": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:39:06",
+  "checked": "2026-11-23T08:22:20",
   "found_on": [
    "/cancer/treatment/"
   ],
@@ -4740,7 +4740,7 @@
  "https://pharmeasy.in/online-medicine-order/3101975": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:35:27",
+  "checked": "2026-11-23T08:18:44",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/",
@@ -4751,7 +4751,7 @@
  "https://pharmeasy.in/online-medicine-order/3104643": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:35:29",
+  "checked": "2026-11-23T08:18:46",
   "found_on": [
    "/cancer/"
   ],
@@ -4761,7 +4761,7 @@
  "https://pharmeasy.in/online-medicine-order/3105993": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:35:31",
+  "checked": "2026-11-23T08:18:47",
   "found_on": [
    "/cancer/"
   ],
@@ -4770,7 +4770,7 @@
  "https://pharmeasy.in/online-medicine-order/33979": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:35:32",
+  "checked": "2026-11-23T08:18:49",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/",
@@ -4782,7 +4782,7 @@
  "https://pharmeasy.in/online-medicine-order/3441822": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:35:34",
+  "checked": "2026-11-23T08:18:50",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/"
@@ -4792,7 +4792,7 @@
  "https://pharmeasy.in/online-medicine-order/3462610": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:35:35",
+  "checked": "2026-11-23T08:18:51",
   "found_on": [
    "/cancer/"
   ],
@@ -4801,7 +4801,7 @@
  "https://pharmeasy.in/online-medicine-order/3482587": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:35:37",
+  "checked": "2026-11-23T08:18:52",
   "found_on": [
    "/cancer/"
   ],
@@ -4810,7 +4810,7 @@
  "https://pharmeasy.in/online-medicine-order/3489025": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:35:38",
+  "checked": "2026-11-23T08:18:55",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/"
@@ -4820,7 +4820,7 @@
  "https://pharmeasy.in/online-medicine-order/35413": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:35:41",
+  "checked": "2026-11-23T08:18:56",
   "found_on": [
    "/cancer/"
   ],
@@ -4830,7 +4830,7 @@
  "https://pharmeasy.in/online-medicine-order/3611424": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:35:42",
+  "checked": "2026-11-23T08:18:58",
   "found_on": [
    "/cancer/"
   ],
@@ -4840,7 +4840,7 @@
  "https://pharmeasy.in/online-medicine-order/3623823": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:35:43",
+  "checked": "2026-11-23T08:18:59",
   "found_on": [
    "/cancer/"
   ],
@@ -4850,7 +4850,7 @@
  "https://pharmeasy.in/online-medicine-order/3713299": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:39:59",
+  "checked": "2026-11-23T08:23:12",
   "found_on": [
    "/cancer/treatment/chemotherapy/"
   ],
@@ -4860,7 +4860,7 @@
  "https://pharmeasy.in/online-medicine-order/3732306": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:35:44",
+  "checked": "2026-11-23T08:19:00",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/",
@@ -4872,7 +4872,7 @@
  "https://pharmeasy.in/online-medicine-order/3734127": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:35:46",
+  "checked": "2026-11-23T08:19:02",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/"
@@ -4882,7 +4882,7 @@
  "https://pharmeasy.in/online-medicine-order/3735578": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:39:07",
+  "checked": "2026-11-23T08:22:22",
   "found_on": [
    "/cancer/treatment/",
    "/cancer/treatment/chemotherapy/"
@@ -4892,7 +4892,7 @@
  "https://pharmeasy.in/online-medicine-order/3743110": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:39:10",
+  "checked": "2026-11-23T08:22:24",
   "found_on": [
    "/cancer/treatment/",
    "/cancer/types/cervical-cancer/"
@@ -4902,7 +4902,7 @@
  "https://pharmeasy.in/online-medicine-order/37620": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:35:48",
+  "checked": "2026-11-23T08:19:03",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/",
@@ -4914,7 +4914,7 @@
  "https://pharmeasy.in/online-medicine-order/37930": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:40:01",
+  "checked": "2026-11-23T08:23:14",
   "found_on": [
    "/cancer/treatment/chemotherapy/"
   ],
@@ -4924,7 +4924,7 @@
  "https://pharmeasy.in/online-medicine-order/3822038": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:35:49",
+  "checked": "2026-11-23T08:19:04",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/"
@@ -4934,7 +4934,7 @@
  "https://pharmeasy.in/online-medicine-order/3867489": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:35:51",
+  "checked": "2026-11-23T08:19:07",
   "found_on": [
    "/cancer/"
   ],
@@ -4943,7 +4943,7 @@
  "https://pharmeasy.in/online-medicine-order/3875821": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:35:53",
+  "checked": "2026-11-23T08:19:08",
   "found_on": [
    "/cancer/"
   ],
@@ -4952,7 +4952,7 @@
  "https://pharmeasy.in/online-medicine-order/3899764": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:35:54",
+  "checked": "2026-11-23T08:19:09",
   "found_on": [
    "/cancer/"
   ],
@@ -4962,7 +4962,7 @@
  "https://pharmeasy.in/online-medicine-order/3899771": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:39:11",
+  "checked": "2026-11-23T08:22:25",
   "found_on": [
    "/cancer/treatment/",
    "/cancer/treatment/chemotherapy/"
@@ -4973,7 +4973,7 @@
  "https://pharmeasy.in/online-medicine-order/3900068": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:35:55",
+  "checked": "2026-11-23T08:19:11",
   "found_on": [
    "/cancer/"
   ],
@@ -4982,7 +4982,7 @@
  "https://pharmeasy.in/online-medicine-order/39069": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:39:12",
+  "checked": "2026-11-23T08:22:26",
   "found_on": [
    "/cancer/treatment/",
    "/cancer/treatment/chemotherapy/",
@@ -4994,7 +4994,7 @@
  "https://pharmeasy.in/online-medicine-order/3917431": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:35:57",
+  "checked": "2026-11-23T08:19:13",
   "found_on": [
    "/cancer/"
   ],
@@ -5003,7 +5003,7 @@
  "https://pharmeasy.in/online-medicine-order/3995137": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:35:58",
+  "checked": "2026-11-23T08:19:14",
   "found_on": [
    "/cancer/"
   ],
@@ -5012,7 +5012,7 @@
  "https://pharmeasy.in/online-medicine-order/3999204": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:40:02",
+  "checked": "2026-11-23T08:23:16",
   "found_on": [
    "/cancer/treatment/chemotherapy/"
   ],
@@ -5021,7 +5021,7 @@
  "https://pharmeasy.in/online-medicine-order/4002": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:39:14",
+  "checked": "2026-11-23T08:22:28",
   "found_on": [
    "/cancer/treatment/"
   ],
@@ -5030,7 +5030,7 @@
  "https://pharmeasy.in/online-medicine-order/4005285": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:36:00",
+  "checked": "2026-11-23T08:19:16",
   "found_on": [
    "/cancer/"
   ],
@@ -5039,7 +5039,7 @@
  "https://pharmeasy.in/online-medicine-order/4011": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:39:15",
+  "checked": "2026-11-23T08:22:29",
   "found_on": [
    "/cancer/treatment/"
   ],
@@ -5048,7 +5048,7 @@
  "https://pharmeasy.in/online-medicine-order/4012": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:36:01",
+  "checked": "2026-11-23T08:19:17",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/"
@@ -5058,7 +5058,7 @@
  "https://pharmeasy.in/online-medicine-order/40872": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:36:02",
+  "checked": "2026-11-23T08:19:19",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/",
@@ -5070,7 +5070,7 @@
  "https://pharmeasy.in/online-medicine-order/4113763": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:40:04",
+  "checked": "2026-11-23T08:23:18",
   "found_on": [
    "/cancer/treatment/chemotherapy/"
   ],
@@ -5079,7 +5079,7 @@
  "https://pharmeasy.in/online-medicine-order/4113855": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:36:04",
+  "checked": "2026-11-23T08:19:20",
   "found_on": [
    "/cancer/"
   ],
@@ -5088,7 +5088,7 @@
  "https://pharmeasy.in/online-medicine-order/4113995": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:39:16",
+  "checked": "2026-11-23T08:22:32",
   "found_on": [
    "/cancer/treatment/",
    "/cancer/treatment/chemotherapy/",
@@ -5099,7 +5099,7 @@
  "https://pharmeasy.in/online-medicine-order/4114079": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:36:05",
+  "checked": "2026-11-23T08:19:22",
   "found_on": [
    "/cancer/"
   ],
@@ -5108,7 +5108,7 @@
  "https://pharmeasy.in/online-medicine-order/4114086": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:39:18",
+  "checked": "2026-11-23T08:22:32",
   "found_on": [
    "/cancer/treatment/"
   ],
@@ -5117,7 +5117,7 @@
  "https://pharmeasy.in/online-medicine-order/4114340": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:40:05",
+  "checked": "2026-11-23T08:23:18",
   "found_on": [
    "/cancer/treatment/chemotherapy/"
   ],
@@ -5126,7 +5126,7 @@
  "https://pharmeasy.in/online-medicine-order/4114508": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:40:06",
+  "checked": "2026-11-23T08:23:20",
   "found_on": [
    "/cancer/treatment/chemotherapy/"
   ],
@@ -5136,7 +5136,7 @@
  "https://pharmeasy.in/online-medicine-order/4114582": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:36:07",
+  "checked": "2026-11-23T08:19:23",
   "found_on": [
    "/cancer/"
   ],
@@ -5145,7 +5145,7 @@
  "https://pharmeasy.in/online-medicine-order/4114825": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:36:08",
+  "checked": "2026-11-23T08:19:24",
   "found_on": [
    "/cancer/"
   ],
@@ -5154,7 +5154,7 @@
  "https://pharmeasy.in/online-medicine-order/4115185": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:36:10",
+  "checked": "2026-11-23T08:19:26",
   "found_on": [
    "/cancer/"
   ],
@@ -5163,7 +5163,7 @@
  "https://pharmeasy.in/online-medicine-order/4115888": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:36:12",
+  "checked": "2026-11-23T08:19:27",
   "found_on": [
    "/cancer/"
   ],
@@ -5173,7 +5173,7 @@
  "https://pharmeasy.in/online-medicine-order/4116496": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:36:13",
+  "checked": "2026-11-23T08:19:29",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/"
@@ -5184,7 +5184,7 @@
  "https://pharmeasy.in/online-medicine-order/4116640": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:40:08",
+  "checked": "2026-11-23T08:23:22",
   "found_on": [
    "/cancer/treatment/chemotherapy/"
   ],
@@ -5193,7 +5193,7 @@
  "https://pharmeasy.in/online-medicine-order/4116922": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:39:19",
+  "checked": "2026-11-23T08:22:33",
   "found_on": [
    "/cancer/treatment/"
   ],
@@ -5202,7 +5202,7 @@
  "https://pharmeasy.in/online-medicine-order/4117196": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:36:14",
+  "checked": "2026-11-23T08:19:31",
   "found_on": [
    "/cancer/"
   ],
@@ -5211,7 +5211,7 @@
  "https://pharmeasy.in/online-medicine-order/4117432": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:36:16",
+  "checked": "2026-11-23T08:19:32",
   "found_on": [
    "/cancer/"
   ],
@@ -5220,7 +5220,7 @@
  "https://pharmeasy.in/online-medicine-order/4117483": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:36:18",
+  "checked": "2026-11-23T08:19:33",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/",
@@ -5231,7 +5231,7 @@
  "https://pharmeasy.in/online-medicine-order/4117889": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:36:19",
+  "checked": "2026-11-23T08:19:35",
   "found_on": [
    "/cancer/"
   ],
@@ -5240,7 +5240,7 @@
  "https://pharmeasy.in/online-medicine-order/4118123": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:36:20",
+  "checked": "2026-11-23T08:19:37",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/",
@@ -5251,7 +5251,7 @@
  "https://pharmeasy.in/online-medicine-order/4119051": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:36:22",
+  "checked": "2026-11-23T08:19:38",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/chemotherapy/"
@@ -5261,7 +5261,7 @@
  "https://pharmeasy.in/online-medicine-order/4119274": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:36:25",
+  "checked": "2026-11-23T08:19:40",
   "found_on": [
    "/cancer/"
   ],
@@ -5271,7 +5271,7 @@
  "https://pharmeasy.in/online-medicine-order/4119324": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:36:26",
+  "checked": "2026-11-23T08:19:41",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/",
@@ -5282,7 +5282,7 @@
  "https://pharmeasy.in/online-medicine-order/4119358": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:36:27",
+  "checked": "2026-11-23T08:19:42",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/"
@@ -5292,7 +5292,7 @@
  "https://pharmeasy.in/online-medicine-order/4119652": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:40:09",
+  "checked": "2026-11-23T08:23:24",
   "found_on": [
    "/cancer/treatment/chemotherapy/"
   ],
@@ -5301,7 +5301,7 @@
  "https://pharmeasy.in/online-medicine-order/4119866": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:36:28",
+  "checked": "2026-11-23T08:19:44",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/",
@@ -5313,7 +5313,7 @@
  "https://pharmeasy.in/online-medicine-order/4119925": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:39:21",
+  "checked": "2026-11-23T08:22:35",
   "found_on": [
    "/cancer/treatment/"
   ],
@@ -5322,7 +5322,7 @@
  "https://pharmeasy.in/online-medicine-order/4120803": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:36:30",
+  "checked": "2026-11-23T08:19:45",
   "found_on": [
    "/cancer/"
   ],
@@ -5331,7 +5331,7 @@
  "https://pharmeasy.in/online-medicine-order/4121837": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:36:32",
+  "checked": "2026-11-23T08:19:47",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/"
@@ -5341,7 +5341,7 @@
  "https://pharmeasy.in/online-medicine-order/4122171": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:36:33",
+  "checked": "2026-11-23T08:19:48",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/chemotherapy/",
@@ -5352,7 +5352,7 @@
  "https://pharmeasy.in/online-medicine-order/4122290": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:40:11",
+  "checked": "2026-11-23T08:23:25",
   "found_on": [
    "/cancer/treatment/chemotherapy/"
   ],
@@ -5361,7 +5361,7 @@
  "https://pharmeasy.in/online-medicine-order/4122603": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:36:34",
+  "checked": "2026-11-23T08:19:49",
   "found_on": [
    "/cancer/"
   ],
@@ -5370,7 +5370,7 @@
  "https://pharmeasy.in/online-medicine-order/4122824": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:40:12",
+  "checked": "2026-11-23T08:23:26",
   "found_on": [
    "/cancer/treatment/chemotherapy/"
   ],
@@ -5379,7 +5379,7 @@
  "https://pharmeasy.in/online-medicine-order/4122968": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:36:36",
+  "checked": "2026-11-23T08:19:51",
   "found_on": [
    "/cancer/"
   ],
@@ -5388,7 +5388,7 @@
  "https://pharmeasy.in/online-medicine-order/4123163": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:39:23",
+  "checked": "2026-11-23T08:22:37",
   "found_on": [
    "/cancer/treatment/"
   ],
@@ -5397,7 +5397,7 @@
  "https://pharmeasy.in/online-medicine-order/4128405": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:40:14",
+  "checked": "2026-11-23T08:23:28",
   "found_on": [
    "/cancer/treatment/chemotherapy/"
   ],
@@ -5406,7 +5406,7 @@
  "https://pharmeasy.in/online-medicine-order/4133716": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:36:38",
+  "checked": "2026-11-23T08:19:52",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/"
@@ -5416,7 +5416,7 @@
  "https://pharmeasy.in/online-medicine-order/4199688": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:36:39",
+  "checked": "2026-11-23T08:19:54",
   "found_on": [
    "/cancer/"
   ],
@@ -5425,7 +5425,7 @@
  "https://pharmeasy.in/online-medicine-order/42761": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:36:41",
+  "checked": "2026-11-23T08:19:56",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/chemotherapy/"
@@ -5435,7 +5435,7 @@
  "https://pharmeasy.in/online-medicine-order/42876": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:36:43",
+  "checked": "2026-11-23T08:19:57",
   "found_on": [
    "/cancer/"
   ],
@@ -5445,7 +5445,7 @@
  "https://pharmeasy.in/online-medicine-order/42888": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:36:43",
+  "checked": "2026-11-23T08:19:59",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/",
@@ -5456,7 +5456,7 @@
  "https://pharmeasy.in/online-medicine-order/4375504": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:36:45",
+  "checked": "2026-11-23T08:20:00",
   "found_on": [
    "/cancer/"
   ],
@@ -5465,7 +5465,7 @@
  "https://pharmeasy.in/online-medicine-order/45455": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:36:46",
+  "checked": "2026-11-23T08:20:02",
   "found_on": [
    "/cancer/"
   ],
@@ -5474,7 +5474,7 @@
  "https://pharmeasy.in/online-medicine-order/45494": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:36:49",
+  "checked": "2026-11-23T08:20:03",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/",
@@ -5486,7 +5486,7 @@
  "https://pharmeasy.in/online-medicine-order/4577": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:36:50",
+  "checked": "2026-11-23T08:20:05",
   "found_on": [
    "/cancer/"
   ],
@@ -5495,7 +5495,7 @@
  "https://pharmeasy.in/online-medicine-order/47616": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:36:51",
+  "checked": "2026-11-23T08:20:06",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/",
@@ -5506,7 +5506,7 @@
  "https://pharmeasy.in/online-medicine-order/47752": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:36:52",
+  "checked": "2026-11-23T08:20:07",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/"
@@ -5517,7 +5517,7 @@
  "https://pharmeasy.in/online-medicine-order/4798248": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:36:54",
+  "checked": "2026-11-23T08:20:09",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/"
@@ -5528,7 +5528,7 @@
  "https://pharmeasy.in/online-medicine-order/4798265": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:36:56",
+  "checked": "2026-11-23T08:20:11",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/"
@@ -5539,7 +5539,7 @@
  "https://pharmeasy.in/online-medicine-order/4819243": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:36:58",
+  "checked": "2026-11-23T08:20:12",
   "found_on": [
    "/cancer/"
   ],
@@ -5548,7 +5548,7 @@
  "https://pharmeasy.in/online-medicine-order/4819745": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:40:15",
+  "checked": "2026-11-23T08:23:29",
   "found_on": [
    "/cancer/treatment/chemotherapy/"
   ],
@@ -5557,7 +5557,7 @@
  "https://pharmeasy.in/online-medicine-order/4819794": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:36:59",
+  "checked": "2026-11-23T08:20:14",
   "found_on": [
    "/cancer/"
   ],
@@ -5566,7 +5566,7 @@
  "https://pharmeasy.in/online-medicine-order/4827801": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:40:17",
+  "checked": "2026-11-23T08:23:30",
   "found_on": [
    "/cancer/treatment/chemotherapy/"
   ],
@@ -5575,7 +5575,7 @@
  "https://pharmeasy.in/online-medicine-order/4827821": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:37:01",
+  "checked": "2026-11-23T08:20:15",
   "found_on": [
    "/cancer/"
   ],
@@ -5584,7 +5584,7 @@
  "https://pharmeasy.in/online-medicine-order/4827822": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:37:02",
+  "checked": "2026-11-23T08:20:18",
   "found_on": [
    "/cancer/"
   ],
@@ -5593,7 +5593,7 @@
  "https://pharmeasy.in/online-medicine-order/4827913": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:39:25",
+  "checked": "2026-11-23T08:22:38",
   "found_on": [
    "/cancer/treatment/",
    "/cancer/treatment/chemotherapy/"
@@ -5603,7 +5603,7 @@
  "https://pharmeasy.in/online-medicine-order/4828084": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:37:03",
+  "checked": "2026-11-23T08:20:19",
   "found_on": [
    "/cancer/"
   ],
@@ -5612,7 +5612,7 @@
  "https://pharmeasy.in/online-medicine-order/4828089": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:37:05",
+  "checked": "2026-11-23T08:20:20",
   "found_on": [
    "/cancer/"
   ],
@@ -5621,7 +5621,7 @@
  "https://pharmeasy.in/online-medicine-order/4828101": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:37:06",
+  "checked": "2026-11-23T08:20:22",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/chemotherapy/"
@@ -5631,7 +5631,7 @@
  "https://pharmeasy.in/online-medicine-order/499871": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:37:09",
+  "checked": "2026-11-23T08:20:23",
   "found_on": [
    "/cancer/"
   ],
@@ -5641,7 +5641,7 @@
  "https://pharmeasy.in/online-medicine-order/50366": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:40:18",
+  "checked": "2026-11-23T08:23:33",
   "found_on": [
    "/cancer/treatment/chemotherapy/"
   ],
@@ -5650,7 +5650,7 @@
  "https://pharmeasy.in/online-medicine-order/528222": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:37:10",
+  "checked": "2026-11-23T08:20:24",
   "found_on": [
    "/cancer/"
   ],
@@ -5659,7 +5659,7 @@
  "https://pharmeasy.in/online-medicine-order/54137": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:40:20",
+  "checked": "2026-11-23T08:23:34",
   "found_on": [
    "/cancer/treatment/chemotherapy/"
   ],
@@ -5668,7 +5668,7 @@
  "https://pharmeasy.in/online-medicine-order/54139": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:40:21",
+  "checked": "2026-11-23T08:23:36",
   "found_on": [
    "/cancer/treatment/chemotherapy/"
   ],
@@ -5677,7 +5677,7 @@
  "https://pharmeasy.in/online-medicine-order/5462": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:37:12",
+  "checked": "2026-11-23T08:20:26",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/",
@@ -5689,7 +5689,7 @@
  "https://pharmeasy.in/online-medicine-order/56510": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:40:22",
+  "checked": "2026-11-23T08:23:37",
   "found_on": [
    "/cancer/treatment/chemotherapy/"
   ],
@@ -5698,7 +5698,7 @@
  "https://pharmeasy.in/online-medicine-order/56512": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:39:26",
+  "checked": "2026-11-23T08:22:39",
   "found_on": [
    "/cancer/treatment/",
    "/cancer/treatment/chemotherapy/"
@@ -5709,7 +5709,7 @@
  "https://pharmeasy.in/online-medicine-order/56519": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:37:13",
+  "checked": "2026-11-23T08:20:27",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/",
@@ -5720,7 +5720,7 @@
  "https://pharmeasy.in/online-medicine-order/56999": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:37:14",
+  "checked": "2026-11-23T08:20:29",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/",
@@ -5732,7 +5732,7 @@
  "https://pharmeasy.in/online-medicine-order/57927": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:39:27",
+  "checked": "2026-11-23T08:22:41",
   "found_on": [
    "/cancer/treatment/",
    "/cancer/treatment/chemotherapy/"
@@ -5742,7 +5742,7 @@
  "https://pharmeasy.in/online-medicine-order/58783": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:37:16",
+  "checked": "2026-11-23T08:20:30",
   "found_on": [
    "/cancer/"
   ],
@@ -5752,7 +5752,7 @@
  "https://pharmeasy.in/online-medicine-order/5896": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:37:17",
+  "checked": "2026-11-23T08:20:32",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/chemotherapy/",
@@ -5764,7 +5764,7 @@
  "https://pharmeasy.in/online-medicine-order/64092": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:37:18",
+  "checked": "2026-11-23T08:20:33",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/chemotherapy/"
@@ -5775,7 +5775,7 @@
  "https://pharmeasy.in/online-medicine-order/64885": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:37:20",
+  "checked": "2026-11-23T08:20:35",
   "found_on": [
    "/cancer/"
   ],
@@ -5785,7 +5785,7 @@
  "https://pharmeasy.in/online-medicine-order/6594": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:37:22",
+  "checked": "2026-11-23T08:20:36",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/"
@@ -5796,7 +5796,7 @@
  "https://pharmeasy.in/online-medicine-order/67977": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:37:24",
+  "checked": "2026-11-23T08:20:38",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/chemotherapy/"
@@ -5806,7 +5806,7 @@
  "https://pharmeasy.in/online-medicine-order/68118": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:37:25",
+  "checked": "2026-11-23T08:20:40",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/",
@@ -5817,7 +5817,7 @@
  "https://pharmeasy.in/online-medicine-order/68343": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:37:26",
+  "checked": "2026-11-23T08:20:41",
   "found_on": [
    "/cancer/"
   ],
@@ -5826,7 +5826,7 @@
  "https://pharmeasy.in/online-medicine-order/68605": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:37:29",
+  "checked": "2026-11-23T08:20:43",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/chemotherapy/",
@@ -5838,7 +5838,7 @@
  "https://pharmeasy.in/online-medicine-order/68703": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:37:29",
+  "checked": "2026-11-23T08:20:44",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/",
@@ -5849,7 +5849,7 @@
  "https://pharmeasy.in/online-medicine-order/69191": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:37:32",
+  "checked": "2026-11-23T08:20:46",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/",
@@ -5861,7 +5861,7 @@
  "https://pharmeasy.in/online-medicine-order/69377": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:37:32",
+  "checked": "2026-11-23T08:20:47",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/",
@@ -5872,7 +5872,7 @@
  "https://pharmeasy.in/online-medicine-order/69379": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:37:34",
+  "checked": "2026-11-23T08:20:49",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/",
@@ -5884,7 +5884,7 @@
  "https://pharmeasy.in/online-medicine-order/69826": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:37:36",
+  "checked": "2026-11-23T08:20:50",
   "found_on": [
    "/cancer/"
   ],
@@ -5893,7 +5893,7 @@
  "https://pharmeasy.in/online-medicine-order/70195": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:37:37",
+  "checked": "2026-11-23T08:20:52",
   "found_on": [
    "/cancer/"
   ],
@@ -5903,7 +5903,7 @@
  "https://pharmeasy.in/online-medicine-order/70287": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:37:39",
+  "checked": "2026-11-23T08:20:53",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/"
@@ -5913,7 +5913,7 @@
  "https://pharmeasy.in/online-medicine-order/70712": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:37:40",
+  "checked": "2026-11-23T08:20:55",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/",
@@ -5924,7 +5924,7 @@
  "https://pharmeasy.in/online-medicine-order/70726": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:39:30",
+  "checked": "2026-11-23T08:22:42",
   "found_on": [
    "/cancer/treatment/",
    "/cancer/treatment/chemotherapy/"
@@ -5935,7 +5935,7 @@
  "https://pharmeasy.in/online-medicine-order/70750": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:37:42",
+  "checked": "2026-11-23T08:20:56",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/chemotherapy/"
@@ -5945,7 +5945,7 @@
  "https://pharmeasy.in/online-medicine-order/72591": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:37:43",
+  "checked": "2026-11-23T08:20:58",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/chemotherapy/"
@@ -5956,7 +5956,7 @@
  "https://pharmeasy.in/online-medicine-order/72961": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:37:44",
+  "checked": "2026-11-23T08:20:59",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/",
@@ -5967,7 +5967,7 @@
  "https://pharmeasy.in/online-medicine-order/74759": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:39:30",
+  "checked": "2026-11-23T08:22:44",
   "found_on": [
    "/cancer/treatment/",
    "/cancer/treatment/chemotherapy/"
@@ -5977,7 +5977,7 @@
  "https://pharmeasy.in/online-medicine-order/74801": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:37:46",
+  "checked": "2026-11-23T08:21:00",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/",
@@ -5989,7 +5989,7 @@
  "https://pharmeasy.in/online-medicine-order/75033": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:37:48",
+  "checked": "2026-11-23T08:21:02",
   "found_on": [
    "/cancer/"
   ],
@@ -5999,7 +5999,7 @@
  "https://pharmeasy.in/online-medicine-order/75882": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:37:49",
+  "checked": "2026-11-23T08:21:03",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/"
@@ -6010,7 +6010,7 @@
  "https://pharmeasy.in/online-medicine-order/76403": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:37:50",
+  "checked": "2026-11-23T08:21:05",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/",
@@ -6021,7 +6021,7 @@
  "https://pharmeasy.in/online-medicine-order/77111": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:37:52",
+  "checked": "2026-11-23T08:21:06",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/",
@@ -6033,7 +6033,7 @@
  "https://pharmeasy.in/online-medicine-order/78742": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:37:53",
+  "checked": "2026-11-23T08:21:08",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/",
@@ -6045,7 +6045,7 @@
  "https://pharmeasy.in/online-medicine-order/80653": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:39:32",
+  "checked": "2026-11-23T08:22:46",
   "found_on": [
    "/cancer/treatment/",
    "/cancer/treatment/chemotherapy/"
@@ -6055,7 +6055,7 @@
  "https://pharmeasy.in/online-medicine-order/81197": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:40:25",
+  "checked": "2026-11-23T08:23:38",
   "found_on": [
    "/cancer/treatment/chemotherapy/"
   ],
@@ -6064,7 +6064,7 @@
  "https://pharmeasy.in/online-medicine-order/81662": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:39:33",
+  "checked": "2026-11-23T08:22:47",
   "found_on": [
    "/cancer/treatment/",
    "/cancer/treatment/chemotherapy/"
@@ -6074,7 +6074,7 @@
  "https://pharmeasy.in/online-medicine-order/8277": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:39:35",
+  "checked": "2026-11-23T08:22:48",
   "found_on": [
    "/cancer/treatment/"
   ],
@@ -6083,7 +6083,7 @@
  "https://pharmeasy.in/online-medicine-order/83763": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:37:55",
+  "checked": "2026-11-23T08:21:11",
   "found_on": [
    "/cancer/"
   ],
@@ -6092,7 +6092,7 @@
  "https://pharmeasy.in/online-medicine-order/83917": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:37:56",
+  "checked": "2026-11-23T08:21:11",
   "found_on": [
    "/cancer/"
   ],
@@ -6102,7 +6102,7 @@
  "https://pharmeasy.in/online-medicine-order/83920": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:37:59",
+  "checked": "2026-11-23T08:21:12",
   "found_on": [
    "/cancer/"
   ],
@@ -6112,7 +6112,7 @@
  "https://pharmeasy.in/online-medicine-order/84628": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:38:00",
+  "checked": "2026-11-23T08:21:14",
   "found_on": [
    "/cancer/"
   ],
@@ -6122,7 +6122,7 @@
  "https://pharmeasy.in/online-medicine-order/85270": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:38:01",
+  "checked": "2026-11-23T08:21:16",
   "found_on": [
    "/cancer/"
   ],
@@ -6131,7 +6131,7 @@
  "https://pharmeasy.in/online-medicine-order/8544": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:38:03",
+  "checked": "2026-11-23T08:21:17",
   "found_on": [
    "/cancer/"
   ],
@@ -6141,7 +6141,7 @@
  "https://pharmeasy.in/online-medicine-order/86485": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:38:04",
+  "checked": "2026-11-23T08:21:18",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/chemotherapy/"
@@ -6152,7 +6152,7 @@
  "https://pharmeasy.in/online-medicine-order/88389": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:38:06",
+  "checked": "2026-11-23T08:21:20",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/"
@@ -6162,7 +6162,7 @@
  "https://pharmeasy.in/online-medicine-order/92253": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:38:08",
+  "checked": "2026-11-23T08:21:22",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/",
@@ -6173,7 +6173,7 @@
  "https://pharmeasy.in/online-medicine-order/92266": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:38:09",
+  "checked": "2026-11-23T08:21:23",
   "found_on": [
    "/cancer/"
   ],
@@ -6182,7 +6182,7 @@
  "https://pharmeasy.in/online-medicine-order/94372": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:38:10",
+  "checked": "2026-11-23T08:21:24",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/"
@@ -6193,7 +6193,7 @@
  "https://pharmeasy.in/online-medicine-order/96678": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:38:12",
+  "checked": "2026-11-23T08:21:26",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/"
@@ -6203,7 +6203,7 @@
  "https://pharmeasy.in/online-medicine-order/98039": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:38:14",
+  "checked": "2026-11-23T08:21:28",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/",
@@ -6215,7 +6215,7 @@
  "https://pharmeasy.in/online-medicine-order/99481": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:38:16",
+  "checked": "2026-11-23T08:21:30",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/"
@@ -6225,7 +6225,7 @@
  "https://pharmeasy.in/online-medicine-order/99503": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:38:16",
+  "checked": "2026-11-23T08:21:30",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/"
@@ -6235,7 +6235,7 @@
  "https://pharmeasy.in/online-medicine-order/99513": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:38:18",
+  "checked": "2026-11-23T08:21:32",
   "found_on": [
    "/cancer/"
   ],
@@ -6245,7 +6245,7 @@
  "https://pharmeasy.in/online-medicine-order/99520": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:38:20",
+  "checked": "2026-11-23T08:21:34",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/",
@@ -6256,7 +6256,7 @@
  "https://pharmeasy.in/online-medicine-order/99526": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:38:21",
+  "checked": "2026-11-23T08:21:35",
   "found_on": [
    "/cancer/"
   ],
@@ -6265,7 +6265,7 @@
  "https://pharmeasy.in/online-medicine-order/99553": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:38:23",
+  "checked": "2026-11-23T08:21:37",
   "found_on": [
    "/cancer/",
    "/cancer/treatment/"
@@ -6275,7 +6275,7 @@
  "https://pharmeasy.in/online-medicine-order/99748": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:39:36",
+  "checked": "2026-11-23T08:22:50",
   "found_on": [
    "/cancer/treatment/",
    "/cancer/treatment/chemotherapy/"
@@ -6285,7 +6285,7 @@
  "https://pharmeasy.in/online-medicine-order/browse": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:42:09",
+  "checked": "2026-11-23T08:25:23",
   "found_on": [
    "assets/js/pe-shell.js"
   ],
@@ -6294,7 +6294,7 @@
  "https://pharmeasy.in/online-medicine-order/celplat-inj-10ml-128340": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:39:39",
+  "checked": "2026-11-23T08:22:52",
   "found_on": [
    "/cancer/treatment/"
   ],
@@ -6303,7 +6303,7 @@
  "https://pharmeasy.in/online-medicine-order/gardasil-pre-filled-syringe-of-0-5ml-suspension-for-injection-3716666": {
   "status": 200,
   "verdict": "ok",
-  "checked": "2026-11-22T07:38:35",
+  "checked": "2026-11-23T08:21:50",
   "found_on": [
    "/cancer/prevention/",
    "/cancer/prevention/hpv/",
