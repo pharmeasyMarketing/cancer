@@ -32,7 +32,7 @@ on:
 # Keep pharmeasy.in/cancer/ out of search until the hub has passed QA. Set to "false" (and push) to
 # make the production pages indexable; the stage check below enforces whichever state is set here.
 env:
-  KEEP_NOINDEX: "true"
+  KEEP_NOINDEX: "false"
 
 concurrency:
   group: cancer-deploy
