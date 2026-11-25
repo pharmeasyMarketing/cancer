@@ -1,6 +1,6 @@
 # Link check report
 
-Crawled 2026-11-24 by build/check_links.py: 988 unique links, 918 OK, 44 dead, 26 unverified.
+Crawled 2026-11-25 by build/check_links.py: 988 unique links, 918 OK, 44 dead, 26 unverified.
 
 - **Dead** (404/410): removed at build time (words kept; sidebar links and brand chips dropped).
 - **Unverified**: the site blocked the checker or errored. Link kept.
