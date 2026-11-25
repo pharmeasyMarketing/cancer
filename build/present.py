@@ -729,7 +729,7 @@ def _bars(seg, starts, a_label, b_label, cap):
 
 
 def _n_needs(seg):
-    return labelled_cards(seg, None, lambda n: 'protein' if 'protein' in n.lower() else 'energy' if 'energy' in n.lower() else 'scale', 'mech-grid tips3')
+    return labelled_cards(seg, None, lambda n: 'gauge' if 'intake' in n.lower() else 'protein' if 'protein' in n.lower() else 'energy' if 'energy' in n.lower() else 'scale', 'mech-grid tips3')
 
 
 def _n_eating(seg):
