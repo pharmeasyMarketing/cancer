@@ -1,12 +1,12 @@
 # Link check report
 
-Crawled 2026-11-25 by build/check_links.py: 988 unique links, 918 OK, 44 dead, 26 unverified.
+Crawled 2026-11-26 by build/check_links.py: 988 unique links, 917 OK, 45 dead, 26 unverified.
 
 - **Dead** (404/410): removed at build time (words kept; sidebar links and brand chips dropped).
 - **Unverified**: the site blocked the checker or errored. Link kept.
 - **Canonical swaps**: the linked page names a different canonical URL on the same site that works, so the page links the canonical.
 
-## Dead links (44)
+## Dead links (45)
 
 ### Planned hub page, not built yet (37)
 
@@ -63,7 +63,7 @@ Crawled 2026-11-25 by build/check_links.py: 988 unique links, 918 OK, 44 dead, 2
 |---|---|---|---|
 | 1 | 404 | /blog/uncover-the-link-between-obesity-and-cancer-risk/ | /cancer/prevention/ |
 
-### External source (4)
+### External source (5)
 
 | # | Status | URL | Found on |
 |---|---|---|---|
@@ -71,6 +71,7 @@ Crawled 2026-11-25 by build/check_links.py: 988 unique links, 918 OK, 44 dead, 2
 | 2 | 404 | https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-tisotumab-vedotin-tftv-recurrent-or-metastatic-cervical-cancer | /cancer/types/cervical-cancer/ |
 | 3 | 404 | https://www.pib.gov.in/www.pib.gov.in/Pressreleaseshare.aspx?PRID=2148754 | /cancer/prevention/ |
 | 4 | 404 | https://www.pib.gov.in/www.pib.gov.in/Pressreleaseshare.aspx?PRID=2152535 | /cancer/prevention/ |
+| 5 | 404 | https://www.pib.gov.in/www.pib.gov.in/Pressreleaseshare.aspx?PRID=2289761 | /cancer/prevention/ |
 
 ## Unverified links (26)
 
@@ -361,7 +362,7 @@ Crawled 2026-11-25 by build/check_links.py: 988 unique links, 918 OK, 44 dead, 2
 | 250 | https://www.healthdirect.gov.au/itchy-skin | https://www.healthdirect.gov.au/symptoms/itchy-skin |
 | 251 | https://www.healthdirect.gov.au/leukaemia | https://www.healthdirect.gov.au/conditions/cancer/leukaemia |
 
-## Canonicals not used (41)
+## Canonicals not used (50)
 
 Bot challenge pages (NCBI served a reCAPTCHA), another domain, a deep page whose canonical is the site homepage, or the same URL written differently.
 
@@ -385,31 +386,40 @@ Bot challenge pages (NCBI served a reCAPTCHA), another domain, a deep page whose
 | 16 | https://irdai.gov.in/health-dept | https://irdai.gov.in |
 | 17 | https://irdai.gov.in/web/policy-holder/health-insurance | https://policyholder.gov.in/health-insurance |
 | 18 | / |  |
-| 19 | https://pmc.ncbi.nlm.nih.gov/articles/PMC10021698/ | https://www.google.com/recaptcha/challengepage |
-| 20 | https://pmc.ncbi.nlm.nih.gov/articles/PMC10137043/ | https://www.google.com/recaptcha/challengepage |
-| 21 | https://pmc.ncbi.nlm.nih.gov/articles/PMC11006742/ | https://www.google.com/recaptcha/challengepage |
-| 22 | https://pmc.ncbi.nlm.nih.gov/articles/PMC1121646/ | https://www.google.com/recaptcha/challengepage |
-| 23 | https://pmc.ncbi.nlm.nih.gov/articles/PMC11222272/ | https://www.google.com/recaptcha/challengepage |
+| 19 | https://pmc.ncbi.nlm.nih.gov/articles/PMC10137043/ | https://www.google.com/recaptcha/challengepage |
+| 20 | https://pmc.ncbi.nlm.nih.gov/articles/PMC10572579/ | https://www.google.com/recaptcha/challengepage |
+| 21 | https://pmc.ncbi.nlm.nih.gov/articles/PMC1121646/ | https://www.google.com/recaptcha/challengepage |
+| 22 | https://pmc.ncbi.nlm.nih.gov/articles/PMC11222272/ | https://www.google.com/recaptcha/challengepage |
+| 23 | https://pmc.ncbi.nlm.nih.gov/articles/PMC11580151/ | https://www.google.com/recaptcha/challengepage |
 | 24 | https://pmc.ncbi.nlm.nih.gov/articles/PMC11820471/ | https://www.google.com/recaptcha/challengepage |
-| 25 | https://pmc.ncbi.nlm.nih.gov/articles/PMC13436836/ | https://www.google.com/recaptcha/challengepage |
-| 26 | https://pmc.ncbi.nlm.nih.gov/articles/PMC4369071/ | https://www.google.com/recaptcha/challengepage |
-| 27 | https://pmc.ncbi.nlm.nih.gov/articles/PMC4650206/ | https://www.google.com/recaptcha/challengepage |
-| 28 | https://pmc.ncbi.nlm.nih.gov/articles/PMC4952129/ | https://www.google.com/recaptcha/challengepage |
-| 29 | https://pmc.ncbi.nlm.nih.gov/articles/PMC6029678/ | https://www.google.com/recaptcha/challengepage |
-| 30 | https://pmc.ncbi.nlm.nih.gov/articles/PMC8318849/ | https://www.google.com/recaptcha/challengepage |
-| 31 | https://pmc.ncbi.nlm.nih.gov/articles/PMC8728487/ | https://www.google.com/recaptcha/challengepage |
-| 32 | https://pmc.ncbi.nlm.nih.gov/articles/PMC9735321/ | https://www.google.com/recaptcha/challengepage |
-| 33 | https://pmc.ncbi.nlm.nih.gov/articles/PMC9857053/ | https://www.google.com/recaptcha/challengepage |
-| 34 | https://www.bccancer.bc.ca/books/uterine-cervix/management/5-6-invasive-small-cell-neuroendocrine-carcinoma | https://www.bccancer.bc.ca:443/books/uterine-cervix/management/5-6-invasive-small-cell-neuroendocrine-carcinoma |
-| 35 | https://www.ncbi.nlm.nih.gov/books/NBK499942/ | https://www.google.com/recaptcha/challengepage |
-| 36 | https://www.ncbi.nlm.nih.gov/books/NBK556021/ | https://www.google.com/recaptcha/challengepage |
-| 37 | https://www.ncbi.nlm.nih.gov/books/NBK559075/ | https://www.google.com/recaptcha/challengepage |
-| 38 | https://www.ncbi.nlm.nih.gov/books/NBK604757/ | https://www.google.com/recaptcha/challengepage |
-| 39 | https://www.ncbi.nlm.nih.gov/books/NBK606494/ | https://www.google.com/recaptcha/challengepage |
-| 40 | https://www.twitter.com/pharmeasyapp/ | https://x.com/pharmeasyapp |
-| 41 | https://www.who.int/news/item/11-04-2022-one-dose-human-papillomavirus-%28hpv%29-vaccine-offers-solid-protection-against-cervical-cancer | https://www.who.int/news/item/11-04-2022-one-dose-human-papillomavirus-(hpv)-vaccine-offers-solid-protection-against-cervical-cancer |
+| 25 | https://pmc.ncbi.nlm.nih.gov/articles/PMC12205135/ | https://www.google.com/recaptcha/challengepage |
+| 26 | https://pmc.ncbi.nlm.nih.gov/articles/PMC12516303/ | https://www.google.com/recaptcha/challengepage |
+| 27 | https://pmc.ncbi.nlm.nih.gov/articles/PMC13044193/ | https://www.google.com/recaptcha/challengepage |
+| 28 | https://pmc.ncbi.nlm.nih.gov/articles/PMC3097332/ | https://www.google.com/recaptcha/challengepage |
+| 29 | https://pmc.ncbi.nlm.nih.gov/articles/PMC3185737/ | https://www.google.com/recaptcha/challengepage |
+| 30 | https://pmc.ncbi.nlm.nih.gov/articles/PMC3272175/ | https://www.google.com/recaptcha/challengepage |
+| 31 | https://pmc.ncbi.nlm.nih.gov/articles/PMC4369071/ | https://www.google.com/recaptcha/challengepage |
+| 32 | https://pmc.ncbi.nlm.nih.gov/articles/PMC4462531/ | https://www.google.com/recaptcha/challengepage |
+| 33 | https://pmc.ncbi.nlm.nih.gov/articles/PMC4565319/ | https://www.google.com/recaptcha/challengepage |
+| 34 | https://pmc.ncbi.nlm.nih.gov/articles/PMC4650206/ | https://www.google.com/recaptcha/challengepage |
+| 35 | https://pmc.ncbi.nlm.nih.gov/articles/PMC5450601/ | https://www.google.com/recaptcha/challengepage |
+| 36 | https://pmc.ncbi.nlm.nih.gov/articles/PMC5609136/ | https://www.google.com/recaptcha/challengepage |
+| 37 | https://pmc.ncbi.nlm.nih.gov/articles/PMC6020165/ | https://www.google.com/recaptcha/challengepage |
+| 38 | https://pmc.ncbi.nlm.nih.gov/articles/PMC6029678/ | https://www.google.com/recaptcha/challengepage |
+| 39 | https://pmc.ncbi.nlm.nih.gov/articles/PMC7912724/ | https://www.google.com/recaptcha/challengepage |
+| 40 | https://pmc.ncbi.nlm.nih.gov/articles/PMC9129883/ | https://www.google.com/recaptcha/challengepage |
+| 41 | https://pmc.ncbi.nlm.nih.gov/articles/PMC9364696/ | https://www.google.com/recaptcha/challengepage |
+| 42 | https://pmc.ncbi.nlm.nih.gov/articles/PMC9857053/ | https://www.google.com/recaptcha/challengepage |
+| 43 | https://www.bccancer.bc.ca/books/uterine-cervix/management/5-6-invasive-small-cell-neuroendocrine-carcinoma | https://www.bccancer.bc.ca:443/books/uterine-cervix/management/5-6-invasive-small-cell-neuroendocrine-carcinoma |
+| 44 | https://www.ncbi.nlm.nih.gov/books/NBK499942/ | https://www.google.com/recaptcha/challengepage |
+| 45 | https://www.ncbi.nlm.nih.gov/books/NBK556021/ | https://www.google.com/recaptcha/challengepage |
+| 46 | https://www.ncbi.nlm.nih.gov/books/NBK559075/ | https://www.google.com/recaptcha/challengepage |
+| 47 | https://www.ncbi.nlm.nih.gov/books/NBK604757/ | https://www.google.com/recaptcha/challengepage |
+| 48 | https://www.ncbi.nlm.nih.gov/books/NBK606494/ | https://www.google.com/recaptcha/challengepage |
+| 49 | https://www.twitter.com/pharmeasyapp/ | https://x.com/pharmeasyapp |
+| 50 | https://www.who.int/news/item/11-04-2022-one-dose-human-papillomavirus-%28hpv%29-vaccine-offers-solid-protection-against-cervical-cancer | https://www.who.int/news/item/11-04-2022-one-dose-human-papillomavirus-(hpv)-vaccine-offers-solid-protection-against-cervical-cancer |
 
-## Linked pages that PharmEasy sets to NOINDEX (66)
+## Linked pages that PharmEasy sets to NOINDEX (67)
 
 Live pages (kept), but PharmEasy tells search engines not to index them; they have no canonical. Medicine and molecule pages among them are linked by their own slug URL from the page data (in the swaps above).
 
@@ -479,3 +489,4 @@ Live pages (kept), but PharmEasy tells search engines not to index them; they ha
 - /online-medicine-order/86485
 - /online-medicine-order/94372
 - /online-medicine-order/99513
+- https://www.ncbi.nlm.nih.gov/sites/books/NBK564367/

@@ -49,6 +49,7 @@ From build/link_status.json (python3 build/check_links.py). Dead = the server an
 - https://pharmeasy.in/blog/uncover-the-link-between-obesity-and-cancer-risk/ (404, unlinked): "the link between obesity and cancer risk"
 - https://pharmeasy.in/cancer/screening/ (404, unlinked): "screening"
 - https://pharmeasy.in/cancer/prevention/myths/ (404, unlinked): "cancer myths and misinformation"
+- https://www.pib.gov.in/www.pib.gov.in/Pressreleaseshare.aspx?PRID=2289761 (404, unlinked): "https://www.pib.gov.in/www.pib.gov.in/Pressreleaseshare.aspx"
 - https://www.pib.gov.in/www.pib.gov.in/Pressreleaseshare.aspx?PRID=2152535 (404, unlinked): "https://www.pib.gov.in/www.pib.gov.in/Pressreleaseshare.aspx"
 - https://www.pib.gov.in/www.pib.gov.in/Pressreleaseshare.aspx?PRID=2148754 (404, unlinked): "https://www.pib.gov.in/www.pib.gov.in/Pressreleaseshare.aspx"
 
