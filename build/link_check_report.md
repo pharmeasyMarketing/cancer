@@ -1,6 +1,6 @@
 # Link check report
 
-Crawled 2026-11-27 by build/check_links.py: 988 unique links, 917 OK, 45 dead, 26 unverified.
+Crawled 2026-11-28 by build/check_links.py: 988 unique links, 917 OK, 45 dead, 26 unverified.
 
 - **Dead** (404/410): removed at build time (words kept; sidebar links and brand chips dropped).
 - **Unverified**: the site blocked the checker or errored. Link kept.
@@ -106,7 +106,7 @@ Crawled 2026-11-27 by build/check_links.py: 988 unique links, 917 OK, 45 dead, 2
 | 25 | 403 | https://www.researchgate.net/publication/401678027_Alkylating_agents_in_cancer_Current_developments | /cancer/ |
 | 26 | 403 | https://www.sciencedirect.com/science/article/pii/S1534580710002480 | /cancer/symptoms/ |
 
-## Canonical swaps (252)
+## Canonical swaps (251)
 
 | # | Linked URL | Now links (canonical) |
 |---|---|---|
@@ -353,15 +353,14 @@ Crawled 2026-11-27 by build/check_links.py: 988 unique links, 917 OK, 45 dead, 2
 | 241 | /online-medicine-order/99526 | /online-medicine-order/adthal-50mg-capsule-99526 |
 | 242 | /online-medicine-order/99553 | /online-medicine-order/erlotad-100mg-tab-99553 |
 | 243 | /online-medicine-order/99748 | /online-medicine-order/tubitere-20mg-inj-99748 |
-| 244 | /online-medicine-order/browse | /online-medicine-order/browse?alphabet=j&page=2 |
-| 245 | https://www.businesstoday.in/amp/personal-finance/insurance/story/irdai-reduces-pre-existing-disease-waiting-period-from-4-to-3-years-here-is-what-existing-policyholders-should-know-425325-2024-04-12 | https://www.businesstoday.in/personal-finance/insurance/story/irdai-reduces-pre-existing-disease-waiting-period-from-4-to-3-years-here-is-what-existing-policyholders-should-know-425325-2024-04-12 |
-| 246 | https://www.cancer.gov/types/testicular/hp/testicular-treatment-pdq?cid=eb_govdel&utm | https://www.cancer.gov/types/testicular/hp/testicular-treatment-pdq |
-| 247 | https://www.cancer.org/cancer/types/vaginal-cancer/causes-risks-prevention/what-causes.html | https://www.cancer.org/cancer/types/vaginal-cancer/causes-risks-prevention.html |
-| 248 | https://www.healthdirect.gov.au/digestive-system | https://www.healthdirect.gov.au/anatomy/digestive-system |
-| 249 | https://www.healthdirect.gov.au/haemoptysis-coughing-up-blood | https://www.healthdirect.gov.au/symptoms/haemoptysis-coughing-up-blood |
-| 250 | https://www.healthdirect.gov.au/headaches | https://www.healthdirect.gov.au/symptoms/aches-and-pains/headaches |
-| 251 | https://www.healthdirect.gov.au/itchy-skin | https://www.healthdirect.gov.au/symptoms/itchy-skin |
-| 252 | https://www.healthdirect.gov.au/leukaemia | https://www.healthdirect.gov.au/conditions/cancer/leukaemia |
+| 244 | https://www.businesstoday.in/amp/personal-finance/insurance/story/irdai-reduces-pre-existing-disease-waiting-period-from-4-to-3-years-here-is-what-existing-policyholders-should-know-425325-2024-04-12 | https://www.businesstoday.in/personal-finance/insurance/story/irdai-reduces-pre-existing-disease-waiting-period-from-4-to-3-years-here-is-what-existing-policyholders-should-know-425325-2024-04-12 |
+| 245 | https://www.cancer.gov/types/testicular/hp/testicular-treatment-pdq?cid=eb_govdel&utm | https://www.cancer.gov/types/testicular/hp/testicular-treatment-pdq |
+| 246 | https://www.cancer.org/cancer/types/vaginal-cancer/causes-risks-prevention/what-causes.html | https://www.cancer.org/cancer/types/vaginal-cancer/causes-risks-prevention.html |
+| 247 | https://www.healthdirect.gov.au/digestive-system | https://www.healthdirect.gov.au/anatomy/digestive-system |
+| 248 | https://www.healthdirect.gov.au/haemoptysis-coughing-up-blood | https://www.healthdirect.gov.au/symptoms/haemoptysis-coughing-up-blood |
+| 249 | https://www.healthdirect.gov.au/headaches | https://www.healthdirect.gov.au/symptoms/aches-and-pains/headaches |
+| 250 | https://www.healthdirect.gov.au/itchy-skin | https://www.healthdirect.gov.au/symptoms/itchy-skin |
+| 251 | https://www.healthdirect.gov.au/leukaemia | https://www.healthdirect.gov.au/conditions/cancer/leukaemia |
 
 ## Canonicals not used (50)
 
